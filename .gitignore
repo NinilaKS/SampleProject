@@ -1,0 +1,56 @@
+# ACLs VLT-ed in
+**/_rep_policy.xml
+
+# IDE and OS artefacts
+# You should have these in your global settings anyway
+.idea
+.classpath
+.metadata
+.project
+.settings
+maven-eclipse.xml
+*.sublime-workspace
+*.sublime-project
+*.iml
+*.ipr
+*.iws
+
+*.versionsBackup
+.DS_Store
+.brackets.json
+\#*
+*.log
+*~
+
+.checkstyle
+
+# Maven noise
+target/*
+release.properties
+*.releaseBackup
+
+# Project specific
+*/.settings/*
+*/target/*
+*/bin/*
+*/.gitignore
+.settings/*
+.lazybones/*
+/target
+*/classes/*
+dependency-reduced-pom.xml
+*/dependency-reduced-pom.xml
+/ui.frontend/node_modules
+/ui.apps/*/cvs-semanticui-light/css/*
+/ui.apps/*/cvs-semanticui-light/js/*
+/ui.apps/*/clientlib-site/css/*
+/ui.apps/*/clientlib-site/js/*
+.vscode/*
+*/node
+*/node/*
+*/node_modules
+*/node_modules/*
+*/dist
+*/dist/*
+clientlib-site
+cvs-semanticui-light
