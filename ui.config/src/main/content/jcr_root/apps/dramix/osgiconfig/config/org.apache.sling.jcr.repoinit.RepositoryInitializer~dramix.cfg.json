@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/dramix",
+        "create path (nt:unstructured) /content/dam/dramix/jcr:content",
+        "set properties on /content/dam/dramix/jcr:content\n  set cq:conf{String} to /conf/dramix\n  set jcr:title{String} to \"DRAMIX SOLUTIONS\"\nend"
+    ]
+}
