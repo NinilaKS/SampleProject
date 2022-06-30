@@ -3,25 +3,29 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:template="/conf/dramix/settings/wcm/templates/spa-next-remote-page"
+        cq:template="/conf/dramix/settings/wcm/templates/dramix-home-page"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="core/wcm/components/page/v2/page">
+        sling:resourceType="dramix/components/page">
         <root
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wcm/foundation/components/responsivegrid">
-            <responsivegrid
+            sling:resourceType="dramix/components/container"
+            layout="responsiveGrid">
+            <experiencefragment-header
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid"
-                editable="{Boolean}true">
-                <cq:responsive jcr:primaryType="nt:unstructured"/>
-            </responsivegrid>
+                sling:resourceType="dramix/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/dramix/us/en/site/header/master"/>
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dramix/components/container"
+                editable="{Boolean}true"
+                layout="responsiveGrid"/>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone
                     jcr:primaryType="nt:unstructured"
                     title="Smaller Screen"
-                    width="{Long}650"/>
+                    width="{Long}768"/>
                 <tablet
                     jcr:primaryType="nt:unstructured"
                     title="Tablet"
