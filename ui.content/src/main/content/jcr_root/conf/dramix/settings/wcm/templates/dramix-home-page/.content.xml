@@ -2,10 +2,10 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Template">
     <jcr:content
-        cq:lastModified="{Date}2022-06-30T22:46:35.879+05:30"
+        cq:lastModified="{Date}2022-06-30T22:53:11.543+05:30"
         cq:lastModifiedBy="admin"
         cq:templateType="/conf/dramix/settings/wcm/template-types/page"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Dramix Home Page"
+        jcr:title="Dramix Home Page Template"
         status="enabled"/>
 </jcr:root>
