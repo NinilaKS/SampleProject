@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.adobe.dramix.core.helper.ContactHelper;
 
+/**
+ * @author vmaindala001
+ *
+ */
 public interface Contact {
 
 	List<ContactHelper> getContactAreaDetails();

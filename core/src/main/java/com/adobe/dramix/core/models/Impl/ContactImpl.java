@@ -12,15 +12,18 @@ import org.apache.sling.models.annotations.Model;
 import com.adobe.dramix.core.helper.ContactHelper;
 import com.adobe.dramix.core.models.Contact;
 
+/**
+ * @author vmaindala001
+ *
+ */
 @Model(adaptables = SlingHttpServletRequest.class,adapters = Contact .class,defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class ContactImpl implements Contact {
-
 	@Inject
 	Resource resource;
 	@Override
 	public List<ContactHelper> getContactAreaDetails() {
 		ArrayList<ContactHelper> object=new ArrayList<>();
-		Resource resource2 = resource.getChild("multifield");
+		Resource resource2 = resource.getChild("expertlist");
 		if (resource2!=null) {
 			for(Resource adaptresource:resource2.getChildren()) {
 				ContactHelper contacthelper = new ContactHelper();

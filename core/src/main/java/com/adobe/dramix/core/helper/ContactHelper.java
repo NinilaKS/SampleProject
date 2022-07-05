@@ -1,31 +1,37 @@
 package com.adobe.dramix.core.helper;
 
+/**
+ * @author vmaindala001
+ *
+ */
 public class ContactHelper {
-	private String imagepath;
-	private String imagetitle;
-	private String imagedescription;
+	
+	private String imagePath;
+	private String imageTitle;
+	private String imageDescription;
+	
 	
 public String getImagepath() {
-		return imagepath;
+		return imagePath;
 	}
 
 	public void setImagepath(String imagepath) {
-		this.imagepath = imagepath;
+		this.imagePath = imagepath;
 	}
 
-	public String getImagetitle() {
-		return imagetitle;
+	public String getImageTitle() {
+		return imageTitle;
 	}
 
 	public void setImagetitle(String imagetitle) {
-		this.imagetitle = imagetitle;
+		this.imageTitle = imagetitle;
 	}
 
 	public String getImagedescription() {
-		return imagedescription;
+		return imageDescription;
 	}
 
 	public void setImagedescription(String imagedescription) {
-		this.imagedescription = imagedescription;
+		this.imageDescription = imagedescription;
 	}
 }
