@@ -17,7 +17,9 @@ import com.adobe.dramix.core.models.SolutionComponent;
 
 
 
+
 /**
+ * @author rdomala001
  * The Class SolutionComponentImpl.
  */
 @Model(
@@ -41,10 +43,10 @@ public class SolutionComponentImpl implements SolutionComponent{
 		try {
 			Resource challengeDetailBean=componentResource.getChild("challengedetailswithmap");
 			if(challengeDetailBean!=null){
-				for (Resource bookBean : challengeDetailBean.getChildren()) {
+				for (Resource challengeBean : challengeDetailBean.getChildren()) {
 
 
-					challengeDetailsBean.add(new SolutionPojo(bookBean));
+					challengeDetailsBean.add(new SolutionPojo(challengeBean));
 				}
 			}
 		}catch (Exception e){
@@ -63,10 +65,10 @@ public class SolutionComponentImpl implements SolutionComponent{
 		try {
 			Resource softwareDetailBean=componentResource.getChild("softwaremultifield");
 			if(softwareDetailBean!=null){
-				for (Resource bookBean : softwareDetailBean.getChildren()) {
+				for (Resource softwareBean : softwareDetailBean.getChildren()) {
 
 
-					softwareDetailsBean.add(new SolutionPojo(bookBean));
+					softwareDetailsBean.add(new SolutionPojo(softwareBean));
 				}
 			}
 		}catch (Exception e){
