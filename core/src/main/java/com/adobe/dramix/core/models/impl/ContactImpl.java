@@ -1,4 +1,4 @@
-package com.adobe.dramix.core.models.Impl;
+package com.adobe.dramix.core.models.impl;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,12 +12,10 @@ import org.apache.sling.models.annotations.Model;
 import com.adobe.dramix.core.helper.ContactHelper;
 import com.adobe.dramix.core.models.Contact;
 
-/**
- * @author vmaindala001
- *
- */
+
 @Model(adaptables = SlingHttpServletRequest.class,adapters = Contact .class,defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class ContactImpl implements Contact {
+
 	@Inject
 	Resource resource;
 	@Override

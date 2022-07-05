@@ -14,7 +14,7 @@
                     <downloads
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Downloads Label"
+                        fieldLabel="Download Label"
                         name="./downloads"/>
                     <downloadtitle
                         jcr:primaryType="nt:unstructured"

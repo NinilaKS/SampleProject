@@ -1,15 +1,9 @@
 package com.adobe.dramix.core.helper;
 
-/**
- * @author vmaindala001
- *
- */
 public class ContactHelper {
-	
 	private String imagePath;
 	private String imageTitle;
 	private String imageDescription;
-	
 	
 public String getImagepath() {
 		return imagePath;
@@ -19,7 +13,7 @@ public String getImagepath() {
 		this.imagePath = imagepath;
 	}
 
-	public String getImageTitle() {
+	public String getImagetitle() {
 		return imageTitle;
 	}
 
@@ -27,6 +21,7 @@ public String getImagepath() {
 		this.imageTitle = imagetitle;
 	}
 
+	
 	public String getImagedescription() {
 		return imageDescription;
 	}
