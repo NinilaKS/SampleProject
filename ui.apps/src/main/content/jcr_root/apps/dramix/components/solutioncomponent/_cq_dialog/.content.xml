@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="nt:unstructured"
-    jcr:title="solution challenge"
+    jcr:title="Solution Challenge"
     sling:resourceType="cq/gui/components/authoring/dialog">
     <content
         granite:class="cmp-author_editor"
@@ -15,18 +15,18 @@
                     <solutionheading
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="First Name"
+                        fieldLabel="Solution Heading"
                         name="./solutionheading"/>
                     <solutiondesc
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Last Name"
+                        fieldLabel="Solution Desc"
                         name="./solutiondesc"
                         required="{Boolean}false"/>
                     <well-multifield
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/well"
-                        fieldLabel="Books">
+                        fieldLabel="Challenge Details">
                         <items jcr:primaryType="nt:unstructured">
                             <challengedetailswithmap
                                 jcr:primaryType="nt:unstructured"
@@ -37,18 +37,18 @@
                                 <field
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/coral/foundation/container"
-                                    emptyText="Books Details"
+                                    emptyText="Challenge Details"
                                     name="./challengedetailswithmap">
                                     <items jcr:primaryType="nt:unstructured">
                                         <challengeheading
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                            fieldLabel="challenge Name"
+                                            fieldLabel="Challenge Name"
                                             name="./challengeheading"/>
                                         <challengedesc
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                            fieldLabel="challenge desc"
+                                            fieldLabel="Challenge Desc"
                                             name="./challengedesc"/>
                                     </items>
                                 </field>
@@ -64,7 +64,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
                                 composite="{Boolean}true"
-                                fieldLabel="Software details"
+                                fieldLabel="Software Details"
                                 required="{Boolean}false">
                                 <field
                                     jcr:primaryType="nt:unstructured"
@@ -74,12 +74,12 @@
                                         <softwares
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                            fieldLabel="softwareheading"
+                                            fieldLabel="Software Heading"
                                             name="./softwares"/>
                                         <desc
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                            fieldLabel="softwaredesc"
+                                            fieldLabel="Software Desc"
                                             name="./desc"/>
                                     </items>
                                 </field>
@@ -89,12 +89,12 @@
                     <temporheading
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="temporheading"
+                        fieldLabel="Heading Heading"
                         name="./heading"/>
                     <tempordescr
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="tempordescr"
+                        fieldLabel="Heading Desc"
                         name="./headingdesc"/>
                 </items>
             </column>

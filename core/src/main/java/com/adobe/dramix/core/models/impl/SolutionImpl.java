@@ -21,6 +21,7 @@ import com.adobe.dramix.core.models.Solution;
 
 
 
+
 @Model(adaptables = SlingHttpServletRequest.class,
 adapters = Solution.class,
 
@@ -34,6 +35,9 @@ private static final Logger LOG = LoggerFactory.getLogger(SolutionImpl.class);
 
     @Inject
     Resource resource;
+    
+    @Inject
+    Resource componentResource;
 
     @SlingObject
     ResourceResolver resourceResolver;
@@ -80,5 +84,7 @@ private static final Logger LOG = LoggerFactory.getLogger(SolutionImpl.class);
         }
         return challengeDetailsMap;
     }
+    
+   
 
 }
