@@ -13,14 +13,9 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="dramix/components/container"
             layout="responsiveGrid">
-            <separator
+            <footer
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="dramix/components/separator"/>
-            <text
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="dramix/components/text"
-                text="&lt;p>Copyright 2022, DRAMIX SOLUTIONS.&amp;nbsp;All rights reserved.&lt;/p>&#xd;&#xa;&lt;p>345 Park Avenue,&amp;nbsp;San Jose, CA 95110-2704, USA&lt;/p>&#xd;&#xa;"
-                textIsRich="true"/>
+                sling:resourceType="dramix/components/footer"/>
         </root>
     </jcr:content>
 </jcr:root>
