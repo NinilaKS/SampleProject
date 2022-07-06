@@ -12,7 +12,6 @@ import org.apache.sling.models.annotations.Model;
 import com.adobe.dramix.core.models.Footer;
 
 @Model(adaptables = Resource.class, adapters = Footer.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL, resourceType = "dramix/components/footer")
-
 public class FooterImpl implements Footer {
 	@Inject
 	private String footerLogo;
