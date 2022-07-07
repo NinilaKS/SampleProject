@@ -2,50 +2,55 @@ package com.adobe.dramix.core.models.impl;
 
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.ChildResource;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 import com.adobe.dramix.core.models.Footer;
 
-@Model(adaptables = Resource.class, adapters = Footer.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL, resourceType = "dramix/components/footer")
-
+@Model(adaptables = Resource.class, adapters = Footer.class, 
+       defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL, 
+       resourceType = FooterImpl.RESOURCE_TYPE)
 public class FooterImpl implements Footer {
-	@Inject
+	
+	protected final static String RESOURCE_TYPE = "dramix/components/footer";
+	
+	@ValueMapValue
 	private String footerLogo;
 
-	@Inject
+	@ChildResource
 	@Named("footerlinks")
 	private List<Link> links;
 
-	@Inject
+	@ValueMapValue
 	private String copyRight;
 
-	@Inject
+	@ValueMapValue
 	private String termsOfUseTitle;
 
-	@Inject
+	@ValueMapValue
 	private String termsOfUseLink;
 
-	@Inject
+	@ValueMapValue
 	private String privacyPolicyTitle;
 
-	@Inject
+	@ValueMapValue
 	private String privacyPolicyLink;
 
-	@Inject
+	@ValueMapValue
 	private String fbLink;
 
-	@Inject
+	@ValueMapValue
 	private String linkedinLink;
 
-	@Inject
+	@ValueMapValue
 	private String youtubeLink;
 
-	@Inject
+	@ValueMapValue
 	private String logoAlt;
 
 	@Override
