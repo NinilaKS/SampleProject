@@ -2,8 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2022-07-05T16:25:27.453+05:30"
-        cq:lastModifiedBy="admin"
         cq:tags="[]"
         cq:template="/conf/dramix/settings/wcm/templates/xf-web-variation"
         cq:xfMasterVariation="{Boolean}true"
@@ -15,74 +13,14 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="dramix/components/container"
             layout="responsiveGrid">
-            <footer
-                jcr:created="{Date}2022-07-05T16:07:45.806+05:30"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2022-07-05T16:25:27.426+05:30"
-                jcr:lastModifiedBy="admin"
+            <separator
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="dramix/components/footer"
-                copyRight="Copyright © 2022 Bekaert. All rights reserved"
-                fbLink="https://www.facebook.com"
-                footerLogo="/content/dam/dramix/Logotype.png"
-                linkedinLink="https://www.linkedin.com"
-                logoAlt="Logo Image"
-                privacyPolicyLink="#"
-                privacyPolicyTitle="Privacy Policy"
-                termsOfUseLink="#"
-                termsOfUseTitle="Terms of Use"
-                youtubeLink="https://www.youtube.com">
-                <footerlinks jcr:primaryType="nt:unstructured">
-                    <item0
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="Products"
-                        linkUrl="#"/>
-                    <item1
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="Projects"
-                        linkUrl="#"/>
-                    <item2
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="About Us"
-                        linkUrl="#"/>
-                    <item3
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="Sustainability"
-                        linkUrl="#"/>
-                    <item4
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="Softwares"
-                        linkUrl="#"/>
-                    <item5
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="Certificates"
-                        linkUrl="#"/>
-                    <item6
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="Whitepapers"
-                        linkUrl="#"/>
-                    <item7
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="Expert Talks"
-                        linkUrl="#"/>
-                    <item8
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="Contact"
-                        linkUrl="#"/>
-                    <item9
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="Request a quote"
-                        linkUrl="#"/>
-                    <item10
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="Upcoming events"
-                        linkUrl="#"/>
-                    <item11
-                        jcr:primaryType="nt:unstructured"
-                        linkTitle="FAQ"
-                        linkUrl="#"/>
-                </footerlinks>
-            </footer>
+                sling:resourceType="dramix/components/separator"/>
+            <text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dramix/components/text"
+                text="&lt;p>Copyright 2022, DRAMIX SOLUTIONS.&amp;nbsp;All rights reserved.&lt;/p>&#xd;&#xa;&lt;p>345 Park Avenue,&amp;nbsp;San Jose, CA 95110-2704, USA&lt;/p>&#xd;&#xa;"
+                textIsRich="true"/>
         </root>
     </jcr:content>
 </jcr:root>
