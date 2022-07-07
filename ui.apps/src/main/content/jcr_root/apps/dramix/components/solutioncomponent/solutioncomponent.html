@@ -1,23 +1,37 @@
-<h1>solutionomponent</h1>
-<div data-sly-use.author="${'com.adobe.dramix.core.models.SolutionComp' @ rAttribute='TestAttribute'}"></div>
+<div
+	data-sly-use.solutioncomponent="${'com.adobe.dramix.core.models.SolutionComp' @ rAttribute='TestAttribute'}"
+	data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></div>
 
-    <div> ${properties.solutionheading} </div>
-    <div>${properties.solutiondesc}</div>
-    <div data-sly-list="${author.challengeDetailsWithMap}">
-        <p> <b>${item.challengeHeading} </b></p>
-        <p> <b>${item.challengeDesc}</b> </p>
-        <p> <b>${item.challengeLink}</b> </p>
-    </div>
+<div>${properties.solutionheading}</div>
+<div>${properties.solutiondesc}</div>
+<div data-sly-list="${solutioncomponent.challengeDetailsWithMap}">
+	<p>
+		<b>${item.challengeHeading} </b>
+	</p>
+	<p>
+		<b>${item.challengeDesc}</b>
+	</p>
+	<p>
+		<b>${item.challengeLink}</b>
+	</p>
+</div>
 
-     <div data-sly-list.item="${author.softwareDetailsWithMap}">
-        <p><b>${item.softwares} </b></p>
-        <p><b>${item.desc}</b> </p>
-        <p> <b>${item.softwareLink}</b> </p>
-    </div>
-    <div>${properties.heading}</div>
-    <div>${properties.headingdesc}</div>
+<div data-sly-list.item="${solutioncomponent.softwareDetailsWithMap}">
+	<p>
+		<b>${item.softwares} </b>
+	</p>
+	<p>
+		<b>${item.desc}</b>
+	</p>
+	<p>
+		<b>${item.softwareLink}</b>
+	</p>
+</div>
+<div>${properties.heading}</div>
+<div>${properties.headingdesc}</div>
 
-    <div data-sly-resource="${'custom' @ resourceType='/apps/myproject/components/button'}"></div>
+<sly
+	data-sly-call="${templates.placeholder @ isEmpty = !solutioncomponent.challengeDetailsWithMap}"></sly>
 
 
 

@@ -1,47 +1,33 @@
 package com.adobe.dramix.core.helper;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 
 /**
  * @author rdomala001
  *
  */
-
+@Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class SolutionPojo {
-	private static final Logger LOG = LoggerFactory.getLogger(SolutionPojo.class);
+	
+	@ValueMapValue
 	private String challengeHeading;
+	
+	@ValueMapValue
 	private String challengeDesc;
+	
+	@ValueMapValue
 	private String softwares;
+	
+	@ValueMapValue
 	private String desc;
+	
+	@ValueMapValue
 	private String link;
-	/**
-	 * @param resource
-	 *
-	 */
-	public SolutionPojo(Resource resource){
-		try {
-			if(StringUtils.isNotBlank(resource.getValueMap().get("challengeheading", String.class))) {
-				this.challengeHeading = resource.getValueMap().get("challengeheading", String.class);
-			}
-			if(StringUtils.isNotBlank(resource.getValueMap().get("challengedesc", String.class))) {
-				this.challengeDesc=resource.getValueMap().get("challengedesc",String.class);
-			}
-			if(StringUtils.isNotBlank(resource.getValueMap().get("softwares", String.class))) {
-				this.softwares=resource.getValueMap().get("softwares",String.class);
-			}
-			if(StringUtils.isNotBlank(resource.getValueMap().get("desc", String.class))) {
-				this.desc=resource.getValueMap().get("desc",String.class);
-			}
 
-		}
-		catch (Exception e){
-			LOG.info("\n BEAN ERROR : {}",e.getMessage());
-		}
-	}
 	public String getChallengeHeading() {
 		return challengeHeading;
 	}
