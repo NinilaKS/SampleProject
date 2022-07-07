@@ -1,0 +1,23 @@
+<h1>solutioncomponent</h1>
+<div data-sly-use.author="${'com.adobe.dramix.core.models.SolutionComponent' @ rAttribute='TestAttribute'}"></div>
+
+    <div> ${properties.solutionheading} </div>
+    <div>${properties.solutiondesc}   </div>
+    <div data-sly-list.item="${author.challengeDetailsWithMap}">
+        <p> <b>${item.challengeHeading} </b></p>
+        <p> <b>${item.challengeDesc}</b> </p>
+    </div>
+
+     <div data-sly-list.item="${author.softwareDetailsWithMap}">
+        <p><b>${item.softwares} </b></p>
+        <p><b>${item.desc}</b> </p>
+    </div>
+    <div>${properties.heading}</div>
+    <div>${properties.headingdesc}</div>
+
+    <div data-sly-resource="${'custom' @ resourceType='/apps/myproject/components/button'}"></div>
+
+
+
+
+

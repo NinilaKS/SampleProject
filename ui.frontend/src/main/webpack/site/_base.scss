@@ -1,27 +1,35 @@
 //== Base
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
 
 html,
 body {
     margin: 0;
-    font-size:   $font-size;
+    font-size: $font-size;
     font-family: $font-family;
     line-height: $font-height;
-    color:       $color-foreground;
-    background:  $color-background;
+    color: $color-foreground;
+    background: $color-background;
 
     @media (prefers-color-scheme: dark) {
-        color:       $color-foreground-dark;
-        background:  $color-background-dark;
+        color: $color-foreground-dark;
+        background: $color-background-dark;
     }
 }
 
 
 a {
-    color: $color-link;
+    color: currentColor;
+    text-decoration: none;
+}
 
-    @media (prefers-color-scheme: dark) {
-        color: $color-link-dark;
-    }
+input,
+select,
+textarea {
+    font-family: $font-family;
 }
 
 button,
@@ -30,4 +38,37 @@ optgroup,
 select,
 textarea {
     font: inherit;
+}
+
+dl,
+ol,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+dd,
+dt {
+    margin: 0;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    touch-action: manipulation;
+    user-select: none;
 }
