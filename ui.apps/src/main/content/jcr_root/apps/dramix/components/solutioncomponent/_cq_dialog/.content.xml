@@ -44,12 +44,18 @@
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             fieldLabel="Challenge Name"
-                                            name="./challengeheading"/>
+                                            name="challengeHeading"/>
                                         <challengedesc
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             fieldLabel="Challenge Desc"
-                                            name="./challengedesc"/>
+                                            name="challengeDesc"/>
+                                        <link
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                            fieldDescription="Link to a content page, external URL or page anchor."
+                                            fieldLabel="Link"
+                                            name="challengeLink"/>
                                     </items>
                                 </field>
                             </challengedetailswithmap>
@@ -75,12 +81,18 @@
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             fieldLabel="Software Heading"
-                                            name="./softwares"/>
+                                            name="softwares"/>
                                         <desc
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             fieldLabel="Software Desc"
-                                            name="./desc"/>
+                                            name="desc"/>
+                                        <link
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                            fieldDescription="Link to a content page, external URL or page anchor."
+                                            fieldLabel="Link"
+                                            name="softwareLink"/>
                                     </items>
                                 </field>
                             </softwaredetailswithmap>

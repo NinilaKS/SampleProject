@@ -6,13 +6,22 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+/**
+ * @author rdomala001
+ *
+ */
+
 public class SolutionPojo {
 	private static final Logger LOG = LoggerFactory.getLogger(SolutionPojo.class);
 	private String challengeHeading;
 	private String challengeDesc;
 	private String softwares;
 	private String desc;
-
+	private String link;
+	/**
+	 * @param resource
+	 *
+	 */
 	public SolutionPojo(Resource resource){
 		try {
 			if(StringUtils.isNotBlank(resource.getValueMap().get("challengeheading", String.class))) {
@@ -46,5 +55,9 @@ public class SolutionPojo {
 	public String getDesc() {
 		return desc;
 	}
+	public String getLink() {
+		return link;
+	}
+	
 
 }
