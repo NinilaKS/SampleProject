@@ -1,16 +1,17 @@
 package com.adobe.dramix.core.models.impl;
 
-import javax.inject.Inject;
-
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class Link {
-	@Inject
+
+	@ValueMapValue
 	private String linkTitle;
-	@Inject
+
+	@ValueMapValue
 	private String linkUrl;
 
 	public String getLinkTitle() {
@@ -20,5 +21,4 @@ public class Link {
 	public String getLinkUrl() {
 		return linkUrl;
 	}
-
 }
