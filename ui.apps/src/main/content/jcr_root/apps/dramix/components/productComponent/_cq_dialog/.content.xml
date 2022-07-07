@@ -11,7 +11,7 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <multifieldwithbean
+                    <product
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Multifield With Bean"
                         sling:resourceType="granite/ui/components/coral/foundation/container">
@@ -32,7 +32,7 @@
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/container"
                                             emptyText="Products"
-                                            name="./listing">
+                                            name="./products">
                                             <items jcr:primaryType="nt:unstructured">
                                                 <questiontext
                                                     jcr:primaryType="nt:unstructured"
@@ -64,7 +64,7 @@
                                 </items>
                             </well>
                         </items>
-                    </multifieldwithbean>
+                    </product>
                 </items>
             </column>
         </items>
