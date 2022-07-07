@@ -1,29 +1,30 @@
 package com.adobe.dramix.core.models.impl;
 
-import org.apache.sling.api.SlingHttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.adobe.dramix.core.models.BannerDetail;
 import com.adobe.dramix.core.models.Listing;
 
-import javax.inject.Inject;
-import java.util.*;
-
 
 @Model(
-		adaptables = SlingHttpServletRequest.class,
+		adaptables = Resource.class,
 		adapters = Listing.class,
-		defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
+		defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,
+		resourceType = "dramix/components/banner-home"
 		)
 public class ListingImpl implements Listing {
 
 	private static final Logger LOG = LoggerFactory.getLogger(ListingImpl.class);
 
-	@Inject
+	@Self
 	Resource componentResource;
 
 	/**
