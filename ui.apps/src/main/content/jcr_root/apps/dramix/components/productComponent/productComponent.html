@@ -1,0 +1,13 @@
+<sly data-sly-use.productDetail="com.adobe.dramix.core.models.Product"></sly>
+
+
+<div data-sly-resource="${'imageComponent' @ resourceType='/apps/myproject/components/image'}"></div>
+
+  <div data-sly-list.item="${productDetail.productDetails}">
+        <p> Question : <b>${item.questionText} </b></p>
+        <p> Answer : <b>${item.answerText}</b> </p>
+        <p> Button Text : <b>${item.buttonText}</b> </p>
+        <p> Button LinkUrl : <b>${item.buttonLink}</b> </p>
+    </div>
+
+
