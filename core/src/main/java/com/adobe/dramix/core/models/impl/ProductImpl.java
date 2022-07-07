@@ -3,10 +3,12 @@ package com.adobe.dramix.core.models.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
+import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,16 +16,15 @@ import com.adobe.dramix.core.models.Product;
 import com.adobe.dramix.core.models.ProductDetail;
 
 @Model(
-		adaptables = Resource.class,
+		adaptables = SlingHttpServletRequest.class,
 		adapters = Product.class,
-		defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,
-		resourceType = "dramix/components/productComponent"
+		defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 		)
 public class ProductImpl implements Product {
 
 	private static final Logger LOG = LoggerFactory.getLogger(ProductImpl.class);
 
-	@Self
+	@Inject
 	Resource componentResource;
 
 	/**
