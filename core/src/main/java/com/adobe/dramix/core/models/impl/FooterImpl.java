@@ -12,8 +12,13 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 import com.adobe.dramix.core.models.Footer;
 
-@Model(adaptables = Resource.class, adapters = Footer.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL, resourceType = "dramix/components/footer")
+@Model(adaptables = Resource.class, adapters = Footer.class, 
+       defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL, 
+       resourceType = FooterImpl.RESOURCE_TYPE)
 public class FooterImpl implements Footer {
+	
+	protected final static String RESOURCE_TYPE = "dramix/components/footer";
+	
 	@ValueMapValue
 	private String footerLogo;
 

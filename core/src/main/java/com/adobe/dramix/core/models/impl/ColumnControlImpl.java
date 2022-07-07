@@ -12,8 +12,15 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 import com.adobe.dramix.core.models.ColumnControl;
 
-@Model(adaptables = Resource.class, adapters = ColumnControl.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL, resourceType = "dramix/components/columncontrol")
+@Model(adaptables = Resource.class, adapters = ColumnControl.class, 
+       defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL, 
+       resourceType = ColumnControlImpl.RESOURCE_TYPE)
 public class ColumnControlImpl implements ColumnControl {
+
+	protected final static String RESOURCE_TYPE = "dramix/components/columncontrol";
+
+	private final static int GRID_SIZE = 12;
+
 	@ValueMapValue
 	private int numberOfColumns;
 
@@ -25,7 +32,7 @@ public class ColumnControlImpl implements ColumnControl {
 	private void init() {
 		list = new ArrayList<>();
 		if (numberOfColumns > 0) {
-			countClass = 12 / numberOfColumns;
+			countClass = GRID_SIZE / numberOfColumns;
 			for (int i = 0; i < numberOfColumns; i++) {
 				list.add(i);
 			}
