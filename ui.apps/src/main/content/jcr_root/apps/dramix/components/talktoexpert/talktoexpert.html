@@ -1,6 +1,7 @@
 <div class="cmp-contact-row">
-	<div class="cmp-contact-wrapper">
-		<img src="${properties.bannerimage}" />
+	<div class="cmp-contact-wrapper"
+		style="background-image: url('${properties.bannerimage @ context='styleString'}');">
+		<!-- <img src="Fond.png" /> -->
 		<div class="cmp-columncontrol">
 			<div class="cmp-row">
 				<div class="cmp-column-contact-5">
@@ -9,7 +10,8 @@
 						<p>${properties.bannerdescription}</p>
 						<div class="cmp-box-button">
 							<a href="${properties.buttonLink}"> <span>${properties.buttonlabel}</span>
-								<span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Arrow.png" /></span>
+								<span><img
+									src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Arrow.png" /></span>
 							</a>
 						</div>
 					</div>
