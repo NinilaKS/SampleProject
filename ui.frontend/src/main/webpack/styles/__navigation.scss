@@ -1,0 +1,236 @@
+/*-------------------------------------------------*\
+   General style sheet for the Navigation Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Navigation With Image
+   - Custom Bottom border line
+   - Navigation Top Panel
+   - Fixed Header
+   - Image with Heading
+   
+\*-------------------------------------------------*/
+
+/*-------------------------------------------*\
+       Navigation With Image
+\*-------------------------------------------*/
+.header-navigation {
+
+    .navbar,
+    .header-top-panel {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 4.4rem;
+
+        .navigation-wrapper {
+            display: flex;
+            flex-wrap: inherit;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+
+            .navbar-brand {
+                margin-right: 3rem;
+
+                .navigation-logo {
+                    display: inline-block;
+                    vertical-align: text-top
+                }
+            }
+
+            .navbar-menus,
+            .navbar-quote {
+                display: flex;
+                flex-basis: auto;
+                flex-grow: 1;
+                align-items: center;
+
+                .navbar-nav {
+                    flex-direction: row;
+                    padding-left: 0;
+                    margin-bottom: 0;
+                    list-style: none;
+                    display: flex;
+
+                    .nav-item {
+                        display: list-item;
+
+                        .nav-link {
+                            display: block;
+                            padding: 0.5rem 1rem;
+                            text-decoration: none;
+                            color: $color-white;
+                            font-family: $helvetica;
+                            font-weight: $font-weight-300;
+                            font-size: $font-size-24;
+                        }
+                    }
+
+                    .cmp-button {
+                        display: inline-block;
+                        border: 1px solid $color-white;
+                        padding: 15px 20px;
+                        cursor: pointer;
+                        text-decoration: none;
+
+                        span {
+                            font-family: $helvetica;
+                            font-style: $font-weight-normal;
+                            font-weight: $font-weight-700;
+                            font-size: $font-size-16;
+                            line-height: $line-height-18;
+                            text-align: center;
+                            white-space: nowrap;
+                            vertical-align: middle;
+                            user-select: none;
+                            color: $color-white;
+
+                        }
+                    }
+                }
+            }
+
+            .navbar-quote {
+                justify-content: flex-end;
+            }
+        }
+    }
+/*-------------------------------------------*\
+      Custom Bottom border line
+\*-------------------------------------------*/
+    hr {
+        &.header-border-line {
+            margin: 0;
+            border-color: $color-white;
+            opacity: 0.2;
+        }
+    }
+/*-------------------------------------------*\
+            Navigation Top Panel
+\*-------------------------------------------*/
+    .header-top-panel {
+        .navigation-wrapper-top {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+
+            .custom-dropdown {
+                li {
+                    border: 1px solid green;
+                    width: 100%;
+                    cursor: pointer;
+                    list-style: none;
+
+                    &.init {
+                        position: relative;
+
+                        &::after {
+                            content: "\2193 ";
+                            position: absolute;
+                            right: 5px;
+                        }
+
+                        &::before {
+                            content: "\2191 ";
+                            position: absolute;
+                            right: 0;
+                        }
+                    }
+                }
+
+                li:not(.init) {
+                    display: none;
+                    float: left;
+                }
+            }
+
+
+
+            .selectContainer {
+                margin-right: auto
+            }
+
+            .navbar-menus {
+                display: flex;
+                align-items: center;
+
+                .navbar-nav {
+                    flex-direction: row;
+                    list-style: none;
+                    display: flex;
+
+                    .nav-item {
+                        display: list-item;
+
+                        .nav-link {
+                            display: block;
+                            text-decoration: none;
+                            color: $color-white;
+                            font-family: $helvetica;
+                            font-weight: $font-weight-400;
+                            font-size: $font-size-16;
+                            line-height: $line-height-18;
+
+                            img {
+                                margin-right: 10px;
+                            }
+                        }
+
+                        &.mr-2 {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+/*-------------------------------------------*\
+           Fixed Header
+\*-------------------------------------------*/
+    &.fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        bottom: 0;
+    }
+}
+/*-------------------------------------------*\
+         Image with Heading
+\*-------------------------------------------*/
+.header-container {
+    position: relative;
+
+    .header-content {
+        position: absolute;
+        left: 17%;
+        right: 20%;
+        top: 50%;
+        text-align: left;
+        transform: translateY(-50%);
+
+        &::before,
+        &::after {
+            display: table;
+            content: " ";
+        }
+
+        h1 {
+            font-size: 80px;
+            color: $color-white;
+            font-size: $font-size-80;
+            line-height: $line-height-81;
+            font-weight: $font-weight-300;
+        }
+    }
+}

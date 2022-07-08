@@ -1,0 +1,10 @@
+<div class="cmp-columncontrol" data-sly-use.colcontrol="com.adobe.dramix.core.models.ColumnControl" data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+	<div class="cmp-row">
+		<div class="column-${colcontrol.columnCount}" data-sly-repeat="${colcontrol.list}">
+			<div class="column-inner">
+				<div data-sly-resource ="${itemList.count @ resourceType='core/wcm/components/container/v1/container'}"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !colcontrol.list}"></sly>
