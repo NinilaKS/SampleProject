@@ -27,24 +27,23 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <solutionheading
+                                            <heading
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                fieldLabel="Solution Heading"
-                                                name="./solutionheading"/>
-                                            <solutiondesc
+                                                fieldLabel="Heading"
+                                                name="./heading"/>
+                                            <title
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                fieldLabel="Solution Desc"
-                                                name="./solutiondesc"
-                                                required="{Boolean}false"/>
+                                                fieldLabel="Title"
+                                                name="./title"/>
                                         </items>
                                     </column>
                                 </items>
                             </columns>
                         </items>
                     </properties>
-                    <challengedetails
+                    <challengeDetails
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Challenge Details"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
@@ -64,37 +63,50 @@
                                                 sling:resourceType="granite/ui/components/coral/foundation/well"
                                                 fieldLabel="Challenge Details">
                                                 <items jcr:primaryType="nt:unstructured">
-                                                    <challengedetailswithmap
+                                                    <challengeDetailsMultifield
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
                                                         composite="{Boolean}true"
-                                                        fieldLabel="Challenge Details"
-                                                        required="{Boolean}false">
+                                                        fieldLabel="Challenge Details">
                                                         <field
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="granite/ui/components/coral/foundation/container"
                                                             emptyText="Challenge Details"
-                                                            name="./challengedetails">
+                                                            name="./challengeDetails">
                                                             <items jcr:primaryType="nt:unstructured">
-                                                                <challengeheading
+                                                                <heading
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                                    fieldLabel="Challenge Name"
-                                                                    name="challengeHeading"/>
-                                                                <challengedesc
+                                                                    fieldLabel="Heading"
+                                                                    name="heading"/>
+                                                                <title
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                                    fieldLabel="Challenge Desc"
-                                                                    name="challengeDesc"/>
-                                                                <link
+                                                                    fieldLabel="Title"
+                                                                    name="title"/>
+                                                                <subHeading
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Sub Heading"
+                                                                    name="subHeading"/>
+                                                                <description
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                    fieldLabel="Description"
+                                                                    name="description"/>
+                                                                <button
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Button Label"
+                                                                    name="buttonLabel"/>
+                                                                <buttonUrl
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="cq/gui/components/coral/common/form/pagefield"
-                                                                    fieldDescription="Link to a content page, external URL or page anchor."
-                                                                    fieldLabel="Link"
-                                                                    name="challengeLink"/>
+                                                                    fieldLabel="Button URL"
+                                                                    name="buttonUrl"/>
                                                             </items>
                                                         </field>
-                                                    </challengedetailswithmap>
+                                                    </challengeDetailsMultifield>
                                                 </items>
                                             </well-multifield>
                                         </items>
@@ -102,10 +114,10 @@
                                 </items>
                             </columns>
                         </items>
-                    </challengedetails>
-                    <softwaredetails
+                    </challengeDetails>
+                    <solutions
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Software Details"
+                        jcr:title="Solutions"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -118,44 +130,42 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <softwaremultifield
+                                            <solutionsWell
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/well"
-                                                fieldLabel="softwares">
+                                                fieldLabel="Solutions">
                                                 <items jcr:primaryType="nt:unstructured">
-                                                    <softwaredetailswithmap
+                                                    <solutionsMultifield
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
                                                         composite="{Boolean}true"
-                                                        fieldLabel="Software Details"
-                                                        required="{Boolean}false">
+                                                        fieldLabel="Solutions">
                                                         <field
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="granite/ui/components/coral/foundation/container"
-                                                            name="./softwaredetails">
+                                                            name="./solutions">
                                                             <items jcr:primaryType="nt:unstructured">
-                                                                <softwares
+                                                                <heading
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                                    fieldLabel="Software Heading"
-                                                                    name="softwares"/>
-                                                                <desc
+                                                                    fieldLabel="Heading"
+                                                                    name="heading"/>
+                                                                <description
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                                    fieldLabel="Software Desc"
-                                                                    name="desc"/>
+                                                                    fieldLabel="Description"
+                                                                    name="description"/>
                                                                 <link
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="cq/gui/components/coral/common/form/pagefield"
-                                                                    fieldDescription="Link to a content page, external URL or page anchor."
                                                                     fieldLabel="Link"
-                                                                    name="softwareLink"/>
+                                                                    name="link"/>
                                                             </items>
                                                         </field>
-                                                    </softwaredetailswithmap>
+                                                    </solutionsMultifield>
                                                 </items>
-                                            </softwaremultifield>
-                                            <backgroundimage
+                                            </solutionsWell>
+                                            <backgroundImage
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                                                 fieldLabel="Background Image"
@@ -165,38 +175,7 @@
                                 </items>
                             </columns>
                         </items>
-                    </softwaredetails>
-                    <discoverdetails
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="Discover Details"
-                        sling:resourceType="granite/ui/components/coral/foundation/container"
-                        margin="{Boolean}true">
-                        <items jcr:primaryType="nt:unstructured">
-                            <columns
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
-                                margin="{Boolean}true">
-                                <items jcr:primaryType="nt:unstructured">
-                                    <column
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/container">
-                                        <items jcr:primaryType="nt:unstructured">
-                                            <temporheading
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                fieldLabel="Discover Heading"
-                                                name="./heading"/>
-                                            <tempordescr
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                fieldLabel="Discover Description"
-                                                name="./headingDesc"/>
-                                        </items>
-                                    </column>
-                                </items>
-                            </columns>
-                        </items>
-                    </discoverdetails>
+                    </solutions>
                 </items>
             </tabs>
         </items>
