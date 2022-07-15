@@ -1,0 +1,93 @@
+<section class="${wcmmode.edit ? '' : 'Homepage'}" >
+	<div class="container">
+		<div class="top-header">
+		   <sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
+			<div class="right-side">
+				<ul>
+					<li><span><img src="Asset/Picto - Softwate tools.png"></span>Software tools</li>
+					<li><span><img src="Asset/Picto - upcoming events.png"></span>Upcoming Events</li>
+				</ul>
+			</div>
+		</div>
+    		
+    	<div class="menu-bar">
+			<sly data-sly-resource="${'navigation' @ resourceType='dramix/components/navigation'}"></sly>
+		</div>
+
+		<div class="List-catecory" data-sly-test="${wcmmode.disabled}">
+			<ul class="list">
+				<li class="first-list parent active">
+					<div class="title">
+						<h1>Making your floor more durable and sustainable</h1>
+					</div>
+					<div class="discribtion">
+						<h4>01 products</h4>
+						<div class="details">
+							<p>Lorem ipsum dolor sit ampet</p>
+							<span><img src="Asset/Picto - Arrow.png"></span>
+						</div>
+					</div> 
+					<video autoplay muted loop>
+						<source src="/content/dam/dramix/home-page-header/one.mp4" type="video/mp4">
+					</video>
+				</li>
+				<li class="second-list parent">
+					<div class="title">
+						<h1 class="animate__backOutUp">Making your floor more durable and sustainable</h1>
+					</div>
+					<div class="discribtion">
+						<h4>02 products</h4>
+						<div class="details">
+							<p>Lorem ipsum dolor sit ampet</p>
+							<span><img src="Asset/Picto - Arrow.png"></span>
+						</div>
+					</div> 
+					<video autoplay muted loop>
+						<source src="/content/dam/dramix/home-page-header/two.mp4" type="video/mp4">
+					</video>
+				</li>
+				<li class="third-list parent">
+					<div class="title">
+						<h1>Making your floor more durable and sustainable</h1>
+					</div>
+					<div class="discribtion">
+						<h4>03 products</h4>
+						<div class="details">
+							<p>Lorem ipsum dolor sit ampet</p>
+							<span><img src="Asset/Picto - Arrow.png"></span>
+						</div>
+					</div> 
+					<video autoplay muted loop>
+						<source src="/content/dam/dramix/home-page-header/three.mp4" type="video/mp4">
+					</video>
+				</li>
+			</ul>
+		</div>
+
+		<div id="banner" data-sly-test="${wcmmode.disabled}">
+			<video data-sly-test="${wcmmode.disabled}" autoplay muted loop id="bannersrc">
+				<source src="/content/dam/dramix/home-page-header/one.mp4" type="video/mp4">
+			</video>
+		</div>
+	</div>
+</section>
+<script>
+        var UL=document.querySelectorAll(".list li");
+        var video =document.querySelectorAll(".list li video");
+        /*get the single list to add active class*/
+           UL.forEach(li =>{
+            li.addEventListener('click',function(){
+                UL.forEach(l=>l.classList.remove('active'));
+                this.classList.add('active');
+
+                /*if list contain active class then get the src from child elemnt to push banner src*/
+                if(li.classList.contains("active")){
+                     let src=li.children[2].children[0].getAttribute('src');
+                    console.log(src);
+                    document.getElementById('bannersrc').src=src;
+                }
+            })
+
+           });
+        
+    </script>
