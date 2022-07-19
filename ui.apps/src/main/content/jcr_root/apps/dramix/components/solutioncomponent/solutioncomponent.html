@@ -14,7 +14,7 @@
             <a href="#!" class="challenge-card-link" data-sly-repeat="${solution.challengeList}">
               <div class="challenges-card ${itemList.first ? 'active' : ''}"
                    id="challenge-card-id"
-                   onclick="showCard('Section${itemList.count @ context = 'scriptToken'}');">
+                   data-id="Section${itemList.count}">
                 <div class="challenge-head">${item.heading}</div>
                 <div class="challenge-text">${item.title}</div>
               </div>
@@ -26,7 +26,7 @@
             <img class="stairs-image" src="${properties.backgroundImage}" alt="" />
             <div class="stairs-img-text" data-sly-list="${solution.solutionList}">
               <div class="head-text-softwares">${item.heading}</div>
-              <a href="${item.link}" class="stairs-text-content-link">
+              <a href="${item.link @extension ='html'}" class="stairs-text-content-link">
                 <div class="stairs-text-content">${item.description}
                 <svg
                     class="arrow-stairs"
@@ -70,7 +70,7 @@
               <h4>${item.subHeading}</h4>
               <p>${item.description}</p>
               <div class="cmp-box-button">
-                <a href="${item.buttonUrl}">
+                <a href="${item.buttonUrl @extension ='html'}">
                   <span>${item.buttonLabel}</span>
                   <span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Arrow.png"/></span>
                 </a>

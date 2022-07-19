@@ -1,9 +1,14 @@
 // generate challenges cards on clicking challenges
-(function() {
+var btns = document.getElementsByClassName("challenges-card");
 
-  console.log("ninila ks");
 const countArr = document.querySelectorAll(".cmp-card-cont");
-
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", toggleCards.bind(null, btns[i]));
+}
+function toggleCards(id) {
+  console.log(id);
+  showCard(id.getAttribute("data-id"));
+}
 var visibleId = null;
 function showCard(id) {
   if (visibleId !== id) {
@@ -33,4 +38,3 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-}());
