@@ -1,6 +1,22 @@
-
-${properties.bannerimage}<br>
-${properties.bannertitle}<br>
-${properties.bannerdescription}<br>
-${properties.buttonlabel}<br>
-${properties.buttonLink}<br>
+<div class="cmp-contact-row">
+	<div class="cmp-contact-wrapper"
+		style="background-image: url('${properties.bannerimage @ context='styleString'}');">
+		<!-- <img src="Fond.png" /> -->
+		<div class="cmp-columncontrol">
+			<div class="cmp-row">
+				<div class="cmp-column-contact-5">
+					<div class="cmp-card-contact">
+						<h4>${properties.bannertitle}</h4>
+						<p>${properties.bannerdescription}</p>
+						<div class="cmp-box-button">
+							<a href="${properties.buttonLink}"> <span>${properties.buttonlabel}</span>
+								<span><img
+									src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Arrow.png" /></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

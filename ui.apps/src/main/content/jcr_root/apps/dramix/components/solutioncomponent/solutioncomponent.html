@@ -1,23 +1,83 @@
-<h1>solutioncomponent</h1>
-<div data-sly-use.author="${'com.adobe.dramix.core.models.SolutionComponent' @ rAttribute='TestAttribute'}"></div>
+    <div class="container-dramix"
+         data-sly-use.solution="${'com.adobe.dramix.core.models.SolutionComponent'}"
+		 data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+      <div class="row">
+        <div class="col-6">
+          <div class="row">
+            <div class="head-text-solutions">${properties.heading}</div>
+            <div class="solution-div">${properties.title}</div>
+            <img
+              class="responsive-stairs-img"
+              src="./stairs_small.png"
+              alt=""
+            />
+            <a href="#!" class="challenge-card-link" data-sly-repeat="${solution.challengeList}">
+              <div class="challenges-card ${itemList.first ? 'active' : ''}"
+                   id="challenge-card-id"
+                   data-id="Section${itemList.count}">
+                <div class="challenge-head">${item.heading}</div>
+                <div class="challenge-text">${item.title}</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-6 blue-col-div">
+          <div>
+            <img class="stairs-image" src="${properties.backgroundImage}" alt="" />
+            <div class="stairs-img-text" data-sly-list="${solution.solutionList}">
+              <div class="head-text-softwares">${item.heading}</div>
+              <a href="${item.link @extension ='html'}" class="stairs-text-content-link">
+                <div class="stairs-text-content">${item.description}
+                <svg
+                    class="arrow-stairs"
+                    width="12"
+                    height="20"
+                    viewBox="0 0 12 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 1.5L9.5 10.5L2 19"
+                      stroke="white"
+                      stroke-width="3"
+                    />
+                 </svg>
+                 </div>
+              </a>
+              <svg data-sly-test="${!itemList.last}"
+                width="320"
+                height="1"
+                class="stairs-divide-line"
+                viewBox="0 0 320 1"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  opacity="0.2"
+                  x="320"
+                  width="1.00001"
+                  height="320"
+                  transform="rotate(90 320 0)"
+                  fill="white"
+                />
+              </svg>
+          </div>
 
-    <div> ${properties.solutionheading} </div>
-    <div>${properties.solutiondesc}   </div>
-    <div data-sly-list.item="${author.challengeDetailsWithMap}">
-        <p> <b>${item.challengeHeading} </b></p>
-        <p> <b>${item.challengeDesc}</b> </p>
+          <div class="blue-div">
+            <div class="cmp-card-cont" data-sly-repeat="${solution.challengeList}" 
+			     id="Section${itemList.count}"
+				 style="display:${itemList.first ? 'block' : 'none'  @ context='styleString'}">
+              <h4>${item.subHeading}</h4>
+              <p>${item.description}</p>
+              <div class="cmp-box-button">
+                <a href="${item.buttonUrl @extension ='html'}">
+                  <span>${item.buttonLabel}</span>
+                  <span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Arrow.png"/></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-     <div data-sly-list.item="${author.softwareDetailsWithMap}">
-        <p><b>${item.softwares} </b></p>
-        <p><b>${item.desc}</b> </p>
-    </div>
-    <div>${properties.heading}</div>
-    <div>${properties.headingdesc}</div>
-
-    <div data-sly-resource="${'custom' @ resourceType='/apps/myproject/components/button'}"></div>
-
-
-
-
-
+    <sly data-sly-call="${templates.placeholder @ isEmpty = !solution.challengeList}"></sly>

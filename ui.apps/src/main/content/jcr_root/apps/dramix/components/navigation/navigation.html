@@ -1,0 +1,18 @@
+<div class="left-menu" 
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.navigation="com.adobe.cq.wcm.core.components.models.Navigation"
+     data-sly-test.hasContent="${navigation.items.size > 0}">
+     
+	<ul data-sly-list=${navigation.items}>
+		<li>
+		<a data-sly-test.hasNoChildren="${item.children.size==0}" 
+		   data-sly-attribute="${item.link.htmlAttributes}" 
+		   aria-current="${item.current && 'page'}">${item.title}</a>
+		<select name="tools" id="Tools" data-sly-test="${!hasNoChildren}" >
+			<option value="${item.title}">${item.title}</option>
+			<option data-sly-repeat.child=${item.children} value="${child.title}">${child.title}</option>
+		</select>
+		</li>
+	</ul>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!hasContent}"></sly>

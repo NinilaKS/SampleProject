@@ -1,22 +1,10 @@
-<div class="cmp-columncontrol" data-sly-use.colcontrol="com.adobe.dramix.core.models.ColumnControl">
+<div class="cmp-columncontrol" data-sly-use.colcontrol="com.adobe.dramix.core.models.ColumnControl" data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
 	<div class="cmp-row">
 		<div class="column-${colcontrol.columnCount}" data-sly-repeat="${colcontrol.list}">
 			<div class="column-inner">
-				<div class="cmp-box-img">
-					<img src="/content/dam/dramix/Logotype.png"/>
-				</div>
-				<div class="cmp-box-cont">
-				
-					<h4>Covid 19</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-						do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					<div class="cmp-box-button">
-						<a href="#"> <span>Learn more</span> <span><img
-								src="Arrow.png" /></span>
-						</a>
-					</div>
-				</div>
+				<div data-sly-resource ="${itemList.count @ resourceType='core/wcm/components/container/v1/container'}"></div>
 			</div>
 		</div>
 	</div>
 </div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !colcontrol.list}"></sly>

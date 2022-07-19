@@ -1,0 +1,245 @@
+.container-dramix {
+  position: relative;
+}
+
+.container-dramix .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  font-family: "Helvetica";
+  width: 100%;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .container-dramix .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.container-dramix .row .col-6 {
+  width: 50%;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container-dramix .row .col-6 {
+    width: 100%;
+  }
+}
+
+.container-dramix .row .col-6 .row {
+  background: #f7f7f7;
+  display: block;
+}
+
+.container-dramix .row .col-6 .row .head-text-solutions {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  margin-left: 20%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #00b5e8;
+}
+
+@media (max-width: 768px) {
+  .container-dramix .row .col-6 .row .head-text-solutions {
+    padding-left: 10%;
+    margin: 0;
+  }
+}
+
+.container-dramix .row .col-6 .row .solution-div {
+  width: 50%;
+  margin-left: 20%;
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: -0.02em;
+  color: #042a4b;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .container-dramix .row .col-6 .row .solution-div {
+    font-size: 50px;
+    line-height: 50px;
+    margin: 10%;
+  }
+}
+
+.container-dramix .row .col-6 .row .responsive-stairs-img {
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container-dramix .row .col-6 .row .responsive-stairs-img {
+    display: block;
+  }
+}
+
+.container-dramix .row .col-6 .row .challenge-card-link {
+  text-decoration: none;
+}
+
+.container-dramix .row .col-6 .row .challenge-card-link .challenges-card {
+  opacity: 0.5;
+  background-color: white;
+  margin-left: 20%;
+  margin-bottom: 1px;
+}
+
+@media (max-width: 768px) {
+  .container-dramix .row .col-6 .row .challenge-card-link .challenges-card {
+    margin-left: 0;
+  }
+}
+
+.container-dramix .row .col-6 .row .challenge-card-link .challenges-card .challenge-head {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  padding-top: 30px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding-left: 47px;
+  padding-bottom: 30px;
+  color: #042a4b;
+}
+
+.container-dramix .row .col-6 .row .challenge-card-link .challenges-card .challenge-text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  padding-left: 47px;
+  color: #042a4b;
+  padding-bottom: 30px;
+}
+
+.container-dramix .row .col-6 .row .challenge-card-link .challenges-card.active {
+  opacity: 1;
+}
+
+.container-dramix .row .col-6 .stairs-image {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container-dramix .row .col-6 .stairs-image {
+    display: none;
+  }
+}
+
+.container-dramix .row .col-6 .stairs-img-text {
+  position: absolute;
+  top: 0px;
+  margin-left: 5%;
+}
+
+@media (max-width: 768px) {
+  .container-dramix .row .col-6 .stairs-img-text {
+    top: 57em;
+  }
+}
+
+.container-dramix .row .col-6 .stairs-img-text .head-text-softwares {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.container-dramix .row .col-6 .stairs-img-text .stairs-text-content-link {
+  text-decoration: none;
+}
+
+.container-dramix .row .col-6 .stairs-img-text .stairs-text-content-link .stairs-text-content {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  width: 200px;
+  color: #ffffff;
+}
+
+.container-dramix .row .col-6 .stairs-img-text .stairs-text-content-link .stairs-text-content .arrow-stairs {
+  right: 5%;
+  position: absolute;
+}
+
+.container-dramix .row .col-6 .stairs-img-text .stairs-divide-line {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.container-dramix .row .col-6 .blue-div {
+  background: #042a4b;
+  width: 100%;
+}
+
+.container-dramix .row .col-6 .blue-div .cmp-card-cont {
+  background-color: white;
+  margin: 0 auto;
+  margin-left: 0;
+  max-width: 70%;
+  position: relative;
+  top: -4em;
+  padding: 6em;
+}
+
+@media (max-width: 767px) {
+  .container-dramix .row .col-6 .blue-div .cmp-card-cont {
+    max-width: 100%;
+    top: 0;
+  }
+}
+
+.container-dramix .row .col-6 .blue-div .cmp-card-cont h4 {
+  color: #042a4b;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.container-dramix .row .col-6 .blue-div .cmp-card-cont p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 146.6%;
+  color: #707070;
+  margin: 20px 0;
+}
+
+.container-dramix .row .col-6 .blue-div .cmp-card-cont .cmp-box-button {
+  margin: 20px 0 0;
+}
+
+.container-dramix .row .col-6 .blue-div .cmp-card-cont .cmp-box-button a {
+  grid-gap: 2em;
+  border: 1px solid rgba(4, 42, 75, 0.2);
+  padding: 0.8em 1em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-decoration: none;
+  color: #042a4b;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+.container-dramix .row .blue-col-div {
+  background-color: #042a4b;
+}
+/*# sourceMappingURL=style.css.map */

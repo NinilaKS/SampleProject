@@ -2,14 +2,21 @@ package com.adobe.dramix.core.models;
 
 import java.util.List;
 
-import com.adobe.dramix.core.helper.SolutionPojo;
+import com.adobe.dramix.core.models.impl.SolutionMultifieldItem;
 
-/**
- * The Interface SolutionComponent.
- */
-public interface SolutionComponent{
-	
-	List<SolutionPojo> getChallengeDetailsWithMap();
-	List<SolutionPojo> getSoftwareDetailsWithMap();
+public interface SolutionComponent {
+	/**
+	 * Method to return Challenge List
+	 * 
+	 * @return List of Challenge multifield items
+	 */
+	List<SolutionMultifieldItem> getChallengeList();
+
+	/**
+	 * Method to return Solution List
+	 * 
+	 * @return List of Solution multifield items
+	 */
+	List<SolutionMultifieldItem> getSolutionList();
 
 }

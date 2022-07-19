@@ -1,0 +1,149 @@
+.cmp-contact-row {
+    margin: 0 auto;
+
+    .cmp-contact-wrapper {
+        
+        background-position: center top;
+        background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media(max-width:767px) {
+            background-position: 55% 0%;
+            background-attachment: scroll;
+            background-size: 180vw;
+            background-repeat: no-repeat;
+        }
+
+    }
+
+    
+    >img {
+        width: 100%;
+    }
+
+    .cmp-card-contact {
+        background: #FE5000;
+        display: grid;
+        padding: 3em;
+
+        h4 {
+            font-size: 38px;
+            color: white;
+            font-weight: 300;
+            margin: 10px 0;
+            line-height: 50px;
+            width: 100%;
+            max-width: 60%;
+            margin: 10px auto;
+        }
+
+        p {
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            width: 100%;
+            max-width: 60%;
+            margin: 20px auto;
+        }
+
+        .cmp-box-button {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 60%;
+
+            a {
+                grid-gap: 2em;
+                border: 1px solid #ffffff33;
+                padding: 0.8em 1em;
+                display: inline-flex;
+                text-decoration: none;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 17px;
+
+            }
+        }
+    }
+}
+
+
+// column width
+.cmp-columncontrol {
+    margin: 0 auto;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+
+    @media(min-width:992px) {
+        max-width: 960px;
+    }
+
+    @media(min-width:1200px) {
+        max-width: 1140px;
+    }
+
+    @media(min-width:1400px) {
+        max-width: 1320px;
+    }
+
+    @media(max-width:576px) {
+        max-width: 540px;
+    }
+
+    @media(max-width:767px) {
+        padding: 0;
+    }
+
+    @media(min-width:768px) and (max-width:991px) {
+        padding: 0;
+    }
+
+    .cmp-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+
+        @media(max-width:767px) {
+            display: grid;
+            grid-gap: 1em;
+        }
+
+        @media(min-width:768px) and (max-width:991px) {
+            display: grid;
+            grid-gap: 1em;
+        }
+
+        .cmp-column-contact-5 {
+            width: calc(40% - 1rem);
+            transform: translate(300px, 100px);
+
+            @media(max-width:767px) {
+                width: 100%;
+                transform: translate(0px, 350px);
+            }
+
+            @media(min-width:768px) and (max-width:991px) {
+                width: 100%;
+                transform: translate(0px, 330px);
+            }
+
+            @media(min-width:500px) and (max-width:622px) {
+                transform: translate(0px, 280px);
+            }
+
+            @media(min-width:421px) and (max-width:499px) {
+                transform: translate(0px, 235px);
+            }
+
+            @media(min-width: 320px) and (max-width:420px) {
+                transform: translate(0px, 180px);
+            }
+
+            @media(min-width:280px) and (max-width: 319px) {
+                transform: translate(0px, 155px);
+            }
+        }
+    }
+}

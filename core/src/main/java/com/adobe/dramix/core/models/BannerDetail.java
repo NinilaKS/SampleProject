@@ -1,52 +1,44 @@
 package com.adobe.dramix.core.models;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
+@Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class BannerDetail {
 
-	private static final Logger LOG = LoggerFactory.getLogger(BannerDetail.class);
+	@ValueMapValue
+	private String title;
 
-	String subHeading;
-	String heading;
-	String buttonText;
-	String buttonLink;
+	@ValueMapValue
+	private String subHeading;
 
-	/**
-	 * @param resource
-	 */
-	public BannerDetail(Resource resource){
-		try {
-			if(StringUtils.isNotBlank(resource.getValueMap().get("subHeading", String.class))) {
-				this.subHeading = resource.getValueMap().get("subHeading", String.class);
-			}
-			if(StringUtils.isNotBlank(resource.getValueMap().get("heading", String.class))) {
-				this.heading=resource.getValueMap().get("heading",String.class);
-			}
-			if(resource.getValueMap().get("buttonText",String.class)!=null) {
-				this.buttonText=resource.getValueMap().get("buttonText",String.class);
-			}
-			if(resource.getValueMap().get("buttonLink",String.class)!=null) {
-				this.buttonLink=resource.getValueMap().get("buttonLink",String.class);
-			}
+	@ValueMapValue
+	private String heading;
 
-		}catch (Exception e){
-			LOG.info("\n BEAN ERROR : {}",e.getMessage());
-		}
+	@ValueMapValue
+	private String buttonLink;
 
+	@ValueMapValue
+	private String video;
+
+	public String getVideo() {
+		return video;
+	}
+
+	public String getTitle() {
+		return title;
 	}
 
 	public String getSubHeading() {
 		return subHeading;
 	}
+
 	public String getHeading() {
 		return heading;
 	}
-	public String getButtonText() {
-		return buttonText;
-	}
+
 	public String getButtonLink() {
 		return buttonLink;
 	}
