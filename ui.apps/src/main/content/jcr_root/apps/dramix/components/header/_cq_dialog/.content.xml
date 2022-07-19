@@ -11,11 +11,39 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <text
+                    <softwareTools
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Text"
-                        name="./text"/>
+                        fieldLabel="Software Tools Label"
+                        name="./softwareToolsLabel"/>
+                    <softwareToolsLinks
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                        fieldLabel="Software Tools Link"
+                        name="./softwareToolsLink"
+                        rootPath="/content/dramix"/>
+                    <upcomingEvents
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Upcoming Events Label"
+                        name="./upcomingEventsLabel"/>
+                    <upcomingEventsLink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                        fieldLabel="Upcoming Events Link"
+                        name="./upcomingEventsLink"
+                        rootPath="/content/dramix"/>
+                    <requestQuote
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Request Quote Label"
+                        name="./requestQuoteLabel"/>
+                    <requestQuoteLink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                        fieldLabel="Request Quote Link"
+                        name="./requestQuoteLink"
+                        rootPath="/content/dramix"/>
                 </items>
             </column>
         </items>
