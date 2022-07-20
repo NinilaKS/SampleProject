@@ -92,10 +92,30 @@ button {
       }
     }
   }
+  .container {
+    &.responsivegrid {
+      &.aem-GridColumn {
+        &.aem-GridColumn--default--12 {
+          width: 100%;
+          padding-right: 0;
+          padding-left: 0;
+          margin-right: auto;
+          margin-left: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
 }
 // container width
 main {
   &.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: unset;
     &.responsivegrid {
       width: 100%;
       padding-right: 0;
