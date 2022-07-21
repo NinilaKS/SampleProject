@@ -94,7 +94,7 @@
           data-sly-list="${footer.footerLinks}"
         >
           <li class="comp_footerLinks-list-item mb-4">
-            <a href="${item.linkUrl}" class="text-decoration-none"
+            <a href="${item.linkUrl @extension ='html'}" class="text-decoration-none"
               >${item.linkTitle}</a
             >
           </li>
@@ -117,7 +117,7 @@
       >
         <rect opacity="0.2" width="1" height="15" fill="white" />
       </svg>
-      <a href="${footer.termsOfUseLink}" class="text-decoration-none"
+      <a href="${footer.termsOfUseLink @extension ='html'}" class="text-decoration-none"
         >${footer.termsOfUseTitle}</a
       >
       <svg
@@ -130,7 +130,7 @@
       >
         <rect opacity="0.2" width="1" height="15" fill="white" />
       </svg>
-      <a href="${footer.privacyPolicyLink}" class="text-decoration-none"
+      <a href="${footer.privacyPolicyLink @extension ='html'}" class="text-decoration-none"
         >${footer.privacyPolicyTitle}</a
       >
     </div>
