@@ -2,36 +2,35 @@
 *,
 ::after,
 ::before {
-    box-sizing: border-box;
-    padding:0;
-    margin:0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
 body {
-    margin: 0;
-    font-size: $font-size;
-    font-family: $font-family;
-    line-height: $font-height;
-    color: $color-foreground;
-    background: $color-background;
+  margin: 0;
+  font-size: $font-size;
+  font-family: $font-family;
+  line-height: $font-height;
+  color: $color-foreground;
+  background: $color-background;
 
-    @media (prefers-color-scheme: dark) {
-        color: $color-foreground-dark;
-        background: $color-background-dark;
-    }
+  @media (prefers-color-scheme: dark) {
+    color: $color-foreground-dark;
+    background: $color-background-dark;
+  }
 }
 
-
 a {
-    color: currentColor;
-    text-decoration: none;
+  color: currentColor;
+  text-decoration: none;
 }
 
 input,
 select,
 textarea {
-    font-family: $font-family;
+  font-family: $font-family;
 }
 
 button,
@@ -39,38 +38,106 @@ input,
 optgroup,
 select,
 textarea {
-    font: inherit;
+  font: inherit;
 }
 
 dl,
 ol,
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 dd,
 dt {
-    margin: 0;
-}
-
-img,
-svg {
-    vertical-align: middle;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+  margin: 0;
 }
 
 button {
-    -webkit-appearance: none;
-    background: none;
-    border: 0;
-    cursor: pointer;
-    padding: 0;
-    touch-action: manipulation;
-    user-select: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  touch-action: manipulation;
+  user-select: none;
+}
+.root {
+  &.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: unset;
+    &.responsivegrid {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 100%;
+    }
+    &.responsivegrid {
+      &.aem-GridColumn {
+        &.aem-GridColumn--default--12 {
+          width: 100%;
+          padding-right: 0;
+          padding-left: 0;
+          margin-right: auto;
+          margin-left: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .container {
+    &.responsivegrid {
+      &.aem-GridColumn {
+        &.aem-GridColumn--default--12 {
+          width: 100%;
+          padding-right: 0;
+          padding-left: 0;
+          margin-right: auto;
+          margin-left: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+// container width
+main {
+  &.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: unset;
+    &.responsivegrid {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 100%;
+    }
+  }
+
+  .container {
+    &.responsivegrid {
+      &.aem-GridColumn {
+        &.aem-GridColumn--default--12 {
+          width: 100%;
+          padding-right: 0;
+          padding-left: 0;
+          margin-right: auto;
+          margin-left: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
 }

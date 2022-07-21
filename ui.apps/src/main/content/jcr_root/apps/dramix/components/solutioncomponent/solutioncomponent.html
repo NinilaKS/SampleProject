@@ -1,72 +1,51 @@
-    <div class="container-dramix"
-         data-sly-use.solution="${'com.adobe.dramix.core.models.SolutionComponent'}"
-		 data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
-      <div class="row">
-        <div class="col-6">
-          <div class="row">
-            <div class="head-text-solutions">${properties.heading}</div>
-            <div class="solution-div">${properties.title}</div>
-            <img
-              class="responsive-stairs-img"
-              src="./stairs_small.png"
-              alt=""
-            />
-            <a href="#!" class="challenge-card-link" data-sly-repeat="${solution.challengeList}">
-              <div class="challenges-card ${itemList.first ? 'active' : ''}"
-                   id="challenge-card-id"
-                   data-id="Section${itemList.count}">
-                <div class="challenge-head">${item.heading}</div>
-                <div class="challenge-text">${item.title}</div>
+  <div class="container-dramix container-fluid"
+       data-sly-use.solution="${'com.adobe.dramix.core.models.SolutionComponent'}"
+       data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12 p-0 grey-background">
+        <div class="row">
+          <div class="head-text-solutions">${properties.heading}</div>
+          <div class="solution-div">${properties.title}</div>
+          <img class="responsive-stairs-img" src="./stairs_small.png" alt="" />
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 p-0">
+        <div class="image-bg-div" style="background-image: url('${properties.backgroundImage @ context='styleString'}');">
+          <!-- <img class="stairs-image" src="./Picture.png" alt="" /> -->
+          <div class="stairs-img-text" data-sly-list="${solution.solutionList}">
+            <div class="head-text-softwares">${item.heading}</div>
+            <a href="${item.link @extension ='html'}" class="stairs-text-content-link">
+              <div class="stairs-text-content">${item.description}
+                <svg class="arrow-stairs" width="12" height="20" viewBox="0 0 12 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 1.5L9.5 10.5L2 19" stroke="white" stroke-width="3" />
+                </svg>
               </div>
             </a>
+            <svg data-sly-test="${!itemList.last}" width="320" height="1" class="stairs-divide-line" viewBox="0 0 320 1" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect opacity="0.2" x="320" width="1.00001" height="320" transform="rotate(90 320 0)" fill="white" />
+            </svg>
           </div>
         </div>
-        <div class="col-6 blue-col-div">
-          <div>
-            <img class="stairs-image" src="${properties.backgroundImage}" alt="" />
-            <div class="stairs-img-text" data-sly-list="${solution.solutionList}">
-              <div class="head-text-softwares">${item.heading}</div>
-              <a href="${item.link @extension ='html'}" class="stairs-text-content-link">
-                <div class="stairs-text-content">${item.description}
-                <svg
-                    class="arrow-stairs"
-                    width="12"
-                    height="20"
-                    viewBox="0 0 12 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2 1.5L9.5 10.5L2 19"
-                      stroke="white"
-                      stroke-width="3"
-                    />
-                 </svg>
-                 </div>
-              </a>
-              <svg data-sly-test="${!itemList.last}"
-                width="320"
-                height="1"
-                class="stairs-divide-line"
-                viewBox="0 0 320 1"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  opacity="0.2"
-                  x="320"
-                  width="1.00001"
-                  height="320"
-                  transform="rotate(90 320 0)"
-                  fill="white"
-                />
-              </svg>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-sm-12  p-0 grey-background">
+        <a href="#!" class="challenge-card-link" data-sly-repeat="${solution.challengeList}">
+          <div class="challenges-card ${itemList.first ? 'active' : ''}" id="challenge-card-id" data-id="Section${itemList.count}">
+            <div class="challenge-head py-4 px-5">${item.heading}</div>
+            <div class="challenge-text pb-4 px-5">${item.title}</div>
           </div>
-
-          <div class="blue-div">
-            <div class="cmp-card-cont" data-sly-repeat="${solution.challengeList}" 
-			     id="Section${itemList.count}"
-				 style="display:${itemList.first ? 'block' : 'none'  @ context='styleString'}">
+        </a>
+      </div>
+      <div class="col-lg-6 col-sm-12  p-0 cmp-card-col" data-sly-list="${solution.challengeList}">
+        <div class="cmp-card-cont" 
+             data-content="content-${itemList.count}" 
+             id="Section${itemList.count}" 
+             style="display:${itemList.first ? 'block' : 'none'  @ context='styleString'}">
+          <div class="cmp-card-wrapper" >
+            <div class="cmp-card-inner">
               <h4>${item.subHeading}</h4>
               <p>${item.description}</p>
               <div class="cmp-box-button">
@@ -80,4 +59,7 @@
         </div>
       </div>
     </div>
-    <sly data-sly-call="${templates.placeholder @ isEmpty = !solution.challengeList}"></sly>
+  </div>
+
+  <sly data-sly-call="${templates.placeholder @ isEmpty = !solution.challengeList}"></sly>
+  

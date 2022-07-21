@@ -171,7 +171,8 @@
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                                                 fieldLabel="Background Image"
-                                                name="./backgroundImage"/>
+                                                name="./backgroundImage"
+                                                rootPath="/content/dam/dramix"/>
                                         </items>
                                     </column>
                                 </items>
