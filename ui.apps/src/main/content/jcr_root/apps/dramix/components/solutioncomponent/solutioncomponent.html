@@ -1,17 +1,20 @@
-  <div class="container-dramix container-fluid"
-       data-sly-use.solution="${'com.adobe.dramix.core.models.SolutionComponent'}"
-       data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+   <div class="container-dramix container-fluid"
+        data-sly-use.solution="${'com.adobe.dramix.core.models.SolutionComponent'}"
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
     <div class="row">
       <div class="col-lg-6 col-sm-12 p-0 grey-background">
-        <div class="row">
-          <div class="head-text-solutions">${properties.heading}</div>
-          <div class="solution-div">${properties.title}</div>
-          <img class="responsive-stairs-img" src="./stairs_small.png" alt="" />
+        <div class="row m-0">
+          <div class="solution-div ">
+            <div class="head-text-solutions  pb-2">${properties.heading}</div>
+
+            ${properties.title}
+          </div>
+
+
         </div>
       </div>
       <div class="col-lg-6 col-sm-12 p-0">
         <div class="image-bg-div" style="background-image: url('${properties.backgroundImage @ context='styleString'}');">
-          <!-- <img class="stairs-image" src="./Picture.png" alt="" /> -->
           <div class="stairs-img-text" data-sly-list="${solution.solutionList}">
             <div class="head-text-softwares">${item.heading}</div>
             <a href="${item.link @extension ='html'}" class="stairs-text-content-link">
@@ -30,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row d-none d-lg-flex">
       <div class="col-lg-6 col-sm-12  p-0 grey-background">
         <a href="#!" class="challenge-card-link" data-sly-repeat="${solution.challengeList}">
           <div class="challenges-card ${itemList.first ? 'active' : ''}" id="challenge-card-id" data-id="Section${itemList.count}">
@@ -40,11 +43,8 @@
         </a>
       </div>
       <div class="col-lg-6 col-sm-12  p-0 cmp-card-col" data-sly-list="${solution.challengeList}">
-        <div class="cmp-card-cont" 
-             data-content="content-${itemList.count}" 
-             id="Section${itemList.count}" 
-             style="display:${itemList.first ? 'block' : 'none'  @ context='styleString'}">
-          <div class="cmp-card-wrapper" >
+        <div class="cmp-card-cont" data-content="content-${itemList.count}" id="Section${itemList.count}" style="display:${itemList.first ? 'block' : 'none'  @ context='styleString'}">
+          <div class="cmp-card-wrapper">
             <div class="cmp-card-inner">
               <h4>${item.subHeading}</h4>
               <p>${item.description}</p>
@@ -59,7 +59,40 @@
         </div>
       </div>
     </div>
+    <div class="row d-flex d-lg-none">
+      <div class="accordion p-0 solutions-accordion" id="accordionExample" data-sly-list="${solution.challengeList}">
+        <div class="accordion-item solutions-accordion-items">
+          <h2 class="accordion-header solutions-accordion-header" id="heading${itemList.count}">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${itemList.count}"
+              aria-expanded="true" aria-controls="collapse${itemList.count}">
+              <div class="challenges-card-accordion" id="challenge-card-id">
+                <div class="challenge-head pt-3 pb-4 px-1">${item.heading}</div>
+                <div class="challenge-text pb-1 px-1">${item.title}</div>
+              </div>
+            </button>
+          </h2>
+          <div id="collapse${itemList.count}" class="accordion-collapse collapse ${itemList.first ? 'show' : ''}" aria-labelledby="heading${itemList.count}"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body solutions-accordion-body">
+              <div class="cmp-card-cont-accordion px-1">
+                <div class="cmp-card-wrapper">
+                  <div class="cmp-card-inner">
+                    <h4>${item.subHeading}</h4>
+                    <p>${item.description}</p>
+                    <div class="cmp-box-button">
+                      <a href="${item.buttonUrl @extension ='html'}">
+                        <span>${item.buttonLabel}</span>
+                        <span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Arrow.png"/></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <sly data-sly-call="${templates.placeholder @ isEmpty = !solution.challengeList}"></sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !solution.challengeList}"></sly>
   
