@@ -1,0 +1,107 @@
+.cmp-contactbanner {
+    margin: 0 auto;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    p,
+    div,
+    a {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .bg-image {
+        height: 70vh;
+        background-position: center top;
+        background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media(max-width:767px) {
+            height: 25vh;
+        }
+    }
+
+    .cmp-contactbox {
+        position: relative;
+
+        .cmp-box-inner {
+            position: absolute;
+            top: -20rem;
+            right: 10rem;
+
+            @media(max-width:767px) {
+                position: static;
+                padding: 0;
+            }
+
+            @media(min-width:768px) and (max-width:1024px) {
+                position: static;
+                padding: 0;
+                width: 100%;
+            }
+
+            .cmp-card-contact {
+                background: #FE5000;
+                display: grid;
+                padding: 3em;
+
+                h4 {
+                    font-size: 38px;
+                    color: white;
+                    font-weight: 300;
+                    margin: 10px 0;
+                    line-height: 50px;
+                    width: 100%;
+                    max-width: 70%;
+                    margin: 10px auto;
+
+                    @media(min-width:1024px) and (max-width:1150px) {
+                        max-width: 80%;
+                    }
+                }
+
+                p {
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 400;
+                    width: 100%;
+                    max-width: 70%;
+                    margin: 20px auto;
+
+                    @media(min-width:1024px) and (max-width:1150px) {
+                        max-width: 80%;
+                    }
+                }
+
+                .cmp-box-button {
+                    margin: 20px auto;
+                    width: 100%;
+                    max-width: 70%;
+
+                    @media(min-width:1024px) and (max-width:1150px) {
+                        max-width: 80%;
+                    }
+
+                    a {
+                        grid-gap: 2em;
+                        border: 1px solid #ffffff33;
+                        padding: 0.8em 1em;
+                        display: inline-flex;
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 17px;
+
+                    }
+                }
+            }
+        }
+    }
+}
