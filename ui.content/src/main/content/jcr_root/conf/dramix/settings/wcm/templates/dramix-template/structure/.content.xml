@@ -3,30 +3,18 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:lastModified="{Date}2022-07-21T14:57:30.088+05:30"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/dramix/settings/wcm/templates/dramix-template"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="dramix/components/page">
         <root
-            jcr:lastModified="{Date}2022-07-20T12:55:09.121+05:30"
-            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="dramix/components/container"
             layout="responsiveGrid">
             <experiencefragment
-                jcr:created="{Date}2022-07-04T16:03:37.410+05:30"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2022-07-21T14:57:30.080+05:30"
-                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="dramix/components/experiencefragment"
                 fragmentVariationPath="/content/experience-fragments/dramix/us/en/site/header/master"/>
             <container
-                jcr:created="{Date}2022-07-20T12:57:12.051+05:30"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2022-07-20T12:57:48.376+05:30"
-                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="dramix/components/container"
                 editable="{Boolean}true">
@@ -38,10 +26,6 @@
                 </cq:responsive>
             </container>
             <experiencefragment_374836098
-                jcr:created="{Date}2022-07-04T16:03:42.901+05:30"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2022-07-04T16:06:19.641+05:30"
-                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="dramix/components/experiencefragment"
                 fragmentVariationPath="/content/experience-fragments/dramix/us/en/site/footer/master"/>

@@ -190,9 +190,7 @@
                 <policy_header
                     cq:styleDefaultElement="header"
                     jcr:description="Sets a &lt;header> element on the page header experience fragment."
-                    jcr:lastModified="{Date}2022-07-05T11:37:52.321+05:30"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
+                   jcr:primaryType="nt:unstructured"
                     jcr:title="Page Header"
                     sling:resourceType="wcm/core/components/policy/policy">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
@@ -200,8 +198,6 @@
                 <policy_footer
                     cq:styleDefaultElement="footer"
                     jcr:description="Sets a &lt;footer> element on the page footer experience fragment."
-                    jcr:lastModified="{Date}2022-07-05T11:38:04.982+05:30"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Footer"
                     sling:resourceType="wcm/core/components/policy/policy">
@@ -211,8 +207,6 @@
             <container jcr:primaryType="nt:unstructured">
                 <policy_1574694950110
                     jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
-                    jcr:lastModified="{Date}2022-07-22T10:06:31.997+05:30"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Root"
                     sling:resourceType="wcm/core/components/policy/policy"
@@ -245,8 +239,6 @@
                 <policy_1574695586800
                     cq:styleDefaultElement="div"
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
-                    jcr:lastModified="{Date}2022-07-22T10:07:24.160+05:30"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
@@ -280,8 +272,6 @@
                 <policy_649128221558427
                     cq:styleDefaultElement="main"
                     jcr:description="Sets a &lt;main> element on the page content area."
-                    jcr:lastModified="{Date}2022-07-21T13:21:53.186+05:30"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Main"
                     sling:resourceType="wcm/core/components/policy/policy"
@@ -291,8 +281,6 @@
                 </policy_649128221558427>
                 <policy_1575040440977
                     jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
-                    jcr:lastModified="{Date}2022-07-15T15:40:10.525+05:30"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="XF Root"
                     sling:resourceType="wcm/core/components/policy/policy"
@@ -323,8 +311,6 @@
                     </cq:authoring>
                 </policy_1575040440977>
                 <policy_9526112340526
-                    jcr:lastModified="{Date}2022-07-22T10:06:06.273+05:30"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Container Policy"
                     sling:resourceType="wcm/core/components/policy/policy"
@@ -373,8 +359,6 @@
             </page>
             <columncontrol jcr:primaryType="nt:unstructured">
                 <policy_1658464925151
-                    jcr:lastModified="{Date}2022-07-22T10:15:17.865+05:30"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Column Control Policy"
                     sling:resourceType="wcm/core/components/policy/policy"
@@ -402,8 +386,6 @@
             </columncontrol>
             <button jcr:primaryType="nt:unstructured">
                 <policy_1658465140306
-                    jcr:lastModified="{Date}2022-07-22T10:17:47.260+05:30"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Button Policy"
                     sling:resourceType="wcm/core/components/policy/policy">

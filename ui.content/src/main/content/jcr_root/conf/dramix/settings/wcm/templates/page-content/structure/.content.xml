@@ -3,8 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:lastModified="{Date}2022-07-19T12:38:26.982+05:30"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/dramix/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="dramix/components/page">
@@ -13,8 +11,6 @@
             sling:resourceType="dramix/components/container"
             layout="responsiveGrid">
             <container
-                jcr:lastModified="{Date}2022-07-19T12:37:20.200+05:30"
-                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="dramix/components/container"
                 editable="{Boolean}true"/>
