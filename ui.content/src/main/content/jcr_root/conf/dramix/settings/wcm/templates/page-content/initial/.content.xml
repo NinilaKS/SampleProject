@@ -10,17 +10,11 @@
             sling:resourceType="dramix/components/container"
             layout="responsiveGrid">
             <container
+                jcr:lastModified="{Date}2022-07-21T13:21:43.306+05:30"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="dramix/components/container"
-                layout="responsiveGrid">
-                <title
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="dramix/components/title"/>
-                <container
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="dramix/components/container"
-                    layout="responsiveGrid"/>
-            </container>
+                layout="responsiveGrid"/>
         </root>
     </jcr:content>
 </jcr:root>

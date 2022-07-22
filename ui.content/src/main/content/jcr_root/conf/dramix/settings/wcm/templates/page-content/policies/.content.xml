@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-12-02T17:37:24.544+01:00"
+        cq:lastModified="{Date}2022-07-22T10:21:29.914+05:30"
         cq:lastModifiedBy="admin"
         cq:policy="dramix/components/page/policy"
         jcr:primaryType="nt:unstructured"
@@ -62,6 +62,18 @@
                     cq:policy="dramix/components/title/policy_641475696923109"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wcm/core/components/policies/mapping"/>
+                <dramix jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <button
+                            cq:policy="dramix/components/button/policy_1658465140306"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                        <columncontrol
+                            cq:policy="dramix/components/columncontrol/policy_1658464925151"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                    </components>
+                </dramix>
             </container>
         </root>
     </jcr:content>
