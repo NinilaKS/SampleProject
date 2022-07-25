@@ -1,20 +1,6 @@
 .cmp-contactbanner {
     margin: 0 auto;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    span,
-    p,
-    div,
-    a {
-        font-family: 'Open Sans', sans-serif;
-    }
-
     .bg-image {
         height: 70vh;
         background-position: center top;
@@ -53,7 +39,7 @@
 
                 h4 {
                     font-size: 38px;
-                    color: white;
+                    color: $color-white;
                     font-weight: 300;
                     margin: 10px 0;
                     line-height: 50px;
@@ -67,7 +53,7 @@
                 }
 
                 p {
-                    color: white;
+                    color: $color-white;
                     font-size: 16px;
                     font-weight: 400;
                     width: 100%;
@@ -94,7 +80,7 @@
                         padding: 0.8em 1em;
                         display: inline-flex;
                         text-decoration: none;
-                        color: #fff;
+                        color: $color-white;
                         font-size: 16px;
                         font-weight: 700;
                         line-height: 17px;

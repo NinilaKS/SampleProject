@@ -1,6 +1,6 @@
-<div class="cmp-columncontrol" data-sly-use.colcontrol="com.adobe.dramix.core.models.ColumnControl" data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
-	<div class="cmp-row">
-		<div class="column-${colcontrol.columnCount}" data-sly-repeat="${colcontrol.list}">
+<div class="cmp-columncontrol container my-3" data-sly-use.colcontrol="com.adobe.dramix.core.models.ColumnControl" data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+	<div class="row flex-sm-row flex-column">
+		<div class="col-${colcontrol.columnCount}" data-sly-repeat="${colcontrol.list}">
 			<div class="column-inner">
 				<div data-sly-resource ="${itemList.count @ resourceType='core/wcm/components/container/v1/container'}"></div>
 			</div>
