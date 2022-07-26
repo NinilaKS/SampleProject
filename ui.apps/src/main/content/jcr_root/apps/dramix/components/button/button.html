@@ -19,11 +19,12 @@
         data-sly-element="${button.link ? 'a' : 'button'}"
         type="${button.link ? '' : 'button'}"
         id="${component.id}"
-        class="cmp-button"
+        class="btn cmp-button rounded-0"
         href="${button.link}"
         aria-label="${button.accessibilityLabel}"
         data-cmp-clickable="${button.data ? true : false}"
         data-cmp-data-layer="${button.data.json}">
-    <sly data-sly-call="${iconTemplate.icon @ icon=button.icon}"></sly>
+    <sly data-sly-call="${iconTemplate.icon @ icon=button.icon, classname='arrow-left'}"></sly>
     <span data-sly-test="${button.text}" class="cmp-button__text">${button.text}</span>
+    <sly data-sly-call="${iconTemplate.icon @ icon=button.icon, classname='arrow-right'}"></sly>
 </button>
