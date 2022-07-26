@@ -190,7 +190,7 @@
                 <policy_header
                     cq:styleDefaultElement="header"
                     jcr:description="Sets a &lt;header> element on the page header experience fragment."
-                   jcr:primaryType="nt:unstructured"
+                    jcr:primaryType="nt:unstructured"
                     jcr:title="Page Header"
                     sling:resourceType="wcm/core/components/policy/policy">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
@@ -381,6 +381,17 @@
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item0>
+                        <item1
+                            cq:styleGroupLabel="Card Spacing"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="card-space-remove"
+                                    cq:styleId="1658766373454"
+                                    cq:styleLabel="Card Spacing Remove"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
                     </cq:styleGroups>
                 </policy_1658464925151>
             </columncontrol>

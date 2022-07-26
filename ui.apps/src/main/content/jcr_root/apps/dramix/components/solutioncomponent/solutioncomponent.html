@@ -1,90 +1,89 @@
-   <div class="container-dramix container-fluid"
-        data-sly-use.solution="${'com.adobe.dramix.core.models.SolutionComponent'}"
-        data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
-    <div class="row">
-      <div class="col-lg-6 col-sm-12 p-0 grey-background">
-        <div class="row m-0">
-          <div class="solution-div ">
-            <div class="head-text-solutions  pb-2">${properties.heading}</div>
-
-            ${properties.title}
-          </div>
-
-
-        </div>
-      </div>
-      <div class="col-lg-6 col-sm-12 p-0">
-        <div class="image-bg-div" style="background-image: url('${properties.backgroundImage @ context='styleString'}');">
-          <div class="stairs-img-text" data-sly-list="${solution.solutionList}">
-            <div class="head-text-softwares">${item.heading}</div>
-            <a href="${item.link @extension ='html'}" class="stairs-text-content-link">
-              <div class="stairs-text-content">${item.description}
-                <svg class="arrow-stairs" width="12" height="20" viewBox="0 0 12 20" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 1.5L9.5 10.5L2 19" stroke="white" stroke-width="3" />
-                </svg>
-              </div>
-            </a>
-            <svg data-sly-test="${!itemList.last}" width="320" height="1" class="stairs-divide-line" viewBox="0 0 320 1" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect opacity="0.2" x="320" width="1.00001" height="320" transform="rotate(90 320 0)" fill="white" />
-            </svg>
-          </div>
+<div class="container-dramix container-fluid mt-2"
+  data-sly-use.solution="${'com.adobe.dramix.core.models.SolutionComponent'}"
+  data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+  <div class="row">
+    <div class="col-lg-6 col-sm-12 p-0 grey-background">
+      <div class="col-md-6 col-sm-12 cmp-left mx-auto">
+        <div class="solution-div mx-0">
+          <div class="head-text-solutions  pb-2">${properties.heading}</div>
+          <p>${properties.title}</p>
         </div>
       </div>
     </div>
-    <div class="row d-none d-lg-flex">
-      <div class="col-lg-6 col-sm-12  p-0 grey-background">
-        <a href="#!" class="challenge-card-link" data-sly-repeat="${solution.challengeList}">
-          <div class="challenges-card ${itemList.first ? 'active' : ''}" id="challenge-card-id" data-id="Section${itemList.count}">
-            <div class="challenge-head py-4 px-5">${item.heading}</div>
-            <div class="challenge-text pb-4 px-5">${item.title}</div>
-          </div>
-        </a>
+    <div class="col-lg-6 col-sm-12 p-0">
+      <div class="image-bg-div" style="background-image: url('${properties.backgroundImage @ context='styleString'}');">
+        <div class="stairs-img-text" data-sly-list="${solution.solutionList}">
+          <div class="head-text-softwares">${item.heading}</div>
+          <a href="${item.link @extension ='html'}" class="stairs-text-content-link">
+            <div class="stairs-text-content">${item.description}
+              <svg class="arrow-stairs" width="12" height="20" viewBox="0 0 12 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 1.5L9.5 10.5L2 19" stroke="white" stroke-width="3" />
+              </svg>
+            </div>
+          </a>
+          <svg data-sly-test="${!itemList.last}" width="320" height="1" class="stairs-divide-line" viewBox="0 0 320 1"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.2" x="320" width="1.00001" height="320" transform="rotate(90 320 0)" fill="white" />
+          </svg>
+        </div>
       </div>
-      <div class="col-lg-6 col-sm-12  p-0 cmp-card-col" data-sly-list="${solution.challengeList}">
-        <div class="cmp-card-cont" data-content="content-${itemList.count}" id="Section${itemList.count}" style="display:${itemList.first ? 'block' : 'none'  @ context='styleString'}">
-          <div class="cmp-card-wrapper">
-            <div class="cmp-card-inner">
-              <h4>${item.subHeading}</h4>
-              <p>${item.description}</p>
-              <div class="cmp-box-button">
-                <a href="${item.buttonUrl @extension ='html'}">
-                  <span>${item.buttonLabel}</span>
-                  <span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Arrow.png"/></span>
-                </a>
-              </div>
+    </div>
+  </div>
+  <div class="row d-none d-lg-flex">
+    <div class="col-lg-6 col-sm-12  p-0 grey-background">
+      <a href="#!" class="challenge-card-link" data-sly-repeat="${solution.challengeList}">
+        <div class="challenges-card ${itemList.first ? 'active' : ''}" id="challenge-card-id"
+          data-id="Section${itemList.count}">
+          <div class="challenge-head py-4 px-5">${item.heading}</div>
+          <div class="challenge-text pb-4 px-5">${item.title}</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-6 col-sm-12  p-0 cmp-card-col" data-sly-list="${solution.challengeList}">
+      <div class="cmp-card-cont" data-content="content-${itemList.count}" id="Section${itemList.count}"
+        style="display:${itemList.first ? 'block' : 'none'  @ context='styleString'}">
+        <div class="cmp-card-wrapper">
+          <div class="cmp-card-inner">
+            <h4>${item.subHeading}</h4>
+            <p>${item.description}</p>
+            <div class="cmp-box-button">
+              <a href="${item.buttonUrl @extension ='html'}">
+                <span>${item.buttonLabel}</span>
+                <span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Arrow.png" /></span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row d-flex d-lg-none">
-      <div class="accordion p-0 solutions-accordion" id="accordionExample" data-sly-list="${solution.challengeList}">
-        <div class="accordion-item solutions-accordion-items">
-          <h2 class="accordion-header solutions-accordion-header" id="heading${itemList.count}">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${itemList.count}"
-              aria-expanded="true" aria-controls="collapse${itemList.count}">
-              <div class="challenges-card-accordion" id="challenge-card-id">
-                <div class="challenge-head pt-3 pb-4 px-1">${item.heading}</div>
-                <div class="challenge-text pb-1 px-1">${item.title}</div>
-              </div>
-            </button>
-          </h2>
-          <div id="collapse${itemList.count}" class="accordion-collapse collapse ${itemList.first ? 'show' : ''}" aria-labelledby="heading${itemList.count}"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body solutions-accordion-body">
-              <div class="cmp-card-cont-accordion px-1">
-                <div class="cmp-card-wrapper">
-                  <div class="cmp-card-inner">
-                    <h4>${item.subHeading}</h4>
-                    <p>${item.description}</p>
-                    <div class="cmp-box-button">
-                      <a href="${item.buttonUrl @extension ='html'}">
-                        <span>${item.buttonLabel}</span>
-                        <span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Arrow.png"/></span>
-                      </a>
-                    </div>
+  </div>
+  <div class="row d-flex d-lg-none">
+    <div class="accordion p-0 solutions-accordion" id="accordionExample" data-sly-list="${solution.challengeList}">
+      <div class="accordion-item solutions-accordion-items">
+        <h2 class="accordion-header solutions-accordion-header" id="heading${itemList.count}">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse${itemList.count}" aria-expanded="true" aria-controls="collapse${itemList.count}">
+            <div class="challenges-card-accordion" id="challenge-card-id">
+              <div class="challenge-head pt-3 pb-4 px-1">${item.heading}</div>
+              <div class="challenge-text pb-1 px-1">${item.title}</div>
+            </div>
+          </button>
+        </h2>
+        <div id="collapse${itemList.count}" class="accordion-collapse collapse ${itemList.first ? 'show' : ''}"
+          aria-labelledby="heading${itemList.count}" data-bs-parent="#accordionExample">
+          <div class="accordion-body solutions-accordion-body">
+            <div class="cmp-card-cont-accordion px-1">
+              <div class="cmp-card-wrapper">
+                <div class="cmp-card-inner">
+                  <h4>${item.subHeading}</h4>
+                  <p>${item.description}</p>
+                  <div class="cmp-box-button">
+                    <a href="${item.buttonUrl @extension ='html'}">
+                      <span>${item.buttonLabel}</span>
+                      <span><img
+                          src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Arrow.png" /></span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -94,5 +93,5 @@
       </div>
     </div>
   </div>
+</div>
 <sly data-sly-call="${templates.placeholder @ isEmpty = !solution.challengeList}"></sly>
-  

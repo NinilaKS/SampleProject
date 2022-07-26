@@ -1,1 +1,20 @@
-.cmp-columncontrol {}
+/*-------------------------------------------------*\
+   General style sheet for the Column Control Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Column Control Remove Side Space
+   
+\*-------------------------------------------------*/
+/*-------------------------------------------*\
+     Column Control Remove Side Space
+\*-------------------------------------------*/
+.columncontrol {
+    &.card-space-remove {
+        .cmp-columncontrol {
+            padding: 0;
+        }
+    }
+}
