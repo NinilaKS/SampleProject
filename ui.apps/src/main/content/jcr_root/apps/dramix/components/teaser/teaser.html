@@ -31,6 +31,7 @@
         <sly data-sly-call="${descriptionTemplate.description @ teaser=teaser}"></sly>
         <hr class="teaser-horz-line opacity-100"/>
         <sly data-sly-call="${actionsTemplate.actions @ teaser=teaser}"></sly>
+        <sly data-sly-resource="${'button' @ resourceType='dramix/components/button', decoration=true}"></sly>
     </div>
 </div>
 <sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-teaser'}"></sly>
