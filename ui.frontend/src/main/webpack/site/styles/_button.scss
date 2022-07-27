@@ -250,7 +250,10 @@
             color: #0E3F6B;
             margin: auto;
         }
-        .close-icon{
+        .arrow-left{
+            display: none;
+        }
+        .arrow-right{
             margin: auto;
         }
     }
@@ -262,7 +265,8 @@
             opacity: 0.7;
             transition: 1s;
         }
-        .close-icon{
+       
+        .arrow-right{
             opacity: 0.7;
             transition: 1s;
 
@@ -290,7 +294,10 @@
             color: white;
             margin: auto;
         }
-        .close-icon{
+        .arrow-left{
+            display: none;
+        }
+        .arrow-right{
             margin: auto;
         }
     }
@@ -302,7 +309,7 @@
             opacity: 0.7;
             transition: 1s;
         }
-        .tick-icon{
+        .arrow-right{
             opacity: 0.7;
             transition: 1s;
 
