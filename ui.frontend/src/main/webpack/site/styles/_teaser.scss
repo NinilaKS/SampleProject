@@ -1,9 +1,59 @@
 .cmp-teaser {}
+
 .cmp-teaser__image {}
+
 .cmp-teaser__content {}
+
 .cmp-teaser__pretitle {}
+
 .cmp-teaser__title {}
+
 .cmp-teaser__title-link {}
+
 .cmp-teaser__description {}
+
 .cmp-teaser__action-container {}
+
 .cmp-teaser__action-link {}
+
+/*-------------------------------------------------*\
+   General style sheet for the Teaser Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Disable Teaser Horziontal Line
+   - Enable Teaser Horziontal Line
+   
+\*-------------------------------------------------*/
+/*-------------------------------------------*\
+    Disable Teaser Horziontal Line
+\*-------------------------------------------*/
+.teaser {
+    .cmp-teaser {
+        .cmp-teaser__content {
+            .teaser-horz-line {
+                display: none;
+            }
+        }
+    }
+}
+
+/*-------------------------------------------*\
+    Enable Teaser Horziontal Line
+\*-------------------------------------------*/
+.teaser {
+    &.enable-hr-line {
+        .cmp-teaser {
+            .cmp-teaser__content {
+                .teaser-horz-line {
+                    display: block;
+                    margin: 30px 0;
+                    background-color: $color-light-gray;
+                }
+            }
+        }
+    }
+
+}
