@@ -3,7 +3,18 @@
 .cmp-button__icon {}
 //.cmp-button__icon--myIcon {}
 
-.dark-btn{
+.dark-buttons-bg {
+    background-color: #1E1E1E;
+}
+/*-------------------------------------------------*\
+    CSS for all the buttons to be added here. 
+    There are 2 types buttons. One with dark bg and one with light bg. 
+
+\*-------------------------------------------------*/
+
+
+// Button with dark background and dark grey border
+.dark-btn {
     .btn {
         border: 1px solid rgba(255, 255, 255, 0.2);
         display: flex;
@@ -11,22 +22,23 @@
         padding-left: 0;
         padding-right: 0;
         min-height: 49px;
-        .arrow-left{
+
+        .arrow-left {
             opacity: 0;
             position: relative;
             left: 0;
             margin: auto 0;
-            
+
         }
-      
-        .arrow-right{
+
+        .arrow-right {
             position: relative;
             right: 20px;
             margin: auto 0;
             margin-left: 20px;
         }
-    
-    
+
+
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
@@ -39,33 +51,485 @@
             margin-right: 30px;
         }
     }
-    .btn:hover{
+
+    .btn:hover {
         border: 1px solid #FFFFFF;
         padding-right: 0;
         transition: 1s;
-        .arrow-right{
+
+        .arrow-right {
             // transform: translate(15px);
             right: 0;
             transition: 0.5s;
             opacity: 0;
         }
-        .arrow-left{
+
+        .arrow-left {
             transform: translate(15px);
             transition: 0.5s;
             opacity: 1;
             right: 10px;
             // margin-right: 20px;
-    
+
         }
-        .cmp-button__text{
+
+        .cmp-button__text {
             transform: translate(15px);
             transition: 0.5s;
-    
+
         }
-    
-    
+
+
     }
-    .btn:focus{
+
+    .btn:focus {
         box-shadow: none;
     }
+}
+
+// Button with dark background and light grey border
+.light-btn {
+    .btn {
+        border: 1px solid rgba(111, 111, 111, 0.2);
+        display: flex;
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+        min-height: 49px;
+
+        .arrow-left {
+            opacity: 0;
+            position: relative;
+            left: 0;
+            margin: auto 0;
+
+        }
+
+        .arrow-right {
+            position: relative;
+            right: 20px;
+            margin: auto 0;
+            margin-left: 20px;
+        }
+
+
+        .cmp-button__text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 17px;
+            color: #FFFFFF;
+            margin: auto;
+            margin-left: 20px;
+            margin-right: 30px;
+        }
     }
+
+    .btn:hover {
+        border: 1px solid #FFFFFF;
+        padding-right: 0;
+        transition: 1s;
+
+        .arrow-right {
+            // transform: translate(15px);
+            right: 0;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .arrow-left {
+            transform: translate(15px);
+            transition: 0.5s;
+            opacity: 1;
+            right: 10px;
+            // margin-right: 20px;
+
+        }
+
+        .cmp-button__text {
+            transform: translate(15px);
+            transition: 0.5s;
+
+        }
+
+
+    }
+
+    .btn:focus {
+        box-shadow: none;
+    }
+}
+
+// Button with dark background and no border
+.no-btn {
+    .btn {
+        display: flex;
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+        min-height: 49px;
+
+        .arrow-left {
+            opacity: 0;
+            position: relative;
+            left: 0;
+            margin: auto 0;
+
+        }
+
+        .arrow-right {
+            position: relative;
+            right: 20px;
+            margin: auto 0;
+            margin-left: 20px;
+        }
+
+
+        .cmp-button__text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 17px;
+            color: #FFFFFF;
+            margin: auto;
+            margin-left: 20px;
+            margin-right: 30px;
+        }
+    }
+
+    .btn:hover {
+        padding-right: 0;
+        transition: 1s;
+
+        .arrow-right {
+            // transform: translate(15px);
+            right: 0;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .arrow-left {
+            transform: translate(15px);
+            transition: 0.5s;
+            opacity: 1;
+            right: 10px;
+            // margin-right: 20px;
+
+        }
+
+        .cmp-button__text {
+            transform: translate(15px);
+            transition: 0.5s;
+
+        }
+
+
+    }
+
+    .btn:focus {
+        box-shadow: none;
+    }
+}
+
+// White button for clear all with cross
+.white-btn {
+    .btn {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: #FFFFFF;
+        
+        width: auto;
+        min-height: 49px;
+        .cmp-button__text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 17px;
+            color: #0E3F6B;
+            margin: auto;
+        }
+        .close-icon{
+            margin: auto;
+        }
+    }
+
+    .btn:hover {
+        border: 1px solid #0E3F6B;
+        transition: 1s;
+        .cmp-button__text{
+            opacity: 0.7;
+            transition: 1s;
+        }
+        .close-icon{
+            opacity: 0.7;
+            transition: 1s;
+
+        }
+    }
+
+    .btn:focus {
+        box-shadow: none;
+    }
+}
+
+// Blue button for filter with tick icon
+.dark-blue-btn {
+    .btn {
+        border: 1px solid #0E3F6B;  ;
+        background: #0E3F6B;        
+        width: auto;
+        min-height: 49px;
+        .cmp-button__text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 17px;
+            color: white;
+            margin: auto;
+        }
+        .close-icon{
+            margin: auto;
+        }
+    }
+
+    .btn:hover {
+        border: 1px solid white;
+        transition: 1s;
+        .cmp-button__text{
+            opacity: 0.7;
+            transition: 1s;
+        }
+        .tick-icon{
+            opacity: 0.7;
+            transition: 1s;
+
+        }
+    }
+
+    .btn:focus {
+        box-shadow: none;
+    }
+}
+
+// Button with light background and  white border
+.dark-btn-grey {
+    .btn {
+        border: 1px solid rgba(14, 63, 107, 0.2);
+        display: flex;
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+        min-height: 49px;
+
+        .arrow-left {
+            opacity: 0;
+            position: relative;
+            left: 0;
+            margin: auto 0;
+
+        }
+
+        .arrow-right {
+            position: relative;
+            right: 20px;
+            margin: auto 0;
+            margin-left: 20px;
+        }
+
+
+        .cmp-button__text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 17px;
+            color: #042A4B;
+            margin: auto;
+            margin-left: 20px;
+            margin-right: 30px;
+        }
+    }
+
+    .btn:hover {
+        border: 1px solid rgba(14, 63, 107, 1);
+        padding-right: 0;
+        transition: 1s;
+
+        .arrow-right {
+            // transform: translate(15px);
+            right: 0;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .arrow-left {
+            transform: translate(15px);
+            transition: 0.5s;
+            opacity: 1;
+            right: 10px;
+            // margin-right: 20px;
+
+        }
+
+        .cmp-button__text {
+            transform: translate(15px);
+            transition: 0.5s;
+
+        }
+
+
+    }
+
+    .btn:focus {
+        box-shadow: none;
+    }
+}
+
+// Button with light background and other white border
+.light-btn-grey {
+    .btn {
+        border: 1px solid rgba(4, 42, 75, 0.2);
+        display: flex;
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+        min-height: 49px;
+
+        .arrow-left {
+            opacity: 0;
+            position: relative;
+            left: 0;
+            margin: auto 0;
+
+        }
+
+        .arrow-right {
+            position: relative;
+            right: 20px;
+            margin: auto 0;
+            margin-left: 20px;
+        }
+
+
+        .cmp-button__text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 17px;
+            color: #042A4B;
+            margin: auto;
+            margin-left: 20px;
+            margin-right: 30px;
+        }
+    }
+
+    .btn:hover {
+        border: 1px solid rgba(4, 42, 75, 1);
+        padding-right: 0;
+        transition: 1s;
+
+        .arrow-right {
+            // transform: translate(15px);
+            right: 0;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .arrow-left {
+            transform: translate(15px);
+            transition: 0.5s;
+            opacity: 1;
+            right: 10px;
+            // margin-right: 20px;
+
+        }
+
+        .cmp-button__text {
+            transform: translate(15px);
+            transition: 0.5s;
+
+        }
+
+
+    }
+
+    .btn:focus {
+        box-shadow: none;
+    }
+}
+
+// Button with light background and no border
+.no-btn-grey {
+    .btn {
+        display: flex;
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+        min-height: 49px;
+
+        .arrow-left {
+            opacity: 0;
+            position: relative;
+            left: 0;
+            margin: auto 0;
+
+        }
+
+        .arrow-right {
+            position: relative;
+            right: 20px;
+            margin: auto 0;
+            margin-left: 20px;
+        }
+
+
+        .cmp-button__text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 17px;
+            color: #042A4B;
+            margin: auto;
+            margin-left: 20px;
+            margin-right: 30px;
+        }
+    }
+
+    .btn:hover {
+        padding-right: 0;
+        transition: 1s;
+
+        .arrow-right {
+            // transform: translate(15px);
+            right: 0;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .arrow-left {
+            transform: translate(15px);
+            transition: 0.5s;
+            opacity: 1;
+            right: 10px;
+            // margin-right: 20px;
+
+        }
+
+        .cmp-button__text {
+            transform: translate(15px);
+            transition: 0.5s;
+
+        }
+
+
+    }
+
+    .btn:focus {
+        box-shadow: none;
+    }
+}

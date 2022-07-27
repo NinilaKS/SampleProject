@@ -444,6 +444,21 @@
                                     cq:styleId="1658465169199"
                                     cq:styleLabel="Dark Blue Button"
                                     jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="dark-btn-grey"
+                                    cq:styleId="1658906776270"
+                                    cq:styleLabel="Dark Button Grey"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="light-btn-grey"
+                                    cq:styleId="1658906777774"
+                                    cq:styleLabel="Light Button Grey"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="no-btn-grey"
+                                    cq:styleId="1658906779037"
+                                    cq:styleLabel="No Button Grey"
+                                    jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item0>
                     </cq:styleGroups>
