@@ -1,10 +1,16 @@
-${properties.contact}<br>
-${properties.contacttitle}<br>
-<sly data-sly-use.sample="com.adobe.dramix.core.models.Contact">
-	<sly data-sly-list.item="${sample.contactAreaDetails}"><sly>
-    <p> Image Path : <b> ${item.imagepath}</b></p>
-    <p> Image Title : <b> ${item.imagetitle}</b></p>
-    <p> Image Description : <b> ${item.imagedescription}</b></p>
+<div data-sly-use.contact="com.adobe.dramix.core.models.Contact"
+	data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+	<p>${properties.subHeading}</p>
+	<h1>${properties.heading}</h1>
 
-
-</sly>
+	<div data-sly-list="${contact.contactDetails}"
+		style="display: flex; gap: 24px">
+		<div>
+			<img alt="" src="${item.imagePath}" />
+			<p>${item.name}</p>
+			<p>${item.details @ context="html"}</p>
+		</div>
+	</div>
+</div>
+<sly
+	data-sly-call="${templates.placeholder @ isEmpty = !contact.contactDetails}"></sly>
