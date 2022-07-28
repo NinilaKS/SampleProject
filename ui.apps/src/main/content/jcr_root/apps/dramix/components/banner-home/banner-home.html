@@ -1,15 +1,30 @@
-<sly data-sly-use.homebanner="com.adobe.dramix.core.models.Listing"></sly>
-
-<div data-sly-resource="${'imageComponent' @ resourceType='/apps/dramix/components/image'}"></div>
-
-<h1><Strong>Title: ${properties.title}</Strong></h1>
-<p>Open Page on New Page: ${properties.newPageCheck}</p>
-
-   <div data-sly-list.item="${homebanner.bannerDetails}">
-        <p> SubHeading : <b>${item.subHeading} </b></p>
-        <p> Heading : <b>${item.heading}</b> </p>
-        <p> Button Text : <b>${item.buttonText}</b> </p>
-        <p> Button LinkUrl : <b>${item.buttonLink}</b> </p>
-    </div>
+<div class="List-catecory">
+<ul class="list"
+	data-sly-use.banner="com.adobe.dramix.core.models.Banner"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-list="${banner.bannerDetails}">
+	<li>
+		<div class="title">
+			<h1>${item.title}</h1>
+		</div>
+		<div class="discribtion">
+			<h4>${item.subHeading}</h4>
+			<div class="details">
+				<p>${item.heading}</p>
+				<span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/BigPicto-Arrow.png"></span>
+			</div>
+		</div> 
+		<video class="video" autoplay muted loop>
+			<source src="${item.video}" type="video/mp4">
+		</video>
+	</li>
+</ul>
+</div>
+<div id="banner" data-sly-list="${banner.bannerDetails}">
+	<video class="video" data-sly-test="${itemList.first && wcmmode.disabled}" autoplay muted loop id="bannersrc">
+		<source src="${item.video}" type="video/mp4">
+	</video>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !banner.bannerDetails}"></sly>
 
 

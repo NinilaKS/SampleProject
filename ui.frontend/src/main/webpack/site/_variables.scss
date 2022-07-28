@@ -1,31 +1,36 @@
-
 //== Font
 
-$font-family:           "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-size:             16px;
-$font-height:           1.5;
-$helvetica:             'Helvetica';
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size: 16px;
+$font-height: 1.5;
+$helvetica: "Helvetica";
 //== Color
 
 // Normal mode
-$color-foreground:      #202020;
-$color-background:      #ECECEC;
-$color-link:            #2020E0;
-$color-white:           #ffffff;
+$color-foreground: #202020;
+$color-background: #ececec;
+$color-link: #2020e0;
+$color-white: #ffffff;
+$color-dark-blue: #042a4b;
+$color-pure-cyan: #00B5E8;
+$color-dark-gray: #707070;
+$color-light-gray: #dadada;
+$color-gray: #f7f7f7;
 
 // Dark mode
 $color-foreground-dark: invert($color-foreground);
 $color-background-dark: invert($color-background);
-$color-link-dark:       invert($color-link);
+$color-link-dark: invert($color-link);
 
-// Font Family Type 
+// Font Family Type
 
-$font-family-roboto: 'Roboto', sans-serif;
+$font-family-roboto: "Roboto", sans-serif;
 $font-family-robotoLight: "Roboto-Light";
 $font-family-robotoItalic: "Roboto-Italic";
 $font-family-robotoBold: "Roboto-Bold";
 
 // Font Size
+$font-size-12: 12px;
 $font-size-16: 16px;
 $font-size-24: 24px;
 $font-size-80: 80px;
@@ -39,5 +44,16 @@ $font-weight-400: 400;
 $font-weight-700: 700;
 
 // Line Height
+$line-height-12: 12px;
+$line-height-17: 17px;
 $line-height-18: 18px;
+$line-height-20: 20px;
+$line-height-28: 28px;
+$line-height-32: 32px;
+$line-height-40: 40px;
 $line-height-81: 81px;
+$line-height-90: 90px;
+
+// Letter Spacing
+$letter-spacing-02:-0.02em;
+$letter-spacing-2: 0.2em;

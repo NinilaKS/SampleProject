@@ -1,0 +1,52 @@
+<section class="${wcmmode.edit ? '' : 'Homepage'}" >
+	<div class="container">
+	
+		<div class="top-header">
+		    <sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
+			<div class="right-side">
+				<ul>
+					<li><span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Softwatetools.png"></span>Software tools</li>
+					<li><span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-upcomingevents.png"></span>Upcoming Events</li>
+				</ul>
+			</div>
+		</div>
+    		
+    	<div class="menu-bar">
+			<sly data-sly-resource="${'navigation' @ resourceType='dramix/components/navigation'}"></sly>
+			<div class="right-menu">
+				<ul>
+					<li><span><i class="fa-solid fa-magnifying-glass"></i></span></li>
+					<li><span class="img"><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Folder.png"></span></li>
+					<li><button>Request a quote</button></li>
+				</ul>
+			</div>
+		</div>
+
+		<sly data-sly-resource="${'banner' @ resourceType='dramix/components/banner-home'}"></sly>
+			
+	</div>
+</section>
+
+
+
+
+<script>
+        var UL=document.querySelectorAll(".list li");
+        var video =document.querySelectorAll(".list li video");
+        /*get the single list to add active class*/
+           UL.forEach(li =>{
+            li.addEventListener('click',function(){
+                UL.forEach(l=>l.classList.remove('active'));
+                this.classList.add('active');
+
+                /*if list contain active class then get the src from child elemnt to push banner src*/
+                if(li.classList.contains("active")){
+                     let src=li.children[2].children[0].getAttribute('src');
+                    console.log(src);
+                    document.getElementById('bannersrc').src=src;
+                }
+            })
+
+           });
+        
+</script>

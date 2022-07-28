@@ -12,15 +12,7 @@
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="dramix/components/container"
-                layout="responsiveGrid">
-                <title
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="dramix/components/title"/>
-                <container
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="dramix/components/container"
-                    layout="responsiveGrid"/>
-            </container>
+                layout="responsiveGrid"/>
         </root>
     </jcr:content>
 </jcr:root>

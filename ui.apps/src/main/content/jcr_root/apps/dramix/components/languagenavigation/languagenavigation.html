@@ -1,0 +1,10 @@
+<sly data-sly-use.commonsTemplates="core/wcm/components/commons/v1/templates.html"
+	 data-sly-use.languageNavigation="com.adobe.cq.wcm.core.components.models.LanguageNavigation"
+     data-sly-test.hasContent="${languageNavigation.items.size > 0}"></sly>
+     
+<div class="left-side">
+	<select name="language" id="languages" data-sly-list.item="${languageNavigation.items}">
+		<option value="${item.language}">${item.title}</option>
+	</select>
+</div>
+<sly data-sly-call="${commonsTemplates.placeholder @ isEmpty = !hasContent}"></sly>

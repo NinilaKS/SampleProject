@@ -210,7 +210,8 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Root"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:DRAMIX SOLUTIONS - Content,/apps/dramix/components/form/container,group:DRAMIX SOLUTIONS - Structure]">
+                    components="[group:Bekaert Dramix - Content,group:DRAMIX SOLUTIONS - Structure]"
+                    layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -236,11 +237,13 @@
                     </cq:authoring>
                 </policy_1574694950110>
                 <policy_1574695586800
+                    cq:styleDefaultElement="div"
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:Bekaert Dramix - Content,group:Bekaert Dramix - Form]"
+                    components="[group:Bekaert Dramix - Content]"
+                    layout="responsiveGrid"
                     layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
@@ -271,7 +274,9 @@
                     jcr:description="Sets a &lt;main> element on the page content area."
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Main"
-                    sling:resourceType="wcm/core/components/policy/policy">
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="group:Bekaert Dramix - Content"
+                    layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy_649128221558427>
                 <policy_1575040440977
@@ -279,7 +284,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="XF Root"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:Bekaert Dramix - Content,/apps/dramix/components/form/container]"
+                    components="[group:Bekaert Dramix - Content,/apps/dramix/components/form/container,/apps/dramix/components/languagenavigation,/apps/dramix/components/navigation,/apps/dramix/components/search]"
                     layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
@@ -305,6 +310,17 @@
                         </assetToComponentMapping>
                     </cq:authoring>
                 </policy_1575040440977>
+                <policy_9526112340526
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Container Policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    columns="12"
+                    components="group:Bekaert Dramix - Content"
+                    layout="responsiveGrid"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_9526112340526>
             </container>
             <teaser jcr:primaryType="nt:unstructured">
                 <policy_1575031387650
@@ -314,6 +330,19 @@
                     sling:resourceType="wcm/core/components/policy/policy"
                     titleType="h3">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Horizontal Line"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="enable-hr-line"
+                                    cq:styleId="1658889370576"
+                                    cq:styleLabel="Enable Horizontal Line"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
                 </policy_1575031387650>
             </teaser>
             <download jcr:primaryType="nt:unstructured">
@@ -341,6 +370,109 @@
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
             </page>
+            <columncontrol jcr:primaryType="nt:unstructured">
+                <policy_1658464925151
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Column Control Policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Styles"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="project-dramix-container"
+                                    cq:styleId="1658464994413"
+                                    cq:styleLabel="Project Component Style"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="sticky-teaser-container"
+                                    cq:styleId="1658464995961"
+                                    cq:styleLabel="Sticky Teaser Middle"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                        <item1
+                            cq:styleGroupLabel="Card Spacing"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="card-space-remove"
+                                    cq:styleId="1658766373454"
+                                    cq:styleLabel="Card Spacing Remove"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
+                    </cq:styleGroups>
+                </policy_1658464925151>
+            </columncontrol>
+            <button jcr:primaryType="nt:unstructured">
+                <policy_1658465140306
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Button Policy"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Button Styles"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="dark-btn"
+                                    cq:styleId="1658465160089"
+                                    cq:styleLabel="Dark Border Button"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="light-btn"
+                                    cq:styleId="1658465166080"
+                                    cq:styleLabel="Light Border Button"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="no-btn"
+                                    cq:styleId="1658465167324"
+                                    cq:styleLabel="No Border Button"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="white-btn"
+                                    cq:styleId="1658465168258"
+                                    cq:styleLabel="White Button"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="dark-blue-btn"
+                                    cq:styleId="1658465169199"
+                                    cq:styleLabel="Dark Blue Button"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="dark-btn-grey"
+                                    cq:styleId="1658906776270"
+                                    cq:styleLabel="Dark Button Grey"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="light-btn-grey"
+                                    cq:styleId="1658906777774"
+                                    cq:styleLabel="Light Button Grey"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="no-btn-grey"
+                                    cq:styleId="1658906779037"
+                                    cq:styleLabel="No Button Grey"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1658465140306>
+            </button>
         </components>
     </dramix>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <parsys jcr:primaryType="nt:unstructured">
+                    <colctrl jcr:primaryType="nt:unstructured"/>
+                </parsys>
+            </components>
+        </foundation>
+    </wcm>
 </jcr:root>

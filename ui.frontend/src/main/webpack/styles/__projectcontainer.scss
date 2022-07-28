@@ -1,0 +1,91 @@
+/*-------------------------------------------------*\
+   General style sheet for the Project Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Project Container
+   - Teaser Container 
+   
+\*-------------------------------------------------*/
+
+/*-------------------------------------------*\
+          Project Container
+\*-------------------------------------------*/
+.project-dramix-container {
+    .text {
+        .cmp-text {
+            h6 {
+                font-size: $font-size-12;
+                line-height: $line-height-12;
+                text-transform: uppercase;
+                color: $color-pure-cyan;
+                font-weight: $font-weight-700;
+                font-style: $font-weight-normal;
+                letter-spacing: $letter-spacing-2;
+            }
+
+            h1 {
+                font-size: $font-size-80;
+                line-height: $line-height-90;
+                color: $color-dark-blue;
+                font-weight: $font-weight-300;
+                font-style: $font-weight-normal;
+                letter-spacing: $letter-spacing-02;
+            }
+        }
+    }
+
+    /*-------------------------------------------*\
+             Teaser Container
+\*-------------------------------------------*/
+    .teaser {
+        .cmp-teaser {
+            .cmp-teaser__image {
+                .cmp-image {
+                    overflow: hidden;
+
+                    .cmp-image__link {
+                        img {
+                            transition: 0.5s all ease-in-out;
+                            object-fit: cover;
+
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .cmp-teaser__content {
+                .cmp-teaser__title {
+                    margin: 20px 0;
+
+                    .cmp-teaser__title-link {
+                        color: $color-dark-blue;
+                        line-height: $line-height-28;
+                        font-weight: $font-weight-normal;
+                        font-weight: $font-weight-400;
+                        font-size: $font-size-24;
+                        text-decoration: none;
+                    }
+                }
+
+                .cmp-teaser__description {
+
+                    p {
+                        margin: 0;
+                        color: $color-dark-gray;
+                        line-height: $line-height-28;
+                        font-weight: $font-weight-normal;
+                        font-weight: $font-weight-400;
+                        font-size: $font-size-16;
+                    }
+                }
+            }
+        }
+    }
+}
