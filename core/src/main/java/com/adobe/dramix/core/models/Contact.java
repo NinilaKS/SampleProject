@@ -2,13 +2,11 @@ package com.adobe.dramix.core.models;
 
 import java.util.List;
 
-import com.adobe.dramix.core.helper.ContactHelper;
+import com.adobe.dramix.core.models.impl.ContactHelper;
 
-/**
- * @author vmaindala001
- *
- */
 public interface Contact {
-
-	List<ContactHelper> getContactAreaDetails();
+    /**
+     * Method to get the contact details
+     */
+	List<ContactHelper> getContactDetails();
 }
