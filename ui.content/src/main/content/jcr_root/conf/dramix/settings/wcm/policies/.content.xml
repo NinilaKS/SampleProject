@@ -344,6 +344,31 @@
                         </item0>
                     </cq:styleGroups>
                 </policy_1575031387650>
+                <policy_20322153661751
+                    jcr:lastModified="{Date}2022-07-25T16:00:20.585+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Teaser Policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    showTitleType="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-teaser--aboutUsTeaser1"
+                                    cq:styleId="1658742448512"
+                                    cq:styleLabel="Text Left - Image Right"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-teaser--aboutUsTeaser2"
+                                    cq:styleId="1658742475653"
+                                    cq:styleLabel="Text Right - Image Left"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_20322153661751>
             </teaser>
             <download jcr:primaryType="nt:unstructured">
                 <policy_1575032193319
