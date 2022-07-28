@@ -1,39 +1,37 @@
 // generate challenges cards on clicking challenges
-var btns = document.getElementsByClassName("challenges-card");
+let changeCards = document.getElementsByClassName("challenges-card");
 
 const countArr = document.querySelectorAll(".cmp-card-cont");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", toggleCards.bind(null, btns[i]));
+for (let i = 0; i < changeCards.length; i++) {
+  changeCards[i].addEventListener("click", toggleCards.bind(null, changeCards[i]));
 }
 function toggleCards(id) {
-  console.log(id);
   showCard(id.getAttribute("data-id"));
 }
-var visibleId = null;
+let visibleCard = null;
 function showCard(id) {
-  if (visibleId !== id) {
-    visibleId = id;
+  if (visibleCard !== id) {
+    visibleCard = id;
   }
   hideCard();
 }
 function hideCard() {
-  var div, i, id;
+  let divClicked, i, id;
   for (i = 0; i < countArr.length; i++) {
     id = countArr[i].id;
-    div = document.getElementById(id);
-    if (visibleId === id) {
-      div.style.display = "block";
+    divClicked = document.getElementById(id);
+    if (visibleCard === id) {
+      divClicked.style.display = "block";
     } else {
-      div.style.display = "none";
+      divClicked.style.display = "none";
     }
   }
 }
 
-var btns = document.getElementsByClassName("challenges-card");
-console.log(btns);
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    var current = document.getElementsByClassName("active");
+let buttonClicked = document.getElementsByClassName("challenges-card");
+for (let i = 0; i < buttonClicked.length; i++) {
+  buttonClicked[i].addEventListener("click", function () {
+    let current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
