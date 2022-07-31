@@ -1,16 +1,26 @@
-<div data-sly-use.contact="com.adobe.dramix.core.models.Contact"
-	data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
-	<p>${properties.subHeading}</p>
-	<h1>${properties.heading}</h1>
+<div class="container-fluid">
+	<div class="row g-0 contact-row">
 
-	<div data-sly-list="${contact.contactDetails}"
-		style="display: flex; gap: 24px">
-		<div>
-			<img alt="" src="${item.imagePath}" />
-			<p>${item.name}</p>
-			<p>${item.details @ context="html"}</p>
+		<div class="col-sm-1 d-none d-sm-block"></div>
+		<div data-sly-use.contact="com.adobe.dramix.core.models.Contact"
+			data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+			class="cmp-contact-container col-md-10 col-sm-12">
+			<p class="cmp-contact__subheading text-uppercase text-start">${properties.subHeading}</p>
+			<h1 class="cmp-contact__heading text-start">${properties.heading}</h1>
+
+			<div data-sly-list="${contact.contactDetails}" class="cmp-contact__teaser d-md-flex d-sm-block gap-md-3 gap-sm-0">
+				<div class="cmp-contact__content position-relative">
+					<img alt="${'Contact Image' @ i18n}" class="img-fluid" src="${item.imagePath}" />
+					<div class="cmp-details position-absolute d-flex flex-column justify-content-end">
+						<h3>${item.name}</h3>
+						<p>${item.details @ context="html"}</p>
+					</div>
+				</div>
+			</div>
 		</div>
+		<div class="col-sm-1 d-none d-sm-block"></div>
+
 	</div>
 </div>
-<sly
-	data-sly-call="${templates.placeholder @ isEmpty = !contact.contactDetails}"></sly>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !contact.contactDetails}"></sly>

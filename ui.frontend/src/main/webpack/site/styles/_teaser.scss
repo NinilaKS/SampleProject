@@ -68,20 +68,34 @@
                 flex-direction: column;
                 justify-content: flex-end;
                 padding: 0 0 0 43px;
-                
+
                 .cmp-teaser__title {
                     padding-bottom: 31px;
+                    text-decoration: none;
+                    font-size: $font-size-38;
+                    font-weight: $font-weight-300;
+                    font-style: $font-weight-normal;
+                    color: $color-white;
+                    letter-spacing: $letter-spacing-02;
+                    font-family: $font-family-roboto;
+                }
+            }
 
-                    .cmp-teaser__title-link {
-                        text-decoration: none;
-                        font-size: $font-size-38;
-                        font-weight: $font-weight-300;
-                        font-style: $font-weight-normal;
-                        color: $color-white;
-                        letter-spacing: $letter-spacing-02;
-                        font-family: $font-family-roboto;
+            .button {
+                &.no-btn {
+
+                    .arrow-left,
+                    .arrow-right {
+                        top: -8px;
                     }
 
+                    .arrow-left {
+                        left: -5px;
+                    }
+
+                    .cmp-button__text {
+                        margin: 0 25px 0 0;
+                    }
                 }
             }
         }

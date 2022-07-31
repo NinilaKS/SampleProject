@@ -1,4 +1,4 @@
-import { AOS } from 'aos';
+import  AOS  from 'aos';
 
 window.addEventListener("DOMContentLoaded", () => {
     AOS.init({

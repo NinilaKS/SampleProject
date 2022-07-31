@@ -32,16 +32,16 @@
   </div>
   <div class="row solution-row d-none d-lg-flex">
     <div class="col-lg-6 col-sm-12  p-0 grey-background">
-      <a href="#!" class="challenge-card-link" data-sly-repeat="${solution.challengeList}">
+      <div class="challenge-card-link text-decoration-none" data-sly-repeat="${solution.challengeList}">
         <div class="challenges-card position-relative ${itemList.first ? 'active' : ''}" id="challenge-card-id"
           data-id="Section${itemList.count}">
           <div class="challenge-head text-uppercase py-4 px-5">${item.heading}</div>
           <div class="challenge-text pb-4 px-5">${item.title}</div>
         </div>
-      </a>
+      </div>
     </div>
     <div class="col-lg-6 col-sm-12  p-0 cmp-card-col" data-sly-list="${solution.challengeList}">
-      <div class="cmp-card-cont position-relative h-100" data-content="content-${itemList.count}" id="Section${itemList.count}"
+      <div class="cmp-card-cont position-relative h-100"  data-content="content-${itemList.count}" id="Section${itemList.count}"
         style="display:${itemList.first ? 'block' : 'none'  @ context='styleString'}">
         <div class="cmp-card-wrapper align-items-center h-100 d-flex p-3">
           <div class="cmp-card-inner">

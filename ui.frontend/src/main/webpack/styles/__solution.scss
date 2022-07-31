@@ -3,9 +3,11 @@
     .cmp-card-col {
       background-color: $color-dark-blue;
     }
+
     .grey-background {
       background: $color-gray;
     }
+
     .cmp-left {
       .head-text-solutions {
         font-weight: $font-weight-700;
@@ -14,13 +16,15 @@
         letter-spacing: $letter-spacing-2;
         color: $color-pure-cyan;
       }
+
       .solution-div {
-        .cmp-solution-title{
+        .cmp-solution-title {
           font-weight: $font-weight-300;
           font-size: $font-size-80;
           line-height: $line-height-90;
           letter-spacing: $letter-spacing-02;
-          color: $color-dark-blue; 
+          color: $color-dark-blue;
+
           @media (max-width: 768px) {
             font-size: 48px;
             line-height: 55px;
@@ -30,8 +34,10 @@
         }
       }
     }
+
     .challenge-card-link {
-      text-decoration: none;
+      cursor: pointer;
+
       .challenges-card {
         top: -15%;
         opacity: 0.5;
@@ -39,9 +45,11 @@
         width: 70%;
         float: right;
         margin-bottom: 1px;
+
         @media (min-width: 1024px) and (max-width: 1179px) {
           top: -5px;
         }
+
         .challenge-head {
           font-weight: $font-weight-700;
           font-size: $font-size-12;
@@ -49,6 +57,7 @@
           letter-spacing: $letter-spacing-2;
           color: $color-dark-blue;
         }
+
         .challenge-text {
           font-weight: $font-weight-300;
           font-size: $font-size-24;
@@ -56,20 +65,28 @@
           color: $color-dark-blue;
         }
       }
-      .challenges-card.active {
-        opacity: 1;
+
+      .challenges-card {
+        &.active {
+          opacity: 1;
+        }
+
       }
     }
+
     .image-bg-div {
       min-height: 400px;
       height: 600px;
       background-repeat: no-repeat;
+
       @media (max-width: 768px) {
         height: 100%;
       }
+
       .stairs-img-text {
         top: 5%;
         width: 70%;
+
         .head-text-softwares {
           font-weight: $font-weight-700;
           font-size: $font-size-12;
@@ -77,14 +94,16 @@
           letter-spacing: $letter-spacing-2;
           color: $color-white;
         }
+
         .stairs-text-content-link {
           .stairs-text-content {
-            font-style: normal;
+            font-style: $font-weight-normal;
             font-weight: $font-weight-300;
             font-size: $font-size-24;
             line-height: $line-height-32;
             width: 70%;
             color: $color-white;
+
             .arrow-stairs {
               right: 5%;
             }
@@ -92,17 +111,21 @@
         }
       }
     }
+
     .cmp-card-cont {
       background-color: $color-white;
       max-width: 70%;
       top: -15%;
+
       @media (min-width: 1024px) and (max-width: 1179px) {
         top: -5px;
       }
+
       .cmp-card-wrapper {
         .cmp-card-inner {
           max-width: 50%;
           margin: 0 auto;
+
           h4 {
             color: $color-dark-blue;
             font-weight: $font-weight-300;
@@ -110,6 +133,7 @@
             line-height: $line-height-40;
             letter-spacing: $letter-spacing-02;
           }
+
           p {
             font-weight: $font-weight-400;
             font-size: $font-size-16;
@@ -117,6 +141,7 @@
             color: $color-dark-gray;
             margin: 20px 0;
           }
+
           .cmp-box-button {
             a {
               grid-gap: 2em;
@@ -131,13 +156,16 @@
         }
       }
     }
+
     .solutions-accordion {
       .solutions-accordion-items {
         .solutions-accordion-header {
           .accordion-button {
             background-color: $color-white;
+
             .challenges-card-accordion {
               margin-bottom: 1px;
+
               .challenge-head {
                 font-weight: $font-weight-700;
                 font-size: $font-size-12;
@@ -145,6 +173,7 @@
                 letter-spacing: $letter-spacing-2;
                 color: $color-dark-blue;
               }
+
               .challenge-text {
                 font-weight: $font-weight-300;
                 font-size: $font-size-16;
@@ -153,10 +182,12 @@
               }
             }
           }
+
           .accordion-button::after {
             background-image: none;
           }
         }
+
         .solutions-accordion-body {
           .cmp-card-cont-accordion {
             .cmp-card-wrapper {
@@ -168,6 +199,7 @@
                   line-height: $line-height-28;
                   letter-spacing: $letter-spacing-02;
                 }
+
                 p {
                   font-weight: $font-weight-400;
                   font-size: $font-size-16;
@@ -175,6 +207,7 @@
                   color: $color-dark-gray;
                   margin: 20px 0;
                 }
+
                 .cmp-box-button {
                   a {
                     grid-gap: 2em;

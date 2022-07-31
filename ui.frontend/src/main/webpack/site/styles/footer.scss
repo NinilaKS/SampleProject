@@ -1,19 +1,21 @@
 .container-footer {
   font-family: $font-family;
+
   .row {
     .footer-bekaert-icon {
       .footer-media-links {
         .svg-middle-line {
-          margin-right: 30px;
-          margin-left: 30px;
+          margin: 0 30px;
         }
       }
     }
+
     .footer-links {
       .comp_footerLinks {
         .comp_footerLinks-list {
           .comp_footerLinks-list-item {
             width: 29%;
+
             a {
               font-weight: $font-weight-400;
               font-size: $font-size-16;
@@ -26,8 +28,10 @@
     }
   }
 }
+
 .copyright-div {
   background: $color-dark-blue;
+
   .copyright-text {
     color: $color-white;
     font-family: $font-family;
@@ -38,11 +42,13 @@
     .middle-copyright-line {
       fill: $color-white;
     }
+
     a {
       color: $color-white;
     }
   }
 }
+
 @media only screen and (max-width: 600px) {
   .copyright-div {
     .copyright-text {
