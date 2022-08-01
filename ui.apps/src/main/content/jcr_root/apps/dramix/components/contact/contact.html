@@ -4,11 +4,11 @@
 		<div class="col-sm-1 d-none d-sm-block"></div>
 		<div data-sly-use.contact="com.adobe.dramix.core.models.Contact"
 			data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
-			class="cmp-contact-container col-md-10 col-sm-12">
+			class="cmp-contact-container col-md-10 col-12">
 			<p class="cmp-contact__subheading text-uppercase text-start">${properties.subHeading}</p>
-			<h1 class="cmp-contact__heading text-start w-50">${properties.heading}</h1>
+			<h1 class="cmp-contact__heading text-start">${properties.heading}</h1>
 
-			<div data-sly-list="${contact.contactDetails}" class="cmp-contact__teaser d-md-flex d-sm-block gap-md-3 gap-sm-0">
+			<div data-sly-list="${contact.contactDetails}" class="cmp-contact__teaser d-md-flex d-block gap-md-3 gap-0">
 				<div class="cmp-contact__content position-relative">
 					<img alt="${'Contact Image' @ i18n}" class="img-fluid" src="${item.imagePath}" />
 					<div class="cmp-details position-absolute d-flex flex-column justify-content-end">

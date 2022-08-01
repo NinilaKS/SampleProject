@@ -8,7 +8,40 @@
    - Disable Teaser Horziontal Line
    
 \*-------------------------------------------------*/
-.sticky-teaser-container{
+.sticky-teaser-container {
     background-color: $color-dark-blue;
 
+    .cmp-columncontrol {
+        .column-inner {
+            .teaser {
+                .cmp-teaser {
+                    &__content {
+                        width: 100%;
+                        margin: 0 auto;
+                        padding: 3.75em 0;
+                        background-color: $color-white;
+                    }
+
+                    &__title-link {
+                        color: $color-dark-blue;
+                        font-weight: $font-weight-300;
+                        font-size: $font-size-38;
+                        line-height: $line-height-44;
+                        letter-spacing: $letter-spacing-02;
+                        margin: 0;
+                    }
+
+                    &__description {
+                        p {
+                            font-weight: $font-weight-400;
+                            font-size: $font-size-16;
+                            line-height: $line-height-146;
+                            color: $color-dark-gray;
+                            margin: 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

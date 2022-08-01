@@ -39,6 +39,11 @@
             color: $color-white;
             letter-spacing: $letter-spacing-02;
             margin-bottom: 60px;
+            width: 50%;
+
+            @media screen and (max-width: $screen-md-min) {
+                width: 100%;
+            }
         }
 
         &__subheading {
@@ -52,7 +57,7 @@
             margin-bottom: 30px;
         }
 
-/*-------------------------------------------*\
+        /*-------------------------------------------*\
     Contact Container Image with Text
 \*-------------------------------------------*/
         &__content {
