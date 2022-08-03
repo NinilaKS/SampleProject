@@ -32,8 +32,8 @@
   </div>
   <div class="row solution-row d-none d-lg-flex">
     <div class="col-lg-6 col-sm-12  p-0 grey-background">
-      <div class="challenge-card-link text-decoration-none" data-sly-repeat="${solution.challengeList}">
-        <div class="challenges-card position-relative ${itemList.first ? 'active' : ''}" id="challenge-card-id"
+      <div class="challenge-card-link position-relative text-decoration-none" data-sly-repeat="${solution.challengeList}">
+        <div class="challenges-card float-end position-relative ${itemList.first ? 'active' : ''}" id="challenge-card-id"
           data-id="Section${itemList.count}">
           <div class="challenge-head text-uppercase py-4 px-5">${item.heading}</div>
           <div class="challenge-text pb-4 px-5">${item.title}</div>

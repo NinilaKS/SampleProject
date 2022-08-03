@@ -14,6 +14,9 @@
           Project Container
 \*-------------------------------------------*/
 .project-dramix-container {
+    .column-inner{
+        position: sticky;
+        top: 1em;
     .text {
         .cmp-text {
             h6 {
@@ -36,6 +39,7 @@
             }
         }
     }
+}
 
     /*-------------------------------------------*\
              Teaser Container
