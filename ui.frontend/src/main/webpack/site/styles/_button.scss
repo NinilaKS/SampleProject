@@ -51,9 +51,9 @@ Button with dark background and dark grey border
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
             color: $color-white;
             margin: auto;
             margin-left: 20px;
@@ -61,34 +61,36 @@ Button with dark background and dark grey border
         }
     }
 
-    .btn:hover {
-        border: 1px solid $color-white;
-        padding-right: 0;
-        transition: 1s;
+    .btn {
+        &:hover {
+            border: 1px solid $color-white;
+            padding-right: 0;
+            transition: 1s;
 
-        .arrow-right {
-            // transform: translate(15px);
-            right: 0;
-            transition: 0.5s;
-            opacity: 0;
+            .arrow-right {
+                // transform: translate(15px);
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+                // margin-right: 20px;
+
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
+
+
         }
-
-        .arrow-left {
-            transform: translate(15px);
-            transition: 0.5s;
-            opacity: 1;
-            right: 10px;
-            // margin-right: 20px;
-
-        }
-
-        .cmp-button__text {
-            transform: translate(15px);
-            transition: 0.5s;
-
-        }
-
-
     }
 
     .btn {
@@ -130,9 +132,9 @@ Button with dark background and dark grey border
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
             color: $color-white;
             margin: auto;
             margin-left: 20px;
@@ -140,34 +142,36 @@ Button with dark background and dark grey border
         }
     }
 
-    .btn:hover {
-        border: 1px solid $color-white;
-        padding-right: 0;
-        transition: 1s;
+    .btn {
+        &:hover {
+            border: 1px solid $color-white;
+            padding-right: 0;
+            transition: 1s;
 
-        .arrow-right {
-            // transform: translate(15px);
-            right: 0;
-            transition: 0.5s;
-            opacity: 0;
+            .arrow-right {
+                // transform: translate(15px);
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+                // margin-right: 20px;
+
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
+
+
         }
-
-        .arrow-left {
-            transform: translate(15px);
-            transition: 0.5s;
-            opacity: 1;
-            right: 10px;
-            // margin-right: 20px;
-
-        }
-
-        .cmp-button__text {
-            transform: translate(15px);
-            transition: 0.5s;
-
-        }
-
-
     }
 
     .btn {
@@ -262,10 +266,10 @@ Button with dark background and dark grey border
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: #0E3F6B;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-regal-blue;
             margin: auto;
         }
 
@@ -278,19 +282,21 @@ Button with dark background and dark grey border
         }
     }
 
-    .btn:hover {
-        border: 1px solid #0E3F6B;
-        transition: 1s;
-
-        .cmp-button__text {
-            opacity: 0.7;
-            transition: 1s;
-        }
-
-        .arrow-right {
-            opacity: 0.7;
+    .btn {
+        &:hover {
+            border: 1px solid #0E3F6B;
             transition: 1s;
 
+            .cmp-button__text {
+                opacity: 0.7;
+                transition: 1s;
+            }
+
+            .arrow-right {
+                opacity: 0.7;
+                transition: 1s;
+
+            }
         }
     }
 
@@ -315,10 +321,10 @@ Button with dark background and dark grey border
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: white;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-white;
             margin: auto;
         }
 
@@ -331,19 +337,21 @@ Button with dark background and dark grey border
         }
     }
 
-    .btn:hover {
-        border: 1px solid $color-white;
-        transition: 1s;
-
-        .cmp-button__text {
-            opacity: 0.7;
-            transition: 1s;
-        }
-
-        .arrow-right {
-            opacity: 0.7;
+    .btn {
+        &:hover {
+            border: 1px solid $color-white;
             transition: 1s;
 
+            .cmp-button__text {
+                opacity: 0.7;
+                transition: 1s;
+            }
+
+            .arrow-right {
+                opacity: 0.7;
+                transition: 1s;
+
+            }
         }
     }
 
@@ -385,44 +393,46 @@ Button with light background and  white border
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: #042A4B;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-dark-blue;
             margin: auto;
             margin-left: 20px;
             margin-right: 30px;
         }
     }
 
-    .btn:hover {
-        border: 1px solid rgba(14, 63, 107, 1);
-        padding-right: 0;
-        transition: 1s;
+    .btn {
+        &:hover {
+            border: 1px solid rgba(14, 63, 107, 1);
+            padding-right: 0;
+            transition: 1s;
 
-        .arrow-right {
-            // transform: translate(15px);
-            right: 0;
-            transition: 0.5s;
-            opacity: 0;
+            .arrow-right {
+                // transform: translate(15px);
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+                // margin-right: 20px;
+
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
+
+
         }
-
-        .arrow-left {
-            transform: translate(15px);
-            transition: 0.5s;
-            opacity: 1;
-            right: 10px;
-            // margin-right: 20px;
-
-        }
-
-        .cmp-button__text {
-            transform: translate(15px);
-            transition: 0.5s;
-
-        }
-
-
     }
 
     .btn {
@@ -464,44 +474,46 @@ Button with light background and other white border
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: #042A4B;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-dark-blue;
             margin: auto;
             margin-left: 20px;
             margin-right: 30px;
         }
     }
 
-    .btn:hover {
-        border: 1px solid rgba(4, 42, 75, 1);
-        padding-right: 0;
-        transition: 1s;
+    .btn {
+        &:hover {
+            border: 1px solid rgba(4, 42, 75, 1);
+            padding-right: 0;
+            transition: 1s;
 
-        .arrow-right {
-            // transform: translate(15px);
-            right: 0;
-            transition: 0.5s;
-            opacity: 0;
+            .arrow-right {
+                // transform: translate(15px);
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+                // margin-right: 20px;
+
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
+
+
         }
-
-        .arrow-left {
-            transform: translate(15px);
-            transition: 0.5s;
-            opacity: 1;
-            right: 10px;
-            // margin-right: 20px;
-
-        }
-
-        .cmp-button__text {
-            transform: translate(15px);
-            transition: 0.5s;
-
-        }
-
-
     }
 
     .btn {
@@ -542,43 +554,45 @@ Button with light background and other white border
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: #042A4B;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-dark-blue;
             margin: auto;
             margin-left: 20px;
             margin-right: 30px;
         }
     }
 
-    .btn:hover {
-        padding-right: 0;
-        transition: 1s;
+    .btn {
+        &:hover {
+            padding-right: 0;
+            transition: 1s;
 
-        .arrow-right {
-            // transform: translate(15px);
-            right: 0;
-            transition: 0.5s;
-            opacity: 0;
+            .arrow-right {
+                // transform: translate(15px);
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+                // margin-right: 20px;
+
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
+
+
         }
-
-        .arrow-left {
-            transform: translate(15px);
-            transition: 0.5s;
-            opacity: 1;
-            right: 10px;
-            // margin-right: 20px;
-
-        }
-
-        .cmp-button__text {
-            transform: translate(15px);
-            transition: 0.5s;
-
-        }
-
-
     }
 
     .btn {

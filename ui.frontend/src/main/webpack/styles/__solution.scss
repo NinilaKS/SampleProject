@@ -1,3 +1,22 @@
+/*-------------------------------------------------*\
+   General style sheet for the Solution Component of Home page
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Title text of soltuion component. 
+   - Left Side Challenges cards.
+   - Image Div with softwares text 
+   - Right Side text cards.
+   - Accordion for mobile responsive. 
+   
+\*-------------------------------------------------*/
+
+
+
+
+
 .container-dramix {
   .solution-row {
     .cmp-card-col {
@@ -7,7 +26,9 @@
     .grey-background {
       background: $color-gray;
     }
-
+/*-------------------------------------------*\
+Title text of soltuion component. 
+\*-------------------------------------------*/
     .cmp-left {
       .head-text-solutions {
         font-weight: $font-weight-700;
@@ -25,7 +46,7 @@
           letter-spacing: $letter-spacing-02;
           color: $color-dark-blue;
 
-          @media (max-width: 768px) {
+          @media (max-width: $screen-md-min) {
             font-size: 48px;
             line-height: 55px;
             padding: 20px;
@@ -34,21 +55,23 @@
         }
       }
     }
-
+/*-------------------------------------------*\
+Left Side Challenges cards.
+\*-------------------------------------------*/
     .challenge-card-link {
       cursor: pointer;
+      top: -15%;
+      @media (min-width: $screen-lg-min) and (max-width: $screen-lg-l-min) {
+        top: -5px;
+      }
+
 
       .challenges-card {
-        top: -15%;
         opacity: 0.5;
         background-color: $color-white;
         width: 70%;
-        float: right;
         margin-bottom: 1px;
-
-        @media (min-width: 1024px) and (max-width: 1179px) {
-          top: -5px;
-        }
+       
 
         .challenge-head {
           font-weight: $font-weight-700;
@@ -73,13 +96,16 @@
 
       }
     }
+/*-------------------------------------------*\
+Image Div with softwares text 
+\*-------------------------------------------*/    
 
     .image-bg-div {
       min-height: 400px;
       height: 600px;
       background-repeat: no-repeat;
 
-      @media (max-width: 768px) {
+      @media (max-width: $screen-md-min) {
         height: 100%;
       }
 
@@ -111,13 +137,15 @@
         }
       }
     }
-
+/*-------------------------------------------*\
+Right Side text cards.
+\*-------------------------------------------*/
     .cmp-card-cont {
       background-color: $color-white;
       max-width: 70%;
       top: -15%;
 
-      @media (min-width: 1024px) and (max-width: 1179px) {
+      @media (min-width: $screen-lg-min) and (max-width: $screen-lg-l-min) {
         top: -5px;
       }
 
@@ -156,7 +184,9 @@
         }
       }
     }
-
+/*-------------------------------------------*\
+Accordion for mobile responsive. 
+\*-------------------------------------------*/
     .solutions-accordion {
       .solutions-accordion-items {
         .solutions-accordion-header {
@@ -183,9 +213,10 @@
             }
           }
 
-          .accordion-button::after {
+          .accordion-button{
+            &::after {
             background-image: none;
-          }
+          }}
         }
 
         .solutions-accordion-body {

@@ -1,7 +1,25 @@
+/*-------------------------------------------------*\
+   General style sheet for the Footer Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Apps icon and logo
+   - Footer Links 
+   - Blue copyright div bottom
+  
+   
+\*-------------------------------------------------*/
+
+
 .container-footer {
   font-family: $font-family;
 
   .row {
+/*-------------------------------------------*\
+Apps icon and logo
+\*-------------------------------------------*/    
     .footer-bekaert-icon {
       .footer-media-links {
         .svg-middle-line {
@@ -9,7 +27,9 @@
         }
       }
     }
-
+/*-------------------------------------------*\
+Footer Links 
+\*-------------------------------------------*/
     .footer-links {
       .comp_footerLinks {
         .comp_footerLinks-list {
@@ -28,6 +48,10 @@
     }
   }
 }
+
+/*-------------------------------------------*\
+Blue copyright div bottom
+\*-------------------------------------------*/
 
 .copyright-div {
   background: $color-dark-blue;
