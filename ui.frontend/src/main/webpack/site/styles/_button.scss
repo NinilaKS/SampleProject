@@ -68,7 +68,7 @@ Button with dark background and dark grey border
             transition: 1s;
 
             .arrow-right {
-                // transform: translate(15px);
+
                 right: 0;
                 transition: 0.5s;
                 opacity: 0;
@@ -79,7 +79,7 @@ Button with dark background and dark grey border
                 transition: 0.5s;
                 opacity: 1;
                 right: 10px;
-                // margin-right: 20px;
+
 
             }
 
@@ -149,7 +149,7 @@ Button with dark background and dark grey border
             transition: 1s;
 
             .arrow-right {
-                // transform: translate(15px);
+
                 right: 0;
                 transition: 0.5s;
                 opacity: 0;
@@ -160,7 +160,7 @@ Button with dark background and dark grey border
                 transition: 0.5s;
                 opacity: 1;
                 right: 10px;
-                // margin-right: 20px;
+
 
             }
 
@@ -313,7 +313,6 @@ Button with dark background and dark grey border
 .dark-blue-btn {
     .btn {
         border: 1px solid #0E3F6B;
-        ;
         background: #0E3F6B;
         width: auto;
         min-height: 49px;
@@ -379,7 +378,6 @@ Button with light background and  white border
             position: relative;
             left: 0;
             margin: auto 0;
-
         }
 
         .arrow-right {
@@ -410,7 +408,6 @@ Button with light background and  white border
             transition: 1s;
 
             .arrow-right {
-                // transform: translate(15px);
                 right: 0;
                 transition: 0.5s;
                 opacity: 0;
@@ -421,14 +418,11 @@ Button with light background and  white border
                 transition: 0.5s;
                 opacity: 1;
                 right: 10px;
-                // margin-right: 20px;
-
             }
 
             .cmp-button__text {
                 transform: translate(15px);
                 transition: 0.5s;
-
             }
 
 
@@ -460,7 +454,6 @@ Button with light background and other white border
             position: relative;
             left: 0;
             margin: auto 0;
-
         }
 
         .arrow-right {
@@ -491,7 +484,6 @@ Button with light background and other white border
             transition: 1s;
 
             .arrow-right {
-                // transform: translate(15px);
                 right: 0;
                 transition: 0.5s;
                 opacity: 0;
@@ -502,14 +494,11 @@ Button with light background and other white border
                 transition: 0.5s;
                 opacity: 1;
                 right: 10px;
-                // margin-right: 20px;
-
             }
 
             .cmp-button__text {
                 transform: translate(15px);
                 transition: 0.5s;
-
             }
 
 
@@ -540,7 +529,6 @@ Button with light background and other white border
             position: relative;
             left: 0;
             margin: auto 0;
-
         }
 
         .arrow-right {
@@ -570,7 +558,6 @@ Button with light background and other white border
             transition: 1s;
 
             .arrow-right {
-                // transform: translate(15px);
                 right: 0;
                 transition: 0.5s;
                 opacity: 0;
@@ -581,8 +568,6 @@ Button with light background and other white border
                 transition: 0.5s;
                 opacity: 1;
                 right: 10px;
-                // margin-right: 20px;
-
             }
 
             .cmp-button__text {
