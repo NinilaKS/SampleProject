@@ -14,52 +14,54 @@
           Project Container
 \*-------------------------------------------*/
 .project-dramix-container {
-    .column-inner{
+    .column-inner {
         position: sticky;
         top: 1em;
-    .text {
-        .cmp-text {
-            h6 {
-                font-size: $font-size-12;
-                line-height: $line-height-12;
-                text-transform: uppercase;
-                color: $color-pure-cyan;
-                font-weight: $font-weight-700;
-                font-style: $font-weight-normal;
-                letter-spacing: $letter-spacing-2;
-            }
 
-            h1 {
-                font-size: $font-size-80;
-                line-height: $line-height-90;
-                color: $color-dark-blue;
-                font-weight: $font-weight-300;
-                font-style: $font-weight-normal;
-                letter-spacing: $letter-spacing-02;
+        .text {
+            .cmp-text {
+                h6 {
+                    font-size: $font-size-12;
+                    line-height: $line-height-12;
+                    text-transform: uppercase;
+                    color: $color-pure-cyan;
+                    font-weight: $font-weight-700;
+                    font-style: $font-weight-normal;
+                    letter-spacing: $letter-spacing-2;
+                }
+
+                h1 {
+                    font-size: $font-size-80;
+                    line-height: $line-height-90;
+                    color: $color-dark-blue;
+                    font-weight: $font-weight-300;
+                    font-style: $font-weight-normal;
+                    letter-spacing: $letter-spacing-02;
+                }
             }
         }
     }
-}
 
     /*-------------------------------------------*\
              Teaser Container
 \*-------------------------------------------*/
     .teaser {
         .cmp-teaser {
+            cursor: pointer;
             .cmp-teaser__image {
                 .cmp-image {
                     overflow: hidden;
 
-                    .cmp-image__link {
-                        img {
-                            transition: 0.5s all ease-in-out;
-                            object-fit: cover;
 
-                            &:hover {
-                                transform: scale(1.2);
-                            }
+                    img {
+                        transition: 0.5s all ease-in-out;
+                        object-fit: cover;
+
+                        &:hover {
+                            transform: scale(1.2);
                         }
                     }
+
                 }
 
             }
@@ -109,5 +111,6 @@
                 }
             }
         }
+
     }
 }

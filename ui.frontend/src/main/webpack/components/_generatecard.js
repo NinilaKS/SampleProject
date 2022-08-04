@@ -1,5 +1,5 @@
 /*-------------------------------------------------*\
-   Javascrip sheet for the Solution Component of Home page
+   Javascript sheet for the Solution Component of Home page
    
    Table of Contents
    If you conduct a Search on the page, type in the 

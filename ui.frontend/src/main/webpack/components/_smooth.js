@@ -1,24 +1,19 @@
 /*-------------------------------------------------*\
-   Javascript sheet for the AOS Animation For All 
-   Page
+   Javascript sheet for the Smooth For All Page
    
    Table of Contents
    If you conduct a Search on the page, type in the 
    section below that you would like to jump to.
 
-   - Initating AOS Animation
+   - Initating Smooth on body of all page
     
    
 \*-------------------------------------------------*/
 /*-------------------------------------------*\
-            Initating AOS Animation
+    Initating Smooth on body of all page
 \*-------------------------------------------*/
-import  AOS  from 'aos';
-
 window.addEventListener("DOMContentLoaded", () => {
-    AOS.init({
-        disable: false,
-        startEvent: 'DOMContentLoaded',
-
+    document.querySelector('body').scrollIntoView({
+        behavior: 'smooth'
     });
 });
