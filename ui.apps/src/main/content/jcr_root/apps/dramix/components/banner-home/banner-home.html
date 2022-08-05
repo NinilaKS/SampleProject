@@ -3,20 +3,20 @@
 	data-sly-use.banner="com.adobe.dramix.core.models.Banner"
     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
     data-sly-list="${banner.bannerDetails}">
-	<li class="parent">		
-				<div class="title">
-					<h1>${item.title}</h1>
-				</div>
-				<div class="discribtion">
-					<h4>${item.subHeading}</h4>
-					<div class="details">
-						<p>${item.heading}</p>
-						<span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/BigPicto-Arrow.png"></span>
-					</div>
-				</div> 
-				<video class="video" autoplay muted loop>
-					<source src="${item.video}" type="video/mp4">
-				</video>	
+	<li>
+		<div class="title">
+			<h1>${item.title}</h1>
+		</div>
+		<div class="discribtion">
+			<h4>${item.subHeading}</h4>
+			<div class="details">
+				<p>${item.heading}</p>
+				<span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/BigPicto-Arrow.png"></span>
+			</div>
+		</div> 
+		<video class="video" autoplay muted loop>
+			<source src="${item.video}" type="video/mp4">
+		</video>
 	</li>
 </ul>
 </div>
