@@ -1,57 +1,38 @@
-<div class="overall">
-<div class="desk">
-	<div class="cmp-columncontrol container my-3" data-sly-use.teasercards="com.adobe.dramix.core.models.TeaserCard" data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
-		<div class="row">
-			<div class="col-md-${properties.columns} col-sm-12" data-sly-repeat="${teasercards.list}">
-				<sly data-sly-resource="${itemList.count @ resourceType='dramix/components/teaser', decoration=true}"></sly>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="mob">
-	<div class="container">
-		<div class="row">
-			<div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
-            	<div class="carousel-indicators" data-sly-list="${teasercards.list}">
-            		<button type="button" data-bs-target="#carouselExampleIndicators" style="background-color:#641616" data-bs-slide-to="${itemList.index}" 
-            		        class="${itemList.first ? 'active' : '' }" aria-current="${itemList.first ? 'true' : 'false'}" aria-label="Slide ${itemList.count}"></button>
+<div class="container-fluid card-wrapper">
+	<div class="cmp-big">
+		<div class="cmp-columncontrol container-fluid my-3"
+			data-sly-use.teasercards="com.adobe.dramix.core.models.TeaserCard"
+			data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+			<div class="row">
+				<div class="col-md-${properties.columns} col-sm-12" data-sly-repeat="${teasercards.list}">
+					<sly
+						data-sly-resource="${itemList.count @ resourceType='dramix/components/teaser', decoration=true}">
+					</sly>
 				</div>
-				<div class="carousel-inner" data-sly-list="${teasercards.list}">
-                	<div class="carousel-item ${itemList.first ? 'active' : '' }">
-                    	<sly data-sly-resource="${itemList.count @ resourceType='dramix/components/teaser', decoration=true}"></sly>
-                	</div>
-            	</div>
 			</div>
 		</div>
 	</div>
-</div>
+	<div class="cmp-small">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="teaserCards" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+					<div class="carousel-inner" data-sly-list="${teasercards.list}">
+						<div class="carousel-item ${itemList.first ? 'active' : '' }">
+							<sly
+								data-sly-resource="${itemList.count @ resourceType='dramix/components/teaser', decoration=true}">
+							</sly>
+						</div>
+					</div>
+					<div class="carousel-indicators" data-sly-list="${teasercards.list}">
+						<button type="button" data-bs-target="#teaserCards" data-bs-slide-to="${itemList.index}"
+							class="${itemList.first ? 'active' : '' }"
+							aria-current="${itemList.first ? 'true' : 'false'}"
+							aria-label="Slide ${itemList.count}"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <sly data-sly-call="${templates.placeholder @ isEmpty = !teasercards.list}"></sly>
-
-<script>
-    const desk = document.querySelector(".desk").cloneNode(true);
-    const mob = document.querySelector(".mob").cloneNode(true);
-    const over = document.querySelector(".overall");
-    const handleDiv = function () {
-        const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-        if (width > 768) {
-            over.innerHTML = "";
-            over.insertAdjacentElement("afterbegin", desk);
-        }
-        else {
-            over.innerHTML = "";
-            over.insertAdjacentElement("afterbegin", mob);
-        }
-    };
-
-    window.addEventListener('resize', handleDiv, false);
-    handleDiv();
-
-
-    document.querySelector('.overall').scrollIntoView({
-        behavior: 'smooth'
-    });
-
-
-</script>
