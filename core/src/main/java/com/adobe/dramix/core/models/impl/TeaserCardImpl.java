@@ -15,7 +15,7 @@ import com.adobe.dramix.core.models.TeaserCard;
 @Model(adaptables = Resource.class, adapters = TeaserCard.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL, resourceType = TeaserCardImpl.RESOURCE_TYPE)
 public class TeaserCardImpl implements TeaserCard {
 
-	protected final static String RESOURCE_TYPE = "dramix/components/teasercards";
+	protected static final String RESOURCE_TYPE = "dramix/components/teasercards";
 	private List<Integer> list = new ArrayList<>();
 
 	@ValueMapValue
