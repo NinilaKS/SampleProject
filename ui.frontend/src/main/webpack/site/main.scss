@@ -8,3 +8,9 @@
 @import "~bootstrap/scss/bootstrap-utilities";
 @import '~bootstrap/dist/css/bootstrap.css';
 @import '~aos/dist/aos.css';
+
+// Declare the font family
+:root {
+    --bs-font-sans-serif: "Bekaert-Regular";
+    --bs-body-color: #042a4b;
+}

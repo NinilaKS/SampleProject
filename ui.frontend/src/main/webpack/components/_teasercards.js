@@ -14,8 +14,8 @@
 /*-------------------------------------------*\
     Variable declare for the structure
 \*-------------------------------------------*/
-const desktopView = document.querySelector(".cmp-big").cloneNode(true);
-const mobileDevice = document.querySelector(".cmp-small").cloneNode(true);
+const desktopView = document.querySelector(".cmp-big")?.cloneNode(true);
+const mobileDevice = document.querySelector(".cmp-small")?.cloneNode(true);
 const wrapContainer = document.querySelector(".card-wrapper");
 /*-------------------------------------------*\
     Removing Div structure as per resoultion
