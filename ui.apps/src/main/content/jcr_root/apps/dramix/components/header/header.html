@@ -1,5 +1,157 @@
 <section class="${wcmmode.edit ? '' : 'Homepage'}">
-  <div class="container-fluid cmp-header g-0">
+	<div class="container">
+		<!--top-menu--->
+    		<div class="top-header">
+               <div class="left-side">
+               	 <sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
+               </div>
+               <div class="right-side">
+               	<ul>
+               		<li><span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Softwatetools.png"></span>${properties.softwareToolsLabel}</li>
+               		<li><span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-upcomingevents.png"></span>${properties.upcomingEventsLabel}</li>
+               	</ul>
+               </div>
+    		</div>
+
+            <!---Second-top-menu--->
+
+    		<div class="menu-bar">
+               <div class="left-menu">
+               	   <ul>
+               	     <li><a href="#">Projects</a></li>
+               	     <li> 
+               		  <select name="tools" id="Tools">
+               	 	   <option value="Toolbox">Toolbox</option>
+               	      </select>
+                     </li>
+                     <li><a href="#">Sustainability</a></li>
+                     <li><a href="#">Products</a></li>
+                     <li><a href="#">Contacts</a></li>
+                 </ul>
+               </div>
+               <div class="right-menu">
+                 <ul>
+                 	<li><span><i class="fa-solid fa-magnifying-glass"></i></span></li>
+                 	<li><span class="img"><img src="Asset/Picto - Folder.png"></span></li>
+                 	<li><button>Request a quote</button></li>
+                 </ul>
+               </div>
+    		</div>
+
+            <!-----Main-list-container----->
+
+    		<div class="List-catecory">
+    			<ul class="list">
+    			  <li class="first-list parent active">
+                      <div class="title">
+                         <h1>Making your floor more durable and sustainable</h1>
+                      </div>
+                      <div class="discribtion">   
+                         <h4>01 products</h4>
+                         <div class="details">
+                            <p>Lorem ipsum dolor sit ampet</p>
+                            <span><img src="Asset/Picto - Arrow.png"></span>
+                          </div>
+                      </div>  
+                     <video autoplay muted loop>
+                        <source src="720.mp4" type="video/mp4">    
+                     </video>                   
+                 </li>
+    			 <li class="second-list parent">
+                     <div class="title">
+                        <h1 class="animate__backOutUp">Making your floor more durable and sustainable</h1>
+                     </div> 
+                     <div class="discribtion">   
+                        <h4>02 products</h4>
+                        <div class="details">
+                            <p>Lorem ipsum dolor sit ampet</p>
+                            <span><img src="Asset/Picto - Arrow.png"></span>
+                        </div>
+                     </div> 
+                     <video autoplay muted loop>
+                        <source src="721.mp4" type="video/mp4">    
+                     </video>             
+                 </li>
+    			 <li class="third-list parent">
+                     <div class="title">
+                        <h1>Making your floor more durable and sustainable</h1>
+                     </div>   
+                     <div class="discribtion">   
+                        <h4>03 products</h4>
+                        <div class="details">
+                            <p>Lorem ipsum dolor sit ampet</p>
+                            <span><img src="Asset/Picto - Arrow.png"></span>
+                        </div>
+                     </div>  
+                     <video autoplay muted loop>
+                        <source src="722.mp4" type="video/mp4">    
+                     </video>        
+                 </li>
+    		 </ul>		
+    	  </div>
+          <!----Banner-screen-here-video-show-section------>
+
+              <div id="banner">
+                     <video autoplay muted loop id="bannersrc">
+                        <source src="720.mp4" type="video/mp4">    
+                     </video>
+                </div>
+    	</div>
+</section>
+    
+    <script>
+        var UL=document.querySelectorAll(".list li");
+        var video =document.querySelectorAll(".list li video");
+        /*get the single list to add active class*/
+           UL.forEach(li =>{
+            li.addEventListener('click',function(){
+                UL.forEach(l=>l.classList.remove('active'));
+                this.classList.add('active');
+
+                /*if list contain active class then get the src from child elemnt to push banner src*/
+                if(li.classList.contains("active")){
+                     let src=li.children[2].children[0].getAttribute('src');
+                    console.log(src);
+                    document.getElementById('bannersrc').src=src;
+                }
+            })
+
+           });
+        
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <section class="${wcmmode.edit ? '' : 'Homepage'}">
+  <div class="container">
+  	
+  	            <!--top-menu--->
+
+    		<div class="top-header">
+               <sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
+               
+               <div class="right-side">
+               	<ul>
+               		<li><span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Softwatetools.png"></span>${properties.softwareToolsLabel}</li>
+               		<li><span><img src=img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-upcomingevents.png"></span>${properties.upcomingEventsLabel}</li>
+               	</ul>
+               </div>
+    		</div>
 	
 	<header class="bg-transparent cmp-header-var-trans">		
 		<nav class="navbar navbar-expand-lg navbar-light cmp-transparent p-0" id="cmp-bg-change">
@@ -10,41 +162,28 @@
           </div>
           
           <div class="flex-shrink-1 d-flex">
-            
             <button type="button" class="cmp-top-bar-btn d-inline-flex me-2">
               <div class="mb-icon">
-                <img
-                  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Softwaretools.svg"
-                  alt="${'softwaretools' @ i18n}"
-                />
+                <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Softwaretools.svg" alt="${'softwaretools' @ i18n}"/>
               </div>
               <p class="cmp-top-bar-tools">${properties.softwareToolsLabel}</p>
             </button>
             <button type="button" class="cmp-top-bar-btn d-inline-flex">
               <div class="mb-icon">
-                <img
-                  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/upcomingevents.svg"
-                  alt="${'upcomingevents' @ i18n}"
-                />
+                <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/upcomingevents.svg" alt="${'upcomingevents' @ i18n}"/>
               </div>
               <p class="cmp-top-bar-events">${properties.upcomingEventsLabel}</p>
             </button>
-            
           </div>
+          
         </div>
       </nav>
-      <nav
-        class="navbar navbar-expand-sm p-0 sticky-top"
-        aria-label="Third navbar offcanvas example"
-        id="cmp-bg-navbar"
-      >
+      
+      <nav class="navbar navbar-expand-sm p-0 sticky-top" aria-label="Third navbar offcanvas example" id="cmp-bg-navbar">
         <div class="container">
           <!-- logo, close-button and mobile menu -->
           <a class="navbar-brand logo-wrapper" href="#">
-            <img
-              src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/logo.png"
-              alt="${'logo' @ i18n}"
-            />
+            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/logo.png" alt="${'logo' @ i18n}"/>
           </a>
           <button
             class="navbar-toggler"
