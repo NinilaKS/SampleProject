@@ -2,19 +2,15 @@
   <div class="container-fluid cmp-header g-0">
 	
 	<header class="bg-transparent cmp-header-var-trans">		
-		<nav
-        class="navbar navbar-expand-lg navbar-light cmp-transparent p-0"
-        id="cmp-bg-change"
-      >
+		<nav class="navbar navbar-expand-lg navbar-light cmp-transparent p-0" id="cmp-bg-change">
         <div class="container">
+          
           <div class="me-auto mb-2 mb-lg-0">
-            <select class="classic">
-              <option>English ( US )</option>
-              <option>English ( CA )</option>
-              <option>Spanish ( MX )</option>
-            </select>
+          	<sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
           </div>
+          
           <div class="flex-shrink-1 d-flex">
+            
             <button type="button" class="cmp-top-bar-btn d-inline-flex me-2">
               <div class="mb-icon">
                 <img
@@ -22,7 +18,7 @@
                   alt="${'softwaretools' @ i18n}"
                 />
               </div>
-              <p class="cmp-top-bar-tools">Software tools</p>
+              <p class="cmp-top-bar-tools">${properties.softwareToolsLabel}</p>
             </button>
             <button type="button" class="cmp-top-bar-btn d-inline-flex">
               <div class="mb-icon">
@@ -31,8 +27,9 @@
                   alt="${'upcomingevents' @ i18n}"
                 />
               </div>
-              <p class="cmp-top-bar-events">Upcoming Events</p>
+              <p class="cmp-top-bar-events">${properties.upcomingEventsLabel}</p>
             </button>
+            
           </div>
         </div>
       </nav>
