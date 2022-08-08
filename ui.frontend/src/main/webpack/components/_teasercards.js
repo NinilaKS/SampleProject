@@ -14,28 +14,28 @@
 /*-------------------------------------------*\
     Variable declare for the structure
 \*-------------------------------------------*/
-// const desktopView = document.querySelector(".cmp-big")[0].cloneNode(true);
-// const mobileDevice = document.querySelector(".cmp-small")[0].cloneNode(true);
-// const wrapContainer = document.querySelector(".card-wrapper");
+const desktopView = document.querySelector(".cmp-big")?.cloneNode(true);
+const mobileDevice = document.querySelector(".cmp-small")?.cloneNode(true);
+const wrapContainer = document.querySelector(".card-wrapper");
 /*-------------------------------------------*\
     Removing Div structure as per resoultion
 \*-------------------------------------------*/
-// const handleStructure = () => {
-//     const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-//     if (width > 768) {
-//         wrapContainer.innerHTML = "";
-//         wrapContainer.insertAdjacentElement("afterbegin", desktopView);
-//     }
-//     else {
-//         wrapContainer.innerHTML = "";
-//         wrapContainer.insertAdjacentElement("afterbegin", mobileDevice);
-//     }
-// };
+const handleStructure = () => {
+    const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    if (width > 768) {
+        wrapContainer.innerHTML = "";
+        wrapContainer.insertAdjacentElement("afterbegin", desktopView);
+    }
+    else {
+        wrapContainer.innerHTML = "";
+        wrapContainer.insertAdjacentElement("afterbegin", mobileDevice);
+    }
+};
 /*-------------------------------------------*\
         Initiating the function
 \*-------------------------------------------*/
-// window.addEventListener('resize', handleStructure, false);
-// handleStructure();
+window.addEventListener('resize', handleStructure, false);
+handleStructure();
 
 
 
