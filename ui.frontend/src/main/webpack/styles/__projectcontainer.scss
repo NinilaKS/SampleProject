@@ -40,6 +40,14 @@
                 }
             }
         }
+        .dark-btn-grey{
+            .cmp-button{
+                width: 198px;
+                .cmp-button__text{
+                    margin: auto 25px auto 20px;
+                }
+            }
+        }
     }
 
     /*-------------------------------------------*\
@@ -94,6 +102,8 @@
 
                 .button {
                     &.no-btn-grey {
+                        .cmp-button{
+                            width: 152px;
 
                         .arrow-left,
                         .arrow-right {
@@ -108,6 +118,7 @@
                             margin: 0 25px 0 0;
                         }
                     }
+                }
                 }
             }
         }

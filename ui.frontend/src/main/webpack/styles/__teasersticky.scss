@@ -33,6 +33,21 @@
                         margin: 0 auto;
                         padding: 3.75em;
                         background-color: $color-white;
+                        .button{
+                            &.dark-btn-grey{
+                                width: 50%;
+                                margin: auto;
+                                @media (max-width: $screen-lg-min) {
+                                    width: 100%;
+                                  }
+                                .cmp-button{
+                                    width: 168px;
+                                    .cmp-button__text{
+                                        margin: auto 25px auto 20px;
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     &__title-link {

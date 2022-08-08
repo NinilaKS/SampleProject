@@ -52,7 +52,7 @@
       }
     }
 /*-------------------------------------------*\
-Left Side Challenges cards.
+      Left Side Challenges cards.
 \*-------------------------------------------*/
     .challenge-card-link {
       cursor: pointer;
@@ -93,7 +93,7 @@ Left Side Challenges cards.
       }
     }
 /*-------------------------------------------*\
-Image Div with softwares text 
+      Image Div with softwares text 
 \*-------------------------------------------*/    
 
     .image-bg-div {
@@ -134,7 +134,7 @@ Image Div with softwares text
       }
     }
 /*-------------------------------------------*\
-Right Side text cards.
+      Right Side text cards.
 \*-------------------------------------------*/
     .cmp-card-cont {
       background-color: $color-white;
@@ -167,21 +167,17 @@ Right Side text cards.
           }
 
           .cmp-box-button {
-            a {
-              grid-gap: 2em;
-              border: 1px solid rgba(4, 42, 75, 0.2);
-              padding: 0.8em 1em;
-              color: $color-dark-blue;
-              font-size: $font-size-16;
-              font-weight: $font-weight-700;
-              line-height: $line-height-17;
+            .dark-btn-grey{
+              .cmp-button{
+                width: 148px;
+              }
             }
           }
         }
       }
     }
 /*-------------------------------------------*\
-Accordion for mobile responsive. 
+      Accordion for mobile responsive. 
 \*-------------------------------------------*/
     .solutions-accordion {
       .solutions-accordion-items {

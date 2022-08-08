@@ -74,18 +74,14 @@
                         max-width: 80%;
                     }
 
-                    a {
-                        grid-gap: 2em;
-                        border: 1px solid #ffffff33;
-                        padding: 0.8em 1em;
-                        display: inline-flex;
-                        text-decoration: none;
-                        color: $color-white;
-                        font-size: 16px;
-                        font-weight: 700;
-                        line-height: 17px;
-
-                    }
+                    .dark-btn{
+                        .cmp-button{
+                          width: 163px;
+                          .cmp-button__text{
+                            margin: auto 25px auto 20px;
+                          }
+                        }
+                      }
                 }
             }
         }
