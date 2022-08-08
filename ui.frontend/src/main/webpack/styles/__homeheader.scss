@@ -79,7 +79,18 @@
         font-size: $font-size-16;
         font-weight: $font-weight-400;
         color: $color-white;
+        text-decoration: none;
       }
+      .cmp-top-bar-events{
+        font-size: $font-size-16;
+        font-weight: $font-weight-400;
+        color: $color-white;
+        text-decoration: none;
+      }
+    }
+
+    .cmp-top-bar-btn-hover{
+      display: none;
     }
   
     /*-------------------------------------------*\
@@ -181,8 +192,54 @@
           }
         }
         .dropdown-menu {
+          height:250px;          
           .dropdown-item{
             color: $color-black;
+          }
+        }
+      }
+
+      .dropdown-hover{
+        position: fixed;
+        &:hover{
+          .dropdown-menu{
+            display: block;
+            left: 0;
+            margin-top: 0.125rem;
+            top: 100%;
+            border-radius: 0px;
+            border: 0px;
+          } 
+          .dropdown-toggle
+          {
+            &:after {
+              content: "";
+              position: absolute;         
+              height: 16px;
+              position: absolute;
+              width: 16px;
+              z-index: 1;
+              border: 0px;
+              margin-left: 2px;
+              background:url(#{$image-path}/dropup.svg) 0px 11px no-repeat;          
+            }   
+          }     
+        }
+      }
+
+      .dropdown{        
+        .dropdown-toggle
+        {
+          &:after {
+            content: "";
+            position: absolute;         
+            height: 16px;
+            position: absolute;
+            width: 16px;
+            z-index: 1;
+            border: 0px;
+            margin-left: 2px;
+            background:url(#{$image-path}/dropdw.svg) 0px 11px no-repeat;          
           }
         }
       }
@@ -270,6 +327,7 @@
 
       .cmp-top-bar-btn-hover{
         display: block;
+        padding-right:16px;
       }
 
     }

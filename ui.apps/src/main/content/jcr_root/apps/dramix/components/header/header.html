@@ -3,7 +3,7 @@
 	
 	<header class="bg-transparent cmp-header-var-trans">		
 		<nav
-        class="navbar navbar-expand-lg navbar-light cmp-transparent p-0"
+        class="navbar navbar-expand-lg navbar-light cmp-transparent py-1 d-none d-sm-block d-md-block"
         id="cmp-bg-change"
       >
         <div class="container">
@@ -22,7 +22,7 @@
                   alt="${'softwaretools' @ i18n}"
                 />
               </div>
-              <p class="cmp-top-bar-tools">Software tools</p>
+              <a href="#" class="cmp-top-bar-tools">Software tools</a>
             </button>
             <button type="button" class="cmp-top-bar-btn d-inline-flex">
               <div class="mb-icon">
@@ -31,13 +31,13 @@
                   alt="${'upcomingevents' @ i18n}"
                 />
               </div>
-              <p class="cmp-top-bar-events">Upcoming Events</p>
+              <a href="#" class="cmp-top-bar-events">Upcoming Events</a>
             </button>
           </div>
         </div>
       </nav>
       <nav
-        class="navbar navbar-expand-sm p-0 sticky-top"
+        class="navbar navbar-expand-sm py-1 sticky-top"
         aria-label="Third navbar offcanvas example"
         id="cmp-bg-navbar"
       >
@@ -89,13 +89,14 @@
                 <li class="nav-item">
                   <a href="#" class="nav-link" aria-current="page">Projects</a>
                 </li>
-                <li class="nav-item dropdown dropdown-hover position-static">
-                  <a
+                <li class="nav-item dropdown dropdown-hover position-static">                  
+				  <a
                     class="nav-link dropdown-toggle"
+                    href="#"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    >Toolbox</a
-                  >
+					data-bs-auto-close="outside"
+                    >Toolbox</a>					
                   <!-- Dropdown mega menu -->
                   <div
                     class="dropdown-menu w-100 mt-0"
@@ -115,58 +116,61 @@
                           <div
                             class="list-group list-group-flush mega-menu-wrapper"
                           >
-                            <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link"
-                                >Softwares</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
-                                id="software"
-                                class="imgshow"
-                                alt="${'right' @ i18n}"
-                              />
-                            </div>
-                            <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link"
-                                >Certificates</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
-                                alt="${'right' @ i18n}"
-                              />
-                            </div>
-                            <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link"
-                                >Expert Talks</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
-                                alt="${'right' @ i18n}"
-                              />
-                            </div>
-                            <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link"
-                                >White papers</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
-                                alt="${'right' @ i18n}"
-                              />
-                            </div>
-                            <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link"
-                                >Product Datasheets</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
-                                alt="${'right' @ i18n}"
-                              />
-                            </div>
+						  <div class="software-tab">
+							<a id="control-selected"
+							  class="list-group-item list-group-item-action submenu-link tab-control"
+							  >
+							  Softwares</a>
+							<img
+							  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
+							  id="software"
+							  class="tab"
+							  alt="${'right' @ i18n}"
+							/>
+						  </div>
+						  <div class="software-tab"> 
+							<a
+							  class="list-group-item list-group-item-action submenu-link tab-control"
+							  >Certificates</a
+							>
+							<img
+							  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
+							  alt="${'right' @ i18n}"
+							  class="tab"
+							/>
+						  </div>
+						  <div class="software-tab">
+							<a
+							  class="list-group-item list-group-item-action submenu-link tab-control"
+							  id="experttalks">Expert Talks</a
+							>
+							<img
+							  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
+							  alt="${'right' @ i18n}"
+							  class="tab"
+							/>
+						  </div>
+						  <div class="software-tab">
+							<a
+							  class="list-group-item list-group-item-action submenu-link"
+							  >White papers</a
+							>
+							<img
+							  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
+							  alt="${'right' @ i18n}"
+							/>
+						  </div>
+						  <div class="software-tab">
+							<a
+							  class="list-group-item list-group-item-action submenu-link"
+							  >Product Datasheets</a
+							>
+							<img
+							  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
+							  alt="${'right' @ i18n}"
+							/>
+						  </div>					  
+
                           </div>
                         </div>
                       </div>
@@ -176,23 +180,72 @@
                 <li class="nav-item">
                   <a href="#" class="nav-link">Sustainability</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown dropdown-hover position-static">
                   <a
                     class="nav-link dropdown-toggle"
                     href="#"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    >Solutions</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
+                    >Solutions</a>
+                  <!-- Dropdown mega menu -->
+                  <div
+                    class="dropdown-menu w-100 mt-0"
+                    id="dropdownid"
+                    aria-labelledby="navbarDropdown"
+                    >
+                    <div class="container mega_menu_wrapper">
+                      <div class="row my-4">
+                        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
+                          <div class="cmp-sub-description">
+                            All the information is available in our toolbox
+                          </div>
+                        </div>
+                        <div
+                          class="col-md-6 col-lg-4 mb-3 mb-lg-0 inner-mg-menu-wrapper"
+                        >
+                          <div
+                            class="list-group list-group-flush mega-menu-wrapper"
+                          >
+						  <div class="software-tab">
+							<a id="control-selected"
+							  class="list-group-item list-group-item-action submenu-link tab-control"
+							  >
+							  Products</a>
+							<img
+							  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg"
+							  id="software"
+							  class="tab"
+							  alt="${'right' @ i18n}"
+							/>
+						  </div>
+						  <div class="software-tab"> 
+							<a
+							  class="list-group-item list-group-item-action submenu-link tab-control"
+							  >Application</a
+							>
+							<img
+							  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg"
+							  alt="${'right' @ i18n}"
+							  class="tab"
+							/>
+						  </div>
+						  <div class="software-tab">
+							<a
+							  class="list-group-item list-group-item-action submenu-link tab-control"
+							  id="experttalks">Technology</a
+							>
+							<img
+							  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg"
+							  alt="${'right' @ i18n}"
+							  class="tab"
+							/>
+						  </div>
+						  				  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">Contact</a>
@@ -245,6 +298,16 @@
                 >
                    <img
                     src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Search.svg"
+                    alt="${'search' @ i18n}"
+                  /> 				  
+                </button>
+				<button
+                  type="button"
+                  class="btn cmp-top-bar-btn-hover search-icon"
+                  id="search-btn"
+                >
+                   <img
+                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Search-hover.svg"
                     alt="${'search' @ i18n}"
                   /> 				  
                 </button>
