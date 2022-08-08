@@ -1,461 +1,181 @@
 <section class="${wcmmode.edit ? '' : 'Homepage'}">
-	<div class="container">
-		<!--top-menu--->
-    		<div class="top-header">
-               <div class="left-side">
-               	 <sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
-               </div>
-               <div class="right-side">
-               	<ul>
-               		<li><span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Softwatetools.png"></span>${properties.softwareToolsLabel}</li>
-               		<li><span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-upcomingevents.png"></span>${properties.upcomingEventsLabel}</li>
-               	</ul>
-               </div>
-    		</div>
+    <div class="">
+        <div class="top-header">
+            <sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
+            <div class="right-side">
+                <ul>
+                    <li><span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Softwatetools.png"></span>${properties.softwareToolsLabel}</li>
+                    <li><span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/upcomingevents.png"></span>${properties.upcomingEventsLabel}</li>
+                </ul>
+            </div>
+        </div>
 
-            <!---Second-top-menu--->
-
-    		<div class="menu-bar">
-               <div class="left-menu">
-               	   <ul>
-               	     <li><a href="#">Projects</a></li>
-               	     <li> 
-               		  <select name="tools" id="Tools">
-               	 	   <option value="Toolbox">Toolbox</option>
-               	      </select>
-                     </li>
-                     <li><a href="#">Sustainability</a></li>
-                     <li><a href="#">Products</a></li>
-                     <li><a href="#">Contacts</a></li>
-                 </ul>
-               </div>
-               <div class="right-menu">
-                 <ul>
-                 	<li><span><i class="fa-solid fa-magnifying-glass"></i></span></li>
-                 	<li><span class="img"><img src="Asset/Picto - Folder.png"></span></li>
-                 	<li><button>Request a quote</button></li>
-                 </ul>
-               </div>
-    		</div>
-
-            <!-----Main-list-container----->
-
-    		<div class="List-catecory">
-    			<ul class="list">
-    			  <li class="first-list parent active">
-                      <div class="title">
-                         <h1>Making your floor more durable and sustainable</h1>
-                      </div>
-                      <div class="discribtion">   
-                         <h4>01 products</h4>
-                         <div class="details">
-                            <p>Lorem ipsum dolor sit ampet</p>
-                            <span><img src="Asset/Picto - Arrow.png"></span>
-                          </div>
-                      </div>  
-                     <video autoplay muted loop>
-                        <source src="720.mp4" type="video/mp4">    
-                     </video>                   
-                 </li>
-    			 <li class="second-list parent">
-                     <div class="title">
-                        <h1 class="animate__backOutUp">Making your floor more durable and sustainable</h1>
-                     </div> 
-                     <div class="discribtion">   
-                        <h4>02 products</h4>
-                        <div class="details">
-                            <p>Lorem ipsum dolor sit ampet</p>
-                            <span><img src="Asset/Picto - Arrow.png"></span>
-                        </div>
-                     </div> 
-                     <video autoplay muted loop>
-                        <source src="721.mp4" type="video/mp4">    
-                     </video>             
-                 </li>
-    			 <li class="third-list parent">
-                     <div class="title">
-                        <h1>Making your floor more durable and sustainable</h1>
-                     </div>   
-                     <div class="discribtion">   
-                        <h4>03 products</h4>
-                        <div class="details">
-                            <p>Lorem ipsum dolor sit ampet</p>
-                            <span><img src="Asset/Picto - Arrow.png"></span>
-                        </div>
-                     </div>  
-                     <video autoplay muted loop>
-                        <source src="722.mp4" type="video/mp4">    
-                     </video>        
-                 </li>
-    		 </ul>		
-    	  </div>
-          <!----Banner-screen-here-video-show-section------>
-
-              <div id="banner">
-                     <video autoplay muted loop id="bannersrc">
-                        <source src="720.mp4" type="video/mp4">    
-                     </video>
+        <header class="bg-transparent cmp-header-var-trans">		
+        <nav class="navbar navbar-expand-lg navbar-light cmp-transparent p-0" id="cmp-bg-change">
+        <div class="">
+            <div class="me-auto mb-2 mb-lg-0">
+                <sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
+            </div>
+            
+            <div class="flex-shrink-1 d-flex">
+                <button type="button" class="cmp-top-bar-btn d-inline-flex me-2">
+                <div class="mb-icon">
+                  <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Softwaretools.svg" alt="${'softwaretools' @ i18n}"/>
                 </div>
-    	</div>
-</section>
-    
-    <script>
-        var UL=document.querySelectorAll(".list li");
-        var video =document.querySelectorAll(".list li video");
-        /*get the single list to add active class*/
-           UL.forEach(li =>{
-            li.addEventListener('click',function(){
-                UL.forEach(l=>l.classList.remove('active'));
-                this.classList.add('active');
-
-                /*if list contain active class then get the src from child elemnt to push banner src*/
-                if(li.classList.contains("active")){
-                     let src=li.children[2].children[0].getAttribute('src');
-                    console.log(src);
-                    document.getElementById('bannersrc').src=src;
-                }
-            })
-
-           });
+                <p class="cmp-top-bar-tools">${properties.softwareToolsLabel}</p>
+                </button>
+                <button type="button" class="cmp-top-bar-btn d-inline-flex">
+                <div class="mb-icon">
+                  <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/upcomingevents.svg" alt="${'upcomingevents' @ i18n}"/>
+                </div>
+                <p class="cmp-top-bar-events">${properties.upcomingEventsLabel}</p>
+              </button>
+            </div>
+        </div>
+        </nav>
         
-    </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <section class="${wcmmode.edit ? '' : 'Homepage'}">
-  <div class="container">
-  	
-  	            <!--top-menu--->
-
-    		<div class="top-header">
-               <sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
-               
-               <div class="right-side">
-               	<ul>
-               		<li><span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Softwatetools.png"></span>${properties.softwareToolsLabel}</li>
-               		<li><span><img src=img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-upcomingevents.png"></span>${properties.upcomingEventsLabel}</li>
-               	</ul>
-               </div>
-    		</div>
-	
-	<header class="bg-transparent cmp-header-var-trans">		
-		<nav class="navbar navbar-expand-lg navbar-light cmp-transparent p-0" id="cmp-bg-change">
-        <div class="container">
-          
-          <div class="me-auto mb-2 mb-lg-0">
-          	<sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
-          </div>
-          
-          <div class="flex-shrink-1 d-flex">
-            <button type="button" class="cmp-top-bar-btn d-inline-flex me-2">
-              <div class="mb-icon">
-                <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Softwaretools.svg" alt="${'softwaretools' @ i18n}"/>
-              </div>
-              <p class="cmp-top-bar-tools">${properties.softwareToolsLabel}</p>
+        <nav class="navbar navbar-expand-sm p-0 sticky-top" aria-label="Third navbar offcanvas example" id="cmp-bg-navbar">
+          <div class="">
+            <a class="navbar-brand logo-wrapper" href="#">
+              <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/logo.png" alt="${'logo' @ i18n}"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <button type="button" class="cmp-top-bar-btn d-inline-flex">
-              <div class="mb-icon">
-                <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/upcomingevents.svg" alt="${'upcomingevents' @ i18n}"/>
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+              <div class="offcanvas-header">
+                <form class="search">
+                  <input class="form-control search-bar" type="search" placeholder="Search" aria-label="Search"/>
+                </form>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"> 
+                </button>
               </div>
-              <p class="cmp-top-bar-events">${properties.upcomingEventsLabel}</p>
-            </button>
-          </div>
-          
-        </div>
-      </nav>
-      
-      <nav class="navbar navbar-expand-sm p-0 sticky-top" aria-label="Third navbar offcanvas example" id="cmp-bg-navbar">
-        <div class="container">
-          <!-- logo, close-button and mobile menu -->
-          <a class="navbar-brand logo-wrapper" href="#">
-            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/logo.png" alt="${'logo' @ i18n}"/>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbarLight"
-            aria-controls="offcanvasNavbarLight"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-top"
-            tabindex="-1"
-            id="offcanvasNavbarLight"
-            aria-labelledby="offcanvasNavbarLightLabel"
-          >
-            <div class="offcanvas-header">
-              <form class="search">
-                <input
-                  class="form-control search-bar"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-              </form>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-
-            <!-- main nav bar -->
-            <div class="offcanvas-body" id="offcanvasNavbarLight">
-              <ul class="navbar-nav me-auto mb-2 mb-sm-0 cmp-navbar">
-                <li class="nav-item">
-                  <a href="#" class="nav-link" aria-current="page">Projects</a>
-                </li>
-                <li class="nav-item dropdown dropdown-hover position-static">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    >Toolbox</a
-                  >
-                  <!-- Dropdown mega menu -->
-                  <div
-                    class="dropdown-menu w-100 mt-0"
-                    id="dropdownid"
-                    aria-labelledby="navbarDropdown"
-                    >
-                    <div class="container mega_menu_wrapper">
-                      <div class="row my-4">
-                        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-                          <div class="cmp-sub-description">
-                            All the information is available in our toolbox
-                          </div>
-                        </div>
-                        <div
-                          class="col-md-6 col-lg-4 mb-3 mb-lg-0 inner-mg-menu-wrapper"
+  
+              <div class="offcanvas-body" id="offcanvasNavbarLight">
+                <sly data-sly-resource="${'navigation' @ resourceType='dramix/components/navigation'}"></sly>
+                <!--/* main nav end */-->
+  
+                <!--/* right side nav */-->
+                <!--/* full width search section */-->
+                <div class="search-section-wrapper bg-white" id="searchSection">
+                  <div class="">
+                    <div class="row my-4">
+                      <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
+                        <h2>search for products</h2>
+                      </div>
+                      <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                        <form
+                          class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 search"
+                          role="search"
+                          id="searchwrap"
                         >
-                          <div
-                            class="list-group list-group-flush mega-menu-wrapper"
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#FFF"
+                            class="bi bi-search"
+                            viewBox="0 0 16 16"
                           >
-                            <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link"
-                                >Softwares</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
-                                id="software"
-                                class="imgshow"
-                                alt="${'right' @ i18n}"
-                              />
-                            </div>
-                            <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link"
-                                >Certificates</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
-                                alt="${'right' @ i18n}"
-                              />
-                            </div>
-                            <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link"
-                                >Expert Talks</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
-                                alt="${'right' @ i18n}"
-                              />
-                            </div>
-                            <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link"
-                                >White papers</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
-                                alt="${'right' @ i18n}"
-                              />
-                            </div>
-                            <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link"
-                                >Product Datasheets</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png"
-                                alt="${'right' @ i18n}"
-                              />
-                            </div>
-                          </div>
-                        </div>
+                            <path
+                              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                            ></path>
+                          </svg>
+                          <input
+                            class="form-control search-bar"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                          />
+                        </form>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Sustainability</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    >Solutions</a
+                </div>
+                <div class="right-nav-wrapper">
+                  <button
+                    type="button"
+                    class="btn cmp-top-bar-btn search-icon"
+                    id="search-btn"
                   >
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Contact</a>
-                </li>
-              </ul>
-              <!-- main nav end -->
-
-              <!-- right side nav -->
-              <!-- full width search section -->
-              <div class="search-section-wrapper bg-white" id="searchSection">
-                <div class="container">
-                  <div class="row my-4">
-                    <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-                      <h2>search for products</h2>
-                    </div>
-                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
-                      <form
-                        class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 search"
-                        role="search"
-                        id="searchwrap"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="#FFF"
-                          class="bi bi-search"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                          ></path>
-                        </svg>
-                        <input
-                          class="form-control search-bar"
-                          type="search"
-                          placeholder="Search"
-                          aria-label="Search"
-                        />
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="right-nav-wrapper">
-                <button
-                  type="button"
-                  class="btn cmp-top-bar-btn search-icon"
-                  id="search-btn"
-                >
-                   <img
-                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Search.svg"
-                    alt="${'search' @ i18n}"
-                  /> 				  
-                </button>
-                
-                <!-- menu only visible in mobile -->
-                <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
-                  <img
-                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Folder.png"
-                    alt="${'document' @ i18n}"
-                  />
-                  <p>Downloads</p>
-                </button>
-                <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
-                  <div class="mb-icon">
-                    <img
-                      src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbsoftware.png"
-                      alt="${'mbsoftwaretools' @ i18n}"
-                    />
-                  </div>
-                  <p>Software Tools</p>
-                </button>
-                <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
-                  <div class="mb-icon">
-                    <img
-                      src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbdocument.png"
-                      alt="${'mbdocument' @ i18n}"
-                    />
-                  </div>
-                  <p>Upcoming Events</p>
-                </button>
-                <!-- menu only visible in mobile end-->
-
-                <button
-                  type="button"
-                  class="cmp-top-bar-btn cmp-file-box"
-                  id="file-box"
-                >
-                  <img
-                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Folder.png"
-                    alt="${'filedocument' @ i18n}"
-                  />
-                </button>
-                <button
-                  type="button"
-                  class="cmp-top-bar-btn-hover cmp-file-box"
-                  id="file-box"
-                >
-                  <img
-                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Folder-hover.png"
-                    alt="${'filedocument' @ i18n}"
-                  />
-                </button>
-                <!-- menu only visible in mobile-->
-                <div class="abt-faq">
-                  <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">FAQ</a></li>
-                  </ul>
-                </div>
-                <!-- menu only visible in mobile end-->
-
-                <div class="button-wrapper">
-                  <button type="button" class="btn me-2 quote-btn">
-                    Request a Quote
+                     <img
+                      src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Search.svg"
+                      alt="${'search' @ i18n}"
+                    /> 				  
                   </button>
+                  
+                  <!-- menu only visible in mobile -->
+                  <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
+                    <img
+                      src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Folder.png"
+                      alt="${'document' @ i18n}"
+                    />
+                    <p>Downloads</p>
+                  </button>
+                  <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
+                    <div class="mb-icon">
+                      <img
+                        src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbsoftware.png"
+                        alt="${'mbsoftwaretools' @ i18n}"
+                      />
+                    </div>
+                    <p>Software Tools</p>
+                  </button>
+                  <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
+                    <div class="mb-icon">
+                      <img
+                        src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbdocument.png"
+                        alt="${'mbdocument' @ i18n}"
+                      />
+                    </div>
+                    <p>Upcoming Events</p>
+                  </button>
+                  <!-- menu only visible in mobile end-->
+  
+                  <button
+                    type="button"
+                    class="cmp-top-bar-btn cmp-file-box"
+                    id="file-box"
+                  >
+                    <img
+                      src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Folder.png"
+                      alt="${'filedocument' @ i18n}"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    class="cmp-top-bar-btn-hover cmp-file-box"
+                    id="file-box"
+                  >
+                    <img
+                      src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Folder-hover.png"
+                      alt="${'filedocument' @ i18n}"
+                    />
+                  </button>
+                  <!-- menu only visible in mobile-->
+                  <div class="abt-faq">
+                    <ul>
+                      <li><a href="">About</a></li>
+                      <li><a href="">FAQ</a></li>
+                    </ul>
+                  </div>
+                  <!-- menu only visible in mobile end-->
+  
+                  <div class="button-wrapper">
+                    <button type="button" class="btn me-2 quote-btn">
+                      Request a Quote
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-
-  </div>
-  <sly
-  data-sly-resource="${'banner' @ resourceType='dramix/components/banner-home'}"
-></sly>
-</section>
+        </nav>
+      </header>
+  
+    </div>
+    <sly
+    data-sly-resource="${'banner' @ resourceType='dramix/components/banner-home'}"
+  ></sly>
+  </section>
+  

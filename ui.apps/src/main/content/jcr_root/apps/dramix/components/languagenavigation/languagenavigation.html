@@ -1,9 +1,12 @@
-<sly data-sly-use.commonsTemplates="core/wcm/components/commons/v1/templates.html"
-	 data-sly-use.languageNavigation="com.adobe.cq.wcm.core.components.models.LanguageNavigation"
-     data-sly-test.hasContent="${languageNavigation.items.size > 0}"></sly>
-     
-	<select class="left-side" name="language" id="languages" data-sly-list.item="${languageNavigation.items}">
+<sly
+	data-sly-use.commonsTemplates="core/wcm/components/commons/v1/templates.html"
+	data-sly-use.languageNavigation="com.adobe.cq.wcm.core.components.models.LanguageNavigation"
+	data-sly-test.hasContent="${languageNavigation.items.size > 0}">
+
+	<select name="language" id="languages" data-sly-list.item="${languageNavigation.items}">
 		<option value="${item.language}">${item.title}</option>
-	</select>
-	
-<sly data-sly-call="${commonsTemplates.placeholder @ isEmpty = !hasContent}"></sly>
+	</select> 
+</sly>
+
+<sly
+	data-sly-call="${commonsTemplates.placeholder @ isEmpty = !hasContent}" />

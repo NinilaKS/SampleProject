@@ -3,9 +3,9 @@
 	data-sly-use.banner="com.adobe.dramix.core.models.Banner"
     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
     data-sly-list="${banner.bannerDetails}">
-	<li class="parent">		
+	<li class="List${itemList.count} parent ${itemList.first ? 'active' : '' }">		
 				<div class="title">
-					<h1>${item.title}</h1>
+					<h1 class="${!itemList.first ? 'animate__backOutUp' : ''}">${item.title}</h1>
 				</div>
 				<div class="discribtion">
 					<h4>${item.subHeading}</h4>
