@@ -15,40 +15,43 @@ window.addEventListener("DOMContentLoaded", () => {
                let src=li.children[2].children[0].getAttribute('src');
               console.log(src);
               document.getElementById('bannersrc').src=src;
-          }
-      })
-      });
+          }         
+      })      
+    });
   
 });
 
 window.addEventListener("DOMContentLoaded", () => {
+
+  const controls = document.querySelectorAll(".tab-control");
+  const tabs = document.querySelectorAll(".tab");
   
-// ******* megamenu image onclick ********
-let previd;
-function show(idname){
-  if(!document.getElementById(idname.id).classList.contains("imgshow")){
-    document.getElementById(idname.id).classList.add("imgshow");
+  // display none for 1-length tabs
+  for (let i = 1; i < tabs.length; i++) {
+    tabs[i].style.display = 'none';
   }
-  if(previd){
-    if(idname.id != previd){
-      child = document.getElementById(previd);
-      child.previousElementSibling.classList.remove('active')
-      child = document.getElementById(idname.id);
-      child.previousElementSibling.classList.add('active')
-      document.getElementById(previd).style.display='none';
-      document.getElementById(idname.id).style.display='block';
+  
+  // set value forl all tabs
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].setAttribute("value", i);
+  }
+  
+  // add event listener for all controls
+  for (let i = 0; i < controls.length; i++) {
+    controls[i].setAttribute("value", i);
+    controls[i].addEventListener("click", displayTab);
+  }
+  
+  // display tab function
+  function displayTab() {
+    for (let i = 0; i < tabs.length; i++) {
+      tabs[i].style.display = 'none';
+      controls[i].removeAttribute("id");
     }
-  }
-  else{
-      child = document.getElementById(idname.id);
-      child.previousElementSibling.classList.add('active')
-      document.getElementById(idname.id).style.display='block';
-  }
-  previd = idname.id;
-  document.getElementById("dropdownid").addEventListener('click', function (event) {
-          event.stopPropagation();
-  });
+    tabs[this.value][0].style.display = 'block';
+    controls[this.value][0].setAttribute("id", "control-selected");
 }
+  
 // ******** search on click *********
 // const searchElement = document.getElementById('searchSection');
 // document.addEventListener('click', function(event) {
@@ -57,15 +60,17 @@ function show(idname){
 // });
 
 // ***** close search on click outside the element *******
-const ignoreClickOnMeElement = document.getElementById('searchSection');
-document.addEventListener('mouse', function(event) {
-    const isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
-  if (!isClickInsideElement) {
-    ignoreClickOnMeElement.style.display = 'none';
-  }
-});
+// const ignoreClickOnMeElement = document.getElementById('searchSection');
+// document.addEventListener('mouse', function(event) {
+//     const isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
+//   if (!isClickInsideElement) {
+//     ignoreClickOnMeElement.style.display = 'none';
+//   }
+// });
 
 });
+
+
 
 window.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("mouseover", function (event) {          

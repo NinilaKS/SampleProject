@@ -20,11 +20,11 @@
 	</li>
 </ul>
 </div>
-<div id="banner" data-sly-list="${banner.bannerDetails}">
+ <div id="banner" data-sly-list="${banner.bannerDetails}">
 	<video class="video" data-sly-test="${itemList.first && wcmmode.disabled}" autoplay muted loop id="bannersrc">
 		<source src="${item.video}" type="video/mp4">
 	</video>
-</div>
+</div> 
 <sly data-sly-call="${templates.placeholder @ isEmpty = !banner.bannerDetails}"></sly>
 
 
