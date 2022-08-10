@@ -1,346 +1,106 @@
 <section class="${wcmmode.edit ? '' : 'Homepage'}">
-  <div class="container-fluid cmp-header g-0">
-	
-	<header class="bg-transparent cmp-header-var-trans">		
-		<nav
-        class="navbar navbar-expand-lg navbar-light cmp-transparent py-1 d-none d-sm-block d-md-block"
-        id="cmp-bg-change"
-      >
-        <div class="container">
-          <div class="me-auto mb-2 mb-lg-0">
-            <select class="classic">
-              <option>English ( US )</option>
-              <option>English ( CA )</option>
-              <option>Spanish ( MX )</option>
-            </select>
-          </div>
-          <div class="flex-shrink-1 d-flex">
-            <button type="button" class="cmp-top-bar-btn d-inline-flex me-2">
-              <div class="mb-icon">
-                <img
-                  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Softwaretools.svg"
-                  alt="${'softwaretools' @ i18n}"
-                />
-              </div>
-              <a href="#" class="cmp-top-bar-tools">Software tools</a>
-            </button>
-            <button type="button" class="cmp-top-bar-btn d-inline-flex">
-              <div class="mb-icon">
-                <img
-                  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/upcomingevents.svg"
-                  alt="${'upcomingevents' @ i18n}"
-                />
-              </div>
-              <a href="#" class="cmp-top-bar-events">Upcoming Events</a>
-            </button>
-          </div>
-        </div>
-      </nav>
-      <nav
-        class="navbar navbar-expand-sm sticky-top cmp-secondary-menu-bar"
-        aria-label="Third navbar offcanvas example"
-        id="cmp-bg-navbar"
-      >
-        <div class="container">
-          <!-- logo, close-button and mobile menu -->
-          <a class="d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none" href="#"><img
-            src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbmail.svg"
-            alt="${'email' @ i18n}"
-          /></a>
-          <a class="navbar-brand logo-wrapper" href="#">
-            <img
-              src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/logo.png"
-              alt="${'logo' @ i18n}"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbarLight"
-            aria-controls="offcanvasNavbarLight"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-top"
-            tabindex="-1"
-            id="offcanvasNavbarLight"
-            aria-labelledby="offcanvasNavbarLightLabel"
-          >
-            <div class="offcanvas-header">
-              <form class="search">
-                <input
-                  class="form-control search-bar"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-              </form>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-
-            <!-- main nav bar -->
-            <div class="offcanvas-body" id="offcanvasNavbarLight">
-              <ul class="navbar-nav me-auto mb-2 mb-sm-0 cmp-navbar">
-                <li class="nav-item">
-                  <a href="#" class="nav-link" aria-current="page">Projects</a>
-                </li>
-                <li class="nav-item dropdown dropdown-hover dropdown-hover-toolbox  position-static">                  
-				          <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-					          data-bs-auto-close="outside"
-                    >Toolbox</a>					
-                  <!-- Dropdown mega menu -->
-                  <div
-                    class="dropdown-menu w-100 mt-0"
-                    id="dropdownid"
-                    aria-labelledby="navbarDropdown"
-                    >
-                    <div class="container mega_menu_wrapper">
-                      <div class="row my-4">
-                        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-                          <div class="cmp-sub-description">
-                            All the information is available in our toolbox
-                          </div>
-                        </div>
-                        <div
-                          class="col-md-6 col-lg-4 mb-3 mb-lg-0 inner-mg-menu-wrapper"
-                        >
-                          <div
-                            class="list-group list-group-flush mega-menu-wrapper"
-                          >
-						  	
-						              <div class="software-tab">
-                            <a  class="list-group-item list-group-item-action submenu-link" id="softwares">Softwares</a>
-                            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png" alt="software" id="software">
-                          </div>
-                          <div class="software-tab">
-                            <a class="list-group-item list-group-item-action submenu-link" id="Certificates">Certificates</a>
-                            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png" alt="certificates" id="certificates">
-                          </div>
-                          <div class="software-tab">
-                            <a  class="list-group-item list-group-item-action submenu-link" onclick="show(experttalks)">Expert Talks</a>
-                            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png" alt="expert-talks" id="experttalks">
-                          </div>
-                          <div class="software-tab">
-                            <a  class="list-group-item list-group-item-action submenu-link" onclick="show(whitepaper)">White papers</a>
-                            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png" alt="whitepaper" id="whitepaper">
-                          </div>
-                          <div class="software-tab">
-                            <a class="list-group-item list-group-item-action submenu-link" onclick="show(datasheets)">Product Datasheets</a>
-                            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png" alt="datasheets" id="datasheets">
-                          </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Sustainability</a>
-                </li>
-                <li class="nav-item dropdown dropdown-hover dropdown-hover-solution position-static">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    >Solutions</a>
-                  <!-- Dropdown mega menu -->
-                  <div
-                    class="dropdown-menu w-100 mt-0"
-                    id="dropdownid"
-                    aria-labelledby="navbarDropdown"
-                    >
-                    <div class="container mega_menu_wrapper">
-                      <div class="row my-4">
-                        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-                          <div class="cmp-sub-description ">
-                            All the information is available in our toolbox
-                          </div>
-                        </div>
-                        <div
-                          class="col-md-6 col-lg-4 mb-3 mb-lg-0 inner-mg-menu-wrapper"
-                        >
-                          <div
-                            class="list-group list-group-flush mega-menu-wrapper"
-                          >
-						  
-                          <div class="d-flex align-items-start">
-                          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            <button class="nav-link submenu-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Products</button>
-                            <button class="nav-link submenu-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Application</button>		
-                            <button class="nav-link submenu-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Technology</button>						  
-                          </div>
-                          <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                            <img
-                            src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg"								
-                            alt="${'right' @ i18n}"
-                            class="imgshow"
-                              />		
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">								
-                              <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link tab-control"
-                                id="experttalks">Technology</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg"								
-                                alt="${'right' @ i18n}"
-                                class="imgshow"
-                                />	
-                              </div>
-                            </div>							  						  
-                          </div>
-                          </div>
-							
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Contact</a>
-                </li>
-              </ul>
-              <!-- main nav end -->
-
-              <!-- right side nav -->
-              <!-- full width search section -->
-              <div class="search-section-wrapper bg-white" id="searchSection">
-                <div class="container">
-                  <div class="row my-4">
-                    <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-                      <div class="cmp-search-title">Search for products, videos or projects</div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
-                      <form
-                        class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 search"
-                        role="search"
-                        id="searchwrap">                    
-                     
-                        <input
-                          class="form-control search-bar"
-                          type="search"
-                          placeholder="Search"
-                          aria-label="Search"
-                        />
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="right-nav-wrapper">
-                <button
-                  type="button"
-                  class="btn cmp-top-bar-btn search-icon"
-                  id="search-btn"
-                >
-                   <img
-                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Search.svg"
-                    alt="${'search' @ i18n}"
-                  /> 				  
-                </button>
-				        <button
-                  type="button"
-                  class="btn cmp-top-bar-btn-hover search-icon"
-                  id="search-btn"
-                >
-                   <img
-                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Search-hover.svg"
-                    alt="${'search' @ i18n}"
-                  /> 				  
-                </button>
-                
-                <!-- menu only visible in mobile -->
-                <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
-                  <img
-                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbdocument.svg"
-                    alt="${'document' @ i18n}"
-                  />
-                  <a href="#">Downloads</a>
-                </button>
-                <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
-                  <div class="mb-icon">
-                    <img
-                      src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbsoftware.svg"
-                      alt="${'mbsoftwaretools' @ i18n}"
-                    />
-                  </div>
-                  <a href="#">Software Tools</a>
-                </button>
-                <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
-                  <div class="mb-icon">
-                    <img
-                      src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbupcoming.svg"
-                      alt="${'upcomingevents' @ i18n}"
-                    />
-                  </div>
-                  <a href="#">Upcoming Events</a>
-                </button>
-                <!-- menu only visible in mobile end-->
-
-                <button
-                  type="button"
-                  class="cmp-top-bar-btn cmp-file-box"
-                  id="file-box"
-                >
-                  <img
-                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Folder.png"
-                    alt="${'filedocument' @ i18n}"
-                  />
-                </button>
-                <button
-                  type="button"
-                  class="cmp-top-bar-btn-hover cmp-file-box"
-                  id="file-box"
-                >
-                  <img
-                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Folder-hover.png"
-                    alt="${'filedocument' @ i18n}"
-                  />
-                </button>
-                <!-- menu only visible in mobile-->
-                <div class="abt-faq">
-                  <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">FAQ</a></li>
-                  </ul>
-                </div>
-                <!-- menu only visible in mobile end-->
-
-                <!-- menu only visible in mobile-->
-                  <div class="cmp-bottom-bar"></div>
-                <!-- menu only visible in mobile end-->
-
-                <div class="cmp-button-wrapper">
-                  <a href="#" class="btn me-2 quote-btn">
-                    Request a Quote
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-  </div>
-  <sly
-  data-sly-resource="${'banner' @ resourceType='dramix/components/banner-home'}"
-></sly>
+	<div class="container-fluid cmp-header g-0">
+		<header class="bg-transparent cmp-header-var-trans">		
+			<nav class="navbar navbar-expand-lg navbar-light cmp-transparent py-1 d-none d-sm-block d-md-block" id="cmp-bg-change">
+        		<div class="container">
+          			<div class="me-auto mb-2 mb-lg-0">
+            			<sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
+          			</div>
+          
+          			<div class="flex-shrink-1 d-flex">
+            			<button type="button" class="cmp-top-bar-btn d-inline-flex me-2">
+              				<div class="mb-icon">
+                				<img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Softwaretools.svg" alt="${'softwaretools' @ i18n}"/>
+              				</div>
+              				<a href="${properties.softwareToolsLink @extension ='html'}" class="cmp-top-bar-tools">${properties.softwareToolsLabel}</a>
+            			</button>
+            			<button type="button" class="cmp-top-bar-btn d-inline-flex">
+              				<div class="mb-icon">
+                				<img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/upcomingevents.svg" alt="${'upcomingevents' @ i18n}"/>
+              				</div>
+              				<a href="${properties.upcomingEventsLink @extension ='html'}" class="cmp-top-bar-events">${properties.upcomingEventsLabel}</a>
+            			</button>
+          			</div>
+        		</div>
+      		</nav>
+      		<nav class="navbar navbar-expand-sm py-1 sticky-top" aria-label="Third navbar offcanvas example" id="cmp-bg-navbar">
+        		<div class="container">
+          			<a class="navbar-brand logo-wrapper" href="${properties.softwareToolsLink @extension ='html'}">
+            		<img src="${properties.headerLogo}" alt="${'logo' @ i18n}"/>
+          			</a>
+          			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight" aria-expanded="false" aria-label="Toggle navigation">
+            		<span class="navbar-toggler-icon"></span>
+          			</button>
+          			<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+            			<div class="offcanvas-header">
+              				<form class="search">
+                				<input class="form-control search-bar" type="search" placeholder="Search" aria-label="Search"/>
+              				</form>
+              				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            			</div>
+            		<div class="offcanvas-body" id="offcanvasNavbarLight">
+            			<sly data-sly-resource="${'navigation' @ resourceType='dramix/components/navigation'}"></sly>
+              		<div class="search-section-wrapper bg-white" id="searchSection">
+                		<div class="container">
+                  			<div class="row my-4">
+                    			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
+                      				<h2>search for products</h2>
+                    			</div>
+                    			<div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                      				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 search" role="search" id="searchwrap">
+                        				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFF" class="bi bi-search" viewBox="0 0 16 16">
+                          					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                        				</svg>
+                        				<input class="form-control search-bar" type="search" placeholder="Search" aria-label="Search"/>
+                      				</form>
+                    			</div>
+                  			</div>
+                		</div>
+              		</div>
+              		<div class="right-nav-wrapper">
+                		<button type="button" class="btn cmp-top-bar-btn search-icon" id="search-btn">
+                   			<img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Search.svg" alt="${'search' @ i18n}"/> 				  
+                		</button>
+						<button type="button" class="btn cmp-top-bar-btn-hover search-icon" id="search-btn">
+                   			<img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Search-hover.svg" alt="${'search' @ i18n}"/> 				  
+                		</button>
+                		<button type="button" class="cmp-top-bar-btn xtra-mb-menu">
+                  			<img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Folder.png" alt="${'document' @ i18n}"/>
+                  			<p>Downloads</p>
+                		</button>
+                		<button type="button" class="cmp-top-bar-btn xtra-mb-menu">
+                  			<div class="mb-icon">
+                    			<img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbsoftware.png" alt="${'mbsoftwaretools' @ i18n}"/>
+                  			</div>
+                  			<p>Software Tools</p>
+                		</button>
+                		<button type="button" class="cmp-top-bar-btn xtra-mb-menu">
+                  			<div class="mb-icon">
+                    			<img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbdocument.png" alt="${'mbdocument' @ i18n}"/>
+                  			</div>
+                  			<p>Upcoming Events</p>
+                		</button>
+                		<button type="button" class="cmp-top-bar-btn cmp-file-box" id="file-box">
+                  			<img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Folder.png" alt="${'filedocument' @ i18n}"/>
+                		</button>
+                		<button type="button" class="cmp-top-bar-btn-hover cmp-file-box" id="file-box">
+                  			<img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Folder-hover.png" alt="${'filedocument' @ i18n}"/>
+                		</button>
+                		<div class="abt-faq">
+                  			<ul>
+                    			<li><a href="">About</a></li>
+                    			<li><a href="">FAQ</a></li>
+                  			</ul>
+                		</div>
+                		<div class="button-wrapper">
+                  			<button type="button" class="btn me-2 quote-btn">${properties.requestQuoteLabel}</button>
+                		</div>
+              		</div>
+            	</div>
+          			</div>
+        		</div>
+			</nav>
+		</header>
+ 	</div>
+ 		<sly data-sly-resource="${'banner' @ resourceType='dramix/components/banner-home'}"></sly>
 </section>
