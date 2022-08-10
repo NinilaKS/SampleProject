@@ -38,7 +38,7 @@
       border-radius: 0px;   
       display: inline-block;  
       padding: 0.5em 3.5em 0.5em 1em;
-
+      font-family: $font-family-Bekaert-regular;
       &.classic { 
         color: $color-white;
         position: relative;
@@ -143,7 +143,7 @@
         grid-gap:1em;
         padding-left: 0px;
         text-align: left;
-        padding: 1em 1em;             
+        padding: 20px 20px;             
       }
 
       &:focus{
@@ -220,6 +220,7 @@
     .quote-btn{
       border: 1px solid $color-white;
       color: $color-white;
+      font-family: $font-family-Bekaert-bold-italic;
       @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
         color: $color-dark-blue;
         font-size: $font-size-16;
@@ -288,6 +289,13 @@
           }
         }
       }
+
+      .offcanvas-top{
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
+          height: 100vh;
+        }
+      }
+
     }
 
 
@@ -303,10 +311,10 @@
         padding: 1em 1em;
       }
 
-      .nav-item{
+      .nav-item{        
         a{
           color: $color-white;
-          font-family: $font-family-Bekaert-regular;
+          font-family: $font-family-Bekaert-bold-italic;
           @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
             color: $color-dark-blue;
             font-size: $font-size-24;
