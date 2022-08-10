@@ -1,10 +1,26 @@
-${properties.contact}<br>
-${properties.contacttitle}<br>
-<sly data-sly-use.sample="com.adobe.dramix.core.models.Contact">
-	<sly data-sly-list.item="${sample.contactAreaDetails}"><sly>
-    <p> Image Path : <b> ${item.imagepath}</b></p>
-    <p> Image Title : <b> ${item.imagetitle}</b></p>
-    <p> Image Description : <b> ${item.imagedescription}</b></p>
+<div class="container-fluid">
+	<div class="row g-0 contact-row">
 
+		<div class="col-sm-1 d-none d-sm-block"></div>
+		<div data-sly-use.contact="com.adobe.dramix.core.models.Contact"
+			data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+			class="cmp-contact-container col-md-10 col-12">
+			<p class="cmp-contact__subheading text-uppercase text-start">${properties.subHeading}</p>
+			<h1 class="cmp-contact__heading text-start">${properties.heading}</h1>
 
-</sly>
+			<div data-sly-list="${contact.contactDetails}" class="cmp-contact__teaser d-md-flex d-block gap-md-3 gap-0">
+				<div class="cmp-contact__content position-relative">
+					<img alt="${'Contact Image' @ i18n}" class="img-fluid" src="${item.imagePath}" />
+					<div class="cmp-details position-absolute d-flex flex-column justify-content-end">
+						<h3>${item.name}</h3>
+						<div>${item.details @ context="html"}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-1 d-none d-sm-block"></div>
+
+	</div>
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !contact.contactDetails}"></sly>

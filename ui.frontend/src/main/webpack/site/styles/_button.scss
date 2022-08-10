@@ -1,19 +1,28 @@
-.cmp-button {}
-.cmp-button__text {}
-.cmp-button__icon {}
-//.cmp-button__icon--myIcon {}
-
 .dark-buttons-bg {
     background-color: #1E1E1E;
 }
-/*-------------------------------------------------*\
-    CSS for all the buttons to be added here. 
-    There are 2 types buttons. One with dark bg and one with light bg. 
 
+/*-------------------------------------------------*\
+   General style sheet for the Button Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Button with dark background and dark grey border
+   - Button with dark background and light grey border
+   - Button with dark background and no border
+   - White button for clear all with cross
+   - Blue button for filter with tick icon
+   - Button with light background and  white border
+   - Button with light background and other white border
+   - Button with light background and no border
+   
 \*-------------------------------------------------*/
 
-
-// Button with dark background and dark grey border
+/*-------------------------------------------*\
+Button with dark background and dark grey border
+\*-------------------------------------------*/
 .dark-btn {
     .btn {
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -42,52 +51,59 @@
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: #FFFFFF;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-white;
             margin: auto;
             margin-left: 20px;
             margin-right: 30px;
         }
     }
 
-    .btn:hover {
-        border: 1px solid #FFFFFF;
-        padding-right: 0;
-        transition: 1s;
+    .btn {
+        &:hover {
+            border: 1px solid $color-white;
+            padding-right: 0;
+            transition: 1s;
 
-        .arrow-right {
-            // transform: translate(15px);
-            right: 0;
-            transition: 0.5s;
-            opacity: 0;
+            .arrow-right {
+
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+
+
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
+
+
         }
-
-        .arrow-left {
-            transform: translate(15px);
-            transition: 0.5s;
-            opacity: 1;
-            right: 10px;
-            // margin-right: 20px;
-
-        }
-
-        .cmp-button__text {
-            transform: translate(15px);
-            transition: 0.5s;
-
-        }
-
-
     }
 
-    .btn:focus {
-        box-shadow: none;
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
     }
 }
 
-// Button with dark background and light grey border
+/*-------------------------------------------*\
+ Button with dark background and light grey border
+\*-------------------------------------------*/
+
 .light-btn {
     .btn {
         border: 1px solid rgba(111, 111, 111, 0.2);
@@ -116,58 +132,63 @@
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: #FFFFFF;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-white;
             margin: auto;
             margin-left: 20px;
             margin-right: 30px;
         }
     }
 
-    .btn:hover {
-        border: 1px solid #FFFFFF;
-        padding-right: 0;
-        transition: 1s;
+    .btn {
+        &:hover {
+            border: 1px solid $color-white;
+            padding-right: 0;
+            transition: 1s;
 
-        .arrow-right {
-            // transform: translate(15px);
-            right: 0;
-            transition: 0.5s;
-            opacity: 0;
+            .arrow-right {
+
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+
+
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
+
+
         }
-
-        .arrow-left {
-            transform: translate(15px);
-            transition: 0.5s;
-            opacity: 1;
-            right: 10px;
-            // margin-right: 20px;
-
-        }
-
-        .cmp-button__text {
-            transform: translate(15px);
-            transition: 0.5s;
-
-        }
-
-
     }
 
-    .btn:focus {
-        box-shadow: none;
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
     }
 }
 
-// Button with dark background and no border
+/*-------------------------------------------*\
+    Button with dark background and no border
+\*-------------------------------------------*/
 .no-btn {
     .btn {
         display: flex;
         width: auto;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
         min-height: 49px;
 
         .arrow-left {
@@ -175,7 +196,6 @@
             position: relative;
             left: 0;
             margin: auto 0;
-
         }
 
         .arrow-right {
@@ -187,141 +207,163 @@
 
 
         .cmp-button__text {
-            font-family: 'Helvetica';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: #FFFFFF;
-            margin: auto;
-            margin-left: 20px;
-            margin-right: 30px;
+            font-family: $font-family-roboto;
+            font-style: $font-weight-normal;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-white;
+            margin: 0 30px 0 20px;
         }
     }
 
-    .btn:hover {
-        padding-right: 0;
-        transition: 1s;
+    .btn {
+        &:hover {
+            padding-right: 0;
+            transition: 1s;
 
-        .arrow-right {
-            // transform: translate(15px);
-            right: 0;
-            transition: 0.5s;
-            opacity: 0;
+            .arrow-right {
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
         }
-
-        .arrow-left {
-            transform: translate(15px);
-            transition: 0.5s;
-            opacity: 1;
-            right: 10px;
-            // margin-right: 20px;
-
-        }
-
-        .cmp-button__text {
-            transform: translate(15px);
-            transition: 0.5s;
-
-        }
-
 
     }
 
-    .btn:focus {
-        box-shadow: none;
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
     }
 }
 
-// White button for clear all with cross
+/*-------------------------------------------*\
+   White button for clear all with cross
+\*-------------------------------------------*/
 .white-btn {
     .btn {
         border: 1px solid rgba(255, 255, 255, 0.2);
-        background-color: #FFFFFF;
-        
+        background-color: $color-white;
+
         width: auto;
         min-height: 49px;
+
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: #0E3F6B;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-regal-blue;
             margin: auto;
         }
-        .arrow-left{
+
+        .arrow-left {
             display: none;
         }
-        .arrow-right{
+
+        .arrow-right {
             margin: auto;
         }
     }
 
-    .btn:hover {
-        border: 1px solid #0E3F6B;
-        transition: 1s;
-        .cmp-button__text{
-            opacity: 0.7;
-            transition: 1s;
-        }
-       
-        .arrow-right{
-            opacity: 0.7;
+    .btn {
+        &:hover {
+            border: 1px solid #0E3F6B;
             transition: 1s;
 
+            .cmp-button__text {
+                opacity: 0.7;
+                transition: 1s;
+            }
+
+            .arrow-right {
+                opacity: 0.7;
+                transition: 1s;
+
+            }
         }
     }
 
-    .btn:focus {
-        box-shadow: none;
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
     }
 }
 
-// Blue button for filter with tick icon
+/*-------------------------------------------*\
+   Blue button for filter with tick icon
+\*-------------------------------------------*/
 .dark-blue-btn {
     .btn {
-        border: 1px solid #0E3F6B;  ;
-        background: #0E3F6B;        
+        border: 1px solid #0E3F6B;
+        background: #0E3F6B;
         width: auto;
         min-height: 49px;
+
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: white;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-white;
             margin: auto;
         }
-        .arrow-left{
+
+        .arrow-left {
             display: none;
         }
-        .arrow-right{
+
+        .arrow-right {
             margin: auto;
         }
     }
 
-    .btn:hover {
-        border: 1px solid white;
-        transition: 1s;
-        .cmp-button__text{
-            opacity: 0.7;
-            transition: 1s;
-        }
-        .arrow-right{
-            opacity: 0.7;
+    .btn {
+        &:hover {
+            border: 1px solid $color-white;
             transition: 1s;
 
+            .cmp-button__text {
+                opacity: 0.7;
+                transition: 1s;
+            }
+
+            .arrow-right {
+                opacity: 0.7;
+                transition: 1s;
+
+            }
         }
     }
 
-    .btn:focus {
-        box-shadow: none;
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
     }
 }
 
-// Button with light background and  white border
+/*-------------------------------------------*\
+Button with light background and  white border
+\*-------------------------------------------*/
 .dark-btn-grey {
     .btn {
         border: 1px solid rgba(14, 63, 107, 0.2);
@@ -336,7 +378,6 @@
             position: relative;
             left: 0;
             margin: auto 0;
-
         }
 
         .arrow-right {
@@ -350,52 +391,55 @@
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: #042A4B;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-dark-blue;
             margin: auto;
             margin-left: 20px;
             margin-right: 30px;
         }
     }
 
-    .btn:hover {
-        border: 1px solid rgba(14, 63, 107, 1);
-        padding-right: 0;
-        transition: 1s;
+    .btn {
+        &:hover {
+            border: 1px solid rgba(14, 63, 107, 1);
+            padding-right: 0;
+            transition: 1s;
 
-        .arrow-right {
-            // transform: translate(15px);
-            right: 0;
-            transition: 0.5s;
-            opacity: 0;
+            .arrow-right {
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+            }
+
+
         }
-
-        .arrow-left {
-            transform: translate(15px);
-            transition: 0.5s;
-            opacity: 1;
-            right: 10px;
-            // margin-right: 20px;
-
-        }
-
-        .cmp-button__text {
-            transform: translate(15px);
-            transition: 0.5s;
-
-        }
-
-
     }
 
-    .btn:focus {
-        box-shadow: none;
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+
     }
 }
 
-// Button with light background and other white border
+/*-------------------------------------------*\
+Button with light background and other white border
+\*-------------------------------------------*/
 .light-btn-grey {
     .btn {
         border: 1px solid rgba(4, 42, 75, 0.2);
@@ -410,7 +454,6 @@
             position: relative;
             left: 0;
             margin: auto 0;
-
         }
 
         .arrow-right {
@@ -424,52 +467,55 @@
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: #042A4B;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-dark-blue;
             margin: auto;
             margin-left: 20px;
             margin-right: 30px;
         }
     }
 
-    .btn:hover {
-        border: 1px solid rgba(4, 42, 75, 1);
-        padding-right: 0;
-        transition: 1s;
+    .btn {
+        &:hover {
+            border: 1px solid rgba(4, 42, 75, 1);
+            padding-right: 0;
+            transition: 1s;
 
-        .arrow-right {
-            // transform: translate(15px);
-            right: 0;
-            transition: 0.5s;
-            opacity: 0;
+            .arrow-right {
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+            }
+
+
         }
-
-        .arrow-left {
-            transform: translate(15px);
-            transition: 0.5s;
-            opacity: 1;
-            right: 10px;
-            // margin-right: 20px;
-
-        }
-
-        .cmp-button__text {
-            transform: translate(15px);
-            transition: 0.5s;
-
-        }
-
-
     }
 
-    .btn:focus {
-        box-shadow: none;
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+
     }
 }
 
-// Button with light background and no border
+/*-------------------------------------------*\
+    Button with light background and no border
+\*-------------------------------------------*/
 .no-btn-grey {
     .btn {
         display: flex;
@@ -483,7 +529,6 @@
             position: relative;
             left: 0;
             margin: auto 0;
-
         }
 
         .arrow-right {
@@ -497,46 +542,48 @@
         .cmp-button__text {
             font-family: 'Helvetica';
             font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 17px;
-            color: #042A4B;
+            font-weight: $font-weight-700;
+            font-size: $font-size-16;
+            line-height: $line-height-17;
+            color: $color-dark-blue;
             margin: auto;
             margin-left: 20px;
             margin-right: 30px;
         }
     }
 
-    .btn:hover {
-        padding-right: 0;
-        transition: 1s;
+    .btn {
+        &:hover {
+            padding-right: 0;
+            transition: 1s;
 
-        .arrow-right {
-            // transform: translate(15px);
-            right: 0;
-            transition: 0.5s;
-            opacity: 0;
+            .arrow-right {
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
+
+
         }
-
-        .arrow-left {
-            transform: translate(15px);
-            transition: 0.5s;
-            opacity: 1;
-            right: 10px;
-            // margin-right: 20px;
-
-        }
-
-        .cmp-button__text {
-            transform: translate(15px);
-            transition: 0.5s;
-
-        }
-
-
     }
 
-    .btn:focus {
-        box-shadow: none;
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+
     }
 }

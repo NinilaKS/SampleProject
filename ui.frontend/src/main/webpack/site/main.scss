@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import 'variables';
 @import 'base';
+@import 'fonts';
 @import '../components/**/*.scss';
 @import '../styles/**/*.scss';
 @import './styles/*.scss';
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/bootstrap-utilities";
 @import '~bootstrap/dist/css/bootstrap.css';
-@import 'aos-animations/dist/animations.min.css';
+@import '~aos/dist/aos.css';
+
+// Declare the font family
+:root {
+    --bs-font-sans-serif: "Bekaert-Regular";
+    --bs-body-color: #042a4b;
+}

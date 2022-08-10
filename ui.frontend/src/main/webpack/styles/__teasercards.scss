@@ -1,0 +1,38 @@
+/*-------------------------------------------------*\
+   General style sheet for the Teaser Cards
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - TeaserCard Mobile Slider 
+   
+\*-------------------------------------------------*/
+/*-------------------------------------------*\
+            TeaserCard Mobile Slider
+\*-------------------------------------------*/
+.teasercards {
+    .card-wrapper {
+        .carousel {
+            margin-bottom: 3.75rem;
+
+            .carousel-indicators {
+                margin-bottom: 0;
+                position: unset;
+                margin-top: 1.875rem;
+
+                [data-bs-target] {
+                    background-color: $color-cloud-gray;
+                    width: 35.75px;
+                    margin-right: 5px;
+                }
+
+                .active {
+                    background-color: $color-black;
+                }
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,113 @@
+/*-------------------------------------------------*\
+   General style sheet for all the fonts integrated
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Bekaert Text Regular
+   - Bekaert Text Medium
+   - Bekaert Text Bold
+   - Bekaert Text Italic
+   - Bekaert Text Medium Italic
+   - Bekaert Text Bold Italic
+   - Bekaert Heading Regular
+   - Bekaert Heading Bold
+   
+\*-------------------------------------------------*/
+/*-------------------------------------------*\
+         Bekaert Text Regular
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Regular";
+    src: url("/etc.clientlibs//clientlibs/generated/clientlib-site/resources/fonts/TrueType/BekaertText-Regular.ttf") format("truetype");
+    src: local(),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/OpenType/BekaertText-Regular.otf") format("opentype"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF2/BekaertText-Regular.woff2") format("woff2"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF/BekaertText-Regular.woff") format("woff"),
+}
+
+/*-------------------------------------------*\
+         Bekaert Text Medium
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Medium";
+    src: url("/etc.clientlibs//clientlibs/generated/clientlib-site/resources/fonts/TrueType/BekaertText-Medium.ttf") format("truetype");
+    src: local(),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/OpenType/BekaertText-Medium.otf") format("opentype"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF2/BekaertText-Medium.woff2") format("woff2"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF/BekaertText-Medium.woff") format("woff"),
+}
+/*-------------------------------------------*\
+         Bekaert Text Bold
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Bold";
+    src: url("/etc.clientlibs//clientlibs/generated/clientlib-site/resources/fonts/TrueType/BekaertText-Bold.ttf") format("truetype");
+    src: local(),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/OpenType/BekaertText-Bold.otf") format("opentype"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF2/BekaertText-Bold.woff2") format("woff2"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF/BekaertText-Bold.woff") format("woff"),
+}
+
+/*-------------------------------------------*\
+         Bekaert Text Italic
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Italic";
+    src: url("/etc.clientlibs//clientlibs/generated/clientlib-site/resources/fonts/TrueType/BekaertText-Italic.ttf") format("truetype");
+    src: local(),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/OpenType/BekaertText-Italic.otf") format("opentype"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF2/BekaertText-Italic.woff2") format("woff2"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF/BekaertText-Italic.woff") format("woff"),
+}
+
+/*-------------------------------------------*\
+         Bekaert Text Medium Italic
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Medium-Italic";
+    src: url("/etc.clientlibs//clientlibs/generated/clientlib-site/resources/fonts/TrueType/BekaertText-MediumItalic.ttf") format("truetype");
+    src: local(),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/OpenType/BekaertText-MediumItalic.otf") format("opentype"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF2/BekaertText-MediumItalic.woff2") format("woff2"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF/BekaertText-MediumItalic.woff") format("woff"),
+}
+
+
+
+/*-------------------------------------------*\
+         Bekaert Text Bold Italic
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Bold-Italic";
+    src: url("/etc.clientlibs//clientlibs/generated/clientlib-site/resources/fonts/TrueType/BekaertText-BoldItalic.ttf") format("truetype");
+    src: local(),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/OpenType/BekaertText-BoldItalic.otf") format("opentype"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF2/BekaertText-BoldItalic.woff2") format("woff2"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF/BekaertText-BoldItalic.woff") format("woff"),
+}
+
+/*-------------------------------------------*\
+         Bekaert Heading Regular
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Heading-Regular";
+    src: url("/etc.clientlibs//clientlibs/generated/clientlib-site/resources/fonts/TrueType/BekaertHeadline-Regular.ttf") format("truetype");
+    src: local(),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/OpenType/BekaertHeadline-Regular.otf") format("opentype"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF2/BekaertHeadline-Regular.woff2") format("woff2"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF/BekaertHeadline-Regular.woff") format("woff"),
+}
+
+/*-------------------------------------------*\
+         Bekaert Heading Bold
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Heading-Regular";
+    src: url("/etc.clientlibs//clientlibs/generated/clientlib-site/resources/fonts/TrueType/BekaertHeadline-Bold.ttf") format("truetype");
+    src: local(),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/OpenType/BekaertHeadline-Bold.otf") format("opentype"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF2/BekaertHeadline-Bold.woff2") format("woff2"),
+        url("/etc.clientlibs/dramix/clientlibs/generated/clientlib-site/resources/fonts/WOFF/BekaertHeadline-Bold.woff") format("woff"),
+}

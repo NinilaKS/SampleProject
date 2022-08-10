@@ -1,0 +1,97 @@
+/*-------------------------------------------------*\
+   General style sheet for the Contact Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Contact Container
+   - Contact Container Heading & Sub title
+   - Contact Container Image with Text
+   
+\*-------------------------------------------------*/
+/*-------------------------------------------*\
+        Contact Container
+\*-------------------------------------------*/
+.contact {
+    background-color: $color-dark-blue;
+
+    .contact-row {
+        margin: 120px 0;
+
+        @media screen and (max-width: $screen-md-min) {
+            margin: 60px 0 0 0;
+        }
+    }
+}
+
+/*-------------------------------------------*\
+    Contact Container Heading & Sub title
+\*-------------------------------------------*/
+.cmp-contact-container {
+    .cmp-contact {
+        &__heading {
+            font-family: $font-family-roboto;
+            font-style: $font-weight-normal;
+            font-weight: $font-weight-300;
+            font-size: $font-size-80;
+            line-height: $line-height-90;
+            color: $color-white;
+            letter-spacing: $letter-spacing-02;
+            margin-bottom: 60px;
+            width: 50%;
+
+            @media screen and (max-width: $screen-md-min) {
+                width: 100%;
+            }
+        }
+
+        &__subheading {
+            font-family: $font-family-roboto;
+            font-style: $font-weight-normal;
+            font-weight: $font-weight-700;
+            font-size: $font-size-12;
+            line-height: $line-height-12;
+            color: $color-picton-blue;
+            letter-spacing: $letter-spacing-2;
+            margin-bottom: 30px;
+        }
+
+        /*-------------------------------------------*\
+    Contact Container Image with Text
+\*-------------------------------------------*/
+        &__content {
+            .cmp-details {
+                padding: 0 0 0 40px;
+
+                &:not(:only-child) {
+                    z-index: 1;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    min-height: auto;
+                    min-width: auto;
+                }
+
+                h3,
+                p {
+
+                    color: $color-white;
+                    font-weight: $font-weight-400;
+                    font-style: $font-weight-normal;
+                }
+
+                h3 {
+                    font-size: $font-size-24;
+                    line-height: $line-height-28;
+                }
+
+                p {
+                    font-size: $font-size-16;
+                }
+            }
+
+        }
+    }
+}

@@ -1,10 +1,95 @@
-.cmp-accordion {}
-.cmp-accordion__item {}
-.cmp-accordion__header {}
-.cmp-accordion__button {}
-.cmp-accordion__button--expanded {}
-.cmp-accordion__title {}
-.cmp-accordion__icon {}
-.cmp-accordion__panel {}
-.cmp-accordion__panel--expanded {}
-.cmp-accordion__panel--hidden {}
+/*-------------------------------------------------*\
+   General style sheet for the Accordion Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Accordion Container
+   - Accordion Border Line
+   - Accordion Minus Button
+   - Accordion Plus Button
+   - Accordion Hidden paragraph
+   
+\*-------------------------------------------------*/
+
+/*-------------------------------------------*\
+            Accordion Container
+\*-------------------------------------------*/
+
+.cmp-accordion {
+
+
+  .cmp-accordion__item {
+/*-------------------------------------------*\
+        Accordion Border Line
+\*-------------------------------------------*/
+    border: 1px solid $color-cloud-gray;
+    border-width: 1px 0 1px 0;
+
+    .cmp-accordion__container {
+      margin: 40px 0;
+
+      .cmp-accordion__header {
+        font-size: $font-size-24;
+
+        .cmp-accordion__button {
+          overflow-anchor: none;
+
+          .cmp-accordion__title {
+            color: $color-black;
+            font-size: $font-size-24;
+            font-style: $font-weight-normal;
+            font-weight: $font-weight-400;
+            line-height: $line-height-28;
+          }
+
+/*-------------------------------------------*\
+            Accordion Minus Button
+\*-------------------------------------------*/
+          &::after {
+            flex-shrink: 0;
+            margin-left: auto;
+            content: "";
+            background-repeat: no-repeat;
+            background-image: url(#{$image-path}/minus.svg);
+            width: 15px;
+            height: 15px;
+            background-size: 15px;
+          }
+/*-------------------------------------------*\
+            Accordion Plus Button
+\*-------------------------------------------*/
+          &:not(.cmp-accordion__button--expanded) {
+            &::after {
+              background-image: url(#{$image-path}/plus.svg);
+            }
+          }
+        }
+      }
+/*-------------------------------------------*\
+        Accordion Hidden paragraph
+\*-------------------------------------------*/
+      .cmp-accordion__panel {
+        &.cmp-accordion__panel {
+          &--expanded {
+            margin-top: 30px;
+
+            .container {
+              padding: 0;
+            }
+
+            p {
+              color: $color-black-07;
+              font-size: $font-size-14;
+              font-style: $font-weight-normal;
+              font-weight: $font-weight-400;
+              line-height: $line-height-21;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}

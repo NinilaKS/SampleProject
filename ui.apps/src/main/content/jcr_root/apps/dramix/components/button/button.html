@@ -16,6 +16,7 @@
 <button data-sly-use.button="com.adobe.cq.wcm.core.components.models.Button"
         data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
         data-sly-use.iconTemplate="icon.html"
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
         data-sly-element="${button.link ? 'a' : 'button'}"
         type="${button.link ? '' : 'button'}"
         id="${component.id}"
@@ -23,8 +24,10 @@
         href="${button.link}"
         aria-label="${button.accessibilityLabel}"
         data-cmp-clickable="${button.data ? true : false}"
-        data-cmp-data-layer="${button.data.json}">
+        data-cmp-data-layer="${button.data.json}"
+        data-sly-test.hasContent="${button.text || button.link}">
     <sly data-sly-call="${iconTemplate.icon @ icon=button.icon, classname='arrow-left'}"></sly>
     <span data-sly-test="${button.text}" class="cmp-button__text">${button.text}</span>
     <sly data-sly-call="${iconTemplate.icon @ icon=button.icon, classname='arrow-right'}"></sly>
 </button>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

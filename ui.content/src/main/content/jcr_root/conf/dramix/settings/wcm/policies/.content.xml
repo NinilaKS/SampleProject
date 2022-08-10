@@ -328,9 +328,21 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Content Teaser"
                     sling:resourceType="wcm/core/components/policy/policy"
+                    showTitleType="false"
                     titleType="h3">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item2
+                            cq:styleGroupLabel="Image With Text"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="image-with-text"
+                                    cq:styleId="1659063310791"
+                                    cq:styleLabel="image text"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
                         <item0
                             cq:styleGroupLabel="Horizontal Line"
                             jcr:primaryType="nt:unstructured">
@@ -342,6 +354,22 @@
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item0>
+                        <item1
+                            cq:styleGroupLabel="Teaser Alignment"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-teaser--teaserStyle1"
+                                    cq:styleId="1659009849930"
+                                    cq:styleLabel="TextLeft-ImageRight"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-teaser--teaserStyle2"
+                                    cq:styleId="1659009857162"
+                                    cq:styleLabel="TextRight-ImageLeft"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
                     </cq:styleGroups>
                 </policy_1575031387650>
             </teaser>

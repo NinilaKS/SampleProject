@@ -1,4 +1,4 @@
-<div class="col-sm-12 col-md-12 cmp-contactbanner my-5 vh-100"
+<div class="col-sm-12 col-md-12 cmp-contactbanner mb-5 vh-100"
      data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
         <div class="container-fluid">
             <div class="row">
@@ -12,10 +12,13 @@
                             <h4>${properties.bannertitle}</h4>
                             <p>${properties.bannerdescription}</p>
                             <div class="cmp-box-button">
-                                <a href="${properties.buttonLink}">
-                                    <span>${properties.buttonlabel}</span>
-                                    <span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Picto-Arrow.png"/></span>
-                                </a>
+                                <div class="button dark-btn aem-GridColumn aem-GridColumn--default--12">
+                                    <a href="${properties.buttonLink @extension='html'}" type="button" id="button-80b69e4142" class="btn cmp-button rounded-0">
+                                        <img src="/content/dam/dramix/button-icon/Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
+                                        <span class="cmp-button__text">${properties.buttonlabel}</span>
+                                        <img src="/content/dam/dramix/button-icon/Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
