@@ -1,4 +1,5 @@
 <div class="List-catecory">
+<div class="container">
 <ul class="list"
 	data-sly-use.banner="com.adobe.dramix.core.models.Banner"
     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
@@ -19,6 +20,7 @@
 				</video>	
 	</li>
 </ul>
+</div>
 </div>
  <div id="banner" data-sly-list="${banner.bannerDetails}">
 	<video class="video" data-sly-test="${itemList.first && wcmmode.disabled}" autoplay muted loop id="bannersrc">

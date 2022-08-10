@@ -80,12 +80,14 @@
         font-weight: $font-weight-400;
         color: $color-white;
         text-decoration: none;
+        padding-left: 16px;
       }
       .cmp-top-bar-events{
         font-size: $font-size-16;
         font-weight: $font-weight-400;
         color: $color-white;
         text-decoration: none;
+        padding-left: 16px;
       }
     }
 
@@ -118,6 +120,13 @@
       .bi{
         fill: #14ACE5;
       }
+      @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+        margin-right: 3em;
+        border-left: 0px;
+        border-right: 0px;
+        padding: 9px;
+        border-bottom: 1px solid $color-dark-blue;
+      }
     }
 
     
@@ -127,11 +136,71 @@
     
     .xtra-mb-menu{
       display: none;
+      @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        grid-gap:1em;
+        padding-left: 0px;
+        text-align: left;
+        padding: 1em 1em;             
+      }
+
+      &:focus{
+        border: 0px;
+      }
+      a{
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+          margin-bottom: 0px;
+          font-size: $font-size-16;
+          font-weight: $font-weight-400;
+          color: $color-dark-blue;
+          text-decoration: none; 
+        }
+      }
     }
 
     .abt-faq{
       display: none;
+      @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        grid-gap:1em;        
+        padding: 0.5em 1em;
+      }
+      a{
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+          text-decoration: none;
+          font-size: 25px;
+          color: $color-dark-gray;          
+        }
+      }
+      ul{
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+          list-style: none;
+          padding-left: 0px;
+        }
+      }
+      li{
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+          padding: 0.5em 0em;
+        }
+      }
     }
+
+    .cmp-bottom-bar{
+      display: none;
+      @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+        border-top:1px solid $color-dark-gray;
+        grid-gap: 1em;
+        align-items: center;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        padding: 0.5em 1em;
+      }
+    }
+
 
     /*-------------------------------------------*\
        Search Icon
@@ -151,6 +220,16 @@
     .quote-btn{
       border: 1px solid $color-white;
       color: $color-white;
+      @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+        color: $color-dark-blue;
+        font-size: $font-size-16;
+        font-weight: $font-weight-700;
+        font-family: $font-family-Bekaert-bold;
+        border: 1px solid $color-light-gray;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
 
       &:hover{
         color:$color-white;
@@ -165,34 +244,86 @@
     
     .right-nav-wrapper{
       display: flex;
-
+      @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+        flex-direction: column;
+      }
       .cmp-file-box {
           img {
             width: 16px;
             height: 16px;
           }
-      }
+      }     
     }
     
+     /*-------------------------------------------*\
+       Secondary Menu Nav Bar
+    \*-------------------------------------------*/
+
+    .cmp-secondary-menu-bar{
+
+      .offcanvas-header{
+        .btn-close{
+          @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){            
+              content: "";
+              position: absolute;         
+              height: 25px;             
+              width: 25px;
+              z-index: 1;
+              border: 0px;
+              margin-left: 2px;
+              right: 21px;
+              background:url(#{$image-path}/mbclose.svg) 8px 9px no-repeat;          
+              background-size: 35px;
+          }
+        }        
+      }
+
+      .offcanvas-body{
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
+          padding: 0em;
+        }
+        .cmp-button-wrapper{
+          @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
+            padding: 1em;
+          }
+        }
+      }
+    }
+
+
     /*-------------------------------------------*\
        Navbar 
     \*-------------------------------------------*/
 
     .cmp-navbar{
-      
+      grid-gap: 10px;     
+
+      @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+        position: relative;
+        padding: 1em 1em;
+      }
+
       .nav-item{
         a{
           color: $color-white;
+          font-family: $font-family-Bekaert-regular;
+          @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+            color: $color-dark-blue;
+            font-size: $font-size-24;
+            font-weight: $font-weight-300;
+          }
         }
         .submenu-link {
           color: $color-dark-blue;
           opacity: 0.5;
           .active{
             color: $color-dark-blue;
+            opacity: 1;
           }
         }
         .dropdown-menu {
-          height:250px;          
+          height:inherit;
+          transition: all .3s;       
           .dropdown-item{
             color: $color-black;
           }
@@ -209,20 +340,27 @@
             top: 100%;
             border-radius: 0px;
             border: 0px;
+            transition: all .3s;
+            opacity: 1;
           } 
           .dropdown-toggle
           {
             &:after {
               content: "";
               position: absolute;         
-              height: 16px;
-              position: absolute;
+              height: 16px;             
               width: 16px;
               z-index: 1;
               border: 0px;
               margin-left: 2px;
-              background:url(#{$image-path}/dropup.svg) 0px 11px no-repeat;          
-            }   
+              background:url(#{$image-path}/dropup.svg) 0px 9px no-repeat; 
+              @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+                height: 25px;              
+                background:url(#{$image-path}/dropup.svg) 0px 14px no-repeat;  
+                transform: rotate(0deg);                   
+              }         
+            }  
+            
           }     
         }
       }
@@ -239,7 +377,12 @@
             z-index: 1;
             border: 0px;
             margin-left: 2px;
-            background:url(#{$image-path}/dropdw.svg) 0px 11px no-repeat;          
+            background:url(#{$image-path}/dropdw.svg) 0px 11px no-repeat;  
+            @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+              height: 25px;              
+              background:url(#{$image-path}/dropup.svg) 0px 0px no-repeat;  
+              transform: rotate(180deg);   
+            }
           }
         }
       }
@@ -290,7 +433,7 @@
 
     }
 
-     /*-------------------------------------------*\
+    /*-------------------------------------------*\
        Top bar background 
     \*-------------------------------------------*/
   
@@ -328,10 +471,30 @@
       .cmp-top-bar-btn-hover{
         display: block;
         padding-right:16px;
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+          display: none;
+        }
       }
 
     }
 
-  }
+     /*-------------------------------------------*\
+       Mobile view navbar icon
+    \*-------------------------------------------*/
 
+    .navbar-toggler-icon {
+      content: "";
+      background:url(#{$image-path}/mbmenu.svg) 0 1px no-repeat;      
+      position: absolute;         
+      margin-left: -24px;
+      position: absolute;
+      z-index: 111;
+      width: 40px;
+      top: 19px;
+      height: 40px;  
+    }
+
+
+  }
+   
 }
