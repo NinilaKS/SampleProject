@@ -11,13 +11,13 @@
 	
 	<li class="nav-item dropdown dropdown-hover position-static"
 	    data-sly-test="${!hasNoChildren}">                  
-		<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">${item.title}</a>					
+		<a class="nav-link dropdown-toggle" href="${item.addLink ? item.URL : '#'}" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">${item.title}</a>					
 			<div class="dropdown-menu w-100 mt-0" id="dropdownid" aria-labelledby="navbarDropdown">
                     <div class="container mega_menu_wrapper">
                       <div class="row my-4">
                         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
                           <div class="cmp-sub-description">
-                            ${item.description}
+                            ${item.navDescription}
                           </div>
                         </div>
                         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0 inner-mg-menu-wrapper">

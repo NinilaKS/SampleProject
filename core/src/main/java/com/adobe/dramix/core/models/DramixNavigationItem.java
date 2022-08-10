@@ -13,7 +13,7 @@ public class DramixNavigationItem{
 	
 	private boolean isAddLink;
 	
-	private boolean isCurrentPage;
+	private boolean isCurrent;
 	
 	private List<DramixNavigationItem> children = new ArrayList<>();
 
@@ -57,12 +57,12 @@ public class DramixNavigationItem{
 		this.isAddLink = isAddLink;
 	}
 
-	public boolean isCurrentPage() {
-		return isCurrentPage;
+	public boolean isCurrent() {
+		return isCurrent;
 	}
 
-	public void setCurrentPage(boolean isCurrentPage) {
-		this.isCurrentPage = isCurrentPage;
+	public void setCurrent(boolean isCurrent) {
+		this.isCurrent = isCurrent;
 	}
 
 }
