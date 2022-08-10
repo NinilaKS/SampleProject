@@ -29,6 +29,14 @@
 
   .cmp-header-var-trans{
   
+     /*-------------------------------------------*\
+      Header padding right and left
+    \*-------------------------------------------*/
+    .cmp-header-padding{
+      padding-left: 70px;
+      padding-right:70px;
+    }
+
     /*-------------------------------------------*\
       Language Selector
     \*-------------------------------------------*/
@@ -262,6 +270,11 @@
 
     .cmp-secondary-menu-bar{
 
+      .cmp-header-padding{
+        padding-left: 70px;
+        padding-right: 70px;
+      }
+
       .offcanvas-header{
         .btn-close{
           @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){            
@@ -329,17 +342,16 @@
             opacity: 1;
           }
         }
-        .dropdown-menu {
-          height:inherit;
+        .dropdown-menu {          
           transition: all .3s;       
           .dropdown-item{
             color: $color-black;
-          }
+          }          
         }
       }
 
       .dropdown-hover{
-        position: fixed;
+        
         &:hover{
           .dropdown-menu{
             display: block;
@@ -350,6 +362,8 @@
             border: 0px;
             transition: all .3s;
             opacity: 1;
+            margin-top: -14px;
+            margin-left: -1px;            
           } 
           .dropdown-toggle
           {
@@ -427,6 +441,8 @@
       }
 
       .mega_menu_wrapper{
+        padding-left: 70px;
+        padding-right: 70px;
         .cmp-sub-description{
           font-weight: $font-weight-300;
           font-size: $font-size-38;
@@ -437,6 +453,15 @@
           height: 138px;
           left: 70px;
         }
+
+        .inner-mg-menu-wrapper{
+          .cmp-megamenu-image{
+            .cmp-inner-image{
+              width: 646px;
+            }            
+          }
+        }
+
       }
 
     }
@@ -448,6 +473,7 @@
     .cmp-transparent{
       background-color: transparent;
       z-index: 1080;
+      border-bottom: 1px solid hsla(0,0%,100%,.2);
     }
 
     .cmp-bg-change-top{
