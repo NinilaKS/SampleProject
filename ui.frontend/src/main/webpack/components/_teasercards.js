@@ -17,20 +17,27 @@
 const desktopView = document.querySelector(".cmp-big")?.cloneNode(true);
 const mobileDevice = document.querySelector(".cmp-small")?.cloneNode(true);
 const wrapContainer = document.querySelector(".card-wrapper");
+
 /*-------------------------------------------*\
     Removing Div structure as per resoultion
 \*-------------------------------------------*/
 const handleStructure = () => {
     const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     if (width > 768) {
-        wrapContainer.innerHTML = "";
-        wrapContainer.insertAdjacentElement("afterbegin", desktopView);
+        if (wrapContainer) {
+            wrapContainer.innerHTML = "";
+            wrapContainer.insertAdjacentElement("afterbegin", desktopView);
+        }
+        
     }
     else {
-        wrapContainer.innerHTML = "";
-        wrapContainer.insertAdjacentElement("afterbegin", mobileDevice);
+        if (wrapContainer) {
+            wrapContainer.innerHTML = "";
+            wrapContainer.insertAdjacentElement("afterbegin", mobileDevice);
+        }       
     }
 };
+
 /*-------------------------------------------*\
         Initiating the function
 \*-------------------------------------------*/

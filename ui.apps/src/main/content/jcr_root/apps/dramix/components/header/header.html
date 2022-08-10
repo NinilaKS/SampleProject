@@ -1,5 +1,5 @@
-<section class="${wcmmode.edit ? '' : 'Homepage'}" >
-	<div class="container">
+<section class="${wcmmode.edit ? '' : 'Homepage'}">
+  <div class="container-fluid cmp-header g-0">
 	
 	<header class="bg-transparent cmp-header-var-trans">		
 		<nav
@@ -18,7 +18,7 @@
             <button type="button" class="cmp-top-bar-btn d-inline-flex me-2">
               <div class="mb-icon">
                 <img
-                  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Softwaretools.svg"
+                  src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Softwatetools.svg"
                   alt="${'softwaretools' @ i18n}"
                 />
               </div>
@@ -294,6 +294,34 @@
                 </button>
                 <!-- menu only visible in mobile end-->
 
+                <button
+                  type="button"
+                  class="cmp-top-bar-btn cmp-file-box"
+                  id="file-box"
+                >
+                  <img
+                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/folder.svg"
+                    alt="${'filedocument' @ i18n}"
+                  />
+                </button>
+                <button
+                  type="button"
+                  class="cmp-top-bar-btn-hover cmp-file-box"
+                  id="file-box"
+                >
+                  <img
+                    src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/folder-hover.svg"
+                    alt="${'filedocument' @ i18n}"
+                  />
+                </button>
+                <!-- menu only visible in mobile-->
+                <div class="abt-faq">
+                  <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">FAQ</a></li>
+                  </ul>
+                </div>
+                <!-- menu only visible in mobile end-->
 
                 <!-- menu only visible in mobile-->
                   <div class="cmp-bottom-bar"></div>
@@ -310,5 +338,9 @@
         </div>
       </nav>
     </header>
-</div>
+
+  </div>
+  <sly
+  data-sly-resource="${'banner' @ resourceType='dramix/components/banner-home'}"
+></sly>
 </section>

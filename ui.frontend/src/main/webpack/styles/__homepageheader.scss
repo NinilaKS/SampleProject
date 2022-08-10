@@ -1,347 +1,192 @@
+/*-------------------------------------------------*\
+   General style sheet for the Banner Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Banner Videos
+   - Banner Animations
+   
+\*-------------------------------------------------*/
+
+
 .Homepage{
 	width: 100%;
-	
+	height: 100vh;
 	position: relative;
     background: transparent;
-}
-.top-header{
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 3px 5px;
-	color: #fff;
-	z-index: 5;
-	position: absolute;
-	cursor: pointer;
-}
-.top-header .left-side select{
-	background: transparent;
-	outline: none;
-	border: none;
-	color: #fff;
-}
-.top-header .right-side{
-	width: 260px;
-	color: #fff;
-}
-.top-header .right-side ul{
-	display: flex;
-	list-style: none;
-	align-items: center;
-	justify-content: space-between;
-}
-.top-header .right-side ul li{
-	margin-left: 10px;
-	display: flex;
-}
-.top-header .right-side ul li span{
-	margin-right: 5px;
-}
-.menu-bar{
-	display: flex;
-	width: 100%;
-	margin-top: 40px;
-	padding: 0px 5px;
-	align-items: center;
-	z-index: 4;
-	position: absolute;
-	justify-content: space-between;
-}
-.menu-bar .left-menu{
-	display: flex;
-	cursor: pointer;
-}
-.menu-bar .left-menu ul{
-	list-style: none;
-	display: flex;
-}
-.menu-bar .left-menu ul li{
-	margin: 0px 10px;
-}
-.menu-bar .left-menu ul li a{
-	color: #fff;
-	font-size: 20px;
-	text-decoration: none;
-}
-.menu-bar .left-menu ul li select{
-	background: transparent;
-	outline: none;
-	border: none;
-	color: white;
-	font-size: 20px;
-}
-.menu-bar .right-menu ul{
-	display: flex;
-	list-style: none;
-	justify-content: space-around;
-	align-items: center;
-}
-.menu-bar .right-menu ul li{
-	font-size: 20px;
-	margin: 0px 10px;
-	position: relative;
-	cursor: pointer;
-}
-.menu-bar .right-menu ul li span:nth-child(1){
-	color: #fff;
-}
-.menu-bar .right-menu ul li .img:before{
-	position: absolute;
-	content: "";
-	background: skyblue;
-	width: 10px;
-	top: 0;
-	right: 0;
-	border-radius: 50%;
-	height: 10px;
-}
-.menu-bar .right-menu ul li button{
-	padding: 10px;
-	color: white;
-	background: transparent;
-	border-color: #fff;
-	outline: none;
-}
-.List-catecory{
-	width: 100%;
-	height: 100vh;
-	background: transparent;
-	z-index: 3;
-	margin-top: 30px;
-	border-top: 1px solid rgba(255,255,255,0.5);
-	position:absolute;
-}
-.List-catecory ul{
-	display: flex;
-	list-style: none;
-	z-index: 999 !important;
-}
-.List-catecory ul li{
-	width:20%;
-	height: 100vh;
-	border-right: 1px solid rgba(255,255,255,0.5);
-	transition: 0.6s;
-	position: relative;
-	cursor: pointer;
+	overflow: hidden;
+
+	.List-catecory{
+		width: 100%;	
+		z-index: 3;			
+		position:absolute;
+
+		.cmp-list-category-container{
+			padding-left: 0px;
+			padding-right:0px;
+		}
+
+		ul{
+			display: flex;
+			list-style: none;
+			z-index: 999 !important;
+			padding-left: 0px;
+			li{	
+				width:20%;
+				height: 100vh;	
+				padding-bottom: 80px;
+				border-right: 1px solid hsla(0,0%,100%,.5);
+				transition: 0.6s;
+				position: relative;
+				cursor: pointer;
+				
+				.third-list{
+					border: none;
+				}
+
+				&.active{
+					width: 60%;
+					.title{
+						animation: move 1s linear forwards;
+						animation-delay: 1s;
+					}
+				}
+
+				.title{
+					width: 500px;
+					top: 20%;
+					left: 10%;
+					position: absolute;
+					opacity: 0;
+					transition: .5s;
+					color: $color-white;
+					h1{
+						color: $color-white;
+						font-size: $font-size-80;
+						letter-spacing: $letter-spacing-02;
+					}					
+				}
+
+				.discribtion{
+					position: absolute;
+					bottom: 10%;
+					left: 10%;
+					h4{
+						font-size: 15px;
+						text-transform: uppercase;
+						color:$color-white;
+					}
+				}
+
+				video{
+					opacity: 0;
+				}
+
+				.details{
+					display: flex;
+					margin-top: 30px;
+					width: 200px;
+					align-items: center;
+					justify-content: space-between;
+					span{
+						img{
+							width: 10px;
+						}					
+					}
+					p{
+						width: 130px;
+						font-size: 20px;
+						color: $color-white;
+					}
+				}
+				.video{
+					width: 100%;
+					height: auto;
+				}
+			}
+
+		}
+
+	}
+
+	#banner {
+		video{
+			position: absolute;
+			width: 100%;
+			height:100vh;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			object-fit: cover;
+		}
+	}
+
+
+	@keyframes move{
+		0%{
+			top: 40%;
+			opacity: 0;
+		}
+		50%{
+			top: 30%;
+			opacity: 0.5;
+		}
+		100%{
+			top: 20%;
+			opacity: 1;
+		}
+	}
+
+	@media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+
+		.List-catecory{
+			margin-top: 120px;
+			border-top: none;
 	
-}
-.List-catecory ul li.third-list{
-	border: none;
-}
-.List-catecory ul li.active{
-	width: 60%;
-}
-.List-catecory ul li .title{
-	width: 500px;
-	top: 20%;
-	left: 10%;
-	position: absolute;
-	opacity: 0;
-	transition: .5s;
-	color: #fff;
+			ul{
+				flex-direction: column;
 	
+				li{
+					width: 100%;
+					height: 10vh;
+					border-right: none;
+					border-bottom: 1px solid rgba(255,255,255,0.5);
+	
+					&.active{
+						height: 50vh;
+						width: 100%;
+					}
+	
+					&.discribtion{
+						display: flex;
+						width: 100%;
+						left: 0;
+						align-items: center;
+						justify-content: space-around;
+	
+						&.details{
+							width: 160px;
+							h4{
+								font-size: 10px;
+								margin-top: 30px;
+							}
+							p{
+								font-size: 15px;
+							}
+						}
+					}
+	
+					.title {
+						h1{
+							font-size: 30px;
+						}
+					} 
+				}
+			}
+		}
+	}
+
 }
 
-.List-catecory ul li.active .title{
-	animation: move 1s linear forwards;
-	animation-delay: 1s;
-}
-@keyframes move{
-	0%{
-		top: 40%;
-		opacity: 0;
-	}
-	50%{
-		top: 30%;
-		opacity: 0.5;
-	}
-	100%{
-		top: 20%;
-		opacity: 1;
-	}
-}
-.List-catecory ul li .title h1{
-	color: #fff;
-	font-size: 50px;
-	letter-spacing: 3px;
-}
-.List-catecory ul li .discribtion{
-	position: absolute;
-	bottom: 10%;
-	left: 10%;
-}
-.List-catecory ul li video{
-	opacity: 0;
-}
-.List-catecory ul li .discribtion h4{
-	font-size: 15px;
-	text-transform: uppercase;
-	color: #fff;
-}
-.List-catecory ul li .discribtion .details{
-	display: flex;
-	margin-top: 30px;
-	width: 200px;
-	align-items: center;
-	justify-content: space-between;
-}
-.List-catecory ul li .discribtion .details span img{
-	width: 10px;
-}
-.List-catecory ul li .discribtion .details p{
-	width: 130px;
-	font-size: 20px;
-	color: #fff;
-}
-#banner video{
-	position: absolute;
-	width: 100vw;
-	height:100vh;
-	left: 0;
-	top: 0;
-	z-index: 1;
-	object-fit: cover;
-}
-/*mobile or potrait devices */
-
-@media only screen and (max-width: 360px)
-	{
-	.top-header .right-side ul li,
-	.top-header .left-side select{
-		font-size: 10px;
-	}
-	.top-header .right-side ul{
-	  justify-content: space-around; 
-	 }
-    .top-header .right-side{
-    	justify-content: flex-end;
-    	align-items: center;
-    	width: 200px;
-    }
-    .menu-bar {
-    	flex-direction: column;
-    }
-   .menu-bar .left-menu ul li a,
-   .menu-bar .left-menu ul li select{
-   	font-size: 10px;
-   }
-   .menu-bar .right-menu{
-   	width: 100%;
-   	margin-top: 10px;
-   }
-   .List-catecory ul{
-   	flex-direction: column;
-   }
-   .List-catecory{
-   	margin-top: 120px;
-   	border-top: none;
-   }
-   .List-catecory ul li{
-   	width: 100vw;
-   	height: 10vh;
-   	border-right: none;
-   	border-bottom: 1px solid rgba(255,255,255,0.5);
-   }
-   .List-catecory ul li.active{
-   	height: 50vh;
-   	width: 100vw;
-   }
-.List-catecory ul li .discribtion{
-   	display: flex;
-   	width: 100vw;
-   	left: 0;
-   	align-items: center;
-   	justify-content: space-around;
-   }
-	.List-catecory ul li .discribtion .details{
-		width: 160px;
-	}
-	.List-catecory ul li .discribtion h4{
-		font-size: 10px;
-		margin-top: 30px;
-	}
-	.List-catecory ul li .title h1{
-		font-size: 30px;
-	}
-	.List-catecory ul li .discribtion .details p{
-		font-size: 15px;
-	}
-}
-
-/*lanscape or tablet devices*/
-
-@media only screen and (min-width: 380px) and (max-width: 760px){
-	.top-header .right-side ul li,
-	.top-header .left-side select{
-		font-size: 13px;
-	}
-	.List-catecory ul li .discribtion h4{
-		font-size: 12px;
-		margin-top: 30px;
-	}
-   .menu-bar .left-menu ul li a,
-   .menu-bar .left-menu ul li select{
-      	font-size: 14px;
-   }
-     .menu-bar {
-    	flex-direction: column;
-    }
-     .menu-bar .left-menu{
-     	width: 100vw;
-     }
-     .menu-bar .left-menu ul{
-         width: 100vw;
-         justify-content: space-around;
-     }
-    .menu-bar .right-menu{
-   	    width: 100%;
-      	margin-top: 14px;
-   }
-   .menu-bar .right-menu{
-   	    width: 100%;
-   	   margin-top: 10px;
-   }
-   .List-catecory ul{
-   	   flex-direction: column;
-   }
-   .List-catecory{
-   	   margin-top: 120px;
-   	   border-top: none;
-   }
-   .List-catecory ul li{
-   	   width: 100vw;
-   	   height: 13vh;
-   	   border-right: none;
-   	   border-bottom: 1px solid rgba(255,255,255,0.5);;
-   }
-   .List-catecory ul li.active{
-   	    height: 54vh;
-   	    width: 100vw;
-   }
-.List-catecory ul li .discribtion{
-   	    display: flex;
-   	    width: 100vw;
-   	    left: 0;
-   	    align-items: center;
-   	    justify-content: space-around;
-   }
-	.List-catecory ul li .discribtion .details{
-		width: 160px;
-	}
-	.List-catecory ul li .discribtion h4{
-		font-size: 13px;
-		margin-top: 30px;
-	}
-	.List-catecory ul li .title h1{
-		font-size: 30px;
-		width: 300px;
-	}
-	.List-catecory ul li .discribtion .details p{
-		font-size: 15px;
-	}
-}
-.video {
-	height: 100%;
-	width: 100%;
-}

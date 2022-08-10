@@ -23,37 +23,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("DOMContentLoaded", () => {
 
-  const someEle = document.getElementById("softwares");//Sample Element
-someEle.addEventListener("click", function(){
-  show();// <- There use your function with param in brackets
-}, false);
-
-  // ******* megamenu image onclick ********
-  let previd;
-  function show(idname){
-    if(!document.getElementById(idname.id).classList.contains("imgshow")){
-      document.getElementById(idname.id).classList.add("imgshow");
-    }
-    if(previd){
-      if(idname.id != previd){
-        child = document.getElementById(previd);
-        child.previousElementSibling.classList.remove('active')
-        child = document.getElementById(idname.id);
-        child.previousElementSibling.classList.add('active')
-        document.getElementById(previd).style.display = "none";
-        document.getElementById(idname.id).style.display = "block";
-      }
-    }
-    else{
-        child = document.getElementById(idname.id);
-        child.previousElementSibling.classList.add('active')
-        document.getElementById(idname.id).style.display = "block";
-    }
-    previd = idname.id;
-    document.getElementById("dropdownid").addEventListener('click', function (event) {
-            event.stopPropagation();
-    });
-  }
 // ******** search on click *********
  //const searchElement = document.getElementById('searchSection');
  // document.addEventListener('click', function(event) {
@@ -73,14 +42,16 @@ someEle.addEventListener("click", function(){
 });
 
 
+
 window.addEventListener("DOMContentLoaded", () => {
   
   // ******* Megamenu Toolbox onhover********//
   const targetToolbox = document.querySelector(".dropdown-hover-toolbox");
-  targetToolbox.addEventListener("mouseover", mOver, false);
-  targetToolbox.addEventListener("mouseout", mOut, false);
-
-  function mOver() {
+  if(targetToolbox){
+    targetToolbox.addEventListener("mouseover", mtOver, false);
+    targetToolbox.addEventListener("mouseout", mtOut, false);
+  }
+  function mtOver() {
     const bgChangeTopbar= document.getElementById('cmp-bg-change');
     const bgChangeNavbar= document.getElementById('cmp-bg-navbar');
     
@@ -95,7 +66,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function mOut() {  
+  function mtOut() {  
     const someElement= document.getElementById('cmp-bg-change');
     const someElement1= document.getElementById('cmp-bg-navbar');
 
@@ -111,9 +82,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // ******* Megamenu solution onhover********//
   const targetSolution = document.querySelector(".dropdown-hover-solution");
-  targetSolution.addEventListener("mouseover", msOver, false);
-  targetSolution.addEventListener("mouseout", msOut, false);
-
+  if(targetSolution){
+    targetSolution.addEventListener("mouseover", msOver, false);
+    targetSolution.addEventListener("mouseout", msOut, false);
+  }
   function msOver() {
     const bgChangeTopbar= document.getElementById('cmp-bg-change');
     const bgChangeNavbar= document.getElementById('cmp-bg-navbar');
@@ -142,8 +114,4 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
-
-
 });
-
