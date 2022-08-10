@@ -1,9 +1,9 @@
 <sly
 	data-sly-use.template="core/wcm/components/commons/v1/templates.html"
-	data-sly-use.navigation="com.adobe.cq.wcm.core.components.models.Navigation"
-	data-sly-test.hasContent="${navigation.items.size > 0}">
+	data-sly-use.navigation="com.adobe.dramix.core.models.DramixNavigation"
+	data-sly-test.hasContent="${navigation.navItems.size > 0}">
 
-<ul class="navbar-nav me-auto mb-2 mb-sm-0 cmp-navbar" data-sly-list=${navigation.items}>
+<ul class="navbar-nav me-auto mb-2 mb-sm-0 cmp-navbar" data-sly-list=${navigation.navItems}>
 	<li class="nav-item"><a href="${item.URL}" class="nav-link"
 		data-sly-test.hasNoChildren="${item.children.size==0}"
 		data-sly-attribute="${item.link.htmlAttributes}"
@@ -17,7 +17,7 @@
                       <div class="row my-4">
                         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
                           <div class="cmp-sub-description">
-                            All the information is available in our toolbox
+                            ${item.description}
                           </div>
                         </div>
                         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0 inner-mg-menu-wrapper">
