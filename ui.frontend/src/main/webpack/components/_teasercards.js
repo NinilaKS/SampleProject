@@ -20,22 +20,22 @@ const wrapContainer = document.querySelector(".card-wrapper");
 /*-------------------------------------------*\
     Removing Div structure as per resoultion
 \*-------------------------------------------*/
-// const handleStructure = () => {
-//     const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-//     if (width > 768) {
-//         wrapContainer.innerHTML = "";
-//         wrapContainer.insertAdjacentElement("afterbegin", desktopView);
-//     }
-//     else {
-//         wrapContainer.innerHTML = "";
-//         wrapContainer.insertAdjacentElement("afterbegin", mobileDevice);
-//     }
-// };
+const handleStructure = () => {
+    const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    if (width > 768) {
+        wrapContainer.innerHTML = "";
+        wrapContainer.insertAdjacentElement("afterbegin", desktopView);
+    }
+    else {
+        wrapContainer.innerHTML = "";
+        wrapContainer.insertAdjacentElement("afterbegin", mobileDevice);
+    }
+};
 /*-------------------------------------------*\
         Initiating the function
 \*-------------------------------------------*/
-// window.addEventListener('resize', handleStructure, false);
-// handleStructure();
+window.addEventListener('resize', handleStructure, false);
+handleStructure();
 
 
 
