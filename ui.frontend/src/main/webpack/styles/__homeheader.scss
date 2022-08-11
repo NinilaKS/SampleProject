@@ -337,6 +337,7 @@
         .submenu-link {
           color: $color-dark-blue;
           opacity: 0.5;
+          cursor: pointer;
           .active{
             color: $color-dark-blue;
             opacity: 1;
@@ -344,7 +345,8 @@
         }
         .dropdown-menu {          
           transition: all .3s;
-          padding: 0rem 0rem;       
+          padding: 0rem 0rem;
+          border-radius: 0rem;       
           .dropdown-item{
             color: $color-black;
           }          
