@@ -1,5 +1,5 @@
 <div class="List-catecory">
-<div class="container">
+
 <ul class="list"
 	data-sly-use.banner="com.adobe.dramix.core.models.Banner"
     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
@@ -9,7 +9,7 @@
 					<h1 class="${!itemList.first ? 'animate__backOutUp' : ''}">${item.title}</h1>
 				</div>
 				<div class="discribtion">
-					<h4>${item.subHeading}</h4>
+					<h4><span id="number">01</span><span id="text">${item.subHeading}</span></h4>
 					<div class="details">
 						<p>${item.heading}</p>
 						<span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/BigPicto-Arrow.png"></span>
@@ -17,10 +17,10 @@
 				</div> 
 				<video class="video" autoplay muted loop>
 					<source src="${item.video}" type="video/mp4">
-				</video>	
+				</video>				
 	</li>
 </ul>
-</div>
+
 </div>
  <div id="banner" data-sly-list="${banner.bannerDetails}">
 	<video class="video" data-sly-test="${itemList.first && wcmmode.disabled}" autoplay muted loop id="bannersrc">

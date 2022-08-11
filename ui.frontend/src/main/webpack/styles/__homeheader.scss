@@ -29,6 +29,14 @@
 
   .cmp-header-var-trans{
   
+     /*-------------------------------------------*\
+      Header padding right and left
+    \*-------------------------------------------*/
+    .cmp-header-padding{
+      padding-left: 70px;
+      padding-right:70px;
+    }
+
     /*-------------------------------------------*\
       Language Selector
     \*-------------------------------------------*/
@@ -71,29 +79,34 @@
       Software tools and upcoming events
     \*-------------------------------------------*/
 
+    .cmp-primary-menu-bar{
+      .cmp-top-header-right{
+        grid-gap: 20px;
+      }      
+    }
+
     .cmp-top-bar-btn{
-      color: $color-white;
-      font-size: $font-size-16;
-      padding-right:16px;     
+      color: $color-white;               
       .cmp-top-bar-tools{
         font-size: $font-size-16;
         font-weight: $font-weight-400;
         color: $color-white;
         text-decoration: none;
-        padding-left: 16px;
+        padding-left: 10px;
       }
       .cmp-top-bar-events{
         font-size: $font-size-16;
         font-weight: $font-weight-400;
         color: $color-white;
         text-decoration: none;
-        padding-left: 16px;
+        padding-left: 10px;
       }
     }
 
     .cmp-top-bar-btn-hover{
       display: none;
     }
+    
   
     /*-------------------------------------------*\
       Search Section
@@ -206,12 +219,12 @@
        Search Icon
     \*-------------------------------------------*/
 
-    .search-icon{
-      img{
-        width: 16px;
-        height: 16px;
-      }
-    } 
+    // .search-icon{
+    //   img{
+    //     width: 16px;
+    //     height: 16px;
+    //   }
+    // } 
 
     /*-------------------------------------------*\
        Request Quote Button
@@ -220,7 +233,7 @@
     .quote-btn{
       border: 1px solid $color-white;
       color: $color-white;
-      font-family: $font-family-Bekaert-bold-italic;
+      font-family: $font-family-Bekaert-regular;
       @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
         color: $color-dark-blue;
         font-size: $font-size-16;
@@ -245,15 +258,17 @@
     
     .right-nav-wrapper{
       display: flex;
+      align-content: center;
+      align-items: center;
       @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
         flex-direction: column;
       }
-      .cmp-file-box {
-          img {
-            width: 16px;
-            height: 16px;
-          }
+      .search-icon{
+        padding-right:30px;
       }     
+      .cmp-file-box{
+        padding-right:30px;
+      }
     }
     
      /*-------------------------------------------*\
@@ -261,6 +276,10 @@
     \*-------------------------------------------*/
 
     .cmp-secondary-menu-bar{
+
+      .cmp-header-padding{
+        padding:0px 70px;
+      }
 
       .offcanvas-header{
         .btn-close{
@@ -304,7 +323,7 @@
     \*-------------------------------------------*/
 
     .cmp-navbar{
-      grid-gap: 10px;     
+      grid-gap: 30px;     
 
       @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
         position: relative;
@@ -314,7 +333,9 @@
       .nav-item{        
         a{
           color: $color-white;
-          font-family: $font-family-Bekaert-bold-italic;
+          font-family: $font-family-Bekaert-regular;
+          font-size: $font-size-24;
+          font-weight: $font-weight-300;
           @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
             color: $color-dark-blue;
             font-size: $font-size-24;
@@ -324,22 +345,20 @@
         .submenu-link {
           color: $color-dark-blue;
           opacity: 0.5;
-          .active{
-            color: $color-dark-blue;
-            opacity: 1;
-          }
+          cursor: pointer;          
         }
-        .dropdown-menu {
-          height:inherit;
-          transition: all .3s;       
+        .dropdown-menu {          
+          transition: all .3s;
+          padding: 0rem 0rem;
+          border-radius: 0rem;       
           .dropdown-item{
             color: $color-black;
-          }
+          }          
         }
       }
 
       .dropdown-hover{
-        position: fixed;
+        
         &:hover{
           .dropdown-menu{
             display: block;
@@ -350,18 +369,20 @@
             border: 0px;
             transition: all .3s;
             opacity: 1;
+            margin-top: -14px;
+            margin-left: -1px;            
           } 
           .dropdown-toggle
           {
             &:after {
               content: "";
               position: absolute;         
-              height: 16px;             
-              width: 16px;
+              height: 26px;             
+              width: 20px;
               z-index: 1;
               border: 0px;
               margin-left: 2px;
-              background:url(#{$image-path}/dropup.svg) 0px 9px no-repeat; 
+              background:url(#{$image-path}/dropup.svg) 10px 16px no-repeat; 
               @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
                 height: 25px;              
                 background:url(#{$image-path}/dropup.svg) 0px 14px no-repeat;  
@@ -379,13 +400,13 @@
           &:after {
             content: "";
             position: absolute;         
-            height: 16px;
+            height: 26px;
             position: absolute;
-            width: 16px;
+            width: 20px;
             z-index: 1;
             border: 0px;
             margin-left: 2px;
-            background:url(#{$image-path}/dropdw.svg) 0px 11px no-repeat;  
+            background:url(#{$image-path}/dropdw.svg) 10px 16px no-repeat;  
             @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
               height: 25px;              
               background:url(#{$image-path}/dropup.svg) 0px 0px no-repeat;  
@@ -419,14 +440,15 @@
         color: $color-dark-blue;
         opacity: 0.5;
         border:0px;
-        .active{
-          font-size: larger;
-          color: $color-dark-blue;
-          background-color: $color-white;
+        padding: 0px 0px 30px 0px;       
+        .active{         
+          color: $color-dark-blue;          
         }
       }
 
       .mega_menu_wrapper{
+        padding-left: 70px;
+        padding-right: 70px;
         .cmp-sub-description{
           font-weight: $font-weight-300;
           font-size: $font-size-38;
@@ -437,6 +459,39 @@
           height: 138px;
           left: 70px;
         }
+
+        .inner-mg-menu-wrapper{
+          .cmp-megamenu-image{
+            .cmp-inner-image{
+              width: 660px;
+              height: auto;
+            }            
+          }
+
+          .list-group{
+            .software-tab{
+              .active{
+                background-color: transparent;
+                color: $color-dark-blue;                
+                opacity: 1; 
+                font-size: $font-size-24;              
+                font-weight: $font-weight-300;
+                cursor: pointer;
+                &:after{
+                  background:url(#{$image-path}/submenunav.svg) 0px 11px no-repeat; 
+                  border: 0;
+                  content: "";
+                  height: 30px;
+                  margin-left: 30px;
+                  position: absolute;
+                  width: 30px;
+                  z-index: 1;                                                                    
+                }
+              }
+            }
+          }
+        }
+
       }
 
     }
@@ -448,6 +503,7 @@
     .cmp-transparent{
       background-color: transparent;
       z-index: 1080;
+      border-bottom: 1px solid hsla(0,0%,100%,.1);
     }
 
     .cmp-bg-change-top{
@@ -470,6 +526,8 @@
       .quote-btn{
         border: 1px solid $color-dark-blue;
         color: $color-dark-blue;
+        font-size: $font-size-16;
+        font-weight: $font-weight-700;
       }
 
       .cmp-top-bar-btn{
@@ -477,8 +535,7 @@
       }
 
       .cmp-top-bar-btn-hover{
-        display: block;
-        padding-right:16px;
+        display: block;        
         @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
           display: none;
         }

@@ -3,10 +3,10 @@
 	
 	<header class="bg-transparent cmp-header-var-trans">		
 		<nav
-        class="navbar navbar-expand-lg navbar-light cmp-transparent py-1 d-none d-sm-block d-md-block"
+        class="navbar navbar-expand-lg navbar-light cmp-transparent cmp-primary-menu-bar py-1 d-none d-sm-block d-md-block"
         id="cmp-bg-change"
       >
-        <div class="container">
+        <div class="container-fluid col-md-12 col-lg-12 col-xl-12 col-xxl-12 cmp-header-padding">
           <div class="me-auto mb-2 mb-lg-0">
             <select class="classic">
               <option>English ( US )</option>
@@ -14,8 +14,8 @@
               <option>Spanish ( MX )</option>
             </select>
           </div>
-          <div class="flex-shrink-1 d-flex">
-            <button type="button" class="cmp-top-bar-btn d-inline-flex me-2">
+          <div class="flex-shrink-1 d-flex cmp-top-header-right">
+            <button type="button" class="cmp-top-bar-btn d-inline-flex">
               <div class="mb-icon">
                 <img
                   src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Softwatetools.svg"
@@ -41,7 +41,7 @@
         aria-label="Third navbar offcanvas example"
         id="cmp-bg-navbar"
       >
-        <div class="container">
+        <div class="container-fluid col-md-12 col-lg-12 col-xl-12 col-xxl-12 cmp-header-padding">
           <!-- logo, close-button and mobile menu -->
           <a class="d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none" href="#"><img
             src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbmail.svg"
@@ -103,47 +103,58 @@
                     >Toolbox</a>					
                   <!-- Dropdown mega menu -->
                   <div
-                    class="dropdown-menu w-100 mt-0"
+                    class="dropdown-menu w-100"
                     id="dropdownid"
                     aria-labelledby="navbarDropdown"
                     >
-                    <div class="container mega_menu_wrapper">
-                      <div class="row my-4">
+                    <div class="container-fluid mega_menu_wrapper">
+                      <div class="row mt-4 mb-0">
                         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
                           <div class="cmp-sub-description">
                             All the information is available in our toolbox
                           </div>
                         </div>
                         <div
-                          class="col-md-6 col-lg-4 mb-3 mb-lg-0 inner-mg-menu-wrapper"
+                          class="col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
                         >
-                          <div
+
+                        <div class="row">
+
+                          <div class="col-md-4 col-lg-4">
+
+                          <ul
                             class="list-group list-group-flush mega-menu-wrapper"
-                          >
-						  	
-						              <div class="software-tab">
-                            <a  class="list-group-item list-group-item-action submenu-link" id="softwares">Softwares</a>
-                            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png" alt="software" id="software">
+                          >                        
+
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Softwares</a>                            
+                            </li>
+                            <li class="software-tab">
+                              <a class="list-group-item submenu-link" href="#">Certificates</a>                           
+                            </li>
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Expert Talks</a>                            
+                            </li>
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Whitepapers</a>                            
+                            </li>
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Product datasheets</a>                            
+                            </li>
+                          </ul>
+
                           </div>
-                          <div class="software-tab">
-                            <a class="list-group-item list-group-item-action submenu-link" id="Certificates">Certificates</a>
-                            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png" alt="certificates" id="certificates">
-                          </div>
-                          <div class="software-tab">
-                            <a  class="list-group-item list-group-item-action submenu-link" onclick="show(experttalks)">Expert Talks</a>
-                            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png" alt="expert-talks" id="experttalks">
-                          </div>
-                          <div class="software-tab">
-                            <a  class="list-group-item list-group-item-action submenu-link" onclick="show(whitepaper)">White papers</a>
-                            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png" alt="whitepaper" id="whitepaper">
-                          </div>
-                          <div class="software-tab">
-                            <a class="list-group-item list-group-item-action submenu-link" onclick="show(datasheets)">Product Datasheets</a>
-                            <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Right.png" alt="datasheets" id="datasheets">
+
+                          <div class="col-md-6 col-lg-6">
+                            <div class="cmp-megamenu-image">
+                                <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/toolbox.png" alt="${'toolbox' @ i18n}" class="cmp-inner-image">    
+                            </div>
                           </div>
 
                           </div>
+
                         </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -160,57 +171,53 @@
                     >Solutions</a>
                   <!-- Dropdown mega menu -->
                   <div
-                    class="dropdown-menu w-100 mt-0"
+                    class="dropdown-menu w-100"
                     id="dropdownid"
                     aria-labelledby="navbarDropdown"
                     >
-                    <div class="container mega_menu_wrapper">
-                      <div class="row my-4">
+                    <div class="container-fluid mega_menu_wrapper">
+                      <div class="row mt-4 mb-0">
                         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
                           <div class="cmp-sub-description ">
                             All the information is available in our toolbox
                           </div>
                         </div>
                         <div
-                          class="col-md-6 col-lg-4 mb-3 mb-lg-0 inner-mg-menu-wrapper"
+                          class="col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
                         >
-                          <div
-                            class="list-group list-group-flush mega-menu-wrapper"
-                          >
-						  
-                          <div class="d-flex align-items-start">
-                          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            <button class="nav-link submenu-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Products</button>
-                            <button class="nav-link submenu-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Application</button>		
-                            <button class="nav-link submenu-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Technology</button>						  
-                          </div>
-                          <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                            <img
-                            src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg"								
-                            alt="${'right' @ i18n}"
-                            class="imgshow"
-                              />		
+
+                          <div class="row">
+
+                            <div class="col-md-4 col-lg-4">                         
+                              
+                                <ul
+                              class="list-group list-group-flush mega-menu-wrapper cmp-list-group-solution-subnav"
+                            >                        
+
+                                <li class="software-tab">
+                                  <a  class="list-group-item submenu-link" href="#">Products</a>                            
+                                </li>
+                                <li class="software-tab">
+                                  <a class="list-group-item submenu-link" href="#">Applications</a>                           
+                                </li>
+                                <li class="software-tab">
+                                  <a  class="list-group-item submenu-link" href="#">Technology</a>                            
+                                </li>                            
+                            </ul>
+                              
                             </div>
-                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">								
-                              <div class="software-tab">
-                              <a
-                                class="list-group-item list-group-item-action submenu-link tab-control"
-                                id="experttalks">Technology</a
-                              >
-                              <img
-                                src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg"								
-                                alt="${'right' @ i18n}"
-                                class="imgshow"
-                                />	
+                            <div class="col-md-6 col-lg-6">
+
+                              <div class="cmp-megamenu-image">
+  
+                                  <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg" alt="${'submenusolution' @ i18n}" class="cmp-inner-image">
+      
                               </div>
-                            </div>							  						  
+                            </div>
+                          </div>                       
                           </div>
-                          </div>
-							
-                        </div>
-                      </div>
-                    </div>
+                        </div>                       
+                  </div>
                   </div>
                 </li>
                 <li class="nav-item">
@@ -328,7 +335,7 @@
                 <!-- menu only visible in mobile end-->
 
                 <div class="cmp-button-wrapper">
-                  <a href="#" class="btn me-2 quote-btn">
+                  <a href="#" class="btn me-0 quote-btn">
                     Request a Quote
                   </a>
                 </div>
