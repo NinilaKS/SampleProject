@@ -3,7 +3,7 @@
 	
 	<header class="bg-transparent cmp-header-var-trans">		
 		<nav
-        class="navbar navbar-expand-lg navbar-light cmp-transparent py-1 d-none d-sm-block d-md-block"
+        class="navbar navbar-expand-lg navbar-light cmp-transparent cmp-primary-menu-bar py-1 d-none d-sm-block d-md-block"
         id="cmp-bg-change"
       >
         <div class="container-fluid col-md-12 col-lg-12 col-xl-12 col-xxl-12 cmp-header-padding">
@@ -14,8 +14,8 @@
               <option>Spanish ( MX )</option>
             </select>
           </div>
-          <div class="flex-shrink-1 d-flex">
-            <button type="button" class="cmp-top-bar-btn d-inline-flex me-2">
+          <div class="flex-shrink-1 d-flex cmp-top-header-right">
+            <button type="button" class="cmp-top-bar-btn d-inline-flex">
               <div class="mb-icon">
                 <img
                   src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Softwatetools.svg"
@@ -115,39 +115,40 @@
                           </div>
                         </div>
                         <div
-                          class="col-md-6 col-lg-4 mb-3 mb-lg-0 inner-mg-menu-wrapper d-flex"
+                          class="col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
                         >
 
                         <div class="row">
 
                           <div class="col-md-4 col-lg-4">
 
-                          <div
+                          <ul
                             class="list-group list-group-flush mega-menu-wrapper"
                           >                        
 
-                            <div class="software-tab">
-                              <a  class="list-group-item list-group-item-action submenu-link" >Softwares</a>                            
-                            </div>
-                            <div class="software-tab">
-                              <a class="list-group-item list-group-item-action submenu-link" >Certificates</a>                           
-                            </div>
-                            <div class="software-tab">
-                              <a  class="list-group-item list-group-item-action submenu-link" >Expert Talks</a>                            
-                            </div>
-                        
-                          </div>
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Softwares</a>                            
+                            </li>
+                            <li class="software-tab">
+                              <a class="list-group-item submenu-link" href="#">Certificates</a>                           
+                            </li>
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Expert Talks</a>                            
+                            </li>
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Whitepapers</a>                            
+                            </li>
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Product datasheets</a>                            
+                            </li>
+                          </ul>
 
                           </div>
 
                           <div class="col-md-6 col-lg-6">
-
                             <div class="cmp-megamenu-image">
-
-                                <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/toolbox.png" alt="${'toolbox' @ i18n}" class="cmp-inner-image">
-    
+                                <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/toolbox.png" alt="${'toolbox' @ i18n}" class="cmp-inner-image">    
                             </div>
-
                           </div>
 
                           </div>
@@ -182,45 +183,41 @@
                           </div>
                         </div>
                         <div
-                          class="col-md-6 col-lg-4 mb-3 mb-lg-0 inner-mg-menu-wrapper d-flex"
+                          class="col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
                         >
 
-                        <div class="row">
+                          <div class="row">
 
-                          <div class="col-md-4 col-lg-4">
+                            <div class="col-md-4 col-lg-4">                         
+                              
+                                <ul
+                              class="list-group list-group-flush mega-menu-wrapper cmp-list-group-solution-subnav"
+                            >                        
 
-                          <div
-                            class="list-group list-group-flush mega-menu-wrapper"
-                          >                        
-
-                            <div class="software-tab">
-                              <a  class="list-group-item list-group-item-action submenu-link" >Products</a>                            
+                                <li class="software-tab">
+                                  <a  class="list-group-item submenu-link" href="#">Products</a>                            
+                                </li>
+                                <li class="software-tab">
+                                  <a class="list-group-item submenu-link" href="#">Applications</a>                           
+                                </li>
+                                <li class="software-tab">
+                                  <a  class="list-group-item submenu-link" href="#">Technology</a>                            
+                                </li>                            
+                            </ul>
+                              
                             </div>
-                            <div class="software-tab">
-                              <a class="list-group-item list-group-item-action submenu-link" >Applications</a>                           
+                            <div class="col-md-6 col-lg-6">
+
+                              <div class="cmp-megamenu-image">
+  
+                                  <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg" alt="${'submenusolution' @ i18n}" class="cmp-inner-image">
+      
+                              </div>
                             </div>
-                            <div class="software-tab">
-                              <a  class="list-group-item list-group-item-action submenu-link" >Technology</a>                            
-                            </div>
-                        
+                          </div>                       
                           </div>
-
-                          </div>
-
-                          <div class="col-md-6 col-lg-6">
-
-                            <div class="cmp-megamenu-image">
-
-                                <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg" alt="${'submenusolution' @ i18n}" class="cmp-inner-image">
-    
-                            </div>
-
-                          </div>
-
-                          </div>
-
-                        </div>
-                       
+                        </div>                       
+                  </div>
                   </div>
                 </li>
                 <li class="nav-item">
@@ -338,7 +335,7 @@
                 <!-- menu only visible in mobile end-->
 
                 <div class="cmp-button-wrapper">
-                  <a href="#" class="btn me-2 quote-btn">
+                  <a href="#" class="btn me-0 quote-btn">
                     Request a Quote
                   </a>
                 </div>

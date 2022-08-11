@@ -1,3 +1,19 @@
+/*-------------------------------------------------*\
+   Javascript sheet for the Solution Component of Home page
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Megamenu Submenu active change and hide
+   - Megamenu Toolboox on hover and solution on hover
+   - Homepage Header Banner slides
+   - Megamenu Search Box active and deactive
+   - 
+   
+\*-------------------------------------------------*/
+
+
 window.addEventListener("DOMContentLoaded", () => {
 
   //************* Banner list image */
@@ -115,3 +131,38 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+
+ // ******* Megamenu Toolbox Navigation Submenu active********//
+
+window.addEventListener("DOMContentLoaded", () => {
+
+const ul = document.querySelector('ul.list-group');
+
+ul.addEventListener('click', e => {
+  e.preventDefault();
+  let li = e.target.closest('li a');
+  if (li) {
+    ul.querySelectorAll('li a').forEach(elm => elm.classList.remove('active'));
+    li.classList.add('active');
+  }
+});
+
+});
+
+// ******* Megamenu SOlution Navigation Submenu active********//
+
+window.addEventListener("DOMContentLoaded", () => {
+
+  const ul = document.querySelector('ul.cmp-list-group-solution-subnav');
+  
+  ul.addEventListener('click', e => {
+    e.preventDefault();
+    let li = e.target.closest('li a');
+    if (li) {
+      ul.querySelectorAll('li a').forEach(elm => elm.classList.remove('active'));
+      li.classList.add('active');
+    }
+  });
+  
+  });
