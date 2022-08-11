@@ -343,7 +343,8 @@
           }
         }
         .dropdown-menu {          
-          transition: all .3s;       
+          transition: all .3s;
+          padding: 0rem 0rem;       
           .dropdown-item{
             color: $color-black;
           }          
