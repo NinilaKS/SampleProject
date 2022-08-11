@@ -63,11 +63,16 @@
 
                     @media(min-width:1280px) and (max-width:1549px) {
                         max-width: 50%;
-                        margin: 10px 10px auto 10px;
+                        margin: 10px 10px 10px 0;
                     }
 
                     @media(min-width:1550px) and (max-width:1920px) {
-                        margin: 10px 10px auto 10px;
+                        max-width: 50%;
+                        margin: 10px 10px 10px 0;
+                    }
+                    @media(min-width:1921px){
+                        max-width: 45%;
+                        margin: 10px 10px 10px 0;
                     }
                 }
 
@@ -84,12 +89,12 @@
                     }
 
                     @media(min-width:1280px) and (max-width:1549px) {
-                        margin: 10px 10px auto 10px;
+                        margin: 10px 10px 10px 0;
                         max-width: 100%;
                     }
 
                     @media(min-width:1550px) and (max-width:1920px) {
-                        margin: 10px 10px auto 10px;
+                        margin: 10px 10px 10px 0;
                         max-width: 100%;
                     }
 
@@ -108,12 +113,15 @@
                     }
 
                     @media(min-width:1280px) and (max-width:1549px) {
-                        margin: 10px 10px auto 10px;
+                        margin: 10px 10px 10px 0;
                     }
 
                     @media(min-width:1550px) and (max-width:1920px) {
                         max-width: 100%;
-                        margin: 10px 10px auto 10px;
+                        margin: 10px 10px 10px 0;
+                    }
+                    @media(min-width:1921px){
+                        margin: 10px 10px 10px 0;
                     }
 
                     .dark-btn {
