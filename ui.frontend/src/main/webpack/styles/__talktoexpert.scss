@@ -37,6 +37,16 @@
                 display: grid;
                 padding: 3em;
 
+                @media(min-width:1280px) and (max-width:1549px) {
+                    padding: 4em 3em;
+                    grid-gap: 1em;
+                }
+
+                @media(min-width:1550px) and (max-width:1920px) {
+                    padding: 4em;
+                    grid-gap: 1.5em;
+                }
+
                 h4 {
                     font-size: 38px;
                     color: $color-white;
@@ -49,6 +59,15 @@
 
                     @media(min-width:1024px) and (max-width:1150px) {
                         max-width: 80%;
+                    }
+
+                    @media(min-width:1280px) and (max-width:1549px) {
+                        max-width: 50%;
+                        margin: 10px 10px auto 10px;
+                    }
+
+                    @media(min-width:1550px) and (max-width:1920px) {
+                        margin: 10px 10px auto 10px;
                     }
                 }
 
@@ -63,6 +82,20 @@
                     @media(min-width:1024px) and (max-width:1150px) {
                         max-width: 80%;
                     }
+
+                    @media(min-width:1280px) and (max-width:1549px) {
+                        margin: 10px 10px auto 10px;
+                        max-width: 100%;
+                    }
+
+                    @media(min-width:1550px) and (max-width:1920px) {
+                        margin: 10px 10px auto 10px;
+                        max-width: 100%;
+                    }
+
+                    @media(min-width:1921px) {
+                        max-width: 100%;
+                    }
                 }
 
                 .cmp-box-button {
@@ -74,14 +107,24 @@
                         max-width: 80%;
                     }
 
-                    .dark-btn{
-                        .cmp-button{
-                          width: 163px;
-                          .cmp-button__text{
-                            margin: auto 25px auto 20px;
-                          }
+                    @media(min-width:1280px) and (max-width:1549px) {
+                        margin: 10px 10px auto 10px;
+                    }
+
+                    @media(min-width:1550px) and (max-width:1920px) {
+                        max-width: 100%;
+                        margin: 10px 10px auto 10px;
+                    }
+
+                    .dark-btn {
+                        .cmp-button {
+                            width: 163px;
+
+                            .cmp-button__text {
+                                margin: auto 25px auto 20px;
+                            }
                         }
-                      }
+                    }
                 }
             }
         }
