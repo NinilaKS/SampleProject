@@ -332,7 +332,7 @@
                     titleType="h3">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:styleGroups jcr:primaryType="nt:unstructured">
-                        <item2
+                        <item0
                             cq:styleGroupLabel="Image With Text"
                             jcr:primaryType="nt:unstructured">
                             <cq:styles jcr:primaryType="nt:unstructured">
@@ -342,8 +342,8 @@
                                     cq:styleLabel="image text"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
-                        </item2>
-                        <item0
+                        </item0>
+                        <item1
                             cq:styleGroupLabel="Horizontal Line"
                             jcr:primaryType="nt:unstructured">
                             <cq:styles jcr:primaryType="nt:unstructured">
@@ -353,8 +353,8 @@
                                     cq:styleLabel="Enable Horizontal Line"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
-                        </item0>
-                        <item1
+                        </item1>
+                        <item2
                             cq:styleGroupLabel="Teaser Alignment"
                             jcr:primaryType="nt:unstructured">
                             <cq:styles jcr:primaryType="nt:unstructured">
@@ -369,7 +369,7 @@
                                     cq:styleLabel="TextRight-ImageLeft"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
-                        </item1>
+                        </item2>
                     </cq:styleGroups>
                 </policy_1575031387650>
             </teaser>

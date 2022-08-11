@@ -3,29 +3,23 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:template="/conf/dramix/settings/wcm/templates/dramix-template"
+        cq:template="/conf/dramix/settings/wcm/templates/listing-page-template"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="dramix/components/page">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="dramix/components/container"
             layout="responsiveGrid">
-            <experiencefragment
+            <experiencefragment-header
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="dramix/components/experiencefragment"
-                fragmentVariationPath="/content/experience-fragments/dramix/us/en/site/header/master"/>
+                editable="{Boolean}true"/>
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="dramix/components/container"
-                editable="{Boolean}true">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        offset="0"
-                        width="12"/>
-                </cq:responsive>
-            </container>
-            <experiencefragment_374836098
+                editable="{Boolean}true"
+                layout="responsiveGrid"/>
+            <experiencefragment
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="dramix/components/experiencefragment"
                 fragmentVariationPath="/content/experience-fragments/dramix/us/en/site/footer/master"/>

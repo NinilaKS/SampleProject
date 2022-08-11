@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/dramix/settings/wcm/templates/listing-page-template"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="dramix/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="dramix/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dramix/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dramix/components/container"/>
+                <columncontrol_copy
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dramix/components/columncontrol"
+                    numberOfColumns="4">
+                    <_x0031_
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/wcm/components/container/v1/container">
+                        <teaser
+                            cq:styleIds="[1659063310791]"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Expert talks"
+                            sling:resourceType="dramix/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/dramix/listing-pages/Picture (10).png"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="Learn more"/>
+                            </actions>
+                            <button
+                                cq:styleIds="[1658465167324]"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Learn More"
+                                sling:resourceType="dramix/components/button"
+                                icon="/content/dam/dramix/button-icon/Arrow.png"
+                                link="#"/>
+                        </teaser>
+                    </_x0031_>
+                    <_x0032_
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/wcm/components/container/v1/container">
+                        <teaser_copy
+                            cq:styleIds="[1659063310791]"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Certifications"
+                            sling:resourceType="dramix/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/dramix/listing-pages/Picture (11).png"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="Learn more"/>
+                            </actions>
+                            <button
+                                cq:styleIds="[1658465167324]"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Learn More"
+                                sling:resourceType="dramix/components/button"
+                                icon="/content/dam/dramix/button-icon/Arrow.png"
+                                link="#"/>
+                        </teaser_copy>
+                    </_x0032_>
+                    <_x0033_
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/wcm/components/container/v1/container">
+                        <teaser_copy
+                            cq:styleIds="[1659063310791]"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Whitepapers"
+                            sling:resourceType="dramix/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/dramix/listing-pages/Picture (12).png"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="Learn more"/>
+                            </actions>
+                            <button
+                                cq:styleIds="[1658465167324]"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Learn More"
+                                sling:resourceType="dramix/components/button"
+                                icon="/content/dam/dramix/button-icon/Arrow.png"
+                                link="#"/>
+                        </teaser_copy>
+                    </_x0033_>
+                    <_x0034_
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/wcm/components/container/v1/container">
+                        <teaser_copy
+                            cq:styleIds="[1659063310791]"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Products"
+                            sling:resourceType="dramix/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/dramix/listing-pages/Picture (10).png"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="Learn more"/>
+                            </actions>
+                            <button
+                                cq:styleIds="[1658465167324]"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Learn More"
+                                sling:resourceType="dramix/components/button"
+                                icon="/content/dam/dramix/button-icon/Arrow.png"
+                                link="#"/>
+                        </teaser_copy>
+                    </_x0034_>
+                </columncontrol_copy>
+                <talktoexpert
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dramix/components/talktoexpert"
+                    bannerdescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    bannerimage="/content/dam/dramix/Fond.png"
+                    bannertitle="Talk to an expert"
+                    buttonlabel="Contact Us"
+                    buttonLink="#"/>
+            </container>
+            <experiencefragment-header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dramix/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/dramix/us/en/site/header/master"/>
+        </root>
+    </jcr:content>
+</jcr:root>
