@@ -141,7 +141,7 @@
                     src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbdocument.svg"
                     alt="${'document' @ i18n}"
                   />
-                  <a href="#">Downloads</a>
+                  <a href="${properties.downloadsLink}">${properties.downloadsLabel}</a>
                 </button>
                 <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
                   <div class="mb-icon">
@@ -150,7 +150,7 @@
                       alt="${'mbsoftwaretools' @ i18n}"
                     />
                   </div>
-                  <a href="#">Software Tools</a>
+                  <a href="${properties.softwareToolsLink}">${properties.softwareToolsLabel}</a>
                 </button>
                 <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
                   <div class="mb-icon">
@@ -159,9 +159,9 @@
                       alt="${'upcomingevents' @ i18n}"
                     />
                   </div>
-                  <a href="#">Upcoming Events</a>
+                  <a href="${properties.upcomingEventsLink}">${properties.upcomingEventsLabel}</a>
                 </button>
-                <!-- menu only visible in mobile end-->
+                <!--/* menu only visible in mobile end */-->
 
                 <button
                   type="button"
@@ -183,22 +183,22 @@
                     alt="${'filedocument' @ i18n}"
                   />
                 </button>
-                <!-- menu only visible in mobile-->
+                <!--/* menu only visible in mobile */-->
                 <div class="abt-faq">
                   <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">FAQ</a></li>
+                    <li><a href="${properties.aboutLink}">${properties.aboutLabel}</a></li>
+                    <li><a href="${properties.faqLink}">${properties.faqLabel}</a></li>
                   </ul>
                 </div>
-                <!-- menu only visible in mobile end-->
+                <!--/* menu only visible in mobile end */-->
 
-                <!-- menu only visible in mobile-->
+                <!--/* menu only visible in mobile */-->
                   <div class="cmp-bottom-bar"></div>
-                <!-- menu only visible in mobile end-->
+                <!--/* menu only visible in mobile end */-->
 
                 <div class="cmp-button-wrapper">
-                  <a href="#" class="btn me-0 quote-btn">
-                    Request a Quote
+                  <a href="${properties.requestQuoteLink}" class="btn me-0 quote-btn">
+                    ${properties.requestQuoteLabel}
                   </a>
                 </div>
               </div>

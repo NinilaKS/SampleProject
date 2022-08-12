@@ -28,7 +28,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldDescription="Label for software tools button"
-                        fieldLabel="Software Tools Label"
+                        fieldLabel="Software Tools Button Label"
                         name="./softwareToolsLabel"/>
                     <softwareToolsLinks
                         jcr:primaryType="nt:unstructured"
@@ -41,7 +41,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldDescription="Label for upcoming events button"
-                        fieldLabel="Upcoming Events Label"
+                        fieldLabel="Upcoming Events Button Label"
                         name="./upcomingEventsLabel"/>
                     <upcomingEventsLink
                         jcr:primaryType="nt:unstructured"
@@ -54,7 +54,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldDescription="Label for request a quote button"
-                        fieldLabel="Request Quote Label"
+                        fieldLabel="Request Quote Button Label"
                         name="./requestQuoteLabel"/>
                     <requestQuoteLink
                         jcr:primaryType="nt:unstructured"
@@ -63,6 +63,42 @@
                         fieldLabel="Request Quote Link"
                         name="./requestQuoteLink"
                         rootPath="/content/dramix"/>
+                     <about
+                    	jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Label for about button"
+                        fieldLabel="About Button Label"
+                        name="./aboutLabel"/>
+                     <aboutLink
+                    	jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                        fieldDescription="Link for about button"
+                        fieldLabel="About Button Link"
+                        name="./aboutLink"/>
+                     <faq
+                    	jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Label for FAQ button"
+                        fieldLabel="FAQ Button Label"
+                        name="./faqLabel"/>
+                     <faqLink
+                    	jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                        fieldDescription="Link for FAQ button"
+                        fieldLabel="FAQ Button Link"
+                        name="./faqLink"/>
+                     <downloads
+                    	jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Label for downloads button"
+                        fieldLabel="Downloads Button Label"
+                        name="./downloadsLabel"/>
+                     <downloadsLink
+                    	jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                        fieldDescription="Link for downloads button"
+                        fieldLabel="Downloads Button Link"
+                        name="./downloadsLink"/>
                 </items>
             </column>
         </items>
