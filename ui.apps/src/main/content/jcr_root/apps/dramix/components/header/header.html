@@ -8,11 +8,7 @@
       >
         <div class="container-fluid col-md-12 col-lg-12 col-xl-12 col-xxl-12 cmp-header-padding">
           <div class="me-auto mb-2 mb-lg-0">
-            <select class="classic">
-              <option>English ( US )</option>
-              <option>English ( CA )</option>
-              <option>Spanish ( MX )</option>
-            </select>
+              <sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
           </div>
           <div class="flex-shrink-1 d-flex cmp-top-header-right">
             <button type="button" class="cmp-top-bar-btn d-inline-flex">
@@ -22,7 +18,7 @@
                   alt="${'softwaretools' @ i18n}"
                 />
               </div>
-              <a href="#" class="cmp-top-bar-tools">Software tools</a>
+              <a href="${properties.softwareToolsLink}" class="cmp-top-bar-tools">${properties.softwareToolsLabel}</a>
             </button>
             <button type="button" class="cmp-top-bar-btn d-inline-flex">
               <div class="mb-icon">
@@ -31,7 +27,7 @@
                   alt="${'upcomingevents' @ i18n}"
                 />
               </div>
-              <a href="#" class="cmp-top-bar-events">Upcoming Events</a>
+              <a href="${properties.upcomingEventsLink}" class="cmp-top-bar-events">${properties.upcomingEventsLabel}</a>
             </button>
           </div>
         </div>
@@ -42,14 +38,14 @@
         id="cmp-bg-navbar"
       >
         <div class="container-fluid col-md-12 col-lg-12 col-xl-12 col-xxl-12 cmp-header-padding">
-          <!-- logo, close-button and mobile menu -->
-          <a class="d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none" href="#"><img
-            src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbmail.svg"
+          <!--/* logo, close-button and mobile menu */-->
+          <a class="d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none" href="${properties.headerLogoLink}"><img
+            src="${properties.headerLogo}"
             alt="${'email' @ i18n}"
           /></a>
-          <a class="navbar-brand logo-wrapper" href="#">
+          <a class="navbar-brand logo-wrapper" href="${properties.headerLogoLink}">
             <img
-              src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/logo.png"
+              src="${properties.headerLogo}"
               alt="${'logo' @ i18n}"
             />
           </a>
@@ -87,147 +83,13 @@
               ></button>
             </div>
 
-            <!-- main nav bar -->
+            <!--/* main nav bar */-->
             <div class="offcanvas-body" id="offcanvasNavbarLight">
-              <ul class="navbar-nav me-auto mb-2 mb-sm-0 cmp-navbar">
-                <li class="nav-item">
-                  <a href="#" class="nav-link" aria-current="page">Projects</a>
-                </li>
-                <li class="nav-item dropdown dropdown-hover dropdown-hover-toolbox  position-static">                  
-				          <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-					          data-bs-auto-close="outside"
-                    >Toolbox</a>					
-                  <!-- Dropdown mega menu -->
-                  <div
-                    class="dropdown-menu w-100"
-                    id="dropdownid"
-                    aria-labelledby="navbarDropdown"
-                    >
-                    <div class="container-fluid mega_menu_wrapper">
-                      <div class="row mt-4 mb-0">
-                        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-                          <div class="cmp-sub-description">
-                            All the information is available in our toolbox
-                          </div>
-                        </div>
-                        <div
-                          class="col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
-                        >
+            	<sly data-sly-resource="${'navigation' @ resourceType='dramix/components/navigation'}"></sly>
+              <!--/* main nav end */-->
 
-                        <div class="row">
-
-                          <div class="col-md-4 col-lg-4">
-
-                          <ul
-                            class="list-group list-group-flush mega-menu-wrapper"
-                          >                        
-
-                            <li class="software-tab">
-                              <a  class="list-group-item submenu-link" href="#">Softwares</a>                            
-                            </li>
-                            <li class="software-tab">
-                              <a class="list-group-item submenu-link" href="#">Certificates</a>                           
-                            </li>
-                            <li class="software-tab">
-                              <a  class="list-group-item submenu-link" href="#">Expert Talks</a>                            
-                            </li>
-                            <li class="software-tab">
-                              <a  class="list-group-item submenu-link" href="#">Whitepapers</a>                            
-                            </li>
-                            <li class="software-tab">
-                              <a  class="list-group-item submenu-link" href="#">Product datasheets</a>                            
-                            </li>
-                          </ul>
-
-                          </div>
-
-                          <div class="col-md-6 col-lg-6">
-                            <div class="cmp-megamenu-image">
-                                <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/toolbox.png" alt="${'toolbox' @ i18n}" class="cmp-inner-image">    
-                            </div>
-                          </div>
-
-                          </div>
-
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Sustainability</a>
-                </li>
-                <li class="nav-item dropdown dropdown-hover dropdown-hover-solution position-static">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    >Solutions</a>
-                  <!-- Dropdown mega menu -->
-                  <div
-                    class="dropdown-menu w-100"
-                    id="dropdownid"
-                    aria-labelledby="navbarDropdown"
-                    >
-                    <div class="container-fluid mega_menu_wrapper">
-                      <div class="row mt-4 mb-0">
-                        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-                          <div class="cmp-sub-description ">
-                            All the information is available in our toolbox
-                          </div>
-                        </div>
-                        <div
-                          class="col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
-                        >
-
-                          <div class="row">
-
-                            <div class="col-md-4 col-lg-4">                         
-                              
-                                <ul
-                              class="list-group list-group-flush mega-menu-wrapper cmp-list-group-solution-subnav"
-                            >                        
-
-                                <li class="software-tab">
-                                  <a  class="list-group-item submenu-link" href="#">Products</a>                            
-                                </li>
-                                <li class="software-tab">
-                                  <a class="list-group-item submenu-link" href="#">Applications</a>                           
-                                </li>
-                                <li class="software-tab">
-                                  <a  class="list-group-item submenu-link" href="#">Technology</a>                            
-                                </li>                            
-                            </ul>
-                              
-                            </div>
-                            <div class="col-md-6 col-lg-6">
-
-                              <div class="cmp-megamenu-image">
-  
-                                  <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg" alt="${'submenusolution' @ i18n}" class="cmp-inner-image">
-      
-                              </div>
-                            </div>
-                          </div>                       
-                          </div>
-                        </div>                       
-                  </div>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Contact</a>
-                </li>
-              </ul>
-              <!-- main nav end -->
-
-              <!-- right side nav -->
-              <!-- full width search section -->
+              <!--/* right side nav */-->
+              <!--/* full width search section */-->
               <div class="search-section-wrapper bg-white" id="searchSection">
                 <div class="container">
                   <div class="row my-4">
@@ -273,7 +135,7 @@
                   /> 				  
                 </button>
                 
-                <!-- menu only visible in mobile -->
+                <!--/* menu only visible in mobile */-->
                 <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
                   <img
                     src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbdocument.svg"
