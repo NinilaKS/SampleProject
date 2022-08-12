@@ -32,7 +32,8 @@
                                         sling:orderBefore="branding"
                                         sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
                                         fieldLabel="Navigation Description"
-                                        name="./navigationDescription"/>
+                                        name="./navigationDescription"
+                                        rows="{Long}3"/>
                                     <addLink
                                         jcr:primaryType="nt:unstructured"
                                         sling:orderBefore="branding"
@@ -42,6 +43,14 @@
                                         text="Add Link in Navigation"
                                         uncheckedValue="false"
                                         value="true"/>
+                                    <subsectionimage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:orderBefore="branding"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Image to be added in sub section"
+                                        fieldLabel="Sub Section Image"
+                                        name="./subSectionImage"
+                                        rootPath="/content/dam/dramix"/>
                                 </items>
                             </column>
                         </items>

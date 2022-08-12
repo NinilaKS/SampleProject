@@ -72,6 +72,7 @@ public class DramixNavigationImpl implements DramixNavigation {
 					if (null != addLink) {
 						navItem.setAddLink(Boolean.valueOf(addLink));
 					}
+					navItem.setSubSectionImage(valueMap.get("subSectionImage", String.class));
 					navItem.setNavDescription(valueMap.get("navigationDescription", String.class));
 				}
 			}

@@ -11,6 +11,8 @@ public class DramixNavigationItem{
 	
 	private String navDescription;
 	
+	private String subSectionImage;
+	
 	private boolean isAddLink;
 	
 	private boolean isCurrent;
@@ -47,6 +49,14 @@ public class DramixNavigationItem{
 
 	public void setNavDescription(String navDescription) {
 		this.navDescription = navDescription;
+	}
+	
+	public String getSubSectionImage() {
+		return subSectionImage;
+	}
+
+	public void setSubSectionImage(String subSectionImage) {
+		this.subSectionImage = subSectionImage;
 	}
 
 	public boolean isAddLink() {
