@@ -1,0 +1,219 @@
+.filter-offcanvas {
+    .filter-offcanvas-header {
+        background: #042A4B;
+
+        .offcanvas-header-text {
+            color: white;
+            font-family: 'Helvetica';
+
+            .head-text-filters {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+            }
+
+            .head-text-choose {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 38px;
+                line-height: 44px;
+                letter-spacing: -0.02em;
+            }
+        }
+
+        .close-filter-button {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            top: 0;
+            right: 0;
+
+            &:hover {
+                transition: 0.5s;
+                border: 1px solid rgba(255, 255, 255, 1);
+
+                .filter-cross-icon {
+                    transition: 0.5s;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+
+    }
+
+    .offcanvas-body {
+        .filter-accrodion-row {
+            .filter-accrodion {
+                .filter-accrodion-item {
+                    .filter-accrodion-header {
+                        .accordion-button {
+                            border-top: 1px solid #DADADA;
+                            background-color: white;
+                            font-family: 'Helvetica';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 12px;
+                            line-height: 16px;
+                            color: #042A4B;
+                        }
+
+                        .accordion-button::after {
+                            background-image: url("./Picto\ -\ Arrow.svg");
+                            width: 7px;
+                            height: 10px;
+                            background-size: auto;
+                        }
+
+                        .accordion-button:not(.collapsed)::after {
+                            transform: rotate(90deg);
+                        }
+
+                    }
+
+                    .filter-accrodion-body {
+                        .filter-list {
+                            .filter-list-items {
+                                .filter-form-check {
+                                    .form-check-input {
+                                        border-color: #DADADA;
+                                        background-color: #DADADA;
+                                    }
+
+                                    .form-check-input:checked {
+                                        background-color: #042A4B;
+                                        background-image: url(./square-checkbox.png);
+                                        background-size: 30%;
+                                    }
+
+                                    .form-check-label {
+                                        font-family: 'Helvetica';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        line-height: 146.6%;
+                                        color: #707070;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .filter-buttons-row {
+            bottom: 0;
+            z-index: 3;
+
+            // White button for clear all with cross
+            .white-btn-filter {
+                .btn {
+                    border: 1px solid rgba(14, 63, 107, 0.2);
+                    background-color: #FFFFFF;
+                    width: auto;
+                    min-height: 49px;
+
+                    .cmp-button__text {
+                        font-family: 'Helvetica';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 17px;
+                        color: #0E3F6B;
+                        margin: auto;
+                    }
+
+                    .arrow-left {
+                        display: none;
+                    }
+
+                    .arrow-right {
+                        margin: auto;
+                    }
+
+                    &:hover {
+                        border: 1px solid #0E3F6B;
+                        transition: 1s;
+
+                        .cmp-button__text {
+                            opacity: 0.7;
+                            transition: 1s;
+                        }
+
+                        .arrow-right {
+                            opacity: 0.7;
+                            transition: 1s;
+
+                        }
+                    }
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+
+
+
+
+            }
+
+            // Blue button for filter with tick icon
+            .dark-blue-btn-filter {
+                .btn {
+                    border: 1px solid #0E3F6B;
+                    background: #0E3F6B;
+                    width: auto;
+                    min-height: 49px;
+
+                    .cmp-button__text {
+                        font-family: 'Helvetica';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 17px;
+                        color: white;
+                        margin: auto;
+                    }
+
+                    .arrow-left {
+                        display: none;
+                    }
+
+                    .arrow-right {
+                        margin: auto;
+                    }
+
+                    &:hover {
+                        border: 1px solid white;
+                        transition: 1s;
+
+                        .cmp-button__text {
+                            opacity: 0.7;
+                            transition: 1s;
+                        }
+
+                        .arrow-right {
+                            opacity: 0.7;
+                            transition: 1s;
+
+                        }
+                    }
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+
+
+
+            }
+        }
+    }
+}
+.offcanvas-end {
+    @media (max-width: 639px) {
+        transform: translateY(-100%);
+        width: 100%;
+    }
+}
