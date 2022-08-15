@@ -3,16 +3,22 @@
 	
 	<header class="bg-transparent cmp-header-var-trans">		
 		<nav
-        class="navbar navbar-expand-lg navbar-light cmp-transparent cmp-primary-menu-bar py-1 d-none d-sm-block d-md-block"
+        class="navbar navbar-expand-lg navbar-light cmp-transparent cmp-primary-menu-bar pt-0 pb-0 d-none d-sm-block d-md-block"
         id="cmp-bg-change"
       >
         <div class="container-fluid col-md-12 col-lg-12 col-xl-12 col-xxl-12 cmp-header-padding">
-          <div class="me-auto mb-2 mb-lg-0">
-            <select class="classic">
-              <option>English ( US )</option>
-              <option>English ( CA )</option>
-              <option>Spanish ( MX )</option>
-            </select>
+          <div class="me-auto mb-2 mb-lg-0">            
+            <div class="cmp-language-navigation">              
+              <ul class="list-group-item cmp-language-list">
+                <li class="list-group-item cmp-language-order"><span class="cmp-language-selected">English ( US )</span>  
+                  <ul class="list-group cmp-language-list-menu">
+                    <li><a class="list-group-item cmp-langauage-list-val" href="#">English ( US )</a></li>
+                    <li><a class="list-group-item cmp-langauage-list-val" href="#">English ( CA )</a></li>
+                    <li><a class="list-group-item cmp-langauage-list-val" href="#">Spanish ( MX )</a></li>
+                  </ul>     
+                </li>                        
+              </ul>
+            </div>
           </div>
           <div class="flex-shrink-1 d-flex cmp-top-header-right">
             <button type="button" class="cmp-top-bar-btn d-inline-flex">
@@ -47,7 +53,7 @@
             src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbmail.svg"
             alt="${'email' @ i18n}"
           /></a>
-          <a class="navbar-brand logo-wrapper" href="#">
+          <a class="navbar-brand logo-wrapper me-5" href="#">
             <img
               src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/logo.png"
               alt="${'logo' @ i18n}"
@@ -108,7 +114,7 @@
                     aria-labelledby="navbarDropdown"
                     >
                     <div class="container-fluid mega_menu_wrapper">
-                      <div class="row mt-4 mb-0">
+                      <div class="row mt-5 mb-0">
                         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
                           <div class="cmp-sub-description">
                             All the information is available in our toolbox
@@ -146,7 +152,7 @@
                           </div>
 
                           <div class="col-md-6 col-lg-6">
-                            <div class="cmp-megamenu-image">
+                            <div class="cmp-megamenu-image d-none d-md-block d-sm-block d-lg-block d-xl-block d-xxl-block">
                                 <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/toolbox.png" alt="${'toolbox' @ i18n}" class="cmp-inner-image">    
                             </div>
                           </div>
@@ -176,39 +182,39 @@
                     aria-labelledby="navbarDropdown"
                     >
                     <div class="container-fluid mega_menu_wrapper">
-                      <div class="row mt-4 mb-0">
-                        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
+                      <div class="row mt-5 mb-0">
+                        <div class="col-xs-12 col-md-6 col-lg-4 mb-3 mb-lg-0">
                           <div class="cmp-sub-description ">
                             All the information is available in our toolbox
                           </div>
                         </div>
                         <div
-                          class="col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
+                          class="col-xs-12 col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
                         >
 
                           <div class="row">
 
                             <div class="col-md-4 col-lg-4">                         
                               
-                                <ul
+                              <ul
                               class="list-group list-group-flush mega-menu-wrapper cmp-list-group-solution-subnav"
-                            >                        
+                               >                        
 
-                                <li class="software-tab">
-                                  <a  class="list-group-item submenu-link" href="#">Products</a>                            
-                                </li>
-                                <li class="software-tab">
-                                  <a class="list-group-item submenu-link" href="#">Applications</a>                           
-                                </li>
-                                <li class="software-tab">
-                                  <a  class="list-group-item submenu-link" href="#">Technology</a>                            
-                                </li>                            
-                            </ul>
+                                  <li class="software-tab">
+                                    <a  class="list-group-item submenu-link" href="#" >Products</a>                            
+                                  </li>
+                                  <li class="software-tab">
+                                    <a class="list-group-item submenu-link" href="#" >Applications</a>                           
+                                  </li>
+                                  <li class="software-tab">
+                                    <a  class="list-group-item submenu-link" href="#" >Technology</a>                            
+                                  </li>                            
+                                </ul>
                               
                             </div>
                             <div class="col-md-6 col-lg-6">
 
-                              <div class="cmp-megamenu-image">
+                              <div class="cmp-megamenu-image d-none d-md-block d-sm-block d-lg-block d-xl-block d-xxl-block">
   
                                   <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg" alt="${'submenusolution' @ i18n}" class="cmp-inner-image">
       
@@ -228,7 +234,7 @@
 
               <!-- right side nav -->
               <!-- full width search section -->
-              <div class="search-section-wrapper bg-white" id="searchSection">
+              <div class="cmp-search-section-wrapper bg-white" id="searchSection">
                 <div class="container">
                   <div class="row my-4">
                     <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
@@ -251,10 +257,10 @@
                   </div>
                 </div>
               </div>
-              <div class="right-nav-wrapper">
+              <div class="cmp-right-nav-wrapper">
                 <button
                   type="button"
-                  class="btn cmp-top-bar-btn search-icon"
+                  class="btn cmp-top-bar-btn cmp-search-icon cmp-sticky-header-hide"
                   id="search-btn"
                 >
                    <img
@@ -264,7 +270,7 @@
                 </button>
 				        <button
                   type="button"
-                  class="btn cmp-top-bar-btn-hover search-icon"
+                  class="btn cmp-top-bar-btn-hover cmp-search-icon cmp-sticky-header-show"
                   id="search-btn"
                 >
                    <img
@@ -303,7 +309,7 @@
 
                 <button
                   type="button"
-                  class="cmp-top-bar-btn cmp-file-box"
+                  class="cmp-top-bar-btn cmp-file-box cmp-sticky-header-hide"
                   id="file-box"
                 >
                   <img
@@ -313,7 +319,7 @@
                 </button>
                 <button
                   type="button"
-                  class="cmp-top-bar-btn-hover cmp-file-box"
+                  class="cmp-top-bar-btn-hover cmp-file-box cmp-sticky-header-show"
                   id="file-box"
                 >
                   <img
