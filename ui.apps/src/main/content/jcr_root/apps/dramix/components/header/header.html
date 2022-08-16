@@ -48,12 +48,18 @@
         id="cmp-bg-navbar"
       >
         <div class="container-fluid col-md-12 col-lg-12 col-xl-12 col-xxl-12 cmp-header-padding">
-          <!-- logo, close-button and mobile menu -->
-          <a class="d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none" href="#"><img
+          <!-- Email, logo, close-button and mobile menu start-->
+          <a class="d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none cmp-top-bar-email" href="#"><img
             src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbmail.svg"
             alt="${'email' @ i18n}"
           /></a>
-          <a class="navbar-brand logo-wrapper me-5" href="#">
+
+          <a class="d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none cmp-top-bar-btn-scroll" href="#"><img
+            src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbemailsticky.svg"
+            alt="${'email' @ i18n}"
+          /></a>
+
+          <a class="navbar-brand logo-wrapper" href="#">
             <img
               src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/logo.png"
               alt="${'logo' @ i18n}"
@@ -92,6 +98,7 @@
                 aria-label="Close"
               ></button>
             </div>
+            <!-- logo, close-button and mobile menu End-->
 
             <!-- main nav bar -->
             <div class="offcanvas-body" id="offcanvasNavbarLight">
@@ -99,7 +106,7 @@
                 <li class="nav-item">
                   <a href="#" class="nav-link" aria-current="page">Projects</a>
                 </li>
-                <li class="nav-item dropdown dropdown-hover dropdown-hover-toolbox  position-static">                  
+                <li class="nav-item dropdown dropdown-hover dropdown-hover-menu dropdown-hover-menu  position-static">                  
 				          <a
                     class="nav-link dropdown-toggle"
                     href="#"
@@ -168,7 +175,7 @@
                 <li class="nav-item">
                   <a href="#" class="nav-link">Sustainability</a>
                 </li>
-                <li class="nav-item dropdown dropdown-hover dropdown-hover-solution position-static">
+                <li class="nav-item dropdown dropdown-hover dropdown-hover-menu dropdown-hover-menu position-static">
                   <a
                     class="nav-link dropdown-toggle"
                     href="#"

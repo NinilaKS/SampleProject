@@ -199,51 +199,7 @@
 
     }
 
-    /*-------------------------------------------*\
-       Sticky Header
-    \*-------------------------------------------*/
-
-    .cmp-sticky{
-      position: fixed;
-      top:0px;
-      width: 100%;
-      background-color: $color-white;      
-      .cmp-navbar{
-        .nav-item{
-          a{
-            color: $color-dark-blue;
-          }
-        }        
-        .dropdown{        
-          .dropdown-toggle
-          {
-            &:after {
-              content: "";
-              position: absolute;         
-              height: 26px;
-              position: absolute;
-              width: 20px;
-              z-index: 1;
-              border: 0px;
-              margin-left: 2px;
-              background:url(#{$image-path}/dropdwsticky.svg) 10px 14px no-repeat; 
-            }
-          }
-        } 
-      }
-      .cmp-sticky-header-hide{
-        display: none;
-      }
-      .cmp-sticky-header-show{
-        display: block;
-      }
-      .quote-btn{
-        border: 1px solid $color-dark-blue;
-        color: $color-dark-blue;
-        font-size: $font-size-16;
-        font-weight: $font-weight-700;
-      }
-    }
+    
     
     /*-------------------------------------------*\
        desktop Header Hide
@@ -374,7 +330,19 @@
       .cmp-header-padding{
         padding:0px 70px;
         @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
-          padding: 0px 10px;
+          padding: 0px 20px;
+          justify-content: space-around;
+          border-bottom: 1px solid hsl(208deg 90% 15% / 20%);
+        }  
+      }
+
+      .logo-wrapper{
+        padding-right: 48px;
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
+          border-right: 1px solid hsl(208deg 90% 15% / 20%);
+          border-left: 1px solid hsl(208deg 90% 15% / 20%);
+          padding-left: 10%;
+          padding-right: 10%;
         }
       }
 
@@ -411,9 +379,108 @@
         @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
           height: 100vh;
         }
-      }      
+      }
+      
+      .cmp-top-bar-btn-scroll{
+        display: none;
+      }
 
+    /*-------------------------------------------*\
+       Sticky Header
+    \*-------------------------------------------*/
+
+    &.cmp-sticky{
+      position: fixed;
+      top:0px;
+      width: 100%;
+      background-color: $color-white; 
+      @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
+        border-bottom: 1px solid hsl(208deg 90% 15% / 20%);
+        padding: 0px;     
+      }     
+      .cmp-navbar{
+        .nav-item{
+          a{
+            color: $color-dark-blue;
+          }
+        }        
+        .dropdown{        
+          .dropdown-toggle
+          {
+            &:after {
+              content: "";
+              position: absolute;         
+              height: 26px;
+              position: absolute;
+              width: 20px;
+              z-index: 1;
+              border: 0px;
+              margin-left: 2px;
+              background:url(#{$image-path}/dropdwsticky.svg) 10px 14px no-repeat; 
+            }
+          }
+        } 
+        .dropdown-hover{        
+          &:hover{
+            .dropdown-toggle
+            {
+              &:after {
+                content: "";
+                position: absolute;         
+                height: 26px;             
+                width: 20px;
+                z-index: 1;
+                border: 0px;
+                margin-left: 2px;
+                background:url(#{$image-path}/dropup.svg) 10px 14px no-repeat;      
+              }  
+            }     
+          }
+        }
+      }
+      .cmp-sticky-header-hide{
+        display: none;
+      }
+      .cmp-sticky-header-show{
+        display: block;
+      }
+      .quote-btn{
+        border: 1px solid $color-dark-blue;
+        color: $color-dark-blue;
+        font-size: $font-size-16;
+        font-weight: $font-weight-700;
+      }
+
+      .cmp-top-bar-email{
+        display: none;
+      }
+
+      .cmp-top-bar-btn-scroll{
+        display: block;
+      }
+
+      .navbar-toggler-icon {
+        background: url(#{$image-path}/mbmenusticky.svg) 0 1px no-repeat;
+        content: "";
+        height: 40px;
+        margin-left: -24px;
+        position: absolute;
+        top: 12px;
+        width: 40px;
+        z-index: 111;       
+      }
+
+      .logo-wrapper{
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
+          border-right: 1px solid hsl(208deg 90% 15% / 20%);
+          border-left: 1px solid hsl(208deg 90% 15% / 20%);
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+      }
     }
+
+   }
 
 
     /*-------------------------------------------*\
