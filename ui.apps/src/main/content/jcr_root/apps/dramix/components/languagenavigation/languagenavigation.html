@@ -2,11 +2,16 @@
 	data-sly-use.commonsTemplates="core/wcm/components/commons/v1/templates.html"
 	data-sly-use.languageNavigation="com.adobe.cq.wcm.core.components.models.LanguageNavigation"
 	data-sly-test.hasContent="${languageNavigation.items.size > 0}">
+	
+<ul class="list-group-item cmp-language-list">
+	<li class="list-group-item cmp-language-order">
+	<span data-sly-repeat="${languageNavigation.items}" data-sly-test="${itemList.first}" class="cmp-language-selected">${item.title}</span>  
+		<ul class="list-group cmp-language-list-menu" data-sly-list.item="${languageNavigation.items}">
+			<li><a class="list-group-item cmp-langauage-list-val" href="${item.URL}">${item.title}</a></li>
+		</ul>     
+	</li>                        
+</ul>
 
-	<select class="classic" name="language" id="languages" data-sly-list.item="${languageNavigation.items}">
-		<option value="${item.language}">${item.title}</option>
-	</select> 
 </sly>
 
-<sly
-	data-sly-call="${commonsTemplates.placeholder @ isEmpty = !hasContent}" />
+<sly data-sly-call="${commonsTemplates.placeholder @ isEmpty = !hasContent}" />

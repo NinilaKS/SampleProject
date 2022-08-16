@@ -1,4 +1,4 @@
-<section class="${wcmmode.edit ? '' : 'Homepage'}">
+<section class="Homepage">
   <div class="container-fluid cmp-header g-0">
 	
 	<header class="bg-transparent cmp-header-var-trans">		
@@ -9,17 +9,10 @@
         <div class="container-fluid col-md-12 col-lg-12 col-xl-12 col-xxl-12 cmp-header-padding">
           <div class="me-auto mb-2 mb-lg-0">            
             <div class="cmp-language-navigation">              
-              <ul class="list-group-item cmp-language-list">
-                <li class="list-group-item cmp-language-order"><span class="cmp-language-selected">English ( US )</span>  
-                  <ul class="list-group cmp-language-list-menu">
-                    <li><a class="list-group-item cmp-langauage-list-val" href="#">English ( US )</a></li>
-                    <li><a class="list-group-item cmp-langauage-list-val" href="#">English ( CA )</a></li>
-                    <li><a class="list-group-item cmp-langauage-list-val" href="#">Spanish ( MX )</a></li>
-                  </ul>     
-                </li>                        
-              </ul>
+              <sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
             </div>
           </div>
+          
           <div class="flex-shrink-1 d-flex cmp-top-header-right">
             <button type="button" class="cmp-top-bar-btn d-inline-flex">
               <div class="mb-icon">
@@ -28,7 +21,7 @@
                   alt="${'softwaretools' @ i18n}"
                 />
               </div>
-              <a href="#" class="cmp-top-bar-tools">Software tools</a>
+              <a href="${properties.softwareToolsLink}" class="cmp-top-bar-tools">${properties.softwareToolsLabel}</a>
             </button>
             <button type="button" class="cmp-top-bar-btn d-inline-flex">
               <div class="mb-icon">
@@ -37,11 +30,13 @@
                   alt="${'upcomingevents' @ i18n}"
                 />
               </div>
-              <a href="#" class="cmp-top-bar-events">Upcoming Events</a>
+              <a href="${properties.upcomingEventsLink}" class="cmp-top-bar-events">${properties.upcomingEventsLabel}</a>
             </button>
           </div>
+          
         </div>
       </nav>
+      
       <nav
         class="navbar navbar-expand-sm sticky-top cmp-secondary-menu-bar"
         aria-label="Third navbar offcanvas example"
@@ -53,9 +48,9 @@
             src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbmail.svg"
             alt="${'email' @ i18n}"
           /></a>
-          <a class="navbar-brand logo-wrapper me-5" href="#">
+          <a class="navbar-brand logo-wrapper me-5" href="${properties.headerLogoLink}">
             <img
-              src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/logo.png"
+              src="${properties.headerLogo}"
               alt="${'logo' @ i18n}"
             />
           </a>
@@ -95,142 +90,8 @@
 
             <!-- main nav bar -->
             <div class="offcanvas-body" id="offcanvasNavbarLight">
-              <ul class="navbar-nav me-auto mb-2 mb-sm-0 cmp-navbar">
-                <li class="nav-item">
-                  <a href="#" class="nav-link" aria-current="page">Projects</a>
-                </li>
-                <li class="nav-item dropdown dropdown-hover dropdown-hover-toolbox  position-static">                  
-				          <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-					          data-bs-auto-close="outside"
-                    >Toolbox</a>					
-                  <!-- Dropdown mega menu -->
-                  <div
-                    class="dropdown-menu w-100"
-                    id="dropdownid"
-                    aria-labelledby="navbarDropdown"
-                    >
-                    <div class="container-fluid mega_menu_wrapper">
-                      <div class="row mt-5 mb-0">
-                        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-                          <div class="cmp-sub-description">
-                            All the information is available in our toolbox
-                          </div>
-                        </div>
-                        <div
-                          class="col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
-                        >
-
-                        <div class="row">
-
-                          <div class="col-md-4 col-lg-4">
-
-                          <ul
-                            class="list-group list-group-flush mega-menu-wrapper"
-                          >                        
-
-                            <li class="software-tab">
-                              <a  class="list-group-item submenu-link" href="#">Softwares</a>                            
-                            </li>
-                            <li class="software-tab">
-                              <a class="list-group-item submenu-link" href="#">Certificates</a>                           
-                            </li>
-                            <li class="software-tab">
-                              <a  class="list-group-item submenu-link" href="#">Expert Talks</a>                            
-                            </li>
-                            <li class="software-tab">
-                              <a  class="list-group-item submenu-link" href="#">Whitepapers</a>                            
-                            </li>
-                            <li class="software-tab">
-                              <a  class="list-group-item submenu-link" href="#">Product datasheets</a>                            
-                            </li>
-                          </ul>
-
-                          </div>
-
-                          <div class="col-md-6 col-lg-6">
-                            <div class="cmp-megamenu-image d-none d-md-block d-sm-block d-lg-block d-xl-block d-xxl-block">
-                                <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/toolbox.png" alt="${'toolbox' @ i18n}" class="cmp-inner-image">    
-                            </div>
-                          </div>
-
-                          </div>
-
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Sustainability</a>
-                </li>
-                <li class="nav-item dropdown dropdown-hover dropdown-hover-solution position-static">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    >Solutions</a>
-                  <!-- Dropdown mega menu -->
-                  <div
-                    class="dropdown-menu w-100"
-                    id="dropdownid"
-                    aria-labelledby="navbarDropdown"
-                    >
-                    <div class="container-fluid mega_menu_wrapper">
-                      <div class="row mt-5 mb-0">
-                        <div class="col-xs-12 col-md-6 col-lg-4 mb-3 mb-lg-0">
-                          <div class="cmp-sub-description ">
-                            All the information is available in our toolbox
-                          </div>
-                        </div>
-                        <div
-                          class="col-xs-12 col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
-                        >
-
-                          <div class="row">
-
-                            <div class="col-md-4 col-lg-4">                         
-                              
-                              <ul
-                              class="list-group list-group-flush mega-menu-wrapper cmp-list-group-solution-subnav"
-                               >                        
-
-                                  <li class="software-tab">
-                                    <a  class="list-group-item submenu-link" href="#" >Products</a>                            
-                                  </li>
-                                  <li class="software-tab">
-                                    <a class="list-group-item submenu-link" href="#" >Applications</a>                           
-                                  </li>
-                                  <li class="software-tab">
-                                    <a  class="list-group-item submenu-link" href="#" >Technology</a>                            
-                                  </li>                            
-                                </ul>
-                              
-                            </div>
-                            <div class="col-md-6 col-lg-6">
-
-                              <div class="cmp-megamenu-image d-none d-md-block d-sm-block d-lg-block d-xl-block d-xxl-block">
-  
-                                  <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg" alt="${'submenusolution' @ i18n}" class="cmp-inner-image">
-      
-                              </div>
-                            </div>
-                          </div>                       
-                          </div>
-                        </div>                       
-                  </div>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Contact</a>
-                </li>
-              </ul>
-              <!-- main nav end -->
+            	<sly data-sly-resource="${'navigation' @ resourceType='dramix/components/navigation'}"></sly>
+            <!-- main nav end -->
 
               <!-- right side nav -->
               <!-- full width search section -->
@@ -285,7 +146,7 @@
                     src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbdocument.svg"
                     alt="${'document' @ i18n}"
                   />
-                  <a href="#">Downloads</a>
+                  <a href="${properties.downloadsLink}">${properties.downloadsLabel}</a>
                 </button>
                 <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
                   <div class="mb-icon">
@@ -294,7 +155,7 @@
                       alt="${'mbsoftwaretools' @ i18n}"
                     />
                   </div>
-                  <a href="#">Software Tools</a>
+                  <a href="${properties.softwareToolsLink}">${properties.softwareToolsLabel}</a>
                 </button>
                 <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
                   <div class="mb-icon">
@@ -303,7 +164,7 @@
                       alt="${'upcomingevents' @ i18n}"
                     />
                   </div>
-                  <a href="#">Upcoming Events</a>
+                  <a href="${properties.upcomingEventsLink}">${properties.upcomingEventsLabel}</a>
                 </button>
                 <!-- menu only visible in mobile end-->
 
@@ -330,8 +191,8 @@
                 <!-- menu only visible in mobile-->
                 <div class="abt-faq">
                   <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">FAQ</a></li>
+                    <li><a href="${properties.aboutLink}">${properties.aboutLabel}</a></li>
+                    <li><a href="${properties.faqLink}">${properties.faqLabel}</a></li>
                   </ul>
                 </div>
                 <!-- menu only visible in mobile end-->
@@ -341,8 +202,8 @@
                 <!-- menu only visible in mobile end-->
 
                 <div class="cmp-button-wrapper">
-                  <a href="#" class="btn me-0 quote-btn">
-                    Request a Quote
+                  <a href="${properties.requestQuoteLink}" class="btn me-0 quote-btn">
+                    ${properties.requestQuoteLabel}
                   </a>
                 </div>
               </div>
@@ -353,7 +214,5 @@
     </header>
 
   </div>
-  <sly
-  data-sly-resource="${'banner' @ resourceType='dramix/components/banner-home'}"
-></sly>
+  <sly data-sly-resource="${'banner' @ resourceType='dramix/components/banner-home'}"></sly>
 </section>
