@@ -20,8 +20,7 @@
 
 .cmp-header{
 
-  padding-left: 0px;
-  padding-right: 0px;
+  padding:0px 0px;
 
   /*-------------------------------------------*\
       Header Transparent
@@ -33,47 +32,93 @@
       Header padding right and left
     \*-------------------------------------------*/
     .cmp-header-padding{
-      padding-left: 70px;
-      padding-right:70px;
+      padding: 0px 70px;
     }
 
     /*-------------------------------------------*\
       Language Selector
     \*-------------------------------------------*/
 
-    select {     
-      background-color: transparent;
-      border-radius: 0px;   
-      display: inline-block;  
-      padding: 0.5em 3.5em 0.5em 1em;
-      font-family: $font-family-Bekaert-regular;
-      &.classic { 
-        color: $color-white;
-        position: relative;
-        border:0px;
-        padding: 0px;
-        option{ 
-          color: $color-black;
-        }
 
-        &::before{
-          content: "";
-          position: absolute;
-          margin: -30px 0px 0px -20px;
-          display: inline-block;
-          background:url(#{$image-path}/Picto.png) 0 0 no-repeat;
-          background-size:  0.5em 0.5em;
-          background-repeat: no-repeat;
-          -webkit-transform: rotate(-10deg);
-          -moz-transform: rotate(-10deg);
-          -ms-transform: rotate(-10deg);
-          -o-transform: rotate(-10deg);
-          transform: rotate(-10deg);
-          width: 100px;
-          height: 100px;
+    .cmp-language-navigation{
+        width: 110px;
+        margin-top: 0px;
+        .cmp-language-list{
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          background-color: transparent;
+          border:0px;
+          color: $color-white;
+          .cmp-language-order{
+              cursor: pointer;
+              position: relative;
+              color: $color-white;           
+              width: 100%;
+              list-style-type: none;
+              background-color: transparent;
+              padding: 0px;
+              margin:0px;
+              border:0px;
+              .cmp-language-list-menu{
+                position: absolute;
+                z-index: 10000;
+                top: 23px;                
+                left: 0px;
+                display: none;
+                background: $color-white;
+                margin: 0;
+                padding: 0;
+                .cmp-langauage-list-val{
+                  padding: 10px 22px 10px 11px;
+                  width: 141px;
+                  border:1px solid $color-light-gray;                  
+                  a{                   
+                    color: $color-dark-gray;
+                    display: block;
+                    text-decoration: none;
+                    border-right: 0;
+                    font-family: $font-family-Bekaert-regular;
+                  }
+                }
+                .selected{
+                  font-family: $font-family-Bekaert-regular;                
+                }                
+              }
+              &:hover{
+                padding: 0px 10px 0px 10px;
+                width: 141px;                       
+                background-color: $color-white;
+                color: $color-dark-blue;
+                .cmp-language-list-menu{
+                  display: block;
+                }
+                &::after{
+                  content: "";
+                  height: 26px;
+                  position: absolute;
+                  width: 20px;
+                  right: 8px;
+                  top: 9px;
+                  z-index: 999;
+                  background:url(#{$image-path}/dropup.svg) 0px 0px no-repeat; 
+                }             
+              }
+              &::after{
+                content: "";
+                height: 26px;
+                position: absolute;
+                width: 20px;
+                right: -9px;
+                top: 8px;
+                z-index: 999;
+                background:url(#{$image-path}/languagedropdw.svg) 0px 0px no-repeat; 
+              }              
+          }                         
         }
-      }      
-    }
+      }
+
+
 
     /*-------------------------------------------*\
       Software tools and upcoming events
@@ -112,7 +157,7 @@
       Search Section
     \*-------------------------------------------*/
 
-    .search-section-wrapper{
+    .cmp-search-section-wrapper{
       display: none;
       position: absolute;
       left: 0;
@@ -138,10 +183,67 @@
         border-left: 0px;
         border-right: 0px;
         padding: 9px;
-        border-bottom: 1px solid $color-dark-blue;
+        border-bottom: 0px solid $color-dark-blue;
+        border-top: 0px;
       }
+      
+      .search-bar{
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+          border-bottom: 1px solid $color-dark-blue;
+          border-top: 0px;
+          border-left: 0px;
+          border-right: 0px;
+          border-radius: 0px;
+        }
+      }
+
     }
 
+    /*-------------------------------------------*\
+       Sticky Header
+    \*-------------------------------------------*/
+
+    .cmp-sticky{
+      position: fixed;
+      top:0px;
+      width: 100%;
+      background-color: $color-white;      
+      .cmp-navbar{
+        .nav-item{
+          a{
+            color: $color-dark-blue;
+          }
+        }        
+        .dropdown{        
+          .dropdown-toggle
+          {
+            &:after {
+              content: "";
+              position: absolute;         
+              height: 26px;
+              position: absolute;
+              width: 20px;
+              z-index: 1;
+              border: 0px;
+              margin-left: 2px;
+              background:url(#{$image-path}/dropdwsticky.svg) 10px 14px no-repeat; 
+            }
+          }
+        } 
+      }
+      .cmp-sticky-header-hide{
+        display: none;
+      }
+      .cmp-sticky-header-show{
+        display: block;
+      }
+      .quote-btn{
+        border: 1px solid $color-dark-blue;
+        color: $color-dark-blue;
+        font-size: $font-size-16;
+        font-weight: $font-weight-700;
+      }
+    }
     
     /*-------------------------------------------*\
        desktop Header Hide
@@ -211,20 +313,10 @@
         display: grid;
         grid-template-columns: auto 1fr;
         padding: 0.5em 1em;
+        width: 100%;
       }
     }
 
-
-    /*-------------------------------------------*\
-       Search Icon
-    \*-------------------------------------------*/
-
-    // .search-icon{
-    //   img{
-    //     width: 16px;
-    //     height: 16px;
-    //   }
-    // } 
 
     /*-------------------------------------------*\
        Request Quote Button
@@ -256,14 +348,16 @@
        Right Icons alignment
     \*-------------------------------------------*/
     
-    .right-nav-wrapper{
+    .cmp-right-nav-wrapper{
       display: flex;
       align-content: center;
       align-items: center;
       @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
         flex-direction: column;
+        align-items: flex-start;
+        align-content: flex-start;
       }
-      .search-icon{
+      .cmp-search-icon{
         padding-right:30px;
       }     
       .cmp-file-box{
@@ -276,9 +370,12 @@
     \*-------------------------------------------*/
 
     .cmp-secondary-menu-bar{
-
+      z-index: 1020;
       .cmp-header-padding{
         padding:0px 70px;
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
+          padding: 0px 10px;
+        }
       }
 
       .offcanvas-header{
@@ -300,11 +397,12 @@
 
       .offcanvas-body{
         @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
-          padding: 0em;
+          padding: 0px;
         }
         .cmp-button-wrapper{
           @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
             padding: 1em;
+            width: 100%;
           }
         }
       }
@@ -313,7 +411,7 @@
         @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
           height: 100vh;
         }
-      }
+      }      
 
     }
 
@@ -334,11 +432,11 @@
         a{
           color: $color-white;
           font-family: $font-family-Bekaert-regular;
-          font-size: $font-size-24;
+          font-size: $font-size-20;
           font-weight: $font-weight-300;
           @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
             color: $color-dark-blue;
-            font-size: $font-size-24;
+            font-size: $font-size-20;
             font-weight: $font-weight-300;
           }
         }
@@ -357,8 +455,7 @@
         }
       }
 
-      .dropdown-hover{
-        
+      .dropdown-hover{        
         &:hover{
           .dropdown-menu{
             display: block;
@@ -382,7 +479,7 @@
               z-index: 1;
               border: 0px;
               margin-left: 2px;
-              background:url(#{$image-path}/dropup.svg) 10px 16px no-repeat; 
+              background:url(#{$image-path}/dropup.svg) 10px 14px no-repeat; 
               @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
                 height: 25px;              
                 background:url(#{$image-path}/dropup.svg) 0px 14px no-repeat;  
@@ -406,7 +503,7 @@
             z-index: 1;
             border: 0px;
             margin-left: 2px;
-            background:url(#{$image-path}/dropdw.svg) 10px 16px no-repeat;  
+            background:url(#{$image-path}/dropdw.svg) 10px 14px no-repeat;  
             @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
               height: 25px;              
               background:url(#{$image-path}/dropup.svg) 0px 0px no-repeat;  
@@ -446,9 +543,11 @@
         }
       }
 
-      .mega_menu_wrapper{
-        padding-left: 70px;
-        padding-right: 70px;
+      .mega_menu_wrapper{        
+        padding:0px 70px;
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+          padding:0px;
+        }
         .cmp-sub-description{
           font-weight: $font-weight-300;
           font-size: $font-size-38;
@@ -458,6 +557,9 @@
           width: 295px;
           height: 138px;
           left: 70px;
+          @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+            display: none;
+          }
         }
 
         .inner-mg-menu-wrapper{
@@ -474,11 +576,11 @@
                 background-color: transparent;
                 color: $color-dark-blue;                
                 opacity: 1; 
-                font-size: $font-size-24;              
+                font-size: $font-size-20;              
                 font-weight: $font-weight-300;
                 cursor: pointer;
                 &:after{
-                  background:url(#{$image-path}/submenunav.svg) 0px 11px no-repeat; 
+                  background:url(#{$image-path}/submenunav.svg) 0px 6px no-repeat; 
                   border: 0;
                   content: "";
                   height: 30px;

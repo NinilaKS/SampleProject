@@ -3,12 +3,22 @@
 	
 	<header class="bg-transparent cmp-header-var-trans">		
 		<nav
-        class="navbar navbar-expand-lg navbar-light cmp-transparent cmp-primary-menu-bar py-1 d-none d-sm-block d-md-block"
+        class="navbar navbar-expand-lg navbar-light cmp-transparent cmp-primary-menu-bar pt-0 pb-0 d-none d-sm-block d-md-block"
         id="cmp-bg-change"
       >
         <div class="container-fluid col-md-12 col-lg-12 col-xl-12 col-xxl-12 cmp-header-padding">
-          <div class="me-auto mb-2 mb-lg-0">
-              <sly data-sly-resource="${'languagenavigation' @ resourceType='dramix/components/languagenavigation'}"></sly>
+          <div class="me-auto mb-2 mb-lg-0">            
+            <div class="cmp-language-navigation">              
+              <ul class="list-group-item cmp-language-list">
+                <li class="list-group-item cmp-language-order"><span class="cmp-language-selected">English ( US )</span>  
+                  <ul class="list-group cmp-language-list-menu">
+                    <li><a class="list-group-item cmp-langauage-list-val" href="#">English ( US )</a></li>
+                    <li><a class="list-group-item cmp-langauage-list-val" href="#">English ( CA )</a></li>
+                    <li><a class="list-group-item cmp-langauage-list-val" href="#">Spanish ( MX )</a></li>
+                  </ul>     
+                </li>                        
+              </ul>
+            </div>
           </div>
           <div class="flex-shrink-1 d-flex cmp-top-header-right">
             <button type="button" class="cmp-top-bar-btn d-inline-flex">
@@ -18,7 +28,7 @@
                   alt="${'softwaretools' @ i18n}"
                 />
               </div>
-              <a href="${properties.softwareToolsLink}" class="cmp-top-bar-tools">${properties.softwareToolsLabel}</a>
+              <a href="#" class="cmp-top-bar-tools">Software tools</a>
             </button>
             <button type="button" class="cmp-top-bar-btn d-inline-flex">
               <div class="mb-icon">
@@ -27,7 +37,7 @@
                   alt="${'upcomingevents' @ i18n}"
                 />
               </div>
-              <a href="${properties.upcomingEventsLink}" class="cmp-top-bar-events">${properties.upcomingEventsLabel}</a>
+              <a href="#" class="cmp-top-bar-events">Upcoming Events</a>
             </button>
           </div>
         </div>
@@ -38,14 +48,14 @@
         id="cmp-bg-navbar"
       >
         <div class="container-fluid col-md-12 col-lg-12 col-xl-12 col-xxl-12 cmp-header-padding">
-          <!--/* logo, close-button and mobile menu */-->
+          <!-- logo, close-button and mobile menu -->
           <a class="d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none" href="#"><img
             src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbmail.svg"
             alt="${'email' @ i18n}"
           /></a>
-          <a class="navbar-brand logo-wrapper" href="${properties.headerLogoLink}">
+          <a class="navbar-brand logo-wrapper me-5" href="#">
             <img
-              src="${properties.headerLogo}"
+              src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/logo.png"
               alt="${'logo' @ i18n}"
             />
           </a>
@@ -83,14 +93,148 @@
               ></button>
             </div>
 
-            <!--/* main nav bar */-->
+            <!-- main nav bar -->
             <div class="offcanvas-body" id="offcanvasNavbarLight">
-            	<sly data-sly-resource="${'navigation' @ resourceType='dramix/components/navigation'}"></sly>
-              <!--/* main nav end */-->
+              <ul class="navbar-nav me-auto mb-2 mb-sm-0 cmp-navbar">
+                <li class="nav-item">
+                  <a href="#" class="nav-link" aria-current="page">Projects</a>
+                </li>
+                <li class="nav-item dropdown dropdown-hover dropdown-hover-toolbox  position-static">                  
+				          <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+					          data-bs-auto-close="outside"
+                    >Toolbox</a>					
+                  <!-- Dropdown mega menu -->
+                  <div
+                    class="dropdown-menu w-100"
+                    id="dropdownid"
+                    aria-labelledby="navbarDropdown"
+                    >
+                    <div class="container-fluid mega_menu_wrapper">
+                      <div class="row mt-5 mb-0">
+                        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
+                          <div class="cmp-sub-description">
+                            All the information is available in our toolbox
+                          </div>
+                        </div>
+                        <div
+                          class="col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
+                        >
 
-              <!--/* right side nav */-->
-              <!--/* full width search section */-->
-              <div class="search-section-wrapper bg-white" id="searchSection">
+                        <div class="row">
+
+                          <div class="col-md-4 col-lg-4">
+
+                          <ul
+                            class="list-group list-group-flush mega-menu-wrapper"
+                          >                        
+
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Softwares</a>                            
+                            </li>
+                            <li class="software-tab">
+                              <a class="list-group-item submenu-link" href="#">Certificates</a>                           
+                            </li>
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Expert Talks</a>                            
+                            </li>
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Whitepapers</a>                            
+                            </li>
+                            <li class="software-tab">
+                              <a  class="list-group-item submenu-link" href="#">Product datasheets</a>                            
+                            </li>
+                          </ul>
+
+                          </div>
+
+                          <div class="col-md-6 col-lg-6">
+                            <div class="cmp-megamenu-image d-none d-md-block d-sm-block d-lg-block d-xl-block d-xxl-block">
+                                <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/toolbox.png" alt="${'toolbox' @ i18n}" class="cmp-inner-image">    
+                            </div>
+                          </div>
+
+                          </div>
+
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Sustainability</a>
+                </li>
+                <li class="nav-item dropdown dropdown-hover dropdown-hover-solution position-static">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >Solutions</a>
+                  <!-- Dropdown mega menu -->
+                  <div
+                    class="dropdown-menu w-100"
+                    id="dropdownid"
+                    aria-labelledby="navbarDropdown"
+                    >
+                    <div class="container-fluid mega_menu_wrapper">
+                      <div class="row mt-5 mb-0">
+                        <div class="col-xs-12 col-md-6 col-lg-4 mb-3 mb-lg-0">
+                          <div class="cmp-sub-description ">
+                            All the information is available in our toolbox
+                          </div>
+                        </div>
+                        <div
+                          class="col-xs-12 col-md-6 col-lg-7 mb-3 mb-lg-0 inner-mg-menu-wrapper"
+                        >
+
+                          <div class="row">
+
+                            <div class="col-md-4 col-lg-4">                         
+                              
+                              <ul
+                              class="list-group list-group-flush mega-menu-wrapper cmp-list-group-solution-subnav"
+                               >                        
+
+                                  <li class="software-tab">
+                                    <a  class="list-group-item submenu-link" href="#" >Products</a>                            
+                                  </li>
+                                  <li class="software-tab">
+                                    <a class="list-group-item submenu-link" href="#" >Applications</a>                           
+                                  </li>
+                                  <li class="software-tab">
+                                    <a  class="list-group-item submenu-link" href="#" >Technology</a>                            
+                                  </li>                            
+                                </ul>
+                              
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+
+                              <div class="cmp-megamenu-image d-none d-md-block d-sm-block d-lg-block d-xl-block d-xxl-block">
+  
+                                  <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/submenusolution.svg" alt="${'submenusolution' @ i18n}" class="cmp-inner-image">
+      
+                              </div>
+                            </div>
+                          </div>                       
+                          </div>
+                        </div>                       
+                  </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Contact</a>
+                </li>
+              </ul>
+              <!-- main nav end -->
+
+              <!-- right side nav -->
+              <!-- full width search section -->
+              <div class="cmp-search-section-wrapper bg-white" id="searchSection">
                 <div class="container">
                   <div class="row my-4">
                     <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
@@ -113,10 +257,10 @@
                   </div>
                 </div>
               </div>
-              <div class="right-nav-wrapper">
+              <div class="cmp-right-nav-wrapper">
                 <button
                   type="button"
-                  class="btn cmp-top-bar-btn search-icon"
+                  class="btn cmp-top-bar-btn cmp-search-icon cmp-sticky-header-hide"
                   id="search-btn"
                 >
                    <img
@@ -126,7 +270,7 @@
                 </button>
 				        <button
                   type="button"
-                  class="btn cmp-top-bar-btn-hover search-icon"
+                  class="btn cmp-top-bar-btn-hover cmp-search-icon cmp-sticky-header-show"
                   id="search-btn"
                 >
                    <img
@@ -135,13 +279,13 @@
                   /> 				  
                 </button>
                 
-                <!--/* menu only visible in mobile */-->
+                <!-- menu only visible in mobile -->
                 <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
                   <img
                     src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/mbdocument.svg"
                     alt="${'document' @ i18n}"
                   />
-                  <a href="${properties.downloadsLink}">${properties.downloadsLabel}</a>
+                  <a href="#">Downloads</a>
                 </button>
                 <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
                   <div class="mb-icon">
@@ -150,7 +294,7 @@
                       alt="${'mbsoftwaretools' @ i18n}"
                     />
                   </div>
-                  <a href="${properties.softwareToolsLink}">${properties.softwareToolsLabel}</a>
+                  <a href="#">Software Tools</a>
                 </button>
                 <button type="button" class="cmp-top-bar-btn xtra-mb-menu">
                   <div class="mb-icon">
@@ -159,13 +303,13 @@
                       alt="${'upcomingevents' @ i18n}"
                     />
                   </div>
-                  <a href="${properties.upcomingEventsLink}">${properties.upcomingEventsLabel}</a>
+                  <a href="#">Upcoming Events</a>
                 </button>
-                <!--/* menu only visible in mobile end */-->
+                <!-- menu only visible in mobile end-->
 
                 <button
                   type="button"
-                  class="cmp-top-bar-btn cmp-file-box"
+                  class="cmp-top-bar-btn cmp-file-box cmp-sticky-header-hide"
                   id="file-box"
                 >
                   <img
@@ -175,7 +319,7 @@
                 </button>
                 <button
                   type="button"
-                  class="cmp-top-bar-btn-hover cmp-file-box"
+                  class="cmp-top-bar-btn-hover cmp-file-box cmp-sticky-header-show"
                   id="file-box"
                 >
                   <img
@@ -183,22 +327,22 @@
                     alt="${'filedocument' @ i18n}"
                   />
                 </button>
-                <!--/* menu only visible in mobile */-->
+                <!-- menu only visible in mobile-->
                 <div class="abt-faq">
                   <ul>
-                    <li><a href="${properties.aboutLink}">${properties.aboutLabel}</a></li>
-                    <li><a href="${properties.faqLink}">${properties.faqLabel}</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">FAQ</a></li>
                   </ul>
                 </div>
-                <!--/* menu only visible in mobile end */-->
+                <!-- menu only visible in mobile end-->
 
-                <!--/* menu only visible in mobile */-->
+                <!-- menu only visible in mobile-->
                   <div class="cmp-bottom-bar"></div>
-                <!--/* menu only visible in mobile end */-->
+                <!-- menu only visible in mobile end-->
 
                 <div class="cmp-button-wrapper">
-                  <a href="${properties.requestQuoteLink}" class="btn me-0 quote-btn">
-                    ${properties.requestQuoteLabel}
+                  <a href="#" class="btn me-0 quote-btn">
+                    Request a Quote
                   </a>
                 </div>
               </div>

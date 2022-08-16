@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
   //************* Banner list image */
   
   const UL=document.querySelectorAll(".list li");
-  const video =document.querySelectorAll(".list li video");
+  const video =document.querySelectorAll(".list li img");
   /*get the single list to add active class*/
      UL.forEach(li =>{
       li.addEventListener('mouseover',function(){
@@ -36,27 +36,6 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   
 });
-
-window.addEventListener("DOMContentLoaded", () => {
-
-// ******** search on click *********
- //const searchElement = document.getElementById('searchSection');
- // document.addEventListener('click', function(event) {
- //   searchElement.style.display = "block";
- //   searchElement.style.top = "100%";
-// });
-
-// ***** close search on click outside the element *******
- const ignoreClickOnMeElement = document.getElementById('searchSection');
- document.addEventListener('mouse', function(event) {
-     const isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
-   if (!isClickInsideElement) {
-     ignoreClickOnMeElement.style.display = 'none';
-   }
- });
-
-});
-
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -104,7 +83,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   function msOver() {
     const bgChangeTopbar= document.getElementById('cmp-bg-change');
-    const bgChangeNavbar= document.getElementById('cmp-bg-navbar');
+    const bgChangeNavbar= document.getElementById('cmp-bg-navbar');   
     
     if(bgChangeTopbar){
       bgChangeTopbar.classList.add('cmp-bg-change-top');
@@ -137,32 +116,44 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("DOMContentLoaded", () => {
 
-const ul = document.querySelector('ul.list-group');
-
-ul.addEventListener('click', e => {
-  e.preventDefault();
-  let li = e.target.closest('li a');
-  if (li) {
-    ul.querySelectorAll('li a').forEach(elm => elm.classList.remove('active'));
-    li.classList.add('active');
+  const links = document.querySelectorAll(".submenu-link");
+  for (var i = 0; i < links.length; i++) {
+    var link = links[i];
+    link.onclick = function() {
+      var prev = document.getElementsByClassName("active");
+      if (prev && prev[0]) {
+        prev[0].classList.remove("active");
+      }
+      this.classList.add("active");
+    };
   }
-});
 
 });
 
-// ******* Megamenu SOlution Navigation Submenu active********//
+
+// ******* Megamenu Sticky Header ********//
 
 window.addEventListener("DOMContentLoaded", () => {
 
-  const ul = document.querySelector('ul.cmp-list-group-solution-subnav');
-  
-  ul.addEventListener('click', e => {
-    e.preventDefault();
-    let li = e.target.closest('li a');
-    if (li) {
-      ul.querySelectorAll('li a').forEach(elm => elm.classList.remove('active'));
-      li.classList.add('active');
+const header  = document.getElementById('cmp-bg-navbar');
+
+addClassHeader = () => {
+    header.classList.add("cmp-sticky");
+}
+
+removeClassHeader = () => {
+    header.classList.remove("cmp-sticky");
+}
+
+window.addEventListener('scroll', function () {
+    let getScrollposition = window.scrollY;
+    if (getScrollposition > 0) {
+        addClassHeader();
+    } else {
+        removeClassHeader();
     }
-  });
-  
-  });
+});
+
+});
+
+

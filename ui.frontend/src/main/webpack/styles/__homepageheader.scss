@@ -58,14 +58,15 @@
 					color: $color-white;
 					h1{
 						color: $color-white;
-						font-size: $font-size-80;
+						font-size: $font-size-38;
 						letter-spacing: $letter-spacing-02;
+						font-family: $font-family-Bekaert-bold;
 					}					
 				}
 
 				.discribtion{
 					position: absolute;
-					bottom: 10%;
+					bottom: 24%;
 					left: 10%;
 					h4{
 						font-size: 15px;
@@ -115,6 +116,16 @@
 			z-index: 1;
 			object-fit: cover;
 		}
+
+		img{
+			position: absolute;
+			width: 100%;
+			height:100vh;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			object-fit: cover;
+		}
 	}
 
 
@@ -146,10 +157,11 @@
 				li{
 					width: 14%;					
 					border-right: none;					
-					height:auto;
-					&.active{						
-						width: 76%;
-						&__.discribtion{
+					height:100vh;	
+					
+					&.active{
+						width: 76%;						
+						.discribtion{							
 							h4{
 								display: flex;
 								#text{
@@ -161,14 +173,13 @@
 									font-size: 15px;
 								}
 							}							
-							&__.details{
+							.details{
 								display: flex;	
 							}
 						}
-					}
+					}			
 	
-					.discribtion{
-						display: none;						
+					.discribtion{										
 						h4{
 							#text{
 								display: none;								
@@ -177,23 +188,26 @@
 								font-size: 20px;
 								margin-left: 5px;
 							}		
-						}
-	
-						&.details{
-							display: flex;
+						}	
+						.details{
+							display: none;
 							width: 180px;							
 						}
 					}	
+
 					.title{						
 						color: $color-white;
 						width: 300px;
 						h1{
 							color: $color-white;
 							font-size: $font-size-48;
-							letter-spacing: $letter-spacing-02;
+							font-family: $font-family-Bekaert-bold;
+							letter-spacing: $letter-spacing-02;							
 						}					
 					}
+					
 				}
+				
 			}
 		}
 	}
