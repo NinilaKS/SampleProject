@@ -5,7 +5,9 @@
 	
 <ul class="list-group-item cmp-language-list">
 	<li class="list-group-item cmp-language-order">
-	<span data-sly-repeat="${languageNavigation.items}" data-sly-test="${itemList.first}" class="cmp-language-selected">${item.title}</span>  
+	<sly data-sly-list="${languageNavigation.items}">
+		<span data-sly-test="${itemList.first}" class="cmp-language-selected">${item.title}</span> 
+	</sly> 
 		<ul class="list-group cmp-language-list-menu" data-sly-list.item="${languageNavigation.items}">
 			<li><a class="list-group-item cmp-langauage-list-val" href="${item.URL}">${item.title}</a></li>
 		</ul>     
