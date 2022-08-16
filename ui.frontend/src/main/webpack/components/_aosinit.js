@@ -7,18 +7,24 @@
    section below that you would like to jump to.
 
    - Initating AOS Animation
-    
+   - project-dramix-container
    
 \*-------------------------------------------------*/
 /*-------------------------------------------*\
             Initating AOS Animation
 \*-------------------------------------------*/
-import  AOS  from 'aos';
+import AOS from 'aos';
 
 window.addEventListener("DOMContentLoaded", () => {
-    AOS.init({
-        disable: false,
-        startEvent: 'DOMContentLoaded',
 
+    const projectdramixcontainer = document.querySelector(".teasercards");
+    if (projectdramixcontainer) {
+        projectdramixcontainer.setAttribute('data-aos', 'zoom-out-left');
+        projectdramixcontainer.classList.add('aos-init');
+    }
+
+    AOS.init({
+        initClassName: "aos-init",
+        startEvent: "DOMContentLoaded",
     });
 });
