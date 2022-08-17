@@ -22,7 +22,8 @@
     .grey-background {
       background: $color-gray;
     }
-/*-------------------------------------------*\
+
+    /*-------------------------------------------*\
       Title text of soltuion component. 
 \*-------------------------------------------*/
     .cmp-left {
@@ -32,6 +33,25 @@
         line-height: $line-height-12;
         letter-spacing: $letter-spacing-2;
         color: $color-pure-cyan;
+        padding-bottom: 30px;
+
+        @media(min-width:1340px) and (max-width:1600px) {
+          max-width: 90%;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        @media(min-width:1601px) and (max-width:1800px) {
+          max-width: 80%;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        @media(min-width:1800px) {
+          max-width: 71%;
+          width: 100%;
+          margin: 0 auto;
+        }
       }
 
       .solution-div {
@@ -48,15 +68,36 @@
             padding: 20px;
             width: 100%;
           }
+
+          @media(min-width:1340px) and (max-width:1600px) {
+            max-width: 90%;
+            width: 100%;
+            margin: 0 auto;
+          }
+
+          @media(min-width:1601px) and (max-width:1800px) {
+            max-width: 80%;
+            width: 100%;
+            margin: 0 auto;
+          }
+
+          @media(min-width:1800px) {
+            max-width: 71%;
+            width: 100%;
+            margin: 0 auto;
+          }
+
         }
       }
     }
-/*-------------------------------------------*\
+
+    /*-------------------------------------------*\
       Left Side Challenges cards.
 \*-------------------------------------------*/
     .challenge-card-link {
       cursor: pointer;
       top: -15%;
+
       @media (min-width: $screen-lg-min) and (max-width: $screen-lg-l-min) {
         top: -5px;
       }
@@ -67,7 +108,7 @@
         background-color: $color-white;
         width: 70%;
         margin-bottom: 1px;
-       
+
 
         .challenge-head {
           font-weight: $font-weight-700;
@@ -92,14 +133,16 @@
 
       }
     }
-/*-------------------------------------------*\
+
+    /*-------------------------------------------*\
       Image Div with softwares text 
-\*-------------------------------------------*/    
+\*-------------------------------------------*/
 
     .image-bg-div {
       min-height: 400px;
       height: 600px;
       background-repeat: no-repeat;
+      background-size: cover;
 
       @media (max-width: $screen-md-min) {
         height: 100%;
@@ -133,7 +176,8 @@
         }
       }
     }
-/*-------------------------------------------*\
+
+    /*-------------------------------------------*\
       Right Side text cards.
 \*-------------------------------------------*/
     .cmp-card-cont {
@@ -167,8 +211,8 @@
           }
 
           .cmp-box-button {
-            .dark-btn-grey{
-              .cmp-button{
+            .dark-btn-grey {
+              .cmp-button {
                 width: 148px;
               }
             }
@@ -176,7 +220,8 @@
         }
       }
     }
-/*-------------------------------------------*\
+
+    /*-------------------------------------------*\
       Accordion for mobile responsive. 
 \*-------------------------------------------*/
     .solutions-accordion {
@@ -205,10 +250,11 @@
             }
           }
 
-          .accordion-button{
+          .accordion-button {
             &::after {
-            background-image: none;
-          }}
+              background-image: none;
+            }
+          }
         }
 
         .solutions-accordion-body {

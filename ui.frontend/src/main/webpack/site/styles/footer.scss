@@ -17,30 +17,36 @@
   font-family: $font-family-Bekaert-regular;
 
   .row {
-/*-------------------------------------------*\
+    &.cmp-footer-row {
+      padding: 7.625em 0;
+      border-top: 1px solid $color-light-gray;
+
+      /*-------------------------------------------*\
 Apps icon and logo
-\*-------------------------------------------*/    
-    .footer-bekaert-icon {
-      .footer-media-links {
-        .svg-middle-line {
-          margin: 0 30px;
+\*-------------------------------------------*/
+      .footer-bekaert-icon {
+        .footer-media-links {
+          .svg-middle-line {
+            margin: 0 30px;
+          }
         }
       }
-    }
-/*-------------------------------------------*\
+
+      /*-------------------------------------------*\
 Footer Links 
 \*-------------------------------------------*/
-    .footer-links {
-      .comp_footerLinks {
-        .comp_footerLinks-list {
-          .comp_footerLinks-list-item {
-            width: 29%;
+      .footer-links {
+        .comp_footerLinks {
+          .comp_footerLinks-list {
+            .comp_footerLinks-list-item {
+              width: 29%;
 
-            a {
-              font-weight: $font-weight-400;
-              font-size: $font-size-16;
-              line-height: $line-height-18;
-              color: $color-dark-blue;
+              a {
+                font-weight: $font-weight-400;
+                font-size: $font-size-16;
+                line-height: $line-height-18;
+                color: $color-dark-blue;
+              }
             }
           }
         }
