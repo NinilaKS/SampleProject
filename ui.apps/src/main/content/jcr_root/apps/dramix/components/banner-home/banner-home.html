@@ -15,19 +15,27 @@
 						<span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/BigPicto-Arrow.png" alt="${'Arrow' @ i18n}"></span>
 					</div>
 				</div> 
-				<!-- <video class="video" autoplay muted loop>
-					<source src="${item.video}" alt="${'bannervideo' @ i18n}" type="video/mp4">
-				</video> -->
-				 <!-- <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Sustainability_header_HP.png" alt="${'bannerimage' @ i18n}" class="img-fluid">			 -->
+				<div class="box video">
+					<video class="video" autoplay muted loop>
+						<source src="${item.video}" alt="${'bannervideo' @ i18n}" type="video/mp4">
+					</video>  
+				</div>
+				<div class="box img1">
+				  <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Sustainability_header_HP.png" alt="${'bannerimage' @ i18n}" class="img-fluid">
+				</div>		 
 	</li>
 </ul>
 
 </div>
  <div id="banner" data-sly-list="${banner.bannerDetails}">
-	 <!-- <video class="video" data-sly-test="${itemList.first && wcmmode.disabled}" autoplay muted loop id="bannersrc">
+	<div class="box video">
+	  <video class="video" data-sly-test="${itemList.first && wcmmode.disabled}" autoplay muted loop id="bannersrc">
 		<source src="${item.video}" alt="${'bannervideo' @ i18n}" type="video/mp4">
-	</video> -->
+	</video> 
+	</div>
+	<div class="box img2">
 	 <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/home-image.jpg" alt="${'bannerimage' @ i18n}" class="img-fluid"> 
+	</div>
 </div> 
 <sly data-sly-call="${templates.placeholder @ isEmpty = !banner.bannerDetails}"></sly>
 
