@@ -14,7 +14,6 @@
 
 
 .container-footer {
-  font-family: $font-family-Bekaert-regular;
 
   .row {
     &.cmp-footer-row {
@@ -42,6 +41,7 @@ Footer Links
               width: 29%;
 
               a {
+                font-family: $font-family-Bekaert-bold;
                 font-weight: $font-weight-400;
                 font-size: $font-size-16;
                 line-height: $line-height-18;

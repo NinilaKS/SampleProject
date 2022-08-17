@@ -19,8 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const projectdramixcontainer = document.querySelector(".teasercards");
     if (projectdramixcontainer) {
-        projectdramixcontainer.setAttribute('data-aos', 'zoom-out-left');
-        projectdramixcontainer.classList.add('aos-init');
+        projectdramixcontainer.setAttribute('data-aos', 'fade-up');
     }
 
     AOS.init({
