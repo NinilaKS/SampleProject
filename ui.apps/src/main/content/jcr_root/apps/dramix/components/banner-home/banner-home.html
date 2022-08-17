@@ -12,15 +12,16 @@
 					<h4><span id="number">01</span><span id="text">${item.subHeading}</span></h4>
 					<div class="details">
 						<p>${item.heading}</p>
+						<p>${item.video}</p>
 						<span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/BigPicto-Arrow.png" alt="${'Arrow' @ i18n}"></span>
 					</div>
 				</div> 
-				<div class="box video">
+				<div class="box video" data-sly-test.isFirst="${itemList.first}" data-video="${item.video}">
 					<video class="video" autoplay muted loop>
 						<source src="${item.video}" alt="${'bannervideo' @ i18n}" type="video/mp4">
 					</video>  
 				</div>
-				<div class="box img1">
+				<div class="box img1" data-sly-test="${!isFirst}" data-image="${item.video}">
 				  <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Sustainability_header_HP.png" alt="${'bannerimage' @ i18n}" class="img-fluid">
 				</div>		 
 	</li>
