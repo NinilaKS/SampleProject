@@ -15,40 +15,6 @@
 
 
 window.addEventListener("DOMContentLoaded", () => {
-
-  //************* Banner list image */
-  
-    const UL=document.querySelectorAll(".list li");
-    const video =document.querySelectorAll(".list li video");
-        /*get the single list to add active class*/
-           UL.forEach(li =>{
-            li.addEventListener('click',function(){
-                UL.forEach(l=>l.classList.remove('active'));
-                this.classList.add('active');
-
-                /*if list contain active class then get the src from child elemnt to push banner src*/
-                if(li.classList.contains("active")){
-                    let src=li.children[2];
-                     if(src.classList.contains('video')){
-                       document.getElementById('banner').innerHTML=` <video autoplay muted loop>
-                            <source src="720.MP4" type="video/mp4">    
-                         </video> `;
-                     }else if(src.classList.contains('img1')){
-                        document.getElementById('banner').innerHTML=`<img src="Asset/1.jpg"/>`;
-                     }else if(src.classList.contains('img2')){
-                        document.getElementById('banner').innerHTML=`<img src="Asset/2.jpg"/>`;
-                     }else{
-                        console.log(src)
-                     }
-                }
-            })
-
-          });
-  
-});
-
-
-window.addEventListener("DOMContentLoaded", () => {
   
   // ******* Megamenu onhover********//
   const targetToolbox = document.querySelectorAll(".dropdown-hover-menu");

@@ -21,22 +21,63 @@
 						<source src="${item.video}" alt="${'bannervideo' @ i18n}" type="video/mp4">
 					</video>  
 				</div>
-				<div class="box img1" data-sly-test="${!isFirst}" data-image="${item.video}">
-				  <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/Sustainability_header_HP.png" alt="${'bannerimage' @ i18n}" class="img-fluid">
-				</div>		 
+				<div class="box img${itemList.index}" data-sly-test="${!isFirst}">
+				</div>
 	</li>
 </ul>
 
 </div>
  <div id="banner" data-sly-list="${banner.bannerDetails}">
-	<div class="box video">
-	  <video class="video" data-sly-test="${itemList.first && wcmmode.disabled}" autoplay muted loop id="bannersrc">
+	<div class="box video" data-sly-test="${itemList.first}">
+	  <video class="video" autoplay muted loop id="bannersrc">
 		<source src="${item.video}" alt="${'bannervideo' @ i18n}" type="video/mp4">
 	</video> 
 	</div>
-	<div class="box img2">
+	<div class="box img${itemList.index}" data-sly-test="${!itemList.first}">
 	 <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/home-image.jpg" alt="${'bannerimage' @ i18n}" class="img-fluid"> 
 	</div>
 </div> 
 <sly data-sly-call="${templates.placeholder @ isEmpty = !banner.bannerDetails}"></sly>
+
+<sly data-sly-list="${banner.bannerDetails}"> 
+	<sly data-sly-test="${itemList.index==0}" data-sly-set.videoURL="${item.video}"></sly> 
+	<sly data-sly-test="${itemList.index==1}" data-sly-set.image1URL="${item.video}"></sly> 
+	<sly data-sly-test="${itemList.index==2}" data-sly-set.image2URL="${item.video}"></sly> 
+</sly>
+
+<script>
+
+window.addEventListener("DOMContentLoaded", () => {
+	
+//************* Banner list image */
+
+const UL=document.querySelectorAll(".list li");
+const video =document.querySelectorAll(".list li video");
+    /*get the single list to add active class*/
+       UL.forEach(li =>{
+        li.addEventListener('click',function(){
+            UL.forEach(l=>l.classList.remove('active'));
+            this.classList.add('active');
+
+            /*if list contain active class then get the src from child elemnt to push banner src*/
+            if(li.classList.contains("active")){
+                let src=li.children[2];
+                 if(src.classList.contains('video')){
+                   document.getElementById('banner').innerHTML=` <video autoplay muted loop>
+                        <source src="${videoURL @ context='uri'}" type="video/mp4">    
+                     </video> `;
+                 }else if(src.classList.contains('img1')){
+                    document.getElementById('banner').innerHTML=`<img src="${image1URL @ context='uri'}"/>`;
+                 }else if(src.classList.contains('img2')){
+                    document.getElementById('banner').innerHTML=`<img src="${image2URL @ context='uri'}"/>`;
+                 }else{
+                    console.log(src)
+                 }
+            }
+        })
+
+      });
+
+});
+</script>
 
