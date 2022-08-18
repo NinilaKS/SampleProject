@@ -1,5 +1,5 @@
 /*-------------------------------------------------*\
-   General style sheet for the Banner Component
+   General style sheet for the Header Banner Component
    
    Table of Contents
    If you conduct a Search on the page, type in the 
@@ -7,9 +7,15 @@
 
    - Banner Videos
    - Banner Animations
+   - Banner Edit Mode
+   - Banner Experience Fragment
    
 \*-------------------------------------------------*/
 
+
+/*-------------------------------------------*\
+       Homepage Banner
+\*-------------------------------------------*/
 
 .Homepage{
 	width: 100%;
@@ -31,7 +37,7 @@
 				width:20%;
 				height: 100vh;	
 				padding-bottom: 80px;
-				border-right: 1px solid hsla(0,0%,100%,.1);
+				border-right: 1px solid $color-light-white-transparent;
 				transition: 0.6s;
 				position: relative;
 				cursor: pointer;		
@@ -59,8 +65,7 @@
 					h1{
 						color: $color-white;
 						font-size: $font-size-38;
-						letter-spacing: $letter-spacing-02;
-						font-family: $font-family-Bekaert-bold;
+						letter-spacing: $letter-spacing-02;						
 					}					
 				}
 
@@ -69,10 +74,12 @@
 					bottom: 24%;
 					left: 10%;
 					h4{
-						font-size: 15px;
+						font-size: $font-size-16;
 						text-transform: uppercase;
 						color:$color-white;
+						font-weight: $font-weight-700;
 					}
+					
 				}
 
 				video{
@@ -92,8 +99,10 @@
 					}
 					p{
 						width: 130px;
-						font-size: 20px;
+						font-size: $font-size-20;
 						color: $color-white;
+						line-height: $line-height-20;
+						font-style: $font-style-normal;
 					}
 				}
 				.video{
@@ -145,7 +154,7 @@
 	}
 
 	/*-------------------------------------------*\
-       Mobile Banner Css
+       Mobile Banner
     \*-------------------------------------------*/
 
 	@media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
@@ -214,6 +223,9 @@
 
 }
 
+/*-----------------------------------------------------*\
+	Homepage Banner editor height set For Desktop view
+\*-----------------------------------------------------*/
 .Homepage {
   &.homepageedit{
 	&.cq-Editable-dom{		

@@ -5,14 +5,17 @@
    If you conduct a Search on the page, type in the 
    section below that you would like to jump to.
 
-   - Megamenu Submenu active change and hide
-   - Megamenu Toolboox on hover and solution on hover
-   - Homepage Header Banner slides
+  
+   - Megamenu Toolboox on hover and solution on hover  
    - Megamenu Search Box active and deactive
-   - 
+   - Megamenu Sticky
    
 \*-------------------------------------------------*/
 
+
+/*-------------------------------------------*\
+    Megamenu Onhover
+\*-------------------------------------------*/
 
 window.addEventListener("DOMContentLoaded", () => {
   
@@ -30,7 +33,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const bgChangeTopbar= document.getElementById('cmp-bg-change');
     const bgChangeNavbar= document.getElementById('cmp-bg-navbar');
     
-
     if(bgChangeTopbar){
       bgChangeTopbar.classList.add('cmp-bg-change-top');
       bgChangeTopbar.style.visibility='unset';
@@ -42,7 +44,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
    
   }
-
   
   function mtOut() {  
     const someElement= document.getElementById('cmp-bg-change');
@@ -60,26 +61,9 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
- // ******* Megamenu Toolbox Navigation Submenu active********//
-
-window.addEventListener("DOMContentLoaded", () => {
-
-  const links = document.querySelectorAll(".submenu-link");
-  for (var i = 0; i < links.length; i++) {
-    var link = links[i];
-    link.onclick = function() {
-      var prev = document.getElementsByClassName("active");
-      if (prev && prev[0]) {
-        prev[0].classList.remove("active");
-      }
-      this.classList.add("active");
-    };
-  }
-
-});
-
-
-// ******* Megamenu Sticky Header ********//
+/*-------------------------------------------*\
+    Megamenu Sticky Header
+\*-------------------------------------------*/
 
 window.addEventListener("DOMContentLoaded", () => {
 
