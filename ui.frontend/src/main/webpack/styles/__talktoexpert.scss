@@ -103,7 +103,7 @@
                     color: $color-white;
                     font-weight: $font-weight-300;
                     margin: 10px 0;
-                    line-height: 50px;
+                    line-height: $line-height-50;
                     width: 100%;
                     max-width: 70%;
                     margin: 10px auto;
@@ -213,7 +213,7 @@
     &.talk-to-expert-edit {
         height: 100%;
 
-        .row {
+        .cmp-contactbox-row {
             .bg-image {
                 height: 600px;
                 background-position: center top;
