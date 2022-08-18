@@ -115,13 +115,13 @@
 
                     // 1280px and 1549px
                     @media(min-width:$screen-xl-l-min) and (max-width:$screen-xll-a-min) {
-                        max-width: 50%;
+                        max-width: 61%;
                         margin: 10px 10px 10px 0;
                     }
 
                     // 1550px and 1920px
                     @media(min-width:$screen-xll-b-min) and (max-width:$screen-xll-c-min) {
-                        max-width: 50%;
+                        max-width: 60%;
                         margin: 10px 10px 10px 0;
                     }
 
@@ -139,6 +139,7 @@
                     width: 100%;
                     max-width: 70%;
                     margin: 20px auto;
+                    line-height: 23.46px;
 
                     // 1024px and 1150px
                     @media(min-width:$screen-lg-m-min) and (max-width:$screen-lg-la-min) {
@@ -191,7 +192,7 @@
 
                     .dark-btn {
                         .cmp-button {
-                            width: 163px;
+                            width: 173px;
 
                             .cmp-button__text {
                                 margin: auto 25px auto 20px;

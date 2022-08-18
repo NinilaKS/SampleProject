@@ -41,7 +41,7 @@ Footer Links
               width: 29%;
 
               a {
-                font-family: $font-family-Bekaert-bold;
+                font-family: $font-family-Bekaert-regular;
                 font-weight: $font-weight-400;
                 font-size: $font-size-16;
                 line-height: $line-height-18;
@@ -68,6 +68,7 @@ Blue copyright div bottom
     font-weight: $font-weight-400;
     font-size: $font-size-16;
     line-height: $line-height-18;
+    padding: 10px 0 11px 0;
 
     .middle-copyright-line {
       fill: $color-white;
