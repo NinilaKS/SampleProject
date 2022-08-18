@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-md-${colcontrol.columnCount} col-sm-12" data-sly-repeat="${colcontrol.list}">
 			<div class="column-inner">
-				<div data-sly-resource ="${itemList.count @ resourceType='core/wcm/components/container/v1/container'}"></div>
+				<div class="column-wrapper" data-sly-resource ="${itemList.count @ resourceType='core/wcm/components/container/v1/container'}"></div>
 			</div>
 		</div>
 	</div>

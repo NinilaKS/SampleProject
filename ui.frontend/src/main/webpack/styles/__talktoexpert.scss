@@ -1,15 +1,31 @@
+/*-------------------------------------------------*\
+   General style sheet for the Talk to Expert
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Talk to Expert
+   - UI - AEM Editable Sections
+   
+\*-------------------------------------------------*/
+/*-------------------------------------------*\
+        Talk to Expert
+\*-------------------------------------------*/
+
 .cmp-contactbanner {
     margin: 0 auto;
-    // height: 100vh;
+    padding-bottom: 7.625em;
 
     .bg-image {
-        height: 70vh;
+        height: 95vh;
         background-position: center top;
         background-attachment: scroll;
         background-size: cover;
         background-repeat: no-repeat;
 
-        @media(max-width:767px) {
+        // 768px
+        @media(max-width:$screen-md-min) {
             height: 25vh;
         }
     }
@@ -18,62 +34,99 @@
         position: relative;
         height: 200px;
 
+        // 768px
+        @media(max-width:$screen-md-min) {
+            height: auto;
+        }
+
         .cmp-box-inner {
             position: absolute;
             top: -20rem;
-            right: 10rem;
+            right: 5rem;
+            background: $color-background-red;
 
-            @media(max-width:767px) {
+            // 768px
+            @media(max-width:$screen-md-min) {
                 position: static;
                 padding: 0;
             }
 
-            @media(min-width:768px) and (max-width:1024px) {
+            // 768px and 1024px
+            @media(min-width:$screen-md-min) and (max-width:$screen-lg-m-min) {
                 position: static;
                 padding: 0;
                 width: 100%;
             }
 
             .cmp-card-contact {
-                background: #FE5000;
+                background: $color-background-red;
                 display: grid;
                 padding: 3em;
 
-                @media(min-width:1280px) and (max-width:1549px) {
+                // 1373px and 1549px
+                @media(min-width:$screen-xl-la-min) and (max-width:$screen-xll-a-min) {
                     padding: 4em 3em;
                     grid-gap: 1em;
+                    width: 100%;
+                    max-width: 70%;
+                    margin: 0 auto;
                 }
 
-                @media(min-width:1550px) and (max-width:1920px) {
+                // 1280px and 1373px
+                @media(min-width:$screen-xl-l-min) and (max-width:$screen-xl-la-min) {
+                    padding: 4em 3em;
+                    grid-gap: 1em;
+                    width: 100%;
+                    max-width: 85%;
+                    margin: 0 auto;
+                }
+
+                // 1550px and 1920px
+                @media(min-width:$screen-xll-b-min) and (max-width:$screen-xll-c-min) {
                     padding: 4em;
                     grid-gap: 1.5em;
+                    width: 100%;
+                    max-width: 70%;
+                    margin: 0 auto;
+                }
+
+                // 1921px
+                @media(min-width:$screen-xll-d-min) {
+                    padding: 6em 3em;
+                    width: 100%;
+                    max-width: 70%;
+                    margin: 0 auto;
                 }
 
                 h4 {
-                    font-size: 38px;
+                    font-size: $font-size-38;
                     color: $color-white;
-                    font-weight: 300;
+                    font-weight: $font-weight-300;
                     margin: 10px 0;
                     line-height: 50px;
                     width: 100%;
                     max-width: 70%;
                     margin: 10px auto;
 
-                    @media(min-width:1024px) and (max-width:1150px) {
+                    // 1024px and 1150px
+                    @media(min-width:$screen-lg-m-min) and (max-width:$screen-lg-la-min) {
                         max-width: 80%;
                     }
 
-                    @media(min-width:1280px) and (max-width:1549px) {
+                    // 1280px and 1549px
+                    @media(min-width:$screen-xl-l-min) and (max-width:$screen-xll-a-min) {
                         max-width: 50%;
                         margin: 10px 10px 10px 0;
                     }
 
-                    @media(min-width:1550px) and (max-width:1920px) {
+                    // 1550px and 1920px
+                    @media(min-width:$screen-xll-b-min) and (max-width:$screen-xll-c-min) {
                         max-width: 50%;
                         margin: 10px 10px 10px 0;
                     }
 
-                    @media(min-width:1921px) {
+                    // 1921px
+                    @media(min-width:$screen-xll-d-min) {
                         max-width: 45%;
                         margin: 10px 10px 10px 0;
                     }
@@ -81,27 +134,31 @@
 
                 p {
                     color: $color-white;
-                    font-size: 16px;
-                    font-weight: 400;
+                    font-size: $font-size-16;
+                    font-weight: $font-weight-400;
                     width: 100%;
                     max-width: 70%;
                     margin: 20px auto;
 
-                    @media(min-width:1024px) and (max-width:1150px) {
+                    // 1024px and 1150px
+                    @media(min-width:$screen-lg-m-min) and (max-width:$screen-lg-la-min) {
                         max-width: 80%;
                     }
 
-                    @media(min-width:1280px) and (max-width:1549px) {
+                    // 1280px and 1549px
+                    @media(min-width:$screen-xl-l-min) and (max-width:$screen-xll-a-min) {
                         margin: 10px 10px 10px 0;
                         max-width: 100%;
                     }
 
-                    @media(min-width:1550px) and (max-width:1920px) {
+                    // 1550px and 1920px
+                    @media(min-width:$screen-xll-b-min) and (max-width:$screen-xll-c-min) {
                         margin: 10px 10px 10px 0;
                         max-width: 100%;
                     }
 
-                    @media(min-width:1921px) {
+                    // 1921px
+                    @media(min-width:$screen-xll-d-min) {
                         max-width: 100%;
                     }
                 }
@@ -111,20 +168,24 @@
                     width: 100%;
                     max-width: 70%;
 
-                    @media(min-width:1024px) and (max-width:1150px) {
+                    // 1024px and 1150px
+                    @media(min-width:$screen-lg-m-min) and (max-width:$screen-lg-la-min) {
                         max-width: 80%;
                     }
 
-                    @media(min-width:1280px) and (max-width:1549px) {
+                    // 1280px and 1549px
+                    @media(min-width:$screen-xl-l-min) and (max-width:$screen-xll-a-min) {
                         margin: 10px 10px 10px 0;
                     }
 
-                    @media(min-width:1550px) and (max-width:1920px) {
+                    // 1550px and 1920px
+                    @media(min-width:$screen-xll-b-min) and (max-width:$screen-xll-c-min) {
                         max-width: 100%;
                         margin: 10px 10px 10px 0;
                     }
 
-                    @media(min-width:1921px) {
+                    // 1921px
+                    @media(min-width:$screen-xll-d-min) {
                         margin: 10px 10px 10px 0;
                     }
 
@@ -142,6 +203,10 @@
         }
     }
 }
+
+/*-------------------------------------------*\
+    UI - AEM Editable Sections
+\*-------------------------------------------*/
 
 .cmp-contactbanner {
     &.talk-to-expert-edit {

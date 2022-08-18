@@ -24,7 +24,8 @@ $color-link-dark: invert($color-link);
 
 // Font Family Type
 
-$font-family-roboto: "Roboto", sans-serif;
+$font-family-roboto: "Roboto",
+sans-serif;
 $font-family-robotoLight: "Roboto-Light";
 $font-family-robotoItalic: "Roboto-Italic";
 $font-family-robotoBold: "Roboto-Bold";
@@ -91,6 +92,7 @@ $screen-md-min: 768px;
 $screen-lg-min: 992px;
 // Tablets and small desktops
 $screen-lg-l-min: 1199px;
+$screen-lg-la-min: 1150px;
 // Tablets and small desktops
 $screen-lg-m-min: 1024px;
 // Tablets and small desktops
@@ -99,5 +101,19 @@ $screen-lg-x-min: 1023px;
 $screen-xl-min: 1200px;
 // Large tablets and desktops
 $screen-xl-l-min: 1280px;
+$screen-xl-la-min: 1373px;
 // Large Screen
 $screen-xll-min: 1400px;
+$screen-xll-a-min: 1549px;
+$screen-xll-b-min: 1550px;
+$screen-xll-c-min: 1920px;
+$screen-xll-d-min: 1921px;
+
+// Font Style
+$font-style-normal: normal;
+
+// Buttons border
+$color-dark-blue-II: rgba(4, 42, 75, 0.2);
+$color-regal-blue-II: rgba(14, 63, 107, 0.2);
+$color-white-II: rgba(255, 255, 255, 0.2);
+$color-grey-II: rgba(111, 111, 111, 0.2);
