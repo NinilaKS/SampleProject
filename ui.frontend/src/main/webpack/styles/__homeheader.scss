@@ -102,7 +102,7 @@
                   height: 26px;
                   position: absolute;
                   width: 20px;
-                  right: 8px;
+                  right: -1px;
                   top: 9px;
                   z-index: 999;
                   background:url(#{$image-path}/dropup.svg) 0px 0px no-repeat; 
@@ -113,7 +113,7 @@
                 height: 26px;
                 position: absolute;
                 width: 20px;
-                right: -9px;
+                right: -24px;
                 top: 8px;
                 z-index: 999;
                 background:url(#{$image-path}/languagedropdw.svg) 0px 0px no-repeat; 

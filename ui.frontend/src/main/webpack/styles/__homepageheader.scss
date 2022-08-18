@@ -214,3 +214,10 @@
 
 }
 
+.Homepage {
+  &.homepageedit{
+	&.cq-Editable-dom{		
+		height: 100%;
+	}
+  }
+}

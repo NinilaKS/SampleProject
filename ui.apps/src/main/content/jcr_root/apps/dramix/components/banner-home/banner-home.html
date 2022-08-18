@@ -54,7 +54,7 @@ const UL=document.querySelectorAll(".list li");
 const video =document.querySelectorAll(".list li video");
     /*get the single list to add active class*/
        UL.forEach(li =>{
-        li.addEventListener('click',function(){
+        li.addEventListener('mouseover',function(){
             UL.forEach(l=>l.classList.remove('active'));
             this.classList.add('active');
 
