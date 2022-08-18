@@ -11,8 +11,7 @@
 				<div class="discribtion">
 					<h4><span id="number">01</span><span id="text">${item.subHeading}</span></h4>
 					<div class="details">
-						<p>${item.heading}</p>
-						<p>${item.video}</p>
+						<p>${item.heading}</p>						
 						<span><img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/BigPicto-Arrow.png" alt="${'Arrow' @ i18n}"></span>
 					</div>
 				</div> 
@@ -20,7 +19,7 @@
 					<video class="video" autoplay muted loop>
 						<source src="${item.video}" alt="${'bannervideo' @ i18n}" type="video/mp4">
 					</video>  
-				</div>
+				</div>				
 				<div class="box img${itemList.index}" data-sly-test="${!isFirst}">
 				</div>
 	</li>
@@ -32,9 +31,9 @@
 	  <video class="video" autoplay muted loop id="bannersrc">
 		<source src="${item.video}" alt="${'bannervideo' @ i18n}" type="video/mp4">
 	</video> 
-	</div>
+	</div>	
 	<div class="box img${itemList.index}" data-sly-test="${!itemList.first}">
-	 <img src="/etc.clientlibs/dramix/clientlibs/clientlib-site/resources/images/home-image.jpg" alt="${'bannerimage' @ i18n}" class="img-fluid"> 
+		
 	</div>
 </div> 
 <sly data-sly-call="${templates.placeholder @ isEmpty = !banner.bannerDetails}"></sly>
@@ -45,7 +44,7 @@
 	<sly data-sly-test="${itemList.index==2}" data-sly-set.image2URL="${item.video}"></sly> 
 </sly>
 
-<script>
+<script type="text/javascript">
 
 window.addEventListener("DOMContentLoaded", () => {
 	
@@ -63,13 +62,11 @@ const video =document.querySelectorAll(".list li video");
             if(li.classList.contains("active")){
                 let src=li.children[2];
                  if(src.classList.contains('video')){
-                   document.getElementById('banner').innerHTML=` <video autoplay muted loop>
-                        <source src="${videoURL @ context='uri'}" type="video/mp4">    
-                     </video> `;
+                   document.getElementById('banner').innerHTML=`<video autoplay muted loop <source src='${videoURL @ context='uri'}' type="video/mp4"></video>`;
                  }else if(src.classList.contains('img1')){
-                    document.getElementById('banner').innerHTML=`<img src="${image1URL @ context='uri'}"/>`;
+                    document.getElementById('banner').innerHTML=`<img src=\"${image1URL @ context='uri'}"\ />`;
                  }else if(src.classList.contains('img2')){
-                    document.getElementById('banner').innerHTML=`<img src="${image2URL @ context='uri'}"/>`;
+                    document.getElementById('banner').innerHTML=`<img src=\"${image2URL @ context='uri'}"\ />`;
                  }else{
                     console.log(src)
                  }
@@ -80,4 +77,5 @@ const video =document.querySelectorAll(".list li video");
 
 });
 </script>
+
 

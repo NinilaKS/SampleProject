@@ -60,6 +60,9 @@
               padding: 0px;
               margin:0px;
               border:0px;
+              font-size: $font-size-16;
+              font-weight: $font-weight-300;
+              font-style: $font-style-normal;
               .cmp-language-list-menu{
                 position: absolute;
                 z-index: 10000;
@@ -70,26 +73,27 @@
                 margin: 0;
                 padding: 0;
                 .cmp-langauage-list-val{
-                  padding: 10px 22px 10px 11px;
-                  width: 141px;
-                  border:1px solid $color-light-gray;                  
+                  padding: 0px;
+                  width: 141px;                                 
                   a{                   
                     color: $color-dark-gray;
                     display: block;
                     text-decoration: none;
-                    border-right: 0;
-                    font-family: $font-family-Bekaert-regular;
+                    border-right: 0;                    
+                    font-size: $font-size-16;
+                    font-weight: $font-weight-300;
+                    font-style: $font-style-normal;
+                    border-bottom:1px solid $color-light-gray; 
+                    padding: 10px;                    
                   }
-                }
-                .selected{
-                  font-family: $font-family-Bekaert-regular;                
-                }                
+                }                            
               }
               &:hover{
                 padding: 0px 10px 0px 10px;
                 width: 141px;                       
                 background-color: $color-white;
                 color: $color-dark-blue;
+                cursor: pointer;
                 .cmp-language-list-menu{
                   display: block;
                 }
@@ -134,7 +138,7 @@
       color: $color-white;               
       .cmp-top-bar-tools{
         font-size: $font-size-16;
-        font-weight: $font-weight-400;
+        font-weight: $font-weight-400;        
         color: $color-white;
         text-decoration: none;
         padding-left: 10px;
@@ -142,6 +146,7 @@
       .cmp-top-bar-events{
         font-size: $font-size-16;
         font-weight: $font-weight-400;
+        
         color: $color-white;
         text-decoration: none;
         padding-left: 10px;
@@ -182,7 +187,7 @@
         margin-right: 3em;
         border-left: 0px;
         border-right: 0px;
-        padding: 9px;
+        padding: 26px 9px 0px 30px;
         border-bottom: 0px solid $color-dark-blue;
         border-top: 0px;
       }
@@ -194,6 +199,8 @@
           border-left: 0px;
           border-right: 0px;
           border-radius: 0px;
+          margin-left: -20px;
+          z-index: -1;
         }
       }
 
@@ -214,7 +221,7 @@
         grid-gap:1em;
         padding-left: 0px;
         text-align: left;
-        padding: 20px 20px;             
+        padding: 20px 30px;             
       }
 
       &:focus{
@@ -225,6 +232,7 @@
           margin-bottom: 0px;
           font-size: $font-size-16;
           font-weight: $font-weight-400;
+          font-family: $font-family-Bekaert-heading-regular;
           color: $color-dark-blue;
           text-decoration: none; 
         }
@@ -238,12 +246,15 @@
         grid-template-columns: auto 1fr;
         align-items: center;
         grid-gap:1em;        
-        padding: 0.5em 1em;
+        padding: 20px 30px;
       }
       a{
         @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
           text-decoration: none;
-          font-size: 25px;
+          font-size: $font-size-16;
+          font-weight: $font-weight-400;
+          line-height: $line-height-18;
+          font-family: $font-family-Bekaert-heading-regular;
           color: $color-dark-gray;          
         }
       }
@@ -267,8 +278,7 @@
         grid-gap: 1em;
         align-items: center;
         display: grid;
-        grid-template-columns: auto 1fr;
-        padding: 0.5em 1em;
+        grid-template-columns: auto 1fr;        
         width: 100%;
       }
     }
@@ -281,12 +291,12 @@
     .quote-btn{
       border: 1px solid $color-white;
       color: $color-white;
-      font-family: $font-family-Bekaert-regular;
+      
       @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
         color: $color-dark-blue;
         font-size: $font-size-16;
         font-weight: $font-weight-700;
-        font-family: $font-family-Bekaert-bold;
+        font-family: $font-family-Bekaert-heading-bold;
         border: 1px solid $color-light-gray;
         width: 100%;
         padding-top: 20px;
@@ -311,13 +321,19 @@
       @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
         flex-direction: column;
         align-items: flex-start;
-        align-content: flex-start;
+        align-content: flex-start;        
       }
       .cmp-search-icon{
         padding-right:30px;
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+          display: none;
+        }
       }     
       .cmp-file-box{
         padding-right:30px;
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+          display: none;
+        }
       }
     }
     
@@ -327,38 +343,48 @@
 
     .cmp-secondary-menu-bar{
       z-index: 1020;
+      @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
+        padding: 0px;
+      }
       .cmp-header-padding{
         padding:0px 70px;
         @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
           padding: 0px 20px;
           justify-content: space-around;
-          border-bottom: 1px solid hsl(208deg 90% 15% / 20%);
+          border-bottom: 1px solid rgb(255 255 255 / 96%);
         }  
       }
 
       .logo-wrapper{
         padding-right: 48px;
         @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
-          border-right: 1px solid hsl(208deg 90% 15% / 20%);
-          border-left: 1px solid hsl(208deg 90% 15% / 20%);
+          border-right: 1px solid rgb(255 255 255 / 96%);
+          border-left: 1px solid rgb(255 255 255 / 96%);
           padding-left: 10%;
           padding-right: 10%;
+          padding-top: 10px;
+          padding-bottom: 10px;
         }
       }
 
       .offcanvas-header{
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
+          padding: 0px;
+        }
         .btn-close{
           @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){            
               content: "";
               position: absolute;         
-              height: 25px;             
-              width: 25px;
+              height: 15px;             
+              width: 40px;
               z-index: 1;
               border: 0px;
               margin-left: 2px;
-              right: 21px;
-              background:url(#{$image-path}/mbclose.svg) 8px 9px no-repeat;          
+              right: 0px;
+              padding: 26px;
+              background:url(#{$image-path}/mbclose.svg) 25px 18px no-repeat;          
               background-size: 35px;
+              border: 1px solid $color-light-gray;
           }
         }        
       }
@@ -369,7 +395,7 @@
         }
         .cmp-button-wrapper{
           @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){ 
-            padding: 1em;
+            padding: 30px 31px 30px 31px;
             width: 100%;
           }
         }
@@ -405,7 +431,7 @@
           }
         }        
         .dropdown{        
-          .dropdown-toggle
+          .dropdown-hover-icon
           {
             &:after {
               content: "";
@@ -416,13 +442,17 @@
               z-index: 1;
               border: 0px;
               margin-left: 2px;
-              background:url(#{$image-path}/dropdwsticky.svg) 10px 14px no-repeat; 
+              background:url(#{$image-path}/dropdwsticky.svg) 10px 14px no-repeat;
+              @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+                background:url(#{$image-path}/dropdwsticky.svg) 10px 4px  no-repeat;
+                width: 50px;
+              }
             }
           }
         } 
         .dropdown-hover{        
           &:hover{
-            .dropdown-toggle
+            .dropdown-hover-icon
             {
               &:after {
                 content: "";
@@ -432,7 +462,7 @@
                 z-index: 1;
                 border: 0px;
                 margin-left: 2px;
-                background:url(#{$image-path}/dropup.svg) 10px 14px no-repeat;      
+                background:url(#{$image-path}/dropup.svg) 10px 14px no-repeat;    
               }  
             }     
           }
@@ -443,6 +473,9 @@
       }
       .cmp-sticky-header-show{
         display: block;
+        @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+          display: none;
+        }
       }
       .quote-btn{
         border: 1px solid $color-dark-blue;
@@ -492,25 +525,31 @@
 
       @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
         position: relative;
-        padding: 1em 1em;
+        padding: 56px 30px 0px 30px;
+        grid-gap: 0px;
       }
 
       .nav-item{        
         a{
-          color: $color-white;
-          font-family: $font-family-Bekaert-regular;
+          color: $color-white;          
           font-size: $font-size-20;
           font-weight: $font-weight-300;
+          font-style: $font-style-normal;
           @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
             color: $color-dark-blue;
-            font-size: $font-size-20;
+            font-size: $font-size-24;
             font-weight: $font-weight-300;
           }
         }
         .submenu-link {
           color: $color-dark-blue;
           opacity: 0.5;
-          cursor: pointer;          
+          cursor: pointer; 
+          @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+            font-size: $font-size-16;            
+            font-weight: $font-weight-400;
+            line-height: $line-height-18;
+          }
         }
         .dropdown-menu {          
           transition: all .3s;
@@ -536,7 +575,7 @@
             margin-top: -14px;
             margin-left: -1px;            
           } 
-          .dropdown-toggle
+          .dropdown-hover-icon
           {
             &:after {
               content: "";
@@ -548,8 +587,9 @@
               margin-left: 2px;
               background:url(#{$image-path}/dropup.svg) 10px 14px no-repeat; 
               @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
-                height: 25px;              
-                background:url(#{$image-path}/dropup.svg) 0px 14px no-repeat;  
+                height: 25px;
+                width:50px;             
+                background:url(#{$image-path}/dropup.svg) 19px 15px no-repeat;  
                 transform: rotate(0deg);                   
               }         
             }  
@@ -559,7 +599,7 @@
       }
 
       .dropdown{        
-        .dropdown-toggle
+        .dropdown-hover-icon
         {
           &:after {
             content: "";
@@ -572,8 +612,9 @@
             margin-left: 2px;
             background:url(#{$image-path}/dropdw.svg) 10px 14px no-repeat;  
             @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
-              height: 25px;              
-              background:url(#{$image-path}/dropup.svg) 0px 0px no-repeat;  
+              width: 50px;
+              height: 25px;           
+              background:url(#{$image-path}/dropup.svg) 0px 5px no-repeat;  
               transform: rotate(180deg);   
             }
           }
@@ -611,16 +652,16 @@
       }
 
       .mega_menu_wrapper{        
-        padding:0px 70px;
+        padding:0px 0px 0px 70px;
         @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
           padding:0px;
         }
         .cmp-sub-description{
           font-weight: $font-weight-300;
-          font-size: $font-size-38;
+          font-size: $font-size-32;
           line-height: $line-height-50;        
           letter-spacing: -0.02em;
-          color: $color-dark-blue;
+          color: $color-dark-blue;          
           width: 295px;
           height: 138px;
           left: 70px;
@@ -646,6 +687,12 @@
                 font-size: $font-size-20;              
                 font-weight: $font-weight-300;
                 cursor: pointer;
+                @media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+                  font-size: $font-size-16;
+                  font-weight: $font-weight-400;
+                  line-height: $line-height-18;
+                  color: $color-black;
+                }
                 &:after{
                   background:url(#{$image-path}/submenunav.svg) 0px 6px no-repeat; 
                   border: 0;
