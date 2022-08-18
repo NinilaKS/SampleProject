@@ -62,7 +62,7 @@ const video =document.querySelectorAll(".list li video");
             if(li.classList.contains("active")){
                 let src=li.children[2];
                  if(src.classList.contains('video')){
-                   document.getElementById('banner').innerHTML=`<video autoplay muted loop <source src='${videoURL @ context='uri'}' type="video/mp4"></video>`;
+                   document.getElementById('banner').innerHTML=`<div class="first-item"></div>`;
                  }else if(src.classList.contains('img1')){
                     document.getElementById('banner').innerHTML=`<img src=\"${image1URL @ context='uri'}"\ />`;
                  }else if(src.classList.contains('img2')){
