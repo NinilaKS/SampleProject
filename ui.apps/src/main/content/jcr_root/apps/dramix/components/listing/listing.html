@@ -113,21 +113,24 @@
       </div>
   </div>
   <div class="row">
-      <div class="col-12 listing-top-div d-flex mb-3">
+    <sly data-sly-use.listing="com.adobe.dramix.core.models.Listing"/>
+    <sly data-sly-list.result="${listing.fetchResults}">
+      <sly data-sly-test="${itemList.first}">  
+      <div class="${result.cssClass}">
           <div class="row">
-              <div class="col-sm-12 col-md-6"><img class="image-top-div" src="./Picture (2).png" alt=""></div>
+              <div class="col-sm-12 col-md-6"><img class="image-top-div" src="${result.imageUrl}" alt=""></div>
               <div class="col-sm-12 col-md-6">
                   <div class="cmp-teaser__content">
                       <h3 class="cmp-teaser__title">
-                          Sustainability Calculator
+                          ${result.title}
                       </h3>
                       <div class="cmp-teaser__description">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                          <p>${result.desc}</p>
                       </div>
 
                       <hr class="teaser-horz-line opacity-100">
                       <div class="button no-btn-grey">
-                          <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#"
+                          <a id="button-bd16164041" class="btn cmp-button rounded-0" href="${result.destUrl}"
                               data-cmp-clickable=""
                               data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
 
@@ -143,19 +146,21 @@
               </div>
           </div>
       </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (3).png" alt=""></div>
+      </sly>
+      <sly data-sly-test="${!itemList.first}">  
+      <div class="${result.cssClass}">
+          <div class="small-image"><img class="small-image-class" src="${result.imageUrl}" alt=""></div>
           <div class="image-description">
               <div class="cmp-teaser__content">
                   <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
+                    ${result.title} </h3>
                   <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                      <p>${result.desc}</p>
                   </div>
 
                   <hr class="teaser-horz-line opacity-100">
                   <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
+                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="${result.destUrl}" data-cmp-clickable=""
                           data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
 
                           <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
@@ -169,345 +174,7 @@
               </div>
           </div>
       </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (4).png" alt=""></div>
-          <div class="image-description">
-              <div class="cmp-teaser__content">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (5).png" alt=""></div>
-          <div class="image-description">
-              <div class="cmp-teaser__content">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (6).png" alt=""></div>
-          <div class="image-description">
-              <div class="cmp-teaser__content">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-
-      <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-div-details"><img class="small-image-class" src="./Picture (7).png" alt=""></div>
-          <div class="image-description">
-              <div class="cmp-teaser__content">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 listing-small-div listing-medium-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (8).png" alt=""></div>
-          <div class="image-description row">
-              <div class="cmp-teaser__content col-md-12 col-lg-6">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (9).png" alt=""></div>
-          <div class="image-description">
-              <div class="cmp-teaser__content">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (10).png" alt=""></div>
-          <div class="image-description">
-              <div class="cmp-teaser__content">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (11).png" alt=""></div>
-          <div class="image-description">
-              <div class="cmp-teaser__content">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (12).png" alt=""></div>
-          <div class="image-description">
-              <div class="cmp-teaser__content">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (13).png" alt=""></div>
-          <div class="image-description">
-              <div class="cmp-teaser__content">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 listing-small-div listing-medium-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (14).png" alt=""></div>
-          <div class="image-description row">
-              <div class="cmp-teaser__content col-md-12 col-lg-6">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (15).png" alt=""></div>
-          <div class="image-description">
-              <div class="cmp-teaser__content">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 listing-small-div mb-3">
-          <div class="small-image"><img class="small-image-class" src="./Picture (16).png" alt=""></div>
-          <div class="image-description">
-              <div class="cmp-teaser__content">
-                  <h3 class="cmp-teaser__title">
-                      it amet odio scelerisque, et posuere ligula eleifend senulla ligula </h3>
-                  <div class="cmp-teaser__description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                  </div>
-
-                  <hr class="teaser-horz-line opacity-100">
-                  <div class="button no-btn-grey">
-                      <a id="button-bd16164041" class="btn cmp-button rounded-0" href="#" data-cmp-clickable=""
-                          data-cmp-data-layer="{&quot;button-bd16164041&quot;:{&quot;@type&quot;:&quot;dramix/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2022-07-27T08:27:14Z&quot;,&quot;dc:title&quot;:&quot;Learn More&quot;,&quot;xdm:linkURL&quot;:&quot;/#&quot;}}">
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-left">
-
-                          <span class="cmp-button__text">Learn More</span>
-
-                          <img src="./Dark_Arrow.png" alt="Button Icon" class="cmp-button__icon arrow-right">
-                      </a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
+      </sly>
+     </sly>
   </div>
 </div>
