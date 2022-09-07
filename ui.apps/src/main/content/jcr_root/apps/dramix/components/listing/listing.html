@@ -1,4 +1,4 @@
-<div class="container cmp-product-listing-dramix">
+<div class="container cmp-product-listing-dramix"  data-sly-use.listing="com.adobe.dramix.core.models.Listing">
   <div class="row filter-container">
       <div class="button no-btn-grey-filter aem-GridColumn aem-GridColumn--default--12">
           <div class="result-numbers float-start py-2">18 results</div>
@@ -22,70 +22,35 @@
           <div class="offcanvas-body">
               <div class="row filter-accrodion-row">
                   <div class="accordion filter-accrodion" id="accordionExample">
-                      <div class="accordion-item filter-accrodion-item border-0">
-                          <h2 class="accordion-header filter-accrodion-header" id="headingOne">
+                      <div class="accordion-item filter-accrodion-item border-0"> 
+                        <sly data-sly-list.result="${listing.fetchFilters}">
+                          <h2 class="accordion-header filter-accrodion-header" id="heading${resultList.index}">
                               <button class="accordion-button shadow-none text-uppercase" type="button"
-                                  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                  data-bs-toggle="collapse" data-bs-target="#collapse${resultList.index}" aria-expanded="true"
                                   aria-controls="collapseOne">
-                                  Fiber type </button>
+                                    ${result.parentFilter} </button>
                           </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                          <div id="collapse${resultList.index}" class="accordion-collapse collapse show" aria-labelledby="heading${resultList.index}"
                               data-bs-parent="#accordionExample">
                               <div class="accordion-body filter-accrodion-body">
                                   <ul class="filter-list list-unstyled">
+                                    <sly data-sly-list.child="${result.childFilterList}">
                                       <li class="filter-list-items">
                                           <div class="form-check filter-form-check">
                                               <input class="form-check-input rounded-0 shadow-none" type="checkbox"
                                                   value="" id="flexCheckDefault">
-                                              <label class="form-check-label" for="flexCheckDefault">
-                                                  Dramix 3D
-                                              </label>
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  ${child.filterName}
+                                                </label>
                                           </div>
                                       </li>
-                                      <li class="filter-list-items">
-                                          <div class="form-check filter-form-check">
-                                              <input class="form-check-input rounded-0 shadow-none" type="checkbox"
-                                                  value="" id="flexCheckDefault2">
-                                              <label class="form-check-label" for="flexCheckDefault2">
-                                                  Dramix 3D
-                                              </label>
-                                          </div>
-                                      </li>
+                                    </sly>
                                   </ul>
                               </div>
                           </div>
+                          </sly>
                       </div>
-                      <div class="accordion-item filter-accrodion-item border-0">
-                          <h2 class="accordion-header filter-accrodion-header" id="headingTwo">
-                              <button class="accordion-button collapsed shadow-none text-uppercase" type="button"
-                                  data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
-                                  aria-controls="collapseTwo">
-                                  material </button>
-                          </h2>
-                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                              data-bs-parent="#accordionExample">
-                              <div class="accordion-body filter-accrodion-body">
-                                  <ul class="filter-list list-unstyled">
-                                      <li class="filter-list-items">
-                                          <div class="form-check filter-form-check">
-                                              <input class="form-check-input shadow-none" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                              <label class="form-check-label" for="flexCheckDefault">
-                                                  Dramix 3D
-                                              </label>
-                                          </div>
-                                      </li>
-                                      <li class="filter-list-items">
-                                          <div class="form-check filter-form-check">
-                                              <input class="form-check-input shadow-none" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                              <label class="form-check-label" for="flexCheckDefault">
-                                                  Dramix 3D
-                                              </label>
-                                          </div>
-                                      </li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
+                      
                   </div>
               </div>
               <div class="row filter-buttons-row position-absolute w-100">
@@ -113,7 +78,7 @@
       </div>
   </div>
   <div class="row">
-    <sly data-sly-use.listing="com.adobe.dramix.core.models.Listing"/>
+   
     <sly data-sly-list.result="${listing.fetchResults}">
       <sly data-sly-test="${itemList.first}">  
       <div class="${result.cssClass}">
